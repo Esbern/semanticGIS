@@ -1,6 +1,6 @@
-# QGIS Geospatial Environment Setup
+# Geospatial Environment Setup
 
-Welcome to the official setup instructions for the **QGIS Geospatial Environment**, developed by Roskilde University. This environment is designed to support a variety of users including:
+Welcome to the official setup instructions for the **RUC Geospatial Environment**, developed by Roskilde University. This environment is designed to support a variety of users including:
 
 - University students in planning, environmental science, and geography
 - Smallholder farmers and agricultural advisors

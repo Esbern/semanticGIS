@@ -31,7 +31,7 @@ Once installed and launched, this geospatial environment will:
 ### 1. Install Miniforge
 
 Visit the official site and download Miniforge for your operating system:
-https://github.com/conda-forge/miniforge
+[https://github.com/conda-forge/miniforge]((https://github.com/conda-forge/miniforge/releases/latest/)
 
 Choose the version that matches your system (macOS Intel/ARM or Windows).
 

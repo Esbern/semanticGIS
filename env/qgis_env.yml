@@ -4,6 +4,7 @@ channels:
 dependencies:
   - qgis
   - python=3.12
+  - jupyterlab
   - gdal
   - pyarrow
   - duckdb

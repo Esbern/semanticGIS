@@ -1,13 +1,13 @@
 # Geospatial Environment Setup
 
-Welcome to the official setup instructions for the **RUC Geospatial Environment**, developed by Roskilde University. This environment is designed to support a variety of users including:
+Welcome to the official setup instructions for the **Geospatial Environment**, developed by Roskilde University. This environment is designed to support a variety of users including:
 
 - University students in planning, environmental science, and geography
 - Smallholder farmers and agricultural advisors
 - Municipal staff working with spatial data
 - Citizen science projects and community mapping groups
 
-The environment is fully self-contained and includes tools for accessing spatial datasets tailored to your user type and current needs.
+The environment is fully self-contained and installs only the tools and data **relevant to your user type**, based on your profile. It uses the **Conda environment management system** to keep things clean, consistent, and isolated from the rest of your system.
 
 ---
 
@@ -26,22 +26,36 @@ Once installed and launched, this geospatial environment will:
 
 ---
 
-## 🔧 Step-by-Step Setup
+## 📦 Prerequisite: Conda or Miniforge
 
-### 1. Install Miniforge
+This setup depends on the **Conda environment system**. We recommend using **Miniforge**, a lightweight open-source alternative to Anaconda.
 
+### 🔹 If you *don’t* have Conda installed:
 Visit the official site and download Miniforge for your operating system:
-[https://github.com/conda-forge/miniforge](https://github.com/conda-forge/miniforge/releases/latest/)
+https://github.com/conda-forge/miniforge
 
 Choose the version that matches your system (macOS Intel/ARM or Windows).
 
-### 2. Download the GitHub Release
+After downloading, you need to run the installer script:
+- On macOS/Linux: run the `.sh` script in a terminal
+- On Windows: run the `.exe` installer (or right-click and open as administrator)
+
+### 🔹 If you already have Anaconda or Miniconda installed:
+You can use your existing Conda installation. Just make sure the `conda` command works in your terminal. We recommend creating a new environment named `qgis_env` to avoid conflicts.
+
+> Note: We assume a basic level of comfort with using the terminal for installation. However, **after this initial setup**, most interactions (QGIS and data downloads) will be fully graphical or require only one-click launch scripts.
+
+---
+
+## 🔧 Step-by-Step Setup
+
+### 1. Download the GitHub Release
 
 Go to the [Releases section of the project GitHub repo](https://github.com/YOUR_GITHUB_USERNAME/RUCgeospatial/releases) and download the latest `.zip` file.
 
 Unzip it somewhere convenient (e.g., your Documents folder).
 
-### 3. Run the Setup Script
+### 2. Run the Setup Script
 
 Open your terminal or command prompt:
 
@@ -63,7 +77,7 @@ This will:
 - Install QGIS, GDAL, DuckDB, and other packages
 - Set up the local tool for downloading datasets based on your selected user type
 
-### 4. Set Up Your `.env` File
+### 3. Set Up Your `.env` File
 
 On first use, the tool will prompt you to select your user type. It will then store your preferences in a file named `.env` in the project folder. This file may include:
 
@@ -117,7 +131,7 @@ And delete the project folder.
 
 ## 🔁 Environment Philosophy
 
-We aim to keep everything in **a single Conda environment** (`qgis_env`) to avoid confusion. This makes it easier to update or add new tools. 
+We aim to keep everything in **a single Conda environment** (`qgis_env`) to avoid confusion. This makes it easier to update or add new tools.
 
 Only if there are package conflicts or highly specialized needs will additional environments be introduced — and this will be clearly communicated.
 

@@ -11,6 +11,4 @@ dependencies:
   - pandas
   - geopandas
   - python-dotenv-with-cli
-  - pip
-  - pip:
-      - nbimporter
+

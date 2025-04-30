@@ -10,3 +10,4 @@ dependencies:
   - duckdb
   - pandas
   - geopandas
+  - python-dotenv-with-cli

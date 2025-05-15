@@ -17,7 +17,6 @@ def run_command(cmd_list):
 def gui():
     run_command([sys.executable, "-m", "streamlit", "run", "gui/app.py"])
 
-
 def qgis():
     env = os.environ.copy()
     conda_env_bin = Path(sys.executable).parent

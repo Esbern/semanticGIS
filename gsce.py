@@ -5,6 +5,8 @@ import os
 import yaml
 from pathlib import Path
 from dotenv import load_dotenv
+import streamlit.components.v1 as components
+from gsce.validate import validate_pipeline
 
 load_dotenv()
 ENV_NAME = "geospatial"
@@ -15,6 +17,7 @@ def run_command(cmd_list):
 def gui():
     run_command([sys.executable, "-m", "streamlit", "run", "gui/app.py"])
 
+
 def qgis():
     env = os.environ.copy()
     conda_env_bin = Path(sys.executable).parent
@@ -23,6 +26,8 @@ def qgis():
 
 def jupyter():
     run_command(["jupyter-lab"])
+
+
 
 def list_projects():
     projects_path = Path("projects")
@@ -44,6 +49,9 @@ if __name__ == "__main__":
     subparsers.add_parser("jupyter", help="Launch JupyterLab")
     subparsers.add_parser("projects", help="List available projects")
 
+    validate_parser = subparsers.add_parser("validate", help="Validate a pipeline YAML file and render Mermaid diagram")
+    validate_parser.add_argument("file", help="Path to pipeline YAML file")
+
     args = parser.parse_args()
 
     if args.command == "gui":
@@ -54,5 +62,7 @@ if __name__ == "__main__":
         jupyter()
     elif args.command == "projects":
         list_projects()
+    elif args.command == "validate":
+        validate_pipeline(args.file)
     else:
         parser.print_help()

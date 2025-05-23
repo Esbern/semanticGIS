@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "processes/load_data_source/Load Data from Source.md",
+                "file": "data/datasets/Datasets.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Load Data from Source"
+              "title": "Datasets"
             }
           }
         ]
@@ -170,10 +170,29 @@
   },
   "active": "39afc851eb697017",
   "lastOpenFiles": [
-    "processes/load_data_source/exampels",
-    "processes/load_data_source/process.yml",
-    "processes/load_data_source/Load Data from Source.md",
-    "processes/load_data_source",
-    "processes"
+    "data/Toposphere/Topography/acqusition_abstract.yml",
+    "data/Toposphere/Topography/acqusition.yml",
+    "data/datasets/DHM/Terræn/acqusition_abstract.yml",
+    "data/datasets/DHM/Terræn/acqusition.yml",
+    "data/datasets/DHM/Terræn",
+    "data/datasets/DHM",
+    "data/datasets/Datasets.md",
+    "datasets/Toposphere/Imagery",
+    "datasets/Toposphere/Surface_physical`",
+    "datasets/Toposphere/Surface_radiative_thermal`",
+    "datasets/Toposphere/Topography",
+    "datasets/Socio-Technical Sphere/Socio-Technical Sphere.md",
+    "datasets/Toposphere/Toposphere.md",
+    "datasets/Toposphere",
+    "datasets/Pedosphere/Pedosphere.md",
+    "datasets/Lithosphere/Lithosphere.md",
+    "datasets/LandUseLandCover/LandUseLandCover.md",
+    "datasets/Hydrosphere/Hydrosphere.md",
+    "datasets/Hydrosphere/Untitled.md",
+    "datasets/Biosphere/Untitled 1.md",
+    "datasets/Biosphere/Untitled.md",
+    "datasets/Biosphere/Biosphere.md",
+    "datasets/Atmosphere/Atmosphere.md",
+    "processes/load_data_source/Load Data from Source.md"
   ]
 }

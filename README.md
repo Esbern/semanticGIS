@@ -15,6 +15,8 @@ It combines the power of the Conda package management system (via `micromamba`) 
 
 This project uses a standardized folder structure to keep everything organized.
 
+---
+
 
 semanticGIS/
 │

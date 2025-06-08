@@ -170,10 +170,26 @@
   },
   "active": "39afc851eb697017",
   "lastOpenFiles": [
-    "processes/load_data_source/exampels",
-    "processes/load_data_source/process.yml",
-    "processes/load_data_source/Load Data from Source.md",
-    "processes/load_data_source",
-    "processes"
+    "data/Toposphere/Topography/acqusition_abstract.yml",
+    "data/Toposphere/Topography/acqusition.yml",
+    "data/datasets/Datasets.md",
+    "data/Toposphere/Toposphere.md",
+    "data/Toposphere/Topography",
+    "data/Socio_Technical/Socio-Technical Sphere.md",
+    "data/Pedosphere/Pedosphere.md",
+    "data/Lithosphere/Lithosphere.md",
+    "data/LandUseLandCover/LandUseLandCover.md",
+    "data/Hydrosphere/Hydrosphere.md",
+    "data/Biosphere/Biosphere.md",
+    "data/Atmosphere/Atmosphere.md",
+    "data/datasets",
+    "data/Toposphere",
+    "data/Socio_Technical",
+    "data/Pedosphere",
+    "data/Lithosphere",
+    "data/LandUseLandCover",
+    "data/Hydrosphere",
+    "data/Biosphere",
+    "processes/load_data_source/Load Data from Source.md"
   ]
 }

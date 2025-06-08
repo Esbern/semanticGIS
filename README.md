@@ -1,6 +1,10 @@
 # `README.md`
 
-You should copy the entire content below into the `README.md` file in the root of your `semanticGIS` project.
+⚠️ A Note on Security and Installation
+
+This project requires you to install software using scripts from the internet. Running code on your machine always carries a small risk. We encourage you to build safe computing habits from the start.
+
+If you are new to using command-line installers, we **strongly recommend** you read our **[Beginner's Guide to Safely Installing Software](./docs/tools/computerliteracy/SAFE_INSTALLATION_GUIDE.md)** Software before proceeding. It provides a simple, step-by-step process for evaluating installation scripts to minimize risk.
 
 
 # 🌳 semanticGIS Project

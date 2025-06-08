@@ -1,9 +1,3 @@
-Of course. A comprehensive and up-to-date `README.md` is the most important document for any project. It serves as the front door for new users.
-
-Here is a complete `README.md` file that incorporates all of our decisions: the `scripts` folder, the `setup` script names, the QGIS integration, the environment pre-existence check, the `mamba` alias recommendation, the Windows-specific starter scripts, and the requested directory structure diagram.
-
----
-
 # `README.md`
 
 You should copy the entire content below into the `README.md` file in the root of your `semanticGIS` project.

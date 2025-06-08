@@ -2,20 +2,20 @@
 
 You should copy the entire content below into the `README.md` file in the root of your `semanticGIS` project.
 
-```markdown
+
 # 🌳 semanticGIS Project
 
 Welcome to the `semanticGIS` project environment. The goal of this project is to provide a standardized, reproducible, and user-friendly ecosystem for geospatial analysis, suitable for both small student projects and large-scale research.
 
 It combines the power of the Conda package management system (via `micromamba`) with a structured project layout to ensure that all tools, libraries, and scripts work together seamlessly.
 
----
+
 
 ## 🏛️ Directory Structure
 
 This project uses a standardized folder structure to keep everything organized.
 
-```
+
 semanticGIS/
 │
 ├── README.md                # This file: essential information for getting started
@@ -34,7 +34,7 @@ semanticGIS/
     ├── start-qgis.sh        # Launches QGIS in the environment (macOS/Linux)
     ├── start-qgis.bat       # Launches QGIS in the environment (Windows)
     └── start-environment.bat # (Windows only) Clickable starter for an activated terminal
-```
+
 
 ---
 

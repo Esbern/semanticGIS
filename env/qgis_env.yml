@@ -1,4 +1,4 @@
-name: qgis_env
+name: gsce
 channels:
   - conda-forge
 dependencies:
@@ -11,4 +11,6 @@ dependencies:
   - pandas
   - geopandas
   - python-dotenv-with-cli
-
+  - psycopg2-binary  # For PostgreSQL/PostGIS connection
+  - pyyaml           # For reading YAML configuration files
+  - sqlalchemy       # For robust database interactions and query building

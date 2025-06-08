@@ -9,19 +9,31 @@
 set -e
 
 # --- Determine Project Root Directory ---
-# This makes the script runnable from anywhere by finding its own location
-# and then navigating up one level to the project root.
 SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && pwd)
 PROJECT_ROOT=$(dirname "$SCRIPT_DIR")
 ENV_FILE="$PROJECT_ROOT/env/semanticGIS_env.yaml"
+ENV_NAME="semanticGIS"
 
 # --- Welcome Message ---
 echo "--- semanticGIS Environment Setup for macOS & Linux ---"
 echo "Project Root: $PROJECT_ROOT"
 echo ""
 
-# --- 1. Prerequisite Check: Verify micromamba is installed ---
-echo "Step 1/3: Checking for micromamba..."
+# --- 1. Check if Environment Already Exists ---
+echo "Step 1/4: Checking for existing '$ENV_NAME' environment..."
+# 'micromamba env list' lists all environments. We grep for the exact name.
+# The command returns a non-zero exit code if the grep finds nothing.
+if micromamba env list | grep -q "^$ENV_NAME\s"; then
+    echo "   - Environment '$ENV_NAME' already exists. Nothing to do."
+    echo "   - To start working, open a new terminal and run 'mamba activate $ENV_NAME'."
+    echo "   - If you wish to rebuild the environment, please remove it first with 'mamba env remove -n $ENV_NAME'"
+    exit 0
+fi
+echo "   - Environment does not exist. Proceeding with setup."
+echo ""
+
+# --- 2. Prerequisite Check: Verify micromamba is installed ---
+echo "Step 2/4: Checking for micromamba..."
 if ! command -v micromamba &> /dev/null; then
     echo "   - ERROR: micromamba could not be found."
     echo "   - Please install it first by following the instructions in the README.md file."
@@ -30,15 +42,15 @@ fi
 echo "   - micromamba is installed."
 echo ""
 
-# --- 2. Create the Conda Environment ---
-echo "Step 2/3: Creating the 'semanticGIS' environment from '$ENV_FILE'..."
-echo "   - This may take several minutes depending on your internet connection."
+# --- 3. Create the Conda Environment ---
+echo "Step 3/4: Creating the '$ENV_NAME' environment from '$ENV_FILE'..."
+echo "   - This may take several minutes."
 micromamba create -f "$ENV_FILE" -y
-echo "   - 'semanticGIS' environment created successfully."
+echo "   - '$ENV_NAME' environment created successfully."
 echo ""
 
-# --- 3. Initialize the Shell ---
-echo "Step 3/3: Initializing your shell to use 'mamba activate'..."
+# --- 4. Initialize the Shell ---
+echo "Step 4/4: Initializing your shell..."
 USER_SHELL=$(basename "$SHELL")
 micromamba shell init -s "$USER_SHELL" -p ~/micromamba
 echo "   - Shell initialization complete."
@@ -46,10 +58,5 @@ echo ""
 
 # --- Final Instructions ---
 echo "--- Setup Complete! ---"
-echo "To finish, please do the following:"
-echo "   1. Close this terminal window completely."
-echo "   2. Open a new terminal window."
-echo "   3. Follow the instructions in the README to create the 'mamba' alias (recommended)."
-echo "   4. You can then activate the environment by running:"
-echo "      mamba activate semanticGIS"
+echo "To finish, please close and re-open your terminal, then activate with 'mamba activate $ENV_NAME'."
 echo ""

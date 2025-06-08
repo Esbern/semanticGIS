@@ -15,7 +15,7 @@ It combines the power of the Conda package management system (via `micromamba`) 
 
 This project uses a standardized folder structure to keep everything organized.
 
-
+```text
 semanticGIS/
 │
 ├── README.md                # This file: essential information for getting started
@@ -35,6 +35,7 @@ semanticGIS/
     ├── start-qgis.bat       # Launches QGIS in the environment (Windows)
     └── start-environment.bat # (Windows only) Clickable starter for an activated terminal
 
+```
 
 ---
 

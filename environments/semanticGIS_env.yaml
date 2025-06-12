@@ -1,0 +1,17 @@
+name: semanticGIS
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - qgis
+  - jupyterlab
+  - gdal
+  - pyarrow
+  - duckdb
+  - pandas
+  - geopandas
+  - python-dotenv-with-cli
+  - psycopg2-binary  # For PostgreSQL/PostGIS connection
+  - pyyaml           # For reading YAML configuration files
+  - sqlalchemy       # For robust database interactions and query building

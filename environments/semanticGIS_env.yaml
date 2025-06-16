@@ -12,6 +12,9 @@ dependencies:
   - pandas
   - geopandas
   - python-dotenv-with-cli
+  - whitebox_tools 
   - psycopg2-binary  # For PostgreSQL/PostGIS connection
   - pyyaml           # For reading YAML configuration files
   - sqlalchemy       # For robust database interactions and query building
+  - pip:
+    - OWSLib

@@ -11,6 +11,7 @@ dependencies:
   - duckdb
   - pandas
   - geopandas
+  - folium
   - python-dotenv-with-cli
   - whitebox_tools 
   - psycopg2-binary  # For PostgreSQL/PostGIS connection

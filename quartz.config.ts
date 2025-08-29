@@ -14,6 +14,7 @@ const config: QuartzConfig = {
     enablePopovers: true,
     analytics: {
       provider: "google",
+      tagId: 'GTM-N3HKVNSC'
     },
     locale: "en-US",
     baseUrl: "semanticgis.org",

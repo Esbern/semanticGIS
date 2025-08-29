@@ -75,15 +75,5 @@ Reflection is a critical part of the learning process. After completing your pro
 
 
 
-#### Digital Garden: Learn What You Need, When You Need It
-
-Think of our site as a digital garden. It’s a space where ideas grow and connect organically. Instead of following a rigid path, you can start with a specific problem you need to solve and explore the concepts as they relate to that problem. Here’s what makes it special:
-
-* **Non-Linear Learning**: Jump in wherever it makes sense for you. Need to solve a specific issue? Start there and see where it takes you.
-* **Interconnected Notes**: Explore topics through a web of interconnected notes and resources, making it easy to dive deeper as needed.
-* **Personal Growth**: Cultivate your knowledge over time, adding to your understanding bit by bit.
-
-[[This site is a Digital Garden|Read more about using our and creating your own digital garden for learning GIS]]
-
 
 

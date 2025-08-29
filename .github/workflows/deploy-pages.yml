@@ -34,7 +34,7 @@ jobs:
       # Step 3: Build the Quartz website
       # We tell it to run all commands from inside the /docs directory
       - name: Build Quartz Website
-        working-directory: ./docs
+        working-directory: ./semanticGIS/docs
         run: |
           # Install all the necessary packages (like quartz, react, etc.)
           npm install

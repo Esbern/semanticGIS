@@ -14,6 +14,7 @@ dependencies:
   - folium
   - python-dotenv-with-cli
   - whitebox_tools 
+  - tqdm
   - psycopg2-binary  # For PostgreSQL/PostGIS connection
   - pyyaml           # For reading YAML configuration files
   - sqlalchemy       # For robust database interactions and query building

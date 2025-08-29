@@ -1,0 +1,62 @@
+# A friendly name for our workflow, shown in the "Actions" tab on GitHub
+name: Deploy Quartz Website to GitHub Pages
+
+# This section defines when the workflow will run
+on:
+  # Run automatically every time a commit is pushed to the "main" branch
+  push:
+    branches: ["main"]
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets the permissions the workflow needs to deploy to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# The sequence of jobs to be executed
+jobs:
+  # The first job is to build the website
+  build:
+    runs-on: ubuntu-latest # Use a standard Linux virtual machine
+    steps:
+      # Step 1: Check out the repository's code so the workflow can access it
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2: Set up the Node.js environment required by Quartz
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20" # Specify the Node.js version
+
+      # Step 3: Build the Quartz website
+      # We tell it to run all commands from inside the /docs directory
+      - name: Build Quartz Website
+        working-directory: ./docs
+        run: |
+          # Install all the necessary packages (like quartz, react, etc.)
+          npm install
+          # This is the equivalent of your local command!
+          npx quartz build
+
+      # Step 4: Package the built site (the contents of docs/public)
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Tell it where the built website files are located
+          path: ./docs/public
+
+  # The second job handles the deployment after the build is successful
+  deploy:
+    needs: build # This job won't run unless the 'build' job succeeds
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      # This final step takes the packaged artifact and publishes it
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,2 @@
+One of the big setbacks in batchprocessing is it is realy fiffercult to find a way to specify tha output as a layer in a geodatabase. the one method i now od is usin calculatet values like 'ogr:dbname=/Users/holmes/Downloads/test.gpkg table="' +
+layer_property( @INPUT ,'name')+'" (geom)'

@@ -33,9 +33,6 @@ Once you've defined your **Analytical Approach** (Step 3) as a `semanticgis` rec
 - A **step-by-step guide** for executing the workflow in desktop software like QGIS.
 - A fully **executable Python script** for automated processing and advanced analysis.
     
-
-Crucially, we guarantee **provenance** by embedding the original recipe script directly into your final GeoPackage output. This creates a self-documenting data product, ensuring your work is transparent and reproducible for anyone.
-
 ## Where to Start
 
 SemanticGIS is an actively developing project. A great place to begin is by reading the full documentation on the **[[Design Rationale]]**. From there, the "GIS 101" section will walk you through a complete project using these principles.

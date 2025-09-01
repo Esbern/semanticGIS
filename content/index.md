@@ -2,17 +2,40 @@
 title: Welcome to Semantic GIS
 tags:
 ---
-# Welcome to Semantic GIS.
-The motivation behind SemanticGIS is to make it easier to talk about **G**eographic **I**nformation **S**ystems. And thereby make it easier to learn and collaborate about GIS.  SemanticGIS is designed to aid especially beginners and casual users of GIS in developing a **structured geospatial thinking** and, at the same time, developing a framework for documenting their GIS work. The overall goal is to focus on the semantics of GIS and maintain a clear separation between **conceptual geospatial operations** and **tool-specific implementations**, thereby enabling users to create a clear conceptual solution to a problem before addressing the implementation details.
-SemanticGIS consists of five interconnected parts.
-1. A recommended workflow, organised around a 4-step "design rationale".
-2. A website (semanticGIS.org) that organises teaching material according to the principles of SemanticGIS.
-3. A so-called **D**omain **S**pecific **L**anguage for GIS, which is a formalised way of describing a pipeline of GIS operations to achieve a specific goal. 
-4. A series of compilers that can translate the DSL into:
-	1. Flowchart of the process for use, for instance, in the design rationale.
-	2. A recipe for implementing the operations in a specific software like  QGIS or ArcGIS, 
-	3. And, for advanced users, an executable Python script.
-5. A series of websites that present national and regional datasets according to the principles of SemanticGIS. (semanticgis.dk and semanticgis.eu)
-## Where to start
-First of all, be warned, semanticGIS is very much a work in progress. The content is filled in as needed for teaching or research projects. A good place to start would be to read the section on design rationales and then the section on establishing a working environment. From there, the section "GIS 101" takes you through the main steps of a GIS project, and from there you hopefully have enough knowledge to explore semanticGIS.org based on your needs and interests. 
-The GIS DSL is implemented as a Python library and can, in principle, be utilised in any Python IDE, but it has been designed to work in Notebook-inspired environments like Jupyter Lab or Google Colaboratory (Google Colab).
+# Semantic GIS: Think First, Click Later.
+
+Geospatial analysis is more than a series of clicks; it's a scientific process. Yet, our workflows often become opaque, hard to reproduce, and locked into a single software tool. How do you document your reasoning? How can you share your methodology in a way that anyone can understand and replicate?
+
+**SemanticGIS provides a framework for structured geospatial thinking.** We advocate for a clear separation between the _'what'_ (your conceptual plan) and the _'how'_ (the tool-specific implementation). This begins not with code, but with a clear, four-step **Design Rationale**.
+
+---
+
+## The Core of Our Method: The 4-Step Design Rationale 🧠
+
+This four-step process guides you from a vague question to a well-documented and defensible result. It ensures you have a solid plan before you write a single line of code or click a single button.
+
+1. **Problem Framing & Conceptual Ontology:** First, define the problem in your own words. What are the key goals? What are the important real-world entities involved (e.g., specific businesses, noise complaints, administrative zones)? This step is about building a clear conceptual foundation for your project.
+    
+2. **Data Selection:** Next, decide how to represent those real-world entities as digital data. You'll identify suitable datasets, justify your choices, and consider any necessary transformations or filtering. This is where you connect your abstract concepts to concrete spatial data.
+    
+3. **Analytical Approach:** Now, you design the specific sequence of operations to answer your question. This is where the `semanticgis` Python library comes in. You deconstruct your problem into a formal **"recipe"**—a simple, human-readable script that defines each analytical step (e.g., buffer, spatial join, density analysis). This script becomes the unambiguous, tool-agnostic plan for your analysis.
+    
+4. **Dissemination & Communication:** Finally, you plan how to present your findings. Who is the audience? What is the best way to communicate the results—an interactive map, a static report, a presentation? This ensures your hard work has the intended impact.
+    
+
+---
+
+## From Recipe to Result: Our Tools for Transparency 🚀
+
+Once you've defined your **Analytical Approach** (Step 3) as a `semanticgis` recipe, our tools can automatically translate it into multiple formats:
+
+- A **visual flowchart** to clearly illustrate your methodology in reports and presentations.
+- A **step-by-step guide** for executing the workflow in desktop software like QGIS.
+- A fully **executable Python script** for automated processing and advanced analysis.
+    
+
+Crucially, we guarantee **provenance** by embedding the original recipe script directly into your final GeoPackage output. This creates a self-documenting data product, ensuring your work is transparent and reproducible for anyone.
+
+## Where to Start
+
+SemanticGIS is an actively developing project. A great place to begin is by reading the full documentation on the **[[Design Rationale]]**. From there, the "GIS 101" section will walk you through a complete project using these principles.

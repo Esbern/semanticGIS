@@ -18,7 +18,7 @@ This four-step process guides you from a vague question to a well-documented and
     
 2. **Data Selection:** Next, decide how to represent those real-world entities as digital data. You'll identify suitable datasets, justify your choices, and consider any necessary transformations or filtering. This is where you connect your abstract concepts to concrete spatial data.
     
-3. **Analytical Approach:** Now, you design the specific sequence of operations to answer your question. This is where the `semanticgis` Python library comes in. You deconstruct your problem into a formal **"recipe"**—a simple, human-readable script that defines each analytical step (e.g., buffer, spatial join, density analysis). This script becomes the unambiguous, tool-agnostic plan for your analysis.
+3. **Analytical Approach:** Now, you design the specific sequence of operations to answer your question. You deconstruct your problem into a formal **"recipe"**—a simple, human-readable script that defines each analytical step (e.g., buffer, spatial join, density analysis). This script becomes the unambiguous, tool-agnostic plan for your analysis. You can write this "**recipe**" in any tool you chose as either a text or a graphical workflow.  This is also where the `semanticgis` Python library comes in.
     
 4. **Dissemination & Communication:** Finally, you plan how to present your findings. Who is the audience? What is the best way to communicate the results—an interactive map, a static report, a presentation? This ensures your hard work has the intended impact.
     

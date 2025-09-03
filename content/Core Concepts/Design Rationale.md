@@ -3,7 +3,7 @@ title: Design Rationale
 draft: false
 tags:
 ---
-**Note on Terminology**
+## Note on Terminology
 
 Within `semanticGIS` we  use the concept of design rationale as a practical tool to help you structure and reflect on your GIS project work. While the term is traditionally used in software and product design to describe decisions after they’re made, we’re adapting it here for you to actively plan, document, and justify your decisions as you go. Think of it as a blend between a traditional _design rationale_ and a _research design_.
 
@@ -44,7 +44,7 @@ Below is a sample design rationale for a fictive project where the client (in th
 
 ---
 
-**1. Problem Framing and Conceptual Ontology**
+## 1. Problem Framing and Conceptual Ontology
 
 The project task is to identify party/entertainment zones in Copenhagen using data-driven GIS methods. Since the term “party/entertainment zone” is open to interpretation, I have chosen to define it as areas characterised by a high concentration of social, cultural, and nightlife activities. This includes bars, restaurants, music venues, cinemas, and event spaces. I would like to include some seasonality in the investigation since there are some clear summer-related areas, such as public parks and swimming zones. 
 
@@ -60,7 +60,7 @@ To make the analysis meaningful, we need to be precise about what we include und
 
 ---
 
-**2. Data Selection (Domain of Discourse)**
+## 2. Data Selection (Domain of Discourse)
 
 The following is an example of the considerations you might make in this case, looking at data for bars.
 
@@ -94,7 +94,7 @@ Other datasets not described in detail:
 
 ---
 
-**3. Analytical Approach**
+## 3. Analytical Approach
 
 The problem was deconstructed into a set of GIS operations:
 
@@ -113,7 +113,7 @@ These steps were combined in a weighted overlay to generate a final raster surfa
 
 ---
 
-**4. Dissemination and Communication**
+## 4. Dissemination and Communication
 
 The results are presented in two main formats:
 

@@ -7,12 +7,14 @@ aliases:
 ---
  
 # Fundamental Geospatial Tasks
-As statet in the text in what is [[GIS]]. I prefer a definition of the term that states that GIS is:
+As stated in the text in what is [[GIS]]. I prefer a definition of the term that states that GIS is:
 
 "A collection of typically (computer-based) tools focused on collecting, analysing, visualising, storing, editing and managing [[Geospatial data]]"
 
 Form this follows that the fundamental Geospatial Tasks are:
 ## Collecting geospatial data
-We here use the term Collecting rather broadly as covering both generating new data through observations and acquiring and transforming  existing data for the specific task.
+We here use the term Collecting rather broadly as covering both collecting new data through observations and acquiring existing data for the specific task. Common for both situations is that you first need a clear ontology ( domain of discourse)  befor starting the process.
+
+Esisting data ofthen need to to be restructured using some of the tools described under ,amaging geospatial data and also processed using some of the 
 
 

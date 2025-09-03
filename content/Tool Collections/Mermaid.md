@@ -1,8 +1,9 @@
-
-
-# 🗺️ **Guide: Using Mermaid to Create Flow Diagrams for GIS Analysis**
-
 ---
+title: Mermaid diagram editor
+draft: false
+tags:
+---
+
 
 ## 1. **What is Mermaid?**
 
@@ -11,13 +12,9 @@ Mermaid is a simple markdown-like language you can use to create diagrams and fl
 It's perfect for GIS analysis workflows because you can **easily sketch processes** like:
 
 - Data collection
-    
 - Data preprocessing
-    
 - Spatial analysis
-    
-- Visualization
-    
+- Visualization  
 - Reporting
     
 
@@ -164,11 +161,8 @@ flowchart LR
 ## 6. **Tools to Use Mermaid**
 
 - [Mermaid Live Editor](https://mermaid-js.github.io/mermaid-live-editor/) (online)
-    
 - Obsidian (markdown + diagrams)
-    
 - GitHub markdown
-    
 - Jupyter notebooks (with Mermaid plugin)
     
 
@@ -177,26 +171,9 @@ flowchart LR
 # 🎯 **Summary: How to Start**
 
 1. Think through the **GIS analysis steps** you want to visualize.
-    
-2. Start a Mermaid `flowchart TD` block.
-    
-3. Use arrows `-->` to show steps and decisions `{}` for checks.
-    
-4. Render it in a Mermaid-supported environment.
+2. Go to  [Mermaid Live Editor](https://mermaid-js.github.io/mermaid-live-editor/) (online)
+3. Start a Mermaid `flowchart TD` block.
+4. Use arrows `-->` to show steps and decisions `{}` for checks.
+5. Render it in a Mermaid-supported environment.
     
 
----
-
-Would you also like me to give you **templates** for typical GIS workflows, like:
-
-- Suitability analysis
-    
-- Environmental impact assessment
-    
-- Network analysis (e.g., nearest facility)
-    
-- Land cover classification?
-    
-
-I can create ready-to-use Mermaid templates if you want! 🚀  
-Would you like that?

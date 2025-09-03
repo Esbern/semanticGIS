@@ -1,8 +1,14 @@
+---
+title: A Beginner's Guide to Safely Installing Software
+draft: false
+tags:
+---
+ 
 # A Beginner's Guide to Safely Installing Software
 
-Welcome! As you move into more advanced computing topics, you will often need to install software directly from the internet using your command-line terminal (like PowerShell or Command Prompt). This is a powerful way to get tools, but it comes with a responsibility to be careful.
+As you move into more advanced computing topics, you will often need to install software directly from the internet using your command-line terminal (like PowerShell or Command Prompt). This is a powerful way to get tools, but it comes with a responsibility to be careful.
 
-This guide provides a simple workflow to help you minimize risks when running installation scripts you find online.
+This guide provides a simple workflow to help you minimise risks when running installation scripts you find online.
 The Core Principle: Trust, but Verify
 
 The internet is filled with amazing, free, open-source software. However, a script you run on your computer has the same permissions that you do. It can read your files, install other software, or change system settings.

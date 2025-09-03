@@ -1,6 +1,6 @@
 ---
 title: Collecting new data
-draft: true
+draft: false
 tags:
 ---
  

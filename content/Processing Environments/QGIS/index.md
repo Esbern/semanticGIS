@@ -3,6 +3,8 @@ title: QGIS
 draft: false
 tags:
   - QGIS
+aliases:
+  - QGIS
 ---
 QGIS is an Open-Source (free to use) desktop GIS that can handle the needs of most Geospatial projects. In addition to the built-in functionality of QGIS, there are hundreds of so-called plugins that can extend the functionality of QGIS. 
 

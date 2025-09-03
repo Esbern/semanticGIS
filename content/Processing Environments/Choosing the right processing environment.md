@@ -11,7 +11,7 @@ There are many software options for working with geospatial data, and which to c
 For most beginners, I recommend a general-purpose solution, whether as a native app on your computer or as a web app. For historical reasons, general-purpose solutions for working with geospatial data are called Geographic Information Systems ([[GIS]]). 
 
 Typical applications:
-- [[SemanticGIS/Processing Environments/QGIS/index]]
+- [[Processing Environments/QGIS/index|QGIS]]]
 - [[ArcGIS pro]]
 
 ### Field Data Collection

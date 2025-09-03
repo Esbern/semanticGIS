@@ -1,5 +1,5 @@
 ---
-title: "## Observing reality"
+title: Observing reality
 draft: false
 tags:
 ---

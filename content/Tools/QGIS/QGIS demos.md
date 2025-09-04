@@ -5,6 +5,6 @@ tags:
   - QGIS
 ---
  
-This is where you find short demos of how to perform a specific task in  [[Processing Environments/QGIS/index|QGIS]]
+This is where you find short demos of how to perform a specific task in  [[Tools/QGIS/index|QGIS]]
 ## Modifying the user interface:
 - [[Changing the UI language]]

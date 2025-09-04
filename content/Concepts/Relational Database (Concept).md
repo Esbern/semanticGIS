@@ -65,7 +65,7 @@ Relational databases come in two main types based on how they are deployed and a
    Server-based databases are ideal for large applications, such as web platforms, multi-user systems, or any scenario where scalability, performance, and concurrency are critical.
 
 2. **Serverless (Embedded) Databases**: These databases do not require a dedicated server to run. They are typically embedded within an application and are designed for local, single-user environments. A key example is:
-   - **SQLite**: A serverless, lightweight database that is embedded in applications. It is commonly used in mobile apps and local desktop applications. SQLite is also the foundation for the **[[GeoPackage]]** format, widely used in GIS applications like [[Processing Environments/QGIS/index|QGIS]]] to store geospatial data in a portable, self-contained file.
+   - **SQLite**: A serverless, lightweight database that is embedded in applications. It is commonly used in mobile apps and local desktop applications. SQLite is also the foundation for the **[[GeoPackage]]** format, widely used in GIS applications like [[Tools/QGIS/index|QGIS]]] to store geospatial data in a portable, self-contained file.
 
    Serverless databases are often used in scenarios where simplicity and portability are more important than scalability. They are easy to deploy and ideal for local data storage.
 

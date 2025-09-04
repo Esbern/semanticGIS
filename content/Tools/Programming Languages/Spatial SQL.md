@@ -63,9 +63,9 @@ This query returns all towns with populations over 150,000. **Result:**
 | Aarhus       | 285273     |
 | Odense       | 180760     |
 
-## Spatial Operations in [[Processing Environments/QGIS/index|QGIS]] vs. Spatial SQL
+## Spatial Operations in [[Tools/QGIS/index|QGIS]] vs. Spatial SQL
 
-In [[Processing Environments/QGIS/index|QGIS]], spatial operations can be carried out using **native tools**, such as:
+In [[Tools/QGIS/index|QGIS]], spatial operations can be carried out using **native tools**, such as:
 - **Select by Location**: Finding features based on spatial relationships (e.g., "find all towns within a certain polygon").
 - **Buffering**: Creating buffer zones around points, lines, or polygons.
 

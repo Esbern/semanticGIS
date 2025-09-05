@@ -6,7 +6,7 @@ tags:
 
 Geospatial analysis is more than a series of clicks; it's a scientific process. Yet, our workflows often become opaque, hard to reproduce, and locked into a single software tool. How do you document your reasoning? How can you share your methodology in a way that anyone can understand and replicate?
 
-**SemanticGIS provides a framework for structured geospatial thinking.** We advocate for a clear separation between the _'what'_ (your conceptual plan) and the _'how'_ (the tool-specific implementation). This begins not with code, but with a clear, four-step **Design Rationale**.
+**SemanticGIS provides a framework for structured geospatial thinking.** We advocate for a clear separation between the _'what'_ (your conceptual plan) and the _'how'_ (the tool-specific implementation). This begins not with code, but with a clear, four-step [[Design Rationale]].
 
 ---
 
@@ -35,4 +35,4 @@ Once you've defined your **Analytical Approach** (Step 3) as a `semanticgis` rec
     
 ## Where to Start
 
-SemanticGIS is an actively developing project. A great place to begin is by reading the full documentation on the **[[Design Rationale]]**. From there, the "GIS 101" section will walk you through a complete project using these principles.
+SemanticGIS is an actively developing project. A great place to begin is by reading the full documentation on the **[[Design Rationale]]**. Think of this guide as a "GIS 101" that will walk you through a complete GIS project .

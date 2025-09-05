@@ -4,7 +4,7 @@ draft: false
 tags:
 ---
 
-An **ontology** in the context of geospatial data and GIS projects is a structured framework that defines how we represent and categorize the world of observation. It is a crucial component in defining the **[[world of discourse]]**—the specific way in which we interpret and organise the phenomena we observe ([[world of observation]]), tailored to the goals of the project.
+An **ontology** in the context of SemanticGIS is a structured framework that defines how we represent and categorise the world of observation. It is a crucial component in defining the **[[world of discourse]]**—the specific way in which we interpret and organise the phenomena we observe ([[world of observation]]), tailored to the goals of the project.
 
 ### **Starting Simple: Basic Ontology Components**
 

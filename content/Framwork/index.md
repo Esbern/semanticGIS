@@ -16,4 +16,5 @@ The core of semanticGIS is a structured [[Design Rationale]] that guides the use
     
 4. Dissemination and Communication: Plan and justify the final presentation of results. This step considers the target audience and the most effective medium (e.g., interactive web map, static report, dashboard) to ensure the findings are communicated with clarity and impact.
 
-If your are new to SemanticGIS it is important that you start be reading the  guide on writing a [[Design Rational]]. This guide also links to the other key aspects of semanticGIS.
+If your are new to SemanticGIS it is important that you start be reading the guide on writing a [[Design Rational]]. This guide also acts as a guide to the entire process of working through a [[GIS project]].
+

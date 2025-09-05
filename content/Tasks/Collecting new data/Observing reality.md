@@ -11,8 +11,6 @@ Before any practical observation begins, you must complete the most critical con
 
 The answers to these questions must be driven directly by your scientific question. An analysis of foot traffic requires mapping individuals, while a study of park utilisation might define 'a group using a bench' as the relevant feature. A theoretical schema, however, rarely survives contact with reality. This is why a pilot study 🧪 is essential. It is an iterative process where you test your definitions in the field, discovering ambiguities and refining your schema against the complexities of the real world. This crucial step ensures your final ontology is not just theoretically sound but practically robust and perfectly aligned with your research goal.
 
-  
-
 ### The Four Modes of Observation
 
 #### 1. Counting: Generating Point Features
@@ -21,7 +19,6 @@ This is the most fundamental act of observation: noting the presence and frequen
 
 - Geospatial Translation: This directly creates point data. Each observation could be a single point (e.g., tree_location) or a point with a quantitative attribute (e.g., intersection_point with an attribute cyclist_count = 152).
     
-
 #### 2. Tracing: Following an entity through time
 
 This method focuses on capturing dynamics and flow. It answers the question, "Where does it go, and what path does it take?" Here, we treat the entity being studied as the constant and record its changing location over time.

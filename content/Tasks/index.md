@@ -9,7 +9,7 @@ aliases:
 # Fundamental Geospatial Tasks
 As stated in the text in what is [[GIS]]. I prefer a definition of the term that states that GIS is:
 
-"A collection of typically (computer-based) tools focused on collecting, analysing, visualising, storing, editing and managing [[Geospatial data]]"
+"A collection of typically (computer-based) tools focused on [[Tasks/index#Collecting geospatial data|Collecting]], analysing, visualising, storing, editing and managing [[Geospatial data]]"
 
 Form this follows that the fundamental Geospatial Tasks are:
 ## Collecting geospatial data

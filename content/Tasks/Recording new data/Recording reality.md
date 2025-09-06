@@ -4,13 +4,8 @@ draft: false
 tags:
 ---
 
-### The Prerequisite: A Well-Defined Ontology
 
-Before any practical observation begins, you must complete the most critical conceptual step: defining your project's ontology. This process establishes your domain of discourse and results in a formal classification schema. This goes beyond simply listing categories; it involves the often complex task of determining what constitutes a single, discrete feature. For instance, is a 'group on a bench' a single entity for a study on public space, or are the individual people the features of interest for a demographic study? The choices you make here are fundamental.
-
-The answers to these questions must be driven directly by your scientific question. An analysis of foot traffic requires mapping individuals, while a study of park utilisation might define 'a group using a bench' as the relevant feature. A theoretical schema, however, rarely survives contact with reality. This is why a pilot study 🧪 is essential. It is an iterative process where you test your definitions in the field, discovering ambiguities and refining your schema against the complexities of the real world. This crucial step ensures your final ontology is not just theoretically sound but practically robust and perfectly aligned with your research goal.
-
-### The Four Modes of Observation
+### The Four Modes of data recording
 
 #### 1. Counting: Generating Point Features
 

@@ -1,9 +1,8 @@
 ---
-title: Observing reality
+title: Recording reality
 draft: false
 tags:
 ---
-## Observing reality
 
 ### The Prerequisite: A Well-Defined Ontology
 

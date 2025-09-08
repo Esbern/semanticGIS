@@ -1,5 +1,5 @@
 ---
-title: Design Rationale
+title: Phases of the GIS project
 draft: false
 tags:
 ---

@@ -1,6 +1,8 @@
 ---
 title: Welcome to Semantic GIS
 tags:
+aliases:
+  - Landing page
 ---
 # Semantic GIS: Think First, Click Later.
 

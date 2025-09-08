@@ -21,11 +21,11 @@ Large projects with many participants, running over more extended periods, typic
 Even a well-thought-through ontology (DoD), rarely survives contact with the complexity of observed phenomena. This is why a pilot study 🧪 is essential. It is an iterative process where you test your recording rules in the field, discovering ambiguities and refining your schema. This crucial step ensures that your final ontology is not only theoretically sound but also practically robust, enabling a consistent and meaningful recording of your observations. Far too many projects suffer from having to change their ontology after data recording has started, and find themselves in the dilemma of having to scrap and redo the first part of the data recording or try (seldom successfully to modify the observations to match the new ontology.)
 
 The SemanticGIS approach to generating New data 
-1. **Precompilng** a ontology: Desktop work where a preliminary ontology is created based on a priori knowledge and literature studies. 
-2. **Pilot registration**: The purpose is to test the the registration based on the preliminary ontology on “reality” in the Area Of Interest. We often use “unstructured” registration tools using paper and notebooks to ensure maximum flexibility in the registration.
-3. **Finalising the Ontology**: Modifying the preliminary ontology to match “reality”
-4. **Creating a data schema**: Specifying how data is to be stored in a computer system
-5. **Final Registration**: A new registration using a more structures tools i.e. apps preprinted forms etc.
+1. **Design** the Preliminary Ontology: Desktop work where a preliminary ontology is created based on a priori knowledge and literature studies.  
+2. **Test** the Ontology (Pilot Fieldwork): The purpose is to test the the registration based on the preliminary ontology on “reality” in the Area Of Interest. We often use “unstructured” registration tools using paper and notebooks to ensure maximum flexibility in the registration.  
+3. **Refine** the Final Ontology: Modifying the preliminary ontology to match “reality”  
+4. **Define** the Data Schema: Specifying how data is to be stored in a computer system  
+5. **Execute** the Final Registration: A new registration using a more structures tools i.e. apps preprinted forms etc.
  
 In SemanticGIS **Design** the Preliminary Ontology is  as part of the Project scoping and Data Modelling phases og the project and documented in  ( step 1 and 2) of [[Design Rationale]]. The following steps all belong to the Data Sourcing and Preparation phase of the of the project..
 In both the **Pilot** and the **Final Registration**, the same four fundamental methods of data capture are used. The crucial difference lies in the **goal** of the work, the **tools** you employ, and the **level of rigor** you apply. The pilot is an exploratory test of your ontology using flexible tools, while the final registration is a systematic execution of your finalized rules using structured tools to produce clean, consistent data.

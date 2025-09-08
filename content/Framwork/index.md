@@ -6,15 +6,38 @@ aliases:
   - about SemanticGIS
 ---
 # Welcome to the SemanticGIS Framework
-The core of semanticGIS is a structured [[Design Rationale]] that guides the user from a vague question to a defensible answer. This process forces a deliberate and documented approach at every stage.
+# The `semanticGIS` Framework
 
-1. Problem Framing & Conceptual Model: Define the problem's scope and the real-world entities involved. The user articulates their understanding of the task, clarifies key terms, and identifies the relevant concepts (e.g., 'suitable habitat', 'service area') that form the project's conceptual foundation.
-    
-2. Data Selection & The Domain of Discourse: Identify and justify the specific datasets used to represent the conceptual entities. This crucial step translates the abstract conceptual model into a concrete, machine-readable Domain of Discourse, forcing a critical evaluation of data suitability, limitations, and necessary transformations.
-    
-3. The Abstract Analytical Approach: Deconstruct the problem into a sequence of software-agnostic spatial operations (e.g., Buffer, Intersect, Zonal Statistics). This high-level "recipe" is documented formally, allowing it to be visualized, debated, and refined before any software is opened. This is the single source of truth for the analysis.
-    
-4. Dissemination and Communication: Plan and justify the final presentation of results. This step considers the target audience and the most effective medium (e.g., interactive web map, static report, dashboard) to ensure the findings are communicated with clarity and impact.
+The `semanticGIS` framework provides a structured methodology for conducting transparent and repeatable geospatial analysis. It is built on three core components: a five-phase project structure, a comprehensive documentation protocol, and a formal language for defining your analysis.
 
-If your are new to SemanticGIS it is important that you start be reading the guide on writing a [[Design Rational]]. This guide also acts as a guide to the entire process of working through a [[GIS project]].
+---
+
+## 1. The Five-Phase Project Process Workflow
+
+Every project is structured into five distinct phases, moving logically from the initial question to the final dissemination. This process provides a clear roadmap for your work, ensuring all critical steps are addressed systematically.
+
+➡️ **Learn about the Five-Phase Process**
+
+---
+
+## 2. The Design Rationale 📓
+
+The **Design Rationale** is the "lab notebook" for your project. It is a structured document where you record every decision, assumption, and process from start to finish. This practice ensures your work is transparent, auditable, and easily understood by others.
+
+➡️ **Read the guide on the Design Rationale**
+
+---
+
+## 3. The Abstract-First Pipeline (DSL) 🔗
+
+We use a simple, human-readable Domain-Specific Language (DSL) to define the analytical workflow _before_ implementing it in any specific GIS software. This **abstract recipe** is the single source of truth for your analysis and can be used to automatically generate several outputs:
+
+- **Mermaid Flowcharts** for visualising the logical steps.
+    
+- **Step-by-step Recipes** for desktop GIS software (e.g., QGIS).
+    
+- **Executable Python Scripts** for automated processing.
+    
+
+➡️ **Explore the DSL and the Abstract-First Pipeline**
 

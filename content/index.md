@@ -4,35 +4,47 @@ tags:
 ---
 # Semantic GIS: Think First, Click Later.
 
-Geospatial analysis is more than a series of clicks; it's a scientific process. Yet, our workflows often become opaque, hard to reproduce, and locked into a single software tool. How do you document your reasoning? How can you share your methodology in a way that anyone can understand and replicate?
-
-**SemanticGIS provides a framework for structured geospatial thinking.** We advocate for a clear separation between the _'what'_ (your conceptual plan) and the _'how'_ (the tool-specific implementation). This begins not with code, but with a clear, four-step [[Design Rationale]].
+GIS projects are often chaotic "black boxes," making them difficult to trust, reproduce, or build upon. `semanticGIS` provides a clear framework that transforms your geospatial work into a structured and transparent scientific process, from the first question to the final map.
 
 ---
 
-## The Core of Our Method: The 4-Step Design Rationale 🧠
+### Our Approach: A Method, Not Just a Tool 
 
-This four-step process guides you from a vague question to a well-documented and defensible result. It ensures you have a solid plan before you write a single line of code or click a single button.
+At the heart of `semanticGIS` are two core principles that work together to ensure clarity and rigor in your work:
 
-1. **Problem Framing & Conceptual Ontology:** First, define the problem in your own words. What are the key goals? What are the important real-world entities involved (e.g., specific businesses, noise complaints, administrative zones)? This step is about building a clear conceptual foundation for your project.
+- **The Five-Phase Process:** We believe every GIS project is a scientific endeavor. Our methodology guides you through five logical phases, ensuring that no critical step is overlooked. This process is the **"scientific method"** for your project.
     
-2. **Data Selection:** Next, decide how to represent those real-world entities as digital data. You'll identify suitable datasets, justify your choices, and consider any necessary transformations or filtering. This is where you connect your abstract concepts to concrete spatial data.
-    
-3. **Analytical Approach:** Now, you design the specific sequence of operations to answer your question. You deconstruct your problem into a formal **"recipe"**—a simple, human-readable script that defines each analytical step (e.g., buffer, spatial join, density analysis). This script becomes the unambiguous, tool-agnostic plan for your analysis. You can write this "**recipe**" in any tool you chose as either a text or a graphical workflow.  This is also where the `semanticgis` Python library comes in.
-    
-4. **Dissemination & Communication:** Finally, you plan how to present your findings. Who is the audience? What is the best way to communicate the results—an interactive map, a static report, a presentation? This ensures your hard work has the intended impact.
+- **The Design Rationale:** This is your project's non-negotiable **"lab notebook"** 📓. It's a living document where you record every assumption, decision, dataset, and process. It is the single source of truth that makes your work completely transparent and defensible.
     
 
 ---
 
-## From Recipe to Result: Our Tools for Transparency 🚀
+### The Five Phases of a `semanticGIS` Project
 
-Once you've defined your **Analytical Approach** (Step 3) as a `semanticgis` recipe, our tools can automatically translate it into multiple formats:
+Our framework organizes the entire project lifecycle into five distinct, manageable phases.
 
-- A **visual flowchart** to clearly illustrate your methodology in reports and presentations.
-- A **step-by-step guide** for executing the workflow in desktop software like QGIS.
-- A fully **executable Python script** for automated processing and advanced analysis.
-    
-## Where to Start
+#### **1. Project Scoping**
 
-SemanticGIS is an actively developing project. A great place to begin is by reading the full documentation on the **[[Design Rationale]]**. Think of this guide as a "GIS 101" that will walk you through a complete GIS project .
+This is the foundational phase where you move from a vague idea to a concrete plan. You define your research questions, establish clear objectives, identify your area of interest, and outline the project's scope and limitations in your Design Rationale.
+
+#### **2. Data Modelling**
+
+Before you collect any data, you design your conceptual **ontology**—the formal "rulebook" that defines the objects, features, and relationships you will be working with. This crucial step ensures your data will be consistent and fit for purpose.
+
+#### **3. Data Sourcing and Preparation**
+
+Here, you acquire and prepare your data. Whether you're conducting fieldwork, downloading existing datasets, or digitizing historical maps, every action is guided by your data model and meticulously documented in your Design Rationale.
+
+#### **4. Geospatial Analysis**
+
+This is where you execute your analytical methods to answer your research questions. By linking your analysis directly to the preceding phases, you ensure that your results are grounded in a clear and logical workflow, not just a series of disconnected tool operations.
+
+#### **5. Dissemination and Communication**
+
+The final phase involves sharing your work. This includes not only your final maps and reports but the **Design Rationale itself**. By publishing your process, you empower others to understand, critique, and confidently build upon your findings, fostering a culture of open and reproducible science.
+
+## What next ?
+The `semanticGIS` framework is a methodology for improving the rigor and transparency of geospatial research. For a comprehensive guide to its principles and implementation, please consult the [[Framwork/index|framework documentation]]. To see the framework applied to a real-world problem, we invite you to explore our case studies from different [[Application domaines/index|Application domains]].
+
+ [[Framwork/index|Explore the Framework]] │[[Application domaines/index|Application domains]].
+

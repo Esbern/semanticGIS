@@ -5,8 +5,8 @@ tags:
 ---
 ## 1  Project Phases and Structure of Your Design Rationale
 
-Within `semanticGIS`, the design rationale and hence also the GIS project is organised into four key phases that provide a clear way to document and justify your thinking and decision-making within the GIS project:
-
+Within `semanticGIS`, the [[GIS project]] and hence also the [[Design Rationale]] is organised into five key phases that provide a transparent and reproducible way to manage your thinking and decision-making within the GIS project.
+The five phases are named after the primary activity undertaken in each phase. and present ways of isolating the theas activities  
 
 ### 1.1 Project scoping
    This phase consists of two main activities: Problem Framing and specification of the project's Universe of Discourse. 

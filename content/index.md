@@ -12,7 +12,7 @@ GIS projects are often chaotic "black boxes," making them difficult to trust, re
 
 ### Our Approach: A Method, Not Just a Tool 
 
-At the heart of `semanticGIS` are two core principles that work together to ensure clarity and rigor in your work:
+At the heart of `semanticGIS` are two core principles that work together to ensure clarity and rigour in your work:
 
 - **The Five-Phase Process:** We believe every GIS project is a scientific endeavor. Our methodology guides you through five logical phases, ensuring that no critical step is overlooked. This process is the **"scientific method"** for your project.
     

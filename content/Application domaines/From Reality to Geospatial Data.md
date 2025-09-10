@@ -17,7 +17,7 @@ The two basic principles for the representation of geospatial data are :
 Talking about reality is always scary, for what is reality? Instead of trying to define "reality" that has so many everyday meanings, we will substitute the term "reality" with the term "[[world of observation]]", thereby enabling us to focus on defining the aspects relevant to the context of geospatial data.
 
 ## Defining the world of discourse
-While an individual [[GIS project]] does not define its own world of observation, which is a common abstract term, each project defines its own [[world of discourse]] that defines who and what we see in the [[world of observation]]. Defining the [[world of discourse]] or a [[GIS project]] is one of the most important elements in writing the [[Phases of the GIS project]] of the project since it defines which information in terms of data is to be the foundation of the project. 
+While an individual [[GIS project]] does not define its own world of observation, which is a common abstract term, each project defines its own [[world of discourse]] that defines who and what we see in the [[world of observation]]. Defining the [[world of discourse]] or a [[GIS project]] is one of the most important elements in writing the [[Design rational]] of the project since it defines which information in terms of data is to be the foundation of the project. 
 The world of discourse is sometimes also called the conceptual data model for the project and is typically defined in terms of an [[Ontology]]. If the Ontology is defined in enough detail, it can be directly translated into a [[Data structure]].
 
 ## Defining a data structure

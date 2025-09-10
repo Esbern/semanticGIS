@@ -1,5 +1,5 @@
 ---
-title: Phases of the GIS project
+title: Design rational
 draft: false
 tags:
 ---

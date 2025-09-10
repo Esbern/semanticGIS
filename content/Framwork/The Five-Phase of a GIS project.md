@@ -34,9 +34,9 @@ Before defining your specific research goals, you must identify and document the
 	- **What is it?** This includes constraints like a mandatory software ecosystem (e.g., "This organization works exclusively with ESRI products"), required database formats (e.g., "All data must be stored in the central PostgreSQL/PostGIS database"), or specific programming languages for scripts (e.g., "All automation must be done in Python 3.9").
 	- **Why does it matter?** These constraints dictate your tool choices from the very beginning. Knowing them prevents you from building a solution in QGIS and R when the client can only support ArcGIS Pro and its proprietary tools.
 	
-- **Project Management:** Document any formal project management requirements. This includes **deadlines** and **milestones**, but also any specific formats for external documentation or reporting. While you must meet these external demands, your **`semanticGIS` Design Rationale remains your non-negotiable internal tool** for ensuring analytical rigor.
+- **Project Management:** Document any formal project management requirements. This includes **deadlines** and **milestones**, but also any specific formats for external documentation or reporting. While you must meet these external demands, your **`semanticGIS` Design Rationale remains your non-negotiable internal tool** for ensuring analytical rigour.
     
-- **Legislation and Compliance:** You must identify any legal or regulatory constraints, such as privacy regulations (GDPR), data protection laws, or copyright on data that govern how you can acquire, store, and use information. In adition to the Legislation you should also consider  **Ethical Guidelines**. This goes beyond strict "Legislation and Compliance." Even if an analysis is legal, it may have significant ethical implications that you must consider.
+- **Legislation and Compliance:** You must identify any legal or regulatory constraints, such as privacy regulations (GDPR), data protection laws, or copyright on data that govern how you can acquire, store, and use information. In addition to the Legislation you should also consider  **Ethical Guidelines**. This goes beyond strict "Legislation and Compliance." Even if an analysis is legal, it may have significant ethical implications that you must consider.
 	- **What is it?** This involves assessing the potential social impact of your work. For example, will a crime hotspot analysis unintentionally stigmatise a neighbourhood and reinforce social biases? Does a site suitability analysis for a new waste facility fairly consider the impact on all communities?
 	- **Why does it matter?** As a researcher and consultant, you have a professional responsibility to "do no harm." Documenting your consideration of these ethical dimensions is a hallmark of a mature and responsible analytical process.
     
@@ -45,7 +45,7 @@ Before defining your specific research goals, you must identify and document the
 
 ---
 
-### ## Defining Your Intellectual Core: Your Analytical Goals
+### Defining Your Intellectual Core: Your Analytical Goals
 
 Now that you have established the practical boundaries of your project, you can define its specific intellectual core. This involves translating the brief into a focused, actionable, and achievable research plan that fits within the identified constraints.
 
@@ -59,7 +59,68 @@ Your task is to:
     
 
 The deliverable for this phase is a formal **project scope** that clearly outlines the external constraints and your specific analytical goals. This will be the first chapter in your Design Rationale.
+
+## 2. Data Modelling: Defining the Characters in Your Story
+
+Think of the **Project Scope** you just completed as the plot outline for a story. This Data Modelling phase is where you define the **characters** who will act in that story.
+
+The process is a stepwise refinement. You'll move from a vague idea of a character (e.g., "the main road") to a precise, detailed "character sheet" that leaves no room for ambiguity. This ensures every piece of data you use has a clear and well-defined role to play in your analysis.
+
+### Step 1: Sketching Your Characters (The Universe of Discourse)
+
+Your first task is to create a "cast list" for your story. This is your **Universe of Discourse (UoD)**—an initial list of all the key concepts, or "characters," in your story (e.g., 'building', 'forest', 'road').
+
+To give these concepts a concrete form, you must define each one using one of three fundamental **character archetypes**. These archetypes provide the basic **template** for how you will describe your data:
+- **The Object**: This is the archetype for discrete, countable "things." The template for an Object requires a well-defined boundary. Examples include 'building', 'lake', or 'parcel of land'.
+- **The Property**: This is the archetype for the measurable characteristics that describe your Objects or the space they inhabit. This archetype has two distinct templates:
+    - **As an Attribute**: A template for a single value attached to a specific Object. For example, `room_temperature` is an attribute of a 'room' object.
+    - **As a Field**: A template for a value that varies continuously across space. For example, the ambient `outdoor_temperature` across a landscape is a field.
+        
+This initial sketch—defining your characters using these core archetypes—is the foundation for the next crucial step: finding data that can bring them to life.
+
+### Step 2: The Critical Juncture - The Data Search
+
+With your preliminary ontology in hand, your first and most important action is to **search for existing datasets** that can represent your concepts. The results of this search will determine the entire course of your project, sending you down one of two distinct paths.
+#### Path A: Your Project is Based on Existing Data
+
+This is the most common path. You've used the informal "character list" from your UoD as a search filter to find promising datasets. Your task now is a deep, critical investigation of those potential datasets, remembering that "The devil, as always, is in the detail".
+
+##### 1. The Investigation: From UoD to DoD
+
+The core of this path is to scrutinise the details of the datasets you've found. We describe these formal, detailed specifications of a dataset in terms of a **Domain of Discourse (DoD)**. You can think of the DoD as the dataset's official "rulebook," which you'll typically find in its **metadata** or technical documentation.
+Your investigation involves comparing your informal concepts (your UoD) with the precise rules of a dataset's DoD.
+
+**Let's look at the GeoDanmark example:** 
+
+- Your **UoD** has the concept of a `'road'` for a traffic analysis.
+- You find the `vejmidter` layer in the GeoDanmark dataset.
+- Your investigation of the dataset's **DoD** (its technical specification) reveals their definition of "road" includes not only existing roads but also _planned_ and _demolished_ roads.    
+
+This investigation reveals a critical mismatch. The dataset, in its raw form, is not fit for your specific purpose.
+
+---
+
+## 2. The Decision: Defining Your Project's DoD
+
+Based on the findings of your investigation, you must now make a strategic decision. This decision will, in turn, formally define your project's DoD for that character.
+
+You have three choices:
+
+- **Accept:** You determine the dataset's DoD is fit for your purpose. By choosing this, the dataset's DoD **becomes** your project's official DoD.
     
+- **Transform:** You find the data valuable but flawed for your needs. You decide to modify it (e.g., filter out "planned" roads). Your project's DoD is then defined by the **transformation rules** you create.
+    
+- **Reject:** You conclude that the dataset's DoD is fundamentally incompatible with your project's needs, and no reasonable transformation is possible. You must then either search for other data or move to **Path B: Creating New Data**.
+
+---
+
+---
+
+### 3. Data Sourcing and Preparation
+
+In the Data Modelling phase, you finalized your DoD and chose your data strategy. Now, in the Data Sourcing phase, **you will execute that strategy** to build your clean and documented project database.
+
+_(The rest of your excellent, detailed text for this phase can follow here, as it's already perfectly structured around the "Accept," "Transform," and "Record" strategies.)_
 ### 1.2 Data Modelling:
 
    The project's **Universe of Discourse (UoD)** is the conceptual boundary of your analysis. It's the complete, informally defined list of **concepts** that are relevant to your scientific question. These concepts are the names we give to the raw **phenomena** we observe.

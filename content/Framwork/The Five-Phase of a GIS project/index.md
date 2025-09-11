@@ -11,9 +11,9 @@ The methodology of `SemanticGIS` is built around three interconnected concepts:
 3. Structuring the analytical process through the use of  a domains specific language.
 This article focuses on the five phases of the [[GIS project]], these five phases are named after the primary intellectual task undertaken in each phase and function as a way to isolate the tasks, allowing for a focused and well-documented intellectual process.
 The five phases are:
-- [[1 Project Scoping]]
-- [[2 Data Modelling]]
-- 
+- [[Project Scoping]]
+- [[Data Modelling]]
+- [[Establishing the Data foundation|Establishing the Data foundation]]
 
 	   
 

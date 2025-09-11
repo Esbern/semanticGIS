@@ -3,7 +3,7 @@ title: Recording reality
 draft: false
 tags:
 ---
-
+****
 
 ### The Four Fundamental Methods of Registration
 

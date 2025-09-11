@@ -4,14 +4,14 @@ draft: false
 tags:
 aliases:
   - Establishing the Data foundation
+order: "3"
 ---
-# Establishing the Data foundation
 Until now we have been focused on intellectual process of ensure a sound conceptual foundation for our project, we now come to a more practical phases of the GIS project where we in addition to intellectual processes also need to grab some tools and shovel some bytes and thus establish the data foundation of our project.
+
+---
 We now need to introduce the concept of a project document. This is not the  Design rational it is a software specific document, In both QGIS and ArcGIS Pro this is called the a project file. In Python it is typically a declaration block in the code. In the project document we establish a named connection between the processing environment (the GIS software) and the data structures that hold the date we intend to use in the project. 
 
-
-n this phase, you will **source** the necessary datasets and **prepare** them to create the solid, reliable foundation for your analysis. This involves executing the data strategy you chose in the previous phase (Accept, Transform, or Record) and setting up your formal GIS project file (e.g., a `.qgz` or `.aprx` file) that organizes all your layers, connections, and styles.
-
+## Data Acquiring
 now we need to establish the physical database and populate it with the data we need for the project.
 
    Having defined your **Domain of Discourse (DoD)** and chosen your data strategy in the previous step, you must now execute that strategy to assemble a complete, clean, and project-ready database. This phase is the practical work of preparing the specific inputs for your analysis. 
@@ -38,4 +38,7 @@ now we need to establish the physical database and populate it with the data we 
 		   3. **Quality Assurance**: Implement a quality control process to check for errors, inconsistencies, and missing values as the data is being created.
 		The outcome is an entirely new, bespoke dataset, created from scratch to match your DoD.
 	Regardless of the path taken, this phase concludes when you have a **final, documented project database**. This clean dataset is the official input for the next step, the **Analytical Approach**.
-	 
+
+## Data Transforming
+## Data Schema Creation
+## Data Recording

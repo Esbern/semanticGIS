@@ -9,7 +9,7 @@ order: "3"
 Until now we have been focused on intellectual process of ensure a sound conceptual foundation for our project, we now come to a more practical phases of the GIS project where we in addition to intellectual processes also need to grab some tools and shovel some bytes and thus establish the data foundation of our project.
 
 ---
-We now need to introduce the concept of a project document. This is not the  Design rational it is a software specific document, In both QGIS and ArcGIS Pro this is called the a project file. In Python it is typically a declaration block in the code. In the project document we establish a named connection between the processing environment (the GIS software) and the data structures that hold the date we intend to use in the project. 
+We now need to introduce the concept of a project document. This is not the Design rational it is a software specific document, In both QGIS and ArcGIS Pro this is called the a project file. In Python it is typically a declaration block in the code. In the project document we establish a named connection between the processing environment (the GIS software) and the data structures that hold the date we intend to use in the project. 
 
 ## Data Acquiring
 now we need to establish the physical database and populate it with the data we need for the project.
@@ -41,4 +41,5 @@ now we need to establish the physical database and populate it with the data we 
 
 ## Data Transforming
 ## Data Schema Creation
-## Data Recording
+## Feature Extraction
+Feature Extraction covers the proces of generating new data through either interpreting unclassified images data or through performing [[Field Surveys]]  using on of the four methods outlined in the article on [[Field Surveys|Field Surveys]]

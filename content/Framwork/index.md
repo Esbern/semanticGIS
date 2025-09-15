@@ -18,7 +18,7 @@ The `semanticGIS` framework provides a structured methodology for conducting tra
 
 Every project is structured into five distinct phases, moving logically from the initial question to the final dissemination. This process provides a clear roadmap for your work, ensuring all critical steps are addressed systematically.
 
-➡️ **Learn about the Five-Phase Process**
+➡️ **[[Framwork/The Five-Phase of a GIS project/index|Learn about the Five-Phase Process]]**
 
 ---
 

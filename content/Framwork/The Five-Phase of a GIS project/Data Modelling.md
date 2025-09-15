@@ -53,7 +53,7 @@ Based on your evaluation, you make a strategic decision. This decision formally 
 
 The purpose of a field pilot is to convert your conceptual UoD into a robust, operational DoD by testing your definitions against real-world complexity. You will discover ambiguities and "edge cases" that force you to refine your rules.
 
-The crucial difference between a pilot and the final data recording lies in the **goal**. The pilot is an **exploratory test** of your ontology, often using flexible tools like paper maps and notebooks. The final [[Recording reality]] is a **systematic execution** of your finalized DoD using structured tools to produce clean, consistent data.
+The crucial difference between a pilot and the final data recording lies in the **goal**. The pilot is an **exploratory test** of your ontology, often using flexible tools like paper maps and notebooks. The final [[Field Surveys]] is a **systematic execution** of your finalized DoD using structured tools to produce clean, consistent data.
 
 After the pilot, you will have a finalized DoD, ready to be implemented in the next phase via [[Establishing the Data foundation#Data Schema Creation|data schema creation]] and [[Establishing the Data foundation#Data Recording|data recording]].
 

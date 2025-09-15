@@ -1,11 +1,13 @@
 ---
-title: Recording reality
+title: Field Surveys
 draft: false
 tags:
+aliases:
+  - Field Surveys
 ---
 ****
 
-### The Four Fundamental Methods of Registration
+### The Four Fundamental Methods of field based Feature Extraction
 
 Whether you are conducting an exploratory pilot study or the final, structured survey, you will use one of four fundamental methods to capture data about the world. These methods are universal. What changes between the pilot and the final registration is your **goal**, your **tools**, and your **level of precision**.
 

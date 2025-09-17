@@ -3,7 +3,7 @@ title:
 draft: false
 tags:
 ---
-**GeoPandas** is an open-source Python library that extends the powerful data manipulation capabilities of **[[Pandas]]** to the geospatial domain. By integrating geometric operations and [[Geospatial data]] handling into the familiar Pandas framework, GeoPandas makes it easier to work with spatial data in Python. It allows for the manipulation and analysis of geospatial data in a way that is both flexible and efficient, making it a key tool for GIS projects that adopt a programming-first approach.
+**GeoPandas** is an open-source Python library that extends the powerful data manipulation capabilities of **[[Pandas]]** to the geospatial domain. By integrating geometric operations and [[Concepts/Framework/Geospatial data]] handling into the familiar Pandas framework, GeoPandas makes it easier to work with spatial data in Python. It allows for the manipulation and analysis of geospatial data in a way that is both flexible and efficient, making it a key tool for GIS projects that adopt a programming-first approach.
 
 ### **GeoPandas Overview**
 

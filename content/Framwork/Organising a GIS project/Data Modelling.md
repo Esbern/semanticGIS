@@ -6,9 +6,9 @@ aliases:
   - Data Modelling
 order: "2"
 ---
-Think of the **Project Scope** you just completed as the plot outline for a story. This **Data Modelling** phase is where you write the detailed **"character sheets"** for the key players in that story.
+Think of the **Project Outline** you just created in the **Project Scope** phase as the plot outline for a story. This **Data Modelling** phase is where you write the detailed **"character sheets"** for the key players in that story.
 
-The process is a step-wise refinement. You'll move from a vague idea of a character (e.g., "the main road") to a precise, unambiguous definition. This ensures every piece of data you use has a clear and well-defined role in your analysis.
+The process is a step-wise refinement. You'll move from a vague idea of a character (e.g.,  "building", "main road", and "forest") to a precise, unambiguous definition. This ensures every piece of data you use has a clear and well-defined role in your analysis.
 
 ---
 ## Step 1: Sketching Your Characters (The Universe of Discourse)

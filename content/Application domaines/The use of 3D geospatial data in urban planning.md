@@ -6,7 +6,7 @@ tags:
  
 Before evaluating the potential and pitfalls of using 3D geospatial data in urban planning, it is necessary to understand a series of topics.
 ## What is 3D geospatial data
-While this might seem rather obvious, there are some important details to consider. In GIS terminology we often work with the terms 2D, 2.5D and 3D [[Geospatial data]]
+While this might seem rather obvious, there are some important details to consider. In GIS terminology we often work with the terms 2D, 2.5D and 3D [[Concepts/Framework/Geospatial data]]
 ## The fundamentals of 3D geospatial data
 
 

@@ -45,18 +45,15 @@ This section documents the non-negotiable constraints and resources. It defines 
     - **Collaborators**: Other teams or experts we depend on.
         
 - **Resources & [[Geospatial Technology Stack/index|Geospatial Technology Stack]]**: What tools and assets do we have?
-    
     - **Time & Budget**: The ultimate constraints.
     - **Data Access**: What data can we use? Is it readily available or does it need to be acquired?
     - **Mandated Technology**: The required software (e.g., ArcGIS Pro vs. QGIS), databases (PostgreSQL/PostGIS), and programming languages (Python version, specific libraries). This dictates our implementation choices from the start.
         
 - **Governance**: What rules must we follow?
-    
     - **Legislation & Compliance**: GDPR, data privacy, copyright, and licensing. This is a hard boundary.
     - **Ethical Considerations**: Beyond the law, we must document potential societal impacts. Will our analysis reinforce bias? Could it be misinterpreted in a harmful way? Acknowledging this is a sign of professional integrity.
         
 - **Project Management & Communication**: How will we work and report?
-    
     - **Deadlines & Milestones**: The required schedule for delivery.
     - **Documentation Standards**: Any specific formats for reports.
     - **Design & Branding**: Required visual guidelines (fonts, colors, logos) for any outputs.

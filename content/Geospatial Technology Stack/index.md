@@ -9,7 +9,7 @@ aliases:
 There are many software options for working with geospatial data, and which to choose depends on your purpose, skills and access to (license, institutional setup and money). 
 
 ### General purpose GIS.
-For most beginners, I recommend a general-purpose solution, whether as a native app on your computer or as a web app. For historical reasons, general-purpose solutions for working with geospatial data are called Geographic Information Systems ([[GIS]]). 
+For most beginners, I recommend a general-purpose solution, whether as a native app on your computer or as a web app. For historical reasons, general-purpose solutions for working with geospatial data are called Geographic Information Systems ([[Concepts/Framework/GIS]]). 
 
 Typical applications:
 - [[Geospatial Technology Stack/Interactive Applications/Desktop GIS/QGIS/index|QGIS]]]

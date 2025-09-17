@@ -4,7 +4,7 @@ draft: false
 tags:
 ---
  
-**Landscape Ecology** is a multidisciplinary field that focuses on understanding the spatial patterns and ecological processes across different scales in the landscape. It plays a crucial role in shaping sustainable [[Land use planning]]practices and is increasingly integrated with Geographic Information Systems ([[GIS]]) to enhance decision-making and land management.
+**Landscape Ecology** is a multidisciplinary field that focuses on understanding the spatial patterns and ecological processes across different scales in the landscape. It plays a crucial role in shaping sustainable [[Land use planning]]practices and is increasingly integrated with Geographic Information Systems ([[Concepts/Framework/GIS]]) to enhance decision-making and land management.
 
 #### 1. **Core Concepts of Landscape Ecology**
 Landscape ecology examines how the spatial arrangement of ecosystems and human activities influence ecological processes. It is based on several key concepts:

@@ -1,6 +1,6 @@
 ---
 title: Geographic Information System (GIS)(GIS)
-draft: true
+draft: false
 tags:
 aliases:
   - GIS

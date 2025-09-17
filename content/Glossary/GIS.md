@@ -1,5 +1,5 @@
 ---
-title: Geographic Information System (GIS)(GIS)
+title: Geographic Information System (GIS)
 draft: false
 tags:
 aliases:

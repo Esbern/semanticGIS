@@ -6,7 +6,7 @@ aliases:
   - Establishing the Data foundation
 order: "3"
 ---
-Until now we have been focused on intellectual process of ensure a sound conceptual foundation for our project, we now come to a more practical phases of the GIS project where we in addition to intellectual processes also need to grab some tools and shovel some bytes and thus establish the data foundation of our project.
+Until this point the GIS project has been focused on the intellectual process of ensure a sound conceptual foundation for our project, we now come to a more practical phases of the GIS project where we in addition to intellectual processes also need to grab some tools and shovel some bytes and thus establish the data foundation of our project.
 
 ---
 We now need to introduce the concept of a project document. This is not the Design rational it is a software specific document, In both QGIS and ArcGIS Pro this is called the a project file. In Python it is typically a declaration block in the code. In the project document we establish a named connection between the processing environment (the GIS software) and the data structures that hold the date we intend to use in the project. 

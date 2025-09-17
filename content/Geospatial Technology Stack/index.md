@@ -2,7 +2,8 @@
 title: Choosing the right Software for the job
 draft: false
 tags:
-  - moc
+aliases:
+  - Choosing the right Software for the job
 ---
  
 There are many software options for working with geospatial data, and which to choose depends on your purpose, skills and access to (license, institutional setup and money). 
@@ -11,7 +12,7 @@ There are many software options for working with geospatial data, and which to c
 For most beginners, I recommend a general-purpose solution, whether as a native app on your computer or as a web app. For historical reasons, general-purpose solutions for working with geospatial data are called Geographic Information Systems ([[GIS]]). 
 
 Typical applications:
-- [[Tools/Desktop GIS/QGIS/index|QGIS]]]
+- [[Geospatial Technology Stack/Interactive Applications/Desktop GIS/QGIS/index|QGIS]]]
 - [[ArcGIS pro]]
 
 ### Field Data Collection

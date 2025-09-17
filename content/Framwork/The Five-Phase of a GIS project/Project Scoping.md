@@ -6,7 +6,7 @@ aliases:
   - Project Scoping
 order: "1"
 ---
-The first phase of any project is to define its **purpose, boundaries, and real-world context**. All projects exist within an organisational framework of rules, resources, and requirements. The first and most critical step is to understand this framework, as it defines the practical limits and directs the intellectual focus of your work.
+The first phase of any GISproject is to define its **purpose, boundaries, and real-world context**. All projects exist within an organisational framework of rules, resources, and requirements. The first and most critical step is to understand this framework, as it defines the practical limits and directs the intellectual focus of your work.
 
 ---
 ### The Organisational Framework: Understanding Your Constraints

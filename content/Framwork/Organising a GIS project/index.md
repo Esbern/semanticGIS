@@ -1,9 +1,10 @@
 ---
-title: The Five-Phase of a GIS project
+title: Organising a GIS project
 draft: false
 tags:
 aliases:
   - The Five-Phase of a GIS project
+  - Organising a GIS project
 ---
 The methodology of `SemanticGIS` is built around three interconnected concepts:
 1. A structuring of a [[GIS project]] into five well-defined phases

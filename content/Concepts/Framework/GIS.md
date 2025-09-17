@@ -6,7 +6,7 @@ tags:
 There are surprisingly many definitions of the term Geographic Information System (GIS). There are even those that take the acronym GIS to mean Geographic Information Science. 
 
 I prefer to **define GIS** as:
-![[Concepts/Glossary/GIS#^gis-definition|GIS]]
+![[Glossary/GIS#^gis-definition|GIS]]
 
 
 

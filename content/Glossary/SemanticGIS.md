@@ -1,0 +1,10 @@
+---
+title: SemanticGIS
+draft: false
+tags:
+---
+ SemanticGIS is the title given to this project, the purpose of which is to support learning and using [[Glossary/GIS|GIS]] by creating a clear semantic framework.
+ 
+The semanticGIS framework provides a structured methodology for conducting transparent and repeatable geospatial analysis. It is built on three core components: a five-phase project structure, a comprehensive documentation protocol centred on the concept of the [[Design rationale]], and a formal language for defining analysis.^018a8f
+
+For an in-depth description of the SemanticGIS framework, see [[Framework/index|the framework definition]]

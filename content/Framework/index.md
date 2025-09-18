@@ -5,12 +5,9 @@ tags:
 aliases:
   - about SemanticGIS
 ---
-# Welcome to the SemanticGIS Framework
 
 
-# The `semanticGIS` Framework
-
-![[SemanticGIS#^018a8f]]
+![[SemanticGIS#^def]]
 
 ---
 

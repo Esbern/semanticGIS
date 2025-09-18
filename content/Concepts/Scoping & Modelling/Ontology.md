@@ -40,6 +40,6 @@ The ontology also plays a crucial role in deciding whether existing data can be 
 
 ### **Conclusion**
 
-Understanding and developing a clear ontology is fundamental to the success of a [[GIS project]]. It not only defines the structure of the data you will use but also shapes the entire analytical framework of your project. By starting with simple entity types and properties, aligning with existing standards, and incorporating crucial elements like temporality, you can ensure that your GIS project has a solid conceptual foundation. This foundation supports effective data analysis and decision-making, ensuring that the world of discourse accurately reflects the needs and goals of the project. The ontology should always play a central role in the [[Concepts/Framework/Design rational]] of the [[GIS project]].
+Understanding and developing a clear ontology is fundamental to the success of a [[GIS project]]. It not only defines the structure of the data you will use but also shapes the entire analytical framework of your project. By starting with simple entity types and properties, aligning with existing standards, and incorporating crucial elements like temporality, you can ensure that your GIS project has a solid conceptual foundation. This foundation supports effective data analysis and decision-making, ensuring that the world of discourse accurately reflects the needs and goals of the project. The ontology should always play a central role in the [[Design rational]] of the [[GIS project]].
 
 

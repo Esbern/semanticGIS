@@ -3,11 +3,10 @@ title: GIS
 draft: false
 tags:
 ---
-There are surprisingly many definitions of the term Geographic Information System (GIS). There are even those that take the acronym GIS to mean Geographic Information Science. 
+There are surprisingly many definitions of the term Geographic Information System (GIS). There are even those who take the acronym GIS to mean Geographic Information Science. 
 
 I prefer to **define GIS** as:
 ![[Glossary/GIS#^gis-definition|GIS]]
-
 
 
 Often, the tools are organised into a coherent desktop processing environment, such as [[Geospatial Technology Stack/Interactive Applications/Desktop GIS/QGIS/index|QGIS]] or [[ArcGIS pro]]. But a GIS can also consist of a programming environment such as [[JupyterLab]], typically in the programming language [[Python]], using a series of common [[Geospatial Libraries]]

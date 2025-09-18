@@ -27,7 +27,7 @@ The SemanticGIS approach to generating New data
 4. **Creating a data schema**: Specifying how data is to be stored in a computer system
 5. **Final Registration**: A new registration using a more structures tools i.e. apps preprinted forms etc.
  
-In SemanticGIS **Design** the Preliminary Ontology is  as part of the Project scoping and Data Modelling phases og the project and documented in  ( step 1 and 2) of [[Concepts/Framework/Design rational]]. The following steps all belong to the Data Sourcing and Preparation phase of the of the project..
+In SemanticGIS **Design** the Preliminary Ontology is  as part of the Project scoping and Data Modelling phases og the project and documented in  ( step 1 and 2) of [[Design rational]]. The following steps all belong to the Data Sourcing and Preparation phase of the of the project..
 In both the **Pilot** and the **Final Registration**, the same four fundamental methods of data capture are used. The crucial difference lies in the **goal** of the work, the **tools** you employ, and the **level of rigor** you apply. The pilot is an exploratory test of your ontology using flexible tools, while the final registration is a systematic execution of your finalized rules using structured tools to produce clean, consistent data.
 
 New top text:

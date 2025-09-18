@@ -4,7 +4,7 @@ draft: false
 tags:
 ---
  
-In the context of geospatial work, the term “[[Concepts/Framework/GIS]]” is often associated primarily with the software tools used for mapping and spatial analysis. However, when I refer to a “GIS project,” I mean something far more comprehensive. A GIS project is not just about the software; it is a structured endeavour that encompasses a variety of components, all working together within an organisational framework to achieve a specific goal.
+In the context of geospatial work, the term “[[Concepts/SemanticGIS/GIS]]” is often associated primarily with the software tools used for mapping and spatial analysis. However, when I refer to a “GIS project,” I mean something far more comprehensive. A GIS project is not just about the software; it is a structured endeavour that encompasses a variety of components, all working together within an organisational framework to achieve a specific goal.
 
 A **GIS project** includes the following key elements:
 
@@ -23,4 +23,4 @@ A **GIS project** includes the following key elements:
 
 **The purpose of a GIS project** is to address a specific problem or goal, whether it be urban planning, environmental management, resource allocation, or any other spatially related issue. Each project is tailored to the unique needs and context of the organisation undertaking it. The organisational framework ensures that all components of the project, including the technical tools, align with the broader goals, resources, and constraints of the organisation.
 
-When working on any GIS project, one of the key tasks is writing and maintaining a clear **[[Concepts/Framework/Design rational]]**, especially if you need to present the project to others or hope to receive feedback from peers.
+When working on any GIS project, one of the key tasks is writing and maintaining a clear **[[Design rational]]**, especially if you need to present the project to others or hope to receive feedback from peers.

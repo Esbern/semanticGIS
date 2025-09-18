@@ -6,7 +6,7 @@ tags:
 
 # SQL: Structured Query Language
 
-**SQL (Structured Query Language)** is the standard language used to interact with relational databases. It allows users to retrieve, manipulate, and manage data through various commands and clauses. SQL operates on the foundation of **first-order predicate logic**, making it a powerful tool for querying data stored in relational tables. SQL is not a general-purpose programming language like Python. Strictly speaking, SQL is a **declarative, domain-specific language** designed to handle **data retrieval and manipulation** in relational databases rather than a full-fledged programming language. In this way, SQL is the de facto standard for querying and manipulating data in a [[Relational Database (Concept)|Relational Database]] and for filtering data in [[Concepts/Framework/GIS]] like [[QGIS]].
+**SQL (Structured Query Language)** is the standard language used to interact with relational databases. It allows users to retrieve, manipulate, and manage data through various commands and clauses. SQL operates on the foundation of **first-order predicate logic**, making it a powerful tool for querying data stored in relational tables. SQL is not a general-purpose programming language like Python. Strictly speaking, SQL is a **declarative, domain-specific language** designed to handle **data retrieval and manipulation** in relational databases rather than a full-fledged programming language. In this way, SQL is the de facto standard for querying and manipulating data in a [[Relational Database (Concept)|Relational Database]] and for filtering data in [[Concepts/SemanticGIS/GIS]] like [[QGIS]].
 
 ## Example Tables
 

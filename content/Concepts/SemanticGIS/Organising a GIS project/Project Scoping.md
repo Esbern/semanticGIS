@@ -19,8 +19,8 @@ This is the "why" of the project. We start by deconstructing the client's brief 
     
     - **Exploratory Workflow**: The brief poses an open-ended question where the outcome is unknown (e.g., "Investigate the relationship between green space and property values"). The goal is **discovery**. The process is iterative, and the primary deliverable might be a report, a set of statistical summaries, and visualizations that reveal patterns.
         
-    - **Prescriptive Workflow**: The brief requires a definitive, actionable output (e.g., "Produce a map of all land parcels suitable for urban agriculture"). The goal is **prescription** or creation. This workflow is often, as you rightly say, "reverse engineered" from the required deliverable.
-        
+    - **Prescriptive Workflow**: The brief requires a definitive, actionable output (e.g., "Produce a map of all land parcels suitable for urban agriculture"). The goal is **prescription** or creation. This workflow is often, characterised by, "reverse engineered" the outputs from the required deliverable. ^Prescriptive-Workflow
+    
 - **Clarify the Spectrum**: It's crucial to state that most projects exist on a **spectrum** between these two poles. A prescriptive project might require an exploratory phase to determine the suitability criteria first. We must document which parts of the project fall where.
     
 - **State the Key Deliverables**: The Core Question must be tied to concrete outputs. This is non-negotiable. What will be handed over?

@@ -18,7 +18,7 @@ In alignment with the concept developed by W.R. Kunz and Horst Rittel, the desig
 By maintaining a clear and detailed design rationale, GIS professionals can enhance the transparency, consistency, and effectiveness of their projects, ensuring that the reasoning behind every decision is well-documented and understood.
 
 
-##  Example Design Rationale: Identifying Entertainment Zones in Copenhagen
+## Example Design Rationale: Identifying Entertainment Zones in Copenhagen
 
 Below is a sample design rationale for a fictive project where the client (in this case, your teacher) has asked for a data-driven identification and visualisation of Copenhagen's party/entertainment zones. This example follows the four phases outlined above.
 

@@ -1,9 +1,8 @@
 ---
-title: Choosing the right Software for the job
+title: Geospatial Technology Stack
 draft: false
 tags:
 aliases:
-  - Choosing the right Software for the job
 ---
  
 There are many software options for working with geospatial data, and which to choose depends on your purpose, skills and access to (license, institutional setup and money). 

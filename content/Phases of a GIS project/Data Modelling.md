@@ -23,7 +23,7 @@ To give these concepts a concrete form, you must define each one using one of th
     - **As an Attribute**: A single value attached to a specific object. For example, `material = 'wood'` is an attribute of a specific bench.
     - **As a Field**: A value that varies continuously across space. For example, the ambient `outdoor_temperature` across a landscape.
         
-With your preliminary UoD in hand, your primary action is to **search for existing datasets** that can represent your concepts. You'll use the terms from your UoD as keywords to search relevant metadata servers (see [[GIS-garden/Tasks/Searching for data/index|Searching for data]]). This search leads to two possible outcomes:
+With your preliminary UoD in hand, your primary action is to **search for existing datasets** that can represent your concepts. You'll use the terms from your UoD as keywords to search relevant metadata servers (see [[Geospatial Practice/Acquiring & Creating Data/Searching for data/index|Searching for data]]). This search leads to two possible outcomes:
 
 1. **No suitable data is found**: This is rare but possible. Before deciding to record your own data, you should first reconsider your concepts and broaden your search. If you still find nothing, you must prepare for fieldwork by proceeding to [[Data Modelling#Step 2b Preforming a field pilot|Step 2b: Performing a Field Pilot]].
     

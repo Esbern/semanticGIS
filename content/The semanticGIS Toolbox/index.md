@@ -5,7 +5,7 @@ tags:
 aliases:
   - The semanticGIS Toolbox
 ---
- In this folder you a software agnostic description of the key methods used in a [[GIS-garden/Concepts/SemanticGIS/GIS project|GIS project]]. The methods link to there implementations in [[QGIS]], [[ArcGIS pro]] and .
+ In this folder you a software agnostic description of the key methods used in a [[Frameworks & Context/GIS project|GIS project]]. The methods link to there implementations in [[QGIS]], [[ArcGIS pro]] and .
 
   At the same time this section also holds the the documentation and structure of the SemanticGIS pipline language
 

@@ -7,8 +7,8 @@ aliases:
   - Organising a GIS project
 ---
 The methodology of `SemanticGIS` is built around three interconnected concepts:
-1. A structuring of a [[GIS-garden/Concepts/SemanticGIS/GIS project]] into five well-defined phases
-2. Documenting the [[GIS-garden/Concepts/SemanticGIS/GIS project]] through the use of a [[Design Rationale]]
+1. A structuring of a [[Frameworks & Context/GIS project]] into five well-defined phases
+2. Documenting the [[Frameworks & Context/GIS project]] through the use of a [[Design Rationale]]
 3. Structuring the analytical process through the use of  a domains specific language.
 This article focuses on the five phases of the [[Glossary/GIS Project|GIS Project]], these five phases are named after the primary intellectual task undertaken in each phase and function as a way to isolate the tasks, allowing for a focused and well-documented intellectual process.
 

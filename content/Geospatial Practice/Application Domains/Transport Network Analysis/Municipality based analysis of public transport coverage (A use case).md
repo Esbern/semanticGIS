@@ -9,7 +9,7 @@ This use case is set up to demonstrate how to use [[OpenTripPlanner]] to analyse
 The steps covered are:
 - Downloading all [[Addresses]] for a Danish municipality
 - Downloading [[OpenStreetMap]] data for Denmark
-- Clipping the [[OpenStreetMap]] data using [[osmium-tool]] to the [[Bounding Box]] of the municipality.
+- Clipping the [[OpenStreetMap]] data using [[osmium-tool]] to the [[Defining the study area]] of the municipality.
 - Downloading the [[GTFS]] data for Denmark
 - Downloading the [[NeTEx]] data for Denmark
 - Starting [[OpenTripPlanner]]
@@ -21,7 +21,7 @@ The steps covered are:
 Tools used
 - [[Docker]]
 - [[JupyterLab]]
-- [[Python]]
+- [[Geospatial Technology Stack/Programming Languages & Libraries/Languages/Python/index]]
 - [[Pandas]]
 - [[osmium-tool]]
 

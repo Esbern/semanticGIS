@@ -69,6 +69,6 @@ Relational databases come in two main types based on how they are deployed and a
 
    Serverless databases are often used in scenarios where simplicity and portability are more important than scalability. They are easy to deploy and ideal for local data storage.
 
-##  [[SQL]]
-The structure of relational databases is managed and queried through **Structured Query Language (SQL)**. [[SQL]] is the standard language for interacting with relational databases, allowing users to insert, query, update, and manage data. While this note focuses on the core concepts of relational databases, a more detailed exploration of SQL, especially in the context of geospatial processing, will be provided in a separate note. That note will also discuss how standard SQL can be extended with spatial operators for handling geographic data.
+##  [[Geospatial Technology Stack/Programming Languages & Libraries/Languages/SQL/index]]
+The structure of relational databases is managed and queried through **Structured Query Language (SQL)**. [[Geospatial Technology Stack/Programming Languages & Libraries/Languages/SQL/index]] is the standard language for interacting with relational databases, allowing users to insert, query, update, and manage data. While this note focuses on the core concepts of relational databases, a more detailed exploration of SQL, especially in the context of geospatial processing, will be provided in a separate note. That note will also discuss how standard SQL can be extended with spatial operators for handling geographic data.
 

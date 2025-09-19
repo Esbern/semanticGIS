@@ -44,7 +44,7 @@ This section documents the non-negotiable constraints and resources. It defines 
     - **Gatekeepers**: IT departments, data owners, legal teams. We need their buy-in.
     - **Collaborators**: Other teams or experts we depend on.
         
-- **Resources & [[GIS-garden/Geospatial Technology Stack/index|Geospatial Technology Stack]]**: What tools and assets do we have?
+- **Resources & [[Geospatial Technology Stack/Platforms & Applications/index|Geospatial Technology Stack]]**: What tools and assets do we have?
     - **Time & Budget**: The ultimate constraints.
     - **Data Access**: What data can we use? Is it readily available or does it need to be acquired?
     - **Mandated Technology**: The required software (e.g., ArcGIS Pro vs. QGIS), databases (PostgreSQL/PostGIS), and programming languages (Python version, specific libraries). This dictates our implementation choices from the start.

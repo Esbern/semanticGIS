@@ -23,4 +23,4 @@ A **GIS project** includes the following key elements:
 
 **The purpose of a GIS project** is to address a specific problem or goal, whether it be urban planning, environmental management, resource allocation, or any other spatially related issue. Each project is tailored to the unique needs and context of the organisation undertaking it. The organisational framework ensures that all components of the project, including the technical tools, align with the broader goals, resources, and constraints of the organisation.
 
-When working on any GIS project, one of the key tasks is writing and maintaining a clear **[[Design rational]]**, especially if you need to present the project to others or hope to receive feedback from peers.
+When working on any GIS project, one of the key tasks is writing and maintaining a clear **[[Geospatial Practice/Project Stewardship/Design rationale]]**, especially if you need to present the project to others or hope to receive feedback from peers.

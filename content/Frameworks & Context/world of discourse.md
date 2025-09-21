@@ -9,7 +9,7 @@ In essence, the world of discourse defines how we “see” the phenomena in the
   
 The key tool for defining the world of discourse is the [[Ontology]]—a structured framework that categorizes and relates the entities and phenomena within the project. The ontology plays a crucial role in shaping the world of discourse by determining which data and relationships are crucial for achieving the project’s objectives. It is the ontology that enables the transformation of raw observational data into meaningful, project-specific information, a process that is both enlightening and essential for the success of a GIS project.
 
-The world of discourse is also central to the **[[Design rational]]** of a GIS project. It guides the decision-making process, helping to determine whether existing datasets can be used or if new data collection efforts are necessary. By clearly defining the world of discourse, project stakeholders can ensure that the project's data foundation aligns with its goals, leading to more effective and focused analysis.
+The world of discourse is also central to the **[[Geospatial Practice/Project Stewardship/Design rationale]]** of a GIS project. It guides the decision-making process, helping to determine whether existing datasets can be used or if new data collection efforts are necessary. By clearly defining the world of discourse, project stakeholders can ensure that the project's data foundation aligns with its goals, leading to more effective and focused analysis.
 
 
 In summary, the world of discourse is not only about what we observe but about how we interpret and organize that observation to serve the specific needs of a GIS project. 

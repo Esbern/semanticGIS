@@ -21,7 +21,7 @@ Every project is structured into five distinct phases, moving logically from the
 
 ## 2. The Design Rationale 📓
 
-The **[[Design rationale]]** is the "lab notebook" for your project. It is a structured document where you record every decision, assumption, and process from start to finish. This practice ensures your work is transparent, auditable, and easily understood by others.
+The **[[Glossary/Design rationale]]** is the "lab notebook" for your project. It is a structured document where you record every decision, assumption, and process from start to finish. This practice ensures your work is transparent, auditable, and easily understood by others.
 
 ➡️ **Read the guide on the Design Rationale**
 

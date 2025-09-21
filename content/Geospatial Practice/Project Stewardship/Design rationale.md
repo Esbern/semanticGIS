@@ -1,11 +1,11 @@
 ---
-title: Design rational
+title: Design rationale
 draft: false
 tags:
 ---
 #### Note on Terminology
 
-![[Design rationale#^def]]
+![[Glossary/Design rationale#^def]]
 
 Like a research design, your rationale will help you plan your work step by step—defining your problem, identifying key concepts, selecting data, and choosing appropriate analytical methods. At the same time, like a traditional design rationale, you’ll be asked to reflect on your decisions, explain why you made them, and consider possible alternatives. This will strengthen your ability to communicate your work clearly to clients, collaborators, or your future self.
 

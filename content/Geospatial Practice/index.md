@@ -3,8 +3,7 @@ title: Geospatial Practice
 draft: false
 tags:
 aliases:
-  - The Five-Phase of a GIS project
-  - Organising a GIS project
+  - Geospatial Practice
 ---
 The methodology of `SemanticGIS` is built around three interconnected concepts:
 1. A structuring of a [[Frameworks & Context/GIS project]] into five well-defined phases

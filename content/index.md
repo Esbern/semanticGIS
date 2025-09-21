@@ -6,11 +6,11 @@ aliases:
 ---
 # Semantic GIS: Think First, Click Later.
 
-GIS projects are often chaotic "black boxes," making them difficult to trust, reproduce, or build upon. `semanticGIS` provides a clear framework that transforms your geospatial work into a structured and transparent scientific process, from the first question to the final map.
+GIS projects are often chaotic "black boxes," making them difficult to trust, reproduce, or build upon.  At the heart of semanticGIS is a desire to establish new [[Geospatial Practice/index|Geospatial Practices]] that focus on a clear, transparent, and portable process, from the first question to the final map.
 
 ---
 
-### Our Approach: A Method, Not Just a Tool 
+### Our Approach: A new geospatial practice, Not Just a Tool 
 
 At the heart of `semanticGIS` are two core principles that work together to ensure clarity and rigour in your work:
 

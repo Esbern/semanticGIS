@@ -46,7 +46,7 @@ This is where you execute your analytical methods to answer your research questi
 The final phase involves sharing your work. This includes not only your final maps and reports but the **Design Rationale itself**. By publishing your process, you empower others to understand, critique, and confidently build upon your findings, fostering a culture of open and reproducible science.
 
 ## What next ?
-The `semanticGIS` framework is a methodology for improving the rigor and transparency of geospatial research. For a comprehensive guide to its principles and implementation, please consult the [[index 2|framework documentation]]. To see the framework applied to a real-world problem, we invite you to explore our case studies from different [[Geospatial Practice/Application Domains/index|Application domains]].
+The `semanticGIS` framework is a methodology for improving the rigor and transparency of geospatial research. For a comprehensive guide to its principles and implementation, please consult the [[index 2|framework documentation]]. To see the framework applied to a real-world problem, we invite you to explore our case studies from different [[Geospatial Practice/Establishing the Data foundation/Application Domains/index|Application domains]].
 
- [[index 2|Explore the Framework]] │[[Geospatial Practice/Application Domains/index|Application domains]].
+ [[index 2|Explore the Framework]] │[[Geospatial Practice/Establishing the Data foundation/Application Domains/index|Application domains]].
 

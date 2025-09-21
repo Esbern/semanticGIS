@@ -1,5 +1,5 @@
 ---
-title: Organising a GIS project
+title: Geospatial Practice
 draft: false
 tags:
 aliases:
@@ -13,11 +13,11 @@ The methodology of `SemanticGIS` is built around three interconnected concepts:
 This article focuses on the five phases of the [[Glossary/GIS Project|GIS Project]], these five phases are named after the primary intellectual task undertaken in each phase and function as a way to isolate the tasks, allowing for a focused and well-documented intellectual process.
 
 The five phases are:
-1. [[Project Scoping]]
-2. [[Data Modelling]]
-3. [[Establishing the Data foundation|Establishing the Data foundation]]
-4. [[Analytical Modelling]]
+1. [[Geospatial Practice/Project Scoping/index]]
+2. [[Geospatial Practice/Data Modelling/index]]
+3. [[Geospatial Practice/Establishing the Data foundation/index|Establishing the Data foundation]]
+4. [[Geospatial Practice/Analytical Modelling/index]]
 5. [[Dissemination and Communication]]
 
 ## Exploitative workflow vs Prescriptive Workflow 
-Note that the execution of five phases is not 100 % linear like a  [waterfall model](https://en.wikipedia.org/wiki/Waterfall_model) within [[SemanticGIS]] there is considerable back flow form one phase to the privies.  This is especially the case if the "Project Scoping" has identified a "[[Project Scoping#^Prescriptive-Workflow|Prescriptive Workflow]]"  where we the project workflow till be identified by revers engineering the prescribed outputs
+Note that the execution of five phases is not 100 % linear like a  [waterfall model](https://en.wikipedia.org/wiki/Waterfall_model) within [[SemanticGIS]] there is considerable back flow form one phase to the privies.  This is especially the case if the "Project Scoping" has identified a "[[Geospatial Practice/Project Scoping/index#^Prescriptive-Workflow|Prescriptive Workflow]]"  where we the project workflow till be identified by revers engineering the prescribed outputs

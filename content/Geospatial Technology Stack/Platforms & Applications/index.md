@@ -1,9 +1,9 @@
 ---
-title: Geospatial Technology Stack
+title: Platforms & Applications
 draft: false
 tags:
 aliases:
-  - Geospatial Technology Stack
+  - Platforms & Applications
 ---
  
 There are many software options for working with geospatial data, and which to choose depends on your purpose, skills and access to (license, institutional setup and money). 

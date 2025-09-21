@@ -15,7 +15,7 @@ aliases:
 
 Every project is structured into five distinct phases, moving logically from the initial question to the final dissemination. This process provides a clear roadmap for your work, ensuring all critical steps are addressed systematically.
 
-➡️ **[[life cycle of a GIS project/index|Learn about the Five-Phase Process]]**
+➡️ **[[Geospatial Practice/index|Learn about the Five-Phase Process]]**
 
 ---
 

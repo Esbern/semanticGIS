@@ -12,7 +12,7 @@ Disclaimer:
 According to [Immanuel Kant](https://da.wikipedia.org/wiki/Immanuel_Kant), we can never observe reality as "Ding an sich" or [noumenon](https://en.wikipedia.org/wiki/Noumenon). Our process always begins with **Observation**: the act of perceiving **phenomena**—the objects, events, or signals that appear to our senses or instruments, _before_ we have assigned them a formal meaning.
 
 ## From Observation to Recording
-While we can **observe** countless phenomena, we cannot map, enumerate, or analyse them in a structured way without an **Ontology** defined as as Domain of Discource (DoD) as descriptive in the article on the [[Data Modelling|Data Modelling]] phase of a GIS project. DoD is the formal "rulebook" that allows us to move from "unstructured" observation to "structured" **[[Field Surveys|Recording]]**—the process of creating data.
+While we can **observe** countless phenomena, we cannot map, enumerate, or analyse them in a structured way without an **Ontology** defined as as Domain of Discource (DoD) as descriptive in the article on the [[Geospatial Practice/Data Modelling/index|Data Modelling]] phase of a GIS project. DoD is the formal "rulebook" that allows us to move from "unstructured" observation to "structured" **[[Field Surveys|Recording]]**—the process of creating data.
 
 The concepts of "unstructured" observation and "structured" Recording are at each end of a continuum defined by how well-defined (scoped) our ontology is. In practice, we rarely operate at the extreme ends of this continuum, but rather somewhere in between, depending on the project's purpose and current state.
 

@@ -67,4 +67,4 @@ The output of this phase is the finalised **Project Outline**, a concise documen
 
 This **Project Outline** is our **"source of truth."** When challenges or requests for changes arise mid-project ("scope creep"), we refer back to this document to make informed decisions.
 
-Crucially, this Project Outline provides the narrative framework for the rest of the project, which is essential for our semanticGIS process. With this **narrative framework** in hand, we are ready to move to the next phase: [[Data Modelling]], where we start establishing the cart (the data).
+Crucially, this Project Outline provides the narrative framework for the rest of the project, which is essential for our semanticGIS process. With this **narrative framework** in hand, we are ready to move to the next phase: [[Geospatial Practice/Data Modelling/index]], where we start establishing the cart (the data).

@@ -9,6 +9,6 @@ A "**GIS project**" is the structured endeavour that used components from the [[
 Within [[SemanticGIS]] a GIS project should be conducted following the five phases:
 1. [[Geospatial Practice/Project Scoping/index]]
 2. [[Geospatial Practice/Data Modelling/index]]
-3. [[Geospatial Practice/Establishing the Data foundation/index|Establishing the Data foundation]]
+3. [[Geospatial Practice/Establishing the Data Foundation/index|Establishing the Data foundation]]
 4. [[Geospatial Practice/Analytical Modelling/index]]
 5. [[Dissemination and Communication]]

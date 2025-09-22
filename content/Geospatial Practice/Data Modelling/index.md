@@ -23,7 +23,7 @@ To give these concepts a concrete form, you must define each one using one of th
     - **As an Attribute**: A single value attached to a specific object. For example, `material = 'wood'` is an attribute of a specific bench.
     - **As a Field**: A value that varies continuously across space. For example, the ambient `outdoor_temperature` across a landscape.
         
-With your preliminary UoD in hand, your primary action is to **search for existing datasets** that can represent your concepts. You'll use the terms from your UoD as keywords to search relevant metadata servers (see [[Geospatial Practice/Establishing the Data foundation/Searching for data/index|Searching for data]]). This search leads to two possible outcomes:
+With your preliminary UoD in hand, your primary action is to **search for existing datasets** that can represent your concepts. You'll use the terms from your UoD as keywords to search relevant metadata servers (see [[Geospatial Practice/Establishing the Data Foundation/Searching for data/index|Searching for data]]). This search leads to two possible outcomes:
 
 1. **No suitable data is found**: This is rare but possible. Before deciding to record your own data, you should first reconsider your concepts and broaden your search. If you still find nothing, you must prepare for fieldwork by proceeding to [[Geospatial Practice/Data Modelling/index#Step 2b Preforming a field pilot|Step 2b: Performing a Field Pilot]].
     
@@ -41,13 +41,13 @@ The goal here is to scrutinize the dataset's official "rulebook"—its **Domain 
     
 #### Your Three Choices
 
-Based on your evaluation, you make a strategic decision. This decision formally defines your project's DoD and determines the tasks you'll perform in the next phase, [[Geospatial Practice/Establishing the Data foundation/index|Establishing the Data Foundation]].
+Based on your evaluation, you make a strategic decision. This decision formally defines your project's DoD and determines the tasks you'll perform in the next phase, [[Geospatial Practice/Establishing the Data Foundation/index|Establishing the Data Foundation]].
 
-- ✅ **Accept**: The dataset's DoD is fit for your purpose. The dataset's DoD **becomes** your project's official DoD. In the next phase, you will simply perform a [[Geospatial Practice/Establishing the Data foundation/index#Data Acquiring|data acquiring]] activity.
+- ✅ **Accept**: The dataset's DoD is fit for your purpose. The dataset's DoD **becomes** your project's official DoD. In the next phase, you will simply perform a [[Geospatial Practice/Establishing the Data Foundation/index#Data Acquiring|data acquiring]] activity.
     
-- 🔁 **Transform**: The dataset is valuable but needs modification. You will define **your own target DoD** (e.g., "roads where status = 'existing'"). Your project's DoD is this new, refined definition, and you will create a set of transformation rules to bridge the gap. In the next phase, you will perform a [[Geospatial Practice/Establishing the Data foundation/index#Data Acquiring|data acquiring]] activity followed by a [[Geospatial Practice/Establishing the Data foundation/index#Data Transforming|data transformation]] activity.
+- 🔁 **Transform**: The dataset is valuable but needs modification. You will define **your own target DoD** (e.g., "roads where status = 'existing'"). Your project's DoD is this new, refined definition, and you will create a set of transformation rules to bridge the gap. In the next phase, you will perform a [[Geospatial Practice/Establishing the Data Foundation/index#Data Acquiring|data acquiring]] activity followed by a [[Geospatial Practice/Establishing the Data Foundation/index#Data Transforming|data transformation]] activity.
     
-- ❌ **Reject**: The dataset is fundamentally incompatible, and transformation is not feasible. You must now define your own DoD from scratch and validate it by performing a [[Geospatial Practice/Data Modelling/index#Step 2b Preforming a field pilot|Field Pilot (Step 2b)]]. In the next phase, you will perform [[Geospatial Practice/Establishing the Data foundation/index#Data Schema Creation|data schema creation]] and [[Geospatial Practice/Establishing the Data foundation/index#Data Recording|data recording]] activities.
+- ❌ **Reject**: The dataset is fundamentally incompatible, and transformation is not feasible. You must now define your own DoD from scratch and validate it by performing a [[Geospatial Practice/Data Modelling/index#Step 2b Preforming a field pilot|Field Pilot (Step 2b)]]. In the next phase, you will perform [[Geospatial Practice/Establishing the Data Foundation/index#Data Schema Creation|data schema creation]] and [[Geospatial Practice/Establishing the Data Foundation/index#Data Recording|data recording]] activities.
 ---
 ## Step 2b: Performing a Field Pilot
 
@@ -55,5 +55,5 @@ The purpose of a field pilot is to convert your conceptual UoD into a robust, op
 
 The crucial difference between a pilot and the final data recording lies in the **goal**. The pilot is an **exploratory test** of your ontology, often using flexible tools like paper maps and notebooks. The final [[Field Surveys]] is a **systematic execution** of your finalized DoD using structured tools to produce clean, consistent data.
 
-After the pilot, you will have a finalized DoD, ready to be implemented in the next phase via [[Geospatial Practice/Establishing the Data foundation/index#Data Schema Creation|data schema creation]] and [[Geospatial Practice/Establishing the Data foundation/index#Data Recording|data recording]].
+After the pilot, you will have a finalized DoD, ready to be implemented in the next phase via [[Geospatial Practice/Establishing the Data Foundation/index#Data Schema Creation|data schema creation]] and [[Geospatial Practice/Establishing the Data Foundation/index#Data Recording|data recording]].
 

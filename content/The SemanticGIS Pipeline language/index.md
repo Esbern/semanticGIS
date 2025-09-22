@@ -1,9 +1,9 @@
 ---
-title: The semanticGIS Toolbox
+title: SemanticGIS Pipeline language
 draft: false
 tags:
 aliases:
-  - The semanticGIS Toolbox
+  - SemanticGIS Pipeline language
 ---
  In this folder you a software agnostic description of the key methods used in a [[Frameworks & Context/GIS project|GIS project]]. The methods link to there implementations in [[QGIS]], [[ArcGIS pro]] and .
 

@@ -15,8 +15,14 @@ GIS projects are often chaotic "black boxes," making them difficult to trust, re
 In the section [[Geospatial Practice/index|Geospatial Practice]], we outline five clear phases your GIS project should go through, plus one overarching activity of [[Geospatial Practice/Project Stewardship/index|Project Stewardship]], of which maintaining [[Geospatial Practice/Project Stewardship/Design rationale|Design rationale]] is the key activity.
 Although semanticGIS focuses on thought at some point, some buttons need to be clicked in order for the thoughts to manifest themselves. The section on the [[Geospatial Technology Stack/index|Geospatial Technology Stack]] contains an overview of and guides to the most common software components of a GIS-project.
 
-## What next ?
-The `semanticGIS` framework is a methodology for improving the rigor and transparency of geospatial research. For a comprehensive guide to its principles and implementation, please consult the [[index 2|framework documentation]]. To see the framework applied to a real-world problem, we invite you to explore our case studies from different [[Geospatial Practice/Establishing the Data foundation/Application Domains/index|Application domains]].
+To support this better [[Geospatial Practice/index|Geospatial Practice]], SemanticGIS includes two tools:
+1. [[The SemanticGIS Pipeline language/index|SemanticGIS Pipeline language]]  
+   We use a simple, human-readable Domain-Specific Language (DSL) to define the analytical workflow _before_ implementing it in any specific GIS software. This **abstract recipe** is the single source of truth for your analysis and can be used to automatically generate several outputs:
+	- **Mermaid Flowcharts** for visualising the logical steps.
+    - **Step-by-step Recipes** for desktop GIS software (e.g., QGIS).
+    - **Executable Python Scripts** for automated processing.
+2. A [[Data resources locater/index|Data resources locator]] that is a framework for locating data. This is not a new metadata standard, and it is highly recommended to also use local national metadata servers.
 
- [[index 2|Explore the Framework]] │[[Geospatial Practice/Establishing the Data foundation/Application Domains/index|Application domains]].
+## What next?
+To start on the SemanticGIS, it is recommended to start by following the recommended [[Geospatial Practice/index|Geospatial Practice]], where each phase contains links to tools and methods relevant to that phase. Once you have understood the recommended  [[Geospatial Practice/index|Geospatial Practice]], you can use the website as a general reference tool. To navigate supports an advantage graph-based navigation available in the top right of each page
 

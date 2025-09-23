@@ -34,5 +34,5 @@ The final phase involves sharing your work. This includes not only your final ma
 
 
 ## Exploitative Workflow vs Prescriptive Workflow 
-Note that the execution of five phases is not 100 % linear like a  [waterfall model](https://en.wikipedia.org/wiki/Waterfall_model) within [[SemanticGIS]] there is considerable back flow form one phase to the privies.  This is especially the case if the "Project Scoping" has identified a "[[Geospatial Practice/Project Scoping/index#^Prescriptive-Workflow|Prescriptive Workflow]]"  where we the project workflow till be identified by revers engineering the prescribed outputs
+Note that the execution of five phases is not 100 % linear like a  [waterfall model](https://en.wikipedia.org/wiki/Waterfall_model) within SemanticGIS there is considerable back flow form one phase to the privies.  This is especially the case if the "Project Scoping" has identified a "[[Geospatial Practice/Project Scoping/index#^Prescriptive-Workflow|Prescriptive Workflow]]"  where we the project workflow till be identified by revers engineering the prescribed outputs
 

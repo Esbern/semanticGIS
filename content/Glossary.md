@@ -4,6 +4,6 @@ draft: true
 tags:
 ---
 ## G
-[[GIS]]
+[[GIS#^gis-definition|GIS]]
 ## D 
 [[Design rationale]] 

@@ -2,12 +2,14 @@
 title: Design rationale
 draft: false
 tags:
+aliases:
+  - Design rationale
 ---
-#### Note on Terminology
+**Note on Terminology**
 
-![[Glossary/Design rationale#^def]]
+Within 'semanticGIS', we use the concept of **design rationale** as a practical tool to help you document and reflect on your GIS project work. Traditionally, the term is used in software and product design to describe decisions after they have been made (see [Wikipedia](https://en.wikipedia.org/wiki/Design_rationale)). We’re adapting it here for you to actively plan, document, and justify your decisions as you proceed. Think of it as a blend between a traditional _design rationale_ and a _research design_. ^def
 
-Like a research design, your rationale will help you plan your work step by step—defining your problem, identifying key concepts, selecting data, and choosing appropriate analytical methods. At the same time, like a traditional design rationale, you’ll be asked to reflect on your decisions, explain why you made them, and consider possible alternatives. This will strengthen your ability to communicate your work clearly to clients, collaborators, or your future self.
+Like a research design, your rationale will help you plan your work step by step—defining your problem, identifying key concepts, selecting data, and choosing appropriate analytical methods. At the same time, like a traditional design rationale, the design rationale is used to reflect on your decisions, explain why you made them, and consider possible alternatives. This will strengthen your ability to communicate your work clearly to clients, collaborators, or your future self.
 
 A key purpose of the design rationale is to clearly explain the consequences or artefacts created by different choices. By explicitly documenting the trade-offs and potential impacts of various decisions, the rationale helps avoid unintended consequences and ensures that all stakeholders understand the implications of the project’s design.
 
@@ -16,8 +18,6 @@ Moreover, the design rationale is essential for **documentation and feedback**. 
 In alignment with the concept developed by W.R. Kunz and Horst Rittel, the design rationale in a GIS project provides an argumentation-based structure that supports the collaborative and often complex process of designing geospatial systems. It ensures that decisions are not only recorded but also justified, considering all alternatives and trade-offs, ultimately leading to more robust and well-founded project outcomes.
 
 By maintaining a clear and detailed design rationale, GIS professionals can enhance the transparency, consistency, and effectiveness of their projects, ensuring that the reasoning behind every decision is well-documented and understood.
-
-
 ## Example Design Rationale: Identifying Entertainment Zones in Copenhagen
 
 Below is a sample design rationale for a fictive project where the client (in this case, your teacher) has asked for a data-driven identification and visualisation of Copenhagen's party/entertainment zones. This example follows the four phases outlined above.
@@ -33,8 +33,8 @@ Entities relevant to this  include:
 - Observations of formal and informal party activity.
 - Public transportation nodes (metro stations, bus stops)
 - Street network data (for walkability analysis relative to public transport)
-- 
-Example of detail consideration on bars:
+
+Example of detailed consideration on bars:
 To make the analysis meaningful, we need to be precise about what we include under each category. For instance, when working with point locations of venues, we must consider how to define a "bar." Do we include only standalone bars, or do bars inside clubs, theatres, and cinemas count as well? If a bar is only accessible to ticket holders (e.g., in a theatre or amusement park), should it be included? In this project, I have decided to include bars that are publicly accessible, whether they are standalone or part of a larger establishment. Bars within clubs or theatres are only counted if they serve the general public. Bars in amusement gardens with entrance fees are included, as they contribute significantly to the entertainment landscape. Finally, we also need to look at temporality some establishments might only be open at weekends or in the summer period. Careful attention must also be paid to avoid double-counting venues (e.g., not counting a club and its bar as two separate entities unless they function independently).
 
 ---

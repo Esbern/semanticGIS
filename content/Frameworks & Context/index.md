@@ -1,9 +1,9 @@
 ---
-title: Frameworks & Theory
+title: Frameworks & Context
 draft: false
 tags:
 aliases:
-  - Frameworks & Theory
+  - Frameworks & Context
 ---
- In this folder Is you find articles on, guiding principle or a broad academic theory that _informs_ our work e.g., FAIR Principles, Semiology of Graphics, statistical theory etc.
+ In this folder, you will find articles on guiding principles or a broad academic theory that informs our work, e.g., [[FAIR Principles]], Semiology of Graphics, statistical theory, etc.
  

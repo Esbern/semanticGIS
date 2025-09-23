@@ -1,5 +1,5 @@
 ---
-title: FAIR principles
+title: FAIR Principles
 draft: false
 tags:
 ---

@@ -1,6 +1,6 @@
 ---
 title: Data resources locator
-draft: true
+draft: false
 tags:
 aliases:
   - Data resources locator

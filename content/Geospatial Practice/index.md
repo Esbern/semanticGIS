@@ -9,7 +9,7 @@ At the heart of semanticGIS is a desire to establish new **geospatial practices*
 
 1. A structuring of the [[Frameworks & Context/GIS project|GIS project]] into five well-defined phases as described in the section [[Geospatial Practice/index#The five phases of the GIS-project|The five phases of the GIS-project]] bellow.
 2. A set of recommendations for good [[Geospatial Practice/Project Stewardship/index|Project Stewardship]], with the use of a [[Geospatial Practice/Project Stewardship/Design rationale|Design rationale]] being the most important.
-It is always advisable to study other projects and domain-specific considerations; therefore, this part of the website also contains links to a series of [[Geospatial Practice/Establishing the Data foundation/Application Domains/index|Application domains]]
+It is always advisable to study other projects and domain-specific considerations; therefore, this part of the website also contains links to a series of [[Geospatial Practice/Application Domains/index|Application domains]]
 ## The five phases of the GIS-project
 Within the SemanticGIS framework, we recommend that you organise your geospatial practice into the following five phases.
 #### **1. [[Geospatial Practice/Project Scoping/index|Project Scoping]]**

@@ -4,7 +4,7 @@ draft: false
 tags:
 ---
  
-A **general-purpose map**, also known as a **reference map**, provides a broad overview of geographical features and is designed to give users a sense of the **spatial context** of an area. These maps serve as a foundational layer, often used as a **[[Basemap]]** in a [[Frameworks & Context/GIS project]] to support more specific geographic data or thematic maps. By providing essential information like roads, water bodies, terrain, and place names, general-purpose maps help users understand the geographic framework within which other spatial information is analysed.
+A **general-purpose map**, also known as a **reference map**, provides a broad overview of geographical features and is designed to give users a sense of the **spatial context** of an area. These maps serve as a foundational layer, often used as a **[[Basemap]]** in a [[GIS project]] to support more specific geographic data or thematic maps. By providing essential information like roads, water bodies, terrain, and place names, general-purpose maps help users understand the geographic framework within which other spatial information is analysed.
 
 #### **Common Uses of General-Purpose Maps**
 

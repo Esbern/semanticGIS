@@ -5,4 +5,4 @@ tags:
 aliases:
   - Core Geospatial Concepts
 ---
- IN this folder you will find articels on a fundamental building block, concept, or analytical method that is intrinsic _to_ geospatial science e.g., Vector/Raster Models, Projections, Map Algebra, Spatial Autocorrelation. This section only contains general theory menaing that yoy will finde articles on  "Spatial Autocorrelation" and toblers first law of geoapgrphy but the specific operations/indicies are described in The semanticGIS Toolbox 
+ In this folder, you will find articles on a fundamental building block, concept, or analytical method that is intrinsic to geospatial science, e.g., Vector/Raster Models, Projections, Map Algebra, and Spatial Autocorrelation. This section only contains general theory, meaning that you will find articles on  "Spatial Autocorrelation" and Tobler's first law of geography, but the specific operations/indices are described in the section on the  [[Geospatial Operations/index|SemanticGIS Pipeline language]]

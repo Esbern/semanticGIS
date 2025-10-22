@@ -3,7 +3,7 @@ title: Land use planning
 draft: false
 tags:
 ---
-Land use planning is a process by which communities evaluate the most efficient, equitable, and sustainable ways to use land resources. In a geospatial context, this process is enhanced through the use of Geographic Information Systems ([[Frameworks & Context/GIS]]) and other spatial analysis tools that allow for more informed decision-making. Geospatial technologies provide a visual and analytical framework for understanding the spatial distribution of land use and its impacts. Additionally, integrating concepts from [[landscape ecology]] allows planners to consider the broader ecological processes and patterns that influence land use decisions.
+Land use planning is a process by which communities evaluate the most efficient, equitable, and sustainable ways to use land resources. In a geospatial context, this process is enhanced through the use of Geographic Information Systems ([[GIS]]) and other spatial analysis tools that allow for more informed decision-making. Geospatial technologies provide a visual and analytical framework for understanding the spatial distribution of land use and its impacts. Additionally, integrating concepts from [[landscape ecology]] allows planners to consider the broader ecological processes and patterns that influence land use decisions.
 
 **Key Components:**
 

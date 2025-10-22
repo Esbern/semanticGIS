@@ -13,7 +13,7 @@ The first and most critical phase of any `semanticGIS` project is the **project 
 
 This is the "why" of the project. We start by deconstructing the client's brief to define a precise, answerable question and the tangible outputs required.
 
-- **Deconstruct the Brief**: Your first step is correct: analyze the brief. The goal is to translate a business or research need into a geospatial question.
+- **Deconstruct the Brief**: Your first step is correct: analyse the brief. The goal is to translate a business or research need into a geospatial question.
     
 - **Define the Analytical Workflow**: You've identified two primary types. Let's refine the terminology for clarity, as "Exploitative" can have unintended connotations.
     
@@ -67,4 +67,4 @@ The output of this phase is the finalised **Project Outline**, a concise documen
 
 This **Project Outline** is our **"source of truth."** When challenges or requests for changes arise mid-project ("scope creep"), we refer back to this document to make informed decisions.
 
-Crucially, this Project Outline provides the narrative framework for the rest of the project, which is essential for our semanticGIS process. With this **narrative framework** in hand, we are ready to move to the next phase: [[Geospatial Practice/Data Modelling/index]], where we start establishing the cart (the data).
+Crucially, this Project Outline provides the narrative framework for the rest of the project, which is essential for our semanticGIS process. With this **narrative framework** in hand, we are ready to move to the next phase: [[Geospatial Practice/Data Modelling/index]], where we start establishing the cast (the data).

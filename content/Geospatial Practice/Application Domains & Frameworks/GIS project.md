@@ -4,7 +4,7 @@ draft: false
 tags:
 ---
  
-In the context of geospatial work, the term “[[Frameworks & Context/GIS]]” is often associated primarily with the software tools used for mapping and spatial analysis. However, when I refer to a “GIS project,” I mean something far more comprehensive. A GIS project is not just about the software; it is a structured endeavour that encompasses a variety of components, all working together within an organisational framework to achieve a specific goal.
+In the context of geospatial work, the term “[[GIS]]” is often associated primarily with the software tools used for mapping and spatial analysis. However, when I refer to a “GIS project,” I mean something far more comprehensive. A GIS project is not just about the software; it is a structured endeavour that encompasses a variety of components, all working together within an organisational framework to achieve a specific goal.
 
 A **GIS project** includes the following key elements:
 

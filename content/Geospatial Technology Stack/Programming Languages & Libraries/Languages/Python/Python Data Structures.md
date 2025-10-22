@@ -4,7 +4,7 @@ draft: false
 tags:
 ---
  
-In [[Geospatial Technology Stack/Programming Languages & Libraries/Languages/Python/index]], data is managed using both **simple data types** and **complex data structures**. Simple data types, such as integers, floats, and strings, represent single values and are the building blocks of more complex structures. Complex data structures, on the other hand, are used to store and organise multiple values, often of different types, in a single, cohesive unit. These complex structures are essential for effectively managing, analysing, and visualising data in various applications, including geospatial data and [[Frameworks & Context/GIS]]. 
+In [[Geospatial Technology Stack/Programming Languages & Libraries/Languages/Python/index]], data is managed using both **simple data types** and **complex data structures**. Simple data types, such as integers, floats, and strings, represent single values and are the building blocks of more complex structures. Complex data structures, on the other hand, are used to store and organise multiple values, often of different types, in a single, cohesive unit. These complex structures are essential for effectively managing, analysing, and visualising data in various applications, including geospatial data and [[GIS]]. 
 
 ### **1. Lists**
 
@@ -118,7 +118,7 @@ While Python's native lists can store arrays of elements, **NumPy arrays** offer
 
 **Objects** are instances of classes in Python, which serve as blueprints for creating complex data structures that bundle both data and behavior (methods). Objects are essential in object-oriented programming (OOP), allowing for the creation of reusable and modular code.
 
-- **Example in [[Frameworks & Context/Geospatial data]]**: An object might represent a geographic feature, such as a `Building`, with attributes (e.g., height, location) and methods (e.g., calculating area).
+- **Example in [[Geospatial data]]**: An object might represent a geographic feature, such as a `Building`, with attributes (e.g., height, location) and methods (e.g., calculating area).
   ```python
   class Building:
       def __init__(self, name, height, location):

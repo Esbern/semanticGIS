@@ -1,15 +1,10 @@
 ---
-title: SemanticGIS Pipeline language
+title:
 draft: false
 tags:
-aliases:
-  - SemanticGIS Pipeline language
 ---
- In this folder you a software agnostic description of the key methods used in a [[Frameworks & Context/GIS project|GIS project]]. The methods link to there implementations in [[QGIS]], [[ArcGIS pro]] and .
-
-  At the same time this section also holds the the documentation and structure of the SemanticGIS pipline language
-
-a example of which is given below:
+ 
+The Purpose of the semantic GIS pipeline language is to provide a simple way of stringing the GIS operations together. The following is an example of a SemanticGIS pipline 
 
 
 ``` 

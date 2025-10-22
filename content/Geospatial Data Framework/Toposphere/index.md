@@ -1,6 +1,13 @@
+---
+title: Toposphere
+draft: true
+tags:
+aliases:
+  - toposphere
+---
 - **Description:** This sphere describes the **geometric and physical properties of the Earth's solid and liquid surfaces**, serving as the **primary interface** where the atmosphere, hydrosphere, pedosphere, lithosphere, and biosphere interact. It focuses on the surface itself, including its raw observable characteristics and high-resolution visual representations.
 - **Subclasses (Complexes):**
-    - `toposphere_topography`: Data related to the shape and elevation of the Earth's land surface and ocean/lake floors (e.g., Digital Elevation Models (DEMs), Digital Terrain Models (DTMs), bathymetry charts, derived slope, aspect, and curvature maps, geomorphological features).
+    - [[Geospatial Data Framework/Toposphere/Topography/index|Topography]]: Data related to the shape and elevation of the Earth's land surface and ocean/lake floors (e.g., Digital surface Models (DSM's), Digital Terrain Models (DTM's), bathymetry charts, derived slope, aspect, and curvature maps, geomorphological features).
     - `toposphere_surface_radiative_thermal`: Data describing the energy exchange properties of the Earth's surface (e.g., Albedo (surface reflectivity), Land Surface Temperature (LST), Sea Surface Temperature (SST), surface emissivity, surface net radiation).
     - `toposphere_surface_physical`: Other physical characteristics of the surface that influence interactions (e.g., surface roughness (aerodynamic or hydrological), aerodynamic resistance, surface infiltration capacity _as an interface property_).
     - `toposphere_imagery`: Raw or processed aerial/satellite photography and other image-based products that serve as a direct visual representation of the Earth's surface (e.g., raw satellite bands, orthophotos, imagery mosaics, and other visual basemaps).

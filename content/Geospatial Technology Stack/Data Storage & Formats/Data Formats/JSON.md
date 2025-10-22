@@ -98,7 +98,7 @@ JSON and **[[XML]] (eXtensible Markup Language)** are both widely used for data 
   - Can be more suitable for applications that require complex data structures or need to include metadata alongside data.
 
 #### **Example: GeoJSON vs. GML**
-In the domain of [[Frameworks & Context/Geospatial data]] and [[Frameworks & Context/GIS]] JSON plays a role as the underlying format in GeoJSON, while XML is the underlying format in GML
+In the domain of [[Geospatial data]] and [[GIS]] JSON plays a role as the underlying format in GeoJSON, while XML is the underlying format in GML
 - **GeoJSON** is a JSON-based format for encoding geographic data, used widely in web mapping applications due to its simplicity.
 - **GML (Geography Markup Language)** is an XML-based format that offers a more robust and detailed way of encoding geographic information but is more complex and less human-readable.
 

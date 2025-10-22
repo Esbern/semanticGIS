@@ -4,7 +4,7 @@ draft: false
 tags:
 ---
  
-In the world of [[Frameworks & Context/GIS]] and [[Geoinformatics]], terms like **web services** and **APIs** often come up. While they might sound technical, understanding these concepts can enhance how we interact with geospatial data. This note provides a straightforward explanation of both, with GIS-related examples to illustrate their roles.
+In the world of [[GIS]] and [[Geoinformatics]], terms like **web services** and **APIs** often come up. While they might sound technical, understanding these concepts can enhance how we interact with geospatial data. This note provides a straightforward explanation of both, with GIS-related examples to illustrate their roles.
 
 ---
 

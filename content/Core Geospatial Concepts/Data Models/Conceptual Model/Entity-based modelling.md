@@ -1,3 +1,8 @@
+---
+title:
+draft: false
+tags:
+---
 **Entity-based modelling** is a method of modelling reality that focuses on discrete objects or so-called entities with a **distinct** presence in space. These entities are not just individual objects; they belong to specific types or classes that define their common properties and meanings.
 
 

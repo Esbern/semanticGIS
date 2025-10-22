@@ -2,6 +2,8 @@
 title: Python
 draft: true
 tags:
+aliases:
+  - Python
 ---
  
 Python is a powerful programming language widely used in the field of GIS for both standalone geospatial analysis and as an integrated tool within desktop GIS software like ArcGIS Pro and QGIS. Its versatility and extensive ecosystem make it a key resource for geospatial professionals.

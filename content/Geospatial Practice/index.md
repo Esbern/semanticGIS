@@ -13,7 +13,7 @@ Especially if you are new to doing geospatial analysis, it is  advisable to stud
 Within the SemanticGIS framework, we recommend that you organise your geospatial practice into the following five phases.
 #### **1. [[Geospatial Practice/Project Scoping/index|Project Scoping]]**
 
-This is the foundational phase where you move from a vague idea (topic) to an actionable question. You define your research questions, establish clear objectives, identify your area of interest, and outline the project's scope and limitations. 
+This is the foundational phase where you move from a vague idea (topic) to an actionable question. You define your research questions, establish clear objectives, identify your area of interest, and outline the project's scope and limitations.  
 
 #### **2. [[Geospatial Practice/Data Modelling/index|Data Modelling]]**
 

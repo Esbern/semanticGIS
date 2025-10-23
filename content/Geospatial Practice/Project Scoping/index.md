@@ -6,14 +6,14 @@ aliases:
   - Project Scoping
 order: "1"
 ---
-The first and most critical phase of any `semanticGIS` project is the **project scoping**, which produces a **Project Outline**. This document is not mere bureaucracy; it is the strategic blueprint that prevents "technical drift" and ensures every line of code we write serves a clear, agreed-upon purpose. It synthesises the project's core question with its operational realities.
+The first and most critical phase of any GIS project is the **project scoping**, which produces a **Project Outline**. This document is not mere bureaucracy; it is the strategic blueprint that prevents "technical drift" and ensures that every step we take from this point on serves a clear, agreed-upon purpose. It synthesises the project's core question with its operational realities. You can think of the project scoping as a mini version of the entire project when you wisit all phases of the project and sketch out what is going to 
 
 ---
 ### 1. Defining the Core Question & Deliverables
 
 This is the "why" of the project. We start by deconstructing the client's brief to define a precise, answerable question and the tangible outputs required.
 
-- **Deconstruct the Brief**: Your first step is correct: analyse the brief. The goal is to translate a business or research need into a geospatial question.
+- **Deconstruct the Brief**: The goal is to translate a business or research need into a geospatial question.
     
 - **Define the Analytical Workflow**: You've identified two primary types. Let's refine the terminology for clarity, as "Exploitative" can have unintended connotations.
     
@@ -67,4 +67,7 @@ The output of this phase is the finalised **Project Outline**, a concise documen
 
 This **Project Outline** is our **"source of truth."** When challenges or requests for changes arise mid-project ("scope creep"), we refer back to this document to make informed decisions.
 
-Crucially, this Project Outline provides the narrative framework for the rest of the project, which is essential for our semanticGIS process. With this **narrative framework** in hand, we are ready to move to the next phase: [[Geospatial Practice/Data Modelling/index]], where we start establishing the cast (the data).
+Crucially, this Project Outline provides the narrative framework for the rest of the project, which is essential for our semanticGIS process. With this **narrative framework** in hand, we are ready to move on with our project.
+
+
+to the next phase: [[Geospatial Practice/Data Modelling/index]], where we start establishing the cast (the data).

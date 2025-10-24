@@ -5,7 +5,10 @@ tags:
 aliases:
   - digital hydrology
 ---
-This is how I visualize your new structure. It's a model we should use for _all_ application domains.
+Digital hydrology is concerned with modelling water flow on and below the surface.  There are two main areas of problems that are addressed through digital hydrology:
+1. Waterborne transport of unwanted substances either to aquatic receptors such as the sea, lakes, streams, etc. or groundwater resources used for drinking water. 
+2. Flooding and local water infiltration, here we primarily look at how much water will flow through a given point and how it is distributed in time.
+One common element in most digital hydrology projects 
 
 ```
 └── 📁 Application Domains

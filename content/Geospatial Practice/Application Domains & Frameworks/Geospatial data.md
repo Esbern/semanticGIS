@@ -32,8 +32,7 @@ In the above example, the coordinates represent a point in 2D, but more complex 
 While Geospatial data typically consist of 0, 1 and 2-dimensional objects (Points, lines and polygons), 3D objects are beginning to appear, especially in geospatial data for urban planning (for more, see the note on [[CityGML]]) it is, however,, important to be clear that there is a distinction between the dimensions of the space and the dimension of the objects. The official Danish infrastructure data ([[GeoDanmark]])is 0, 1 and 2D objects but represented in a 3D space, i.e. using XYZ coordinates. For more information on this topic, see   [[Dimensions in Geospatial Data]].
 
 When it comes to working with more than 2D geometries, there are especially three use cases to take note of, namely:
-- [[Surface  and Terrain models]]
+- [[Geospatial Data Framework/Toposphere/Topography/index|Topography]]
 - [[Building and property data#Buildings|Buildings]]
-- [[Surface  and Terrain models#Representation of bridges and tunnels|Buildings and tunnels]]
 
 A emerging area is the incorporation of real-time sensor dat in a geospatial context combining real-time data and 3D geospatial data comes close to the concept of a [[Digital Twin]]

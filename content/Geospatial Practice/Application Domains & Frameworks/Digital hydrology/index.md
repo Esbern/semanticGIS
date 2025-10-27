@@ -6,10 +6,10 @@ aliases:
   - digital hydrology
 ---
 Digital hydrology is concerned with modelling water flow on and below the surface.  There are two main areas of problems that are addressed through digital hydrology:
-1. Waterborne transport of unwanted substances either to aquatic receptors such as the sea, lakes, streams, etc. or groundwater resources used for drinking water. 
+1. Waterborne transport of unwanted substances either to aquatic receptors such as the sea, lakes, streams, etc. or underground water resources used for drinking water. 
 2. Flooding and local water infiltration, here we primarily look at how much water will flow through a given point and how it is distributed in time.
-One common element in most digital hydrology projects 
 
+Although the the applications of digital hydrology focus differentiation problem sets in different physical environments
 ```
 └── 📁 Application Domains
     └── 📁 Digital Hydrology
@@ -40,7 +40,6 @@ One common element in most digital hydrology projects
 ```
 
 
-Digital hydrology is concerned with modelling water flow on and below the surface.  There are two main areas of problems that are addressed through digital hydrology, namely flooding and waterborne transport of unwanted substances either to aquatic receptors such as the sea, lakes, streams, etc., or groundwater resources used for drinking water. We have no examples of calculating weather movement through the ground, as this is a reteher-specialised calculation. We will, however, discuss this topic from a regulatory point of view and show some data sets used for this, although our focus will be on surface water flows.
 
 ## Surface Water Flow
 

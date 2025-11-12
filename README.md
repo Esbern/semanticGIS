@@ -80,7 +80,7 @@ This script will check for dependencies and create the `semanticGIS` environment
 
     #### **For Windows:**
     ⚠️ **Note:** If you get an error about "scripts being disabled", run this command first, then try the setup script again:
-    `Set-ExecutionPolicy RemoteSigned -Scope Process` but you must do it in a  powershel that is run as administrater
+    ` Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser but you must do it in a  powershel that is run as administrater
     ```powershell
     .\scripts\setup.ps1
     ```

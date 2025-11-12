@@ -5,7 +5,7 @@ tags:
 aliases:
   - digital hydrology
 ---
-Digital hydrology is concerned with modelling water flow on and below the surface.  There are two main areas of problems that are addressed through digital hydrology:
+Digital hydrology concerns the modelling of water flow on and below the surface.  There are two main areas of problems that are addressed through digital hydrology:
 1. Waterborne transport of unwanted substances either to aquatic receptors such as the sea, lakes, streams, etc. or underground water resources used for drinking water. 
 2. Flooding and local water infiltration, here we primarily look at how much water will flow through a given point and how it is distributed in time.
 

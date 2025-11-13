@@ -12,6 +12,6 @@ If the [[Geospatial Operations/index|Geospatial Operations]] section provides th
 
 This is where we practice our **Abstract-First Design Pattern**. The notes here don't just show _which buttons to click_. They first define a _tool-agnostic, abstract pipeline_ that represents the pure **logic** of the analysis.
 
-The pipelines in this section (like [[Geospatial Practice/Application Domains & Frameworks/Digital hydrology/index|digital hydrology]] digital hydrology or suitability modeling) are our 'abstract' building blocks. In the `Application Domains` section, we will see how these same pipelines are compiled and applied to solve concrete, real-world problems.
+The pipelines in this section (like [[Geospatial Practice/Application Domains/Digital hydrology/index|digital hydrology]] digital hydrology or suitability modeling) are our 'abstract' building blocks. In the `Application Domains` section, we will see how these same pipelines are compiled and applied to solve concrete, real-world problems.
 
 As you use this section, focus on understanding _how_ a problem is deconstructed into a logical chain of operations. The goal is to build your own "design rationale"—the ability to explain _why_ you chose a specific pipeline and how it logically connects your data to your scientific question.

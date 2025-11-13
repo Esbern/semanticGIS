@@ -12,5 +12,5 @@ While this might seem rather obvious, there are some important details to consid
 
 ## The integration of 2 and 3D geospatial data
 
-When combining Realtime data with 3D geospatial data we come close to the concept op a [[Digital Twin]]
+When combining Realtime data with 3D geospatial data we come close to the concept op a [[Geospatial Practice/Application Domains & Frameworks/Digital Twins/index]]
 

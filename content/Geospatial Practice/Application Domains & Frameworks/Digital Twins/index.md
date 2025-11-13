@@ -1,7 +1,9 @@
 ---
-title: Digital Twin
+title: Digital Twine
 draft: false
 tags:
+aliases:
+  - Digital Twine
 ---
 ### **What Is a Digital Twin?**
 

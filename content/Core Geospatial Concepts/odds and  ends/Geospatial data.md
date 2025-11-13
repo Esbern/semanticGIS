@@ -35,4 +35,4 @@ When it comes to working with more than 2D geometries, there are especially thre
 - [[Geospatial Data Framework/Toposphere/Topography/index|Topography]]
 - [[Building and property data#Buildings|Buildings]]
 
-A emerging area is the incorporation of real-time sensor dat in a geospatial context combining real-time data and 3D geospatial data comes close to the concept of a [[Digital Twin]]
+A emerging area is the incorporation of real-time sensor dat in a geospatial context combining real-time data and 3D geospatial data comes close to the concept of a [[Geospatial Practice/Application Domains & Frameworks/Digital Twins/index]]

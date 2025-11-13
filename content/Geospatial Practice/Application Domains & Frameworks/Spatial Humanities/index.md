@@ -1,11 +1,11 @@
 ---
-title: The Use of Spatial Technologies in Ethnography
+title: Spatial  Humanities
 draft: false
 tags:
+aliases:
+  - Spatial  Humanities
 ---
- 
-In this [[MOC]]-note, I will introduce some key usages of Geospatial technologies in ethnographical studies. In my experience,
-we can describe four key use cases:
+
 ## Describing the Spatial configuration
 In ethnography, understanding and describing the **spatial configuration** where the studied activities take place is crucial. One of the simplest and most effective ways to achieve this is by using a **[[General-purpose Map]]** such as [[OpenStreetMap]] to provide a geographical context. On such maps, key locations and activities can be marked to help visualise the spatial relationships and movements within the study area.
 

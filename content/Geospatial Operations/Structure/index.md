@@ -3,7 +3,7 @@ title: Structure
 draft: false
 tags:
 aliases:
-  - structure
+  - Structure
 ---
  Structue i information relecant to how data is stiores that somtime is needed to be exlpiclly statet  we have raster and vedtor but also sets (unordered) and lista (ordered= both of which must contain momogenius ellements  finaly we also have vector_points vector_lines and vestor_polygons  as well as taster continius and raster_categorical-
   

@@ -5,4 +5,4 @@ tags:
 aliases:
   - Data io
 ---
-Data IO landels the inferface metween memory and (persistant storage)  so loading a file from a disk or server ther is the special case names `Unbound`that specigyes a deta to be lelivered later (typicaly as a human interaction)
+Data IO handles the interface between memory and persistent storage such as a file, database or web service.  In addition to the standard like loading a file from a disk or server thee is the special case names `Unbound`that indicates a data set to be specified as part of the processing (typically as a human interaction)

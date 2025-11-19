@@ -5,11 +5,8 @@ tags:
 aliases:
   - SemanticGIS Pipeline language
 ---
- In this folder you a software agnostic description of the key methods used in a [[GIS project|GIS project]]. The methods link to there implementations in [[QGIS]], [[ArcGIS pro]] and .
-
-  At the same time this section also holds the the documentation and structure of the SemanticGIS pipline language
-
-a example of which is given below:
+ In this folder you find a software agnostic description of the key methods used in a [[GIS project|GIS project]]. The methods link to there implementations in [[QGIS]], [[ArcGIS pro]] and relevant python library.
+The structure and the individual operates also match the syntax in the SemanticGIS pipeline language a example of which is given below:
 
 
 ``` 

@@ -7,7 +7,7 @@ tags:
  
 This use case is set up to demonstrate how to use [[OpenTripPlanner]] to analyse how well the addresses within a municipality are connected to different services.
 The steps covered are:
-- Downloading all [[Addresses]] for a Danish municipality
+- Downloading all [[Geospatial Data Framework/Datasets Collection/Dataset Categories/Addresses]] for a Danish municipality
 - Downloading [[OpenStreetMap]] data for Denmark
 - Clipping the [[OpenStreetMap]] data using [[osmium-tool]] to the [[Defining the study area]] of the municipality.
 - Downloading the [[GTFS]] data for Denmark
@@ -26,7 +26,7 @@ Tools used
 - [[osmium-tool]]
 
 Data used
-- [[Addresses]]
+- [[Geospatial Data Framework/Datasets Collection/Dataset Categories/Addresses]]
 - [[GTFS]]
 - [[NeTEx]]
 - [[OpenStreetMap]]

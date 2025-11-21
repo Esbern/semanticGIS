@@ -1,7 +1,9 @@
 ---
-title:
+title: Addresses
 draft: false
 tags:
+aliases:
+  - Addresses
 ---
 ## The Foundational Role of Addressing Systems: Governance and Global Diversity
 

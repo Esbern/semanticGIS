@@ -1,7 +1,9 @@
 ---
-title:
+title: The SemanticGIS pipeline Language
 draft: false
 tags:
+aliases:
+  - The SemanticGIS pipeline Language
 ---
  
 The Purpose of the semantic GIS pipeline language is to provide a simple way of stringing the GIS operations together. The following is an example of a SemanticGIS pipline 

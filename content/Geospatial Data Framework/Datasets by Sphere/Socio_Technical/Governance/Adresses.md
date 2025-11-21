@@ -1,7 +1,7 @@
 ---
-title: 
-draft: true
-tags: 
+title:
+draft: false
+tags:
 ---
 ## The Foundational Role of Addressing Systems: Governance and Global Diversity
 

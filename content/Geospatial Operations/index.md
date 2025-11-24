@@ -60,5 +60,3 @@ Based on Tobler's First Law of Geography ("Near things are more related than dis
 The Ephemeral View
 
 The ultimate goal of analysis is insight, and insight often requires visual representation. This complex handles the generation of human-readable outputs—maps, charts, histograms, and scatter plots. Unlike other operations that produce data for the next step in the pipeline, visualize operations are "sinks"—they produce ephemeral views for interpretation. They translate the abstract numbers and geometries of the machine into the cognitive patterns of the human analyst.
-
-ddd

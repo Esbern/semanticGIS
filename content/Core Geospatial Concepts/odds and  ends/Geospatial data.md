@@ -33,6 +33,6 @@ While Geospatial data typically consist of 0, 1 and 2-dimensional objects (Point
 
 When it comes to working with more than 2D geometries, there are especially three use cases to take note of, namely:
 - [[Geospatial Data Framework/Datasets by Sphere/Toposphere/Topography/index|Topography]]
-- [[Building and property data#Buildings|Buildings]]
 
-A emerging area is the incorporation of real-time sensor dat in a geospatial context combining real-time data and 3D geospatial data comes close to the concept of a [[Geospatial Practice/Application Domains/Digital Twins/index]]
+
+A emerging area is the incorporation of real-time sensor dat in a geospatial context combining real-time data and 3D geospatial data comes close to the concept of a [[Core Geospatial Concepts/Temporal Resolution & Real-Time Streams/Digital Twins/index]]

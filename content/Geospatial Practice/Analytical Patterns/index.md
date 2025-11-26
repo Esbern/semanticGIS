@@ -1,0 +1,16 @@
+---
+title: Analytical Patterns
+draft: true
+tags:
+aliases:
+  - Analytical Patterns
+---
+ Although Geospatial data Processing can be seen as a knowledge domain in its own right. Different application domains have their own traditions for which data and business logic (workflows) to use.  However many of theas domains hare the same **Analytical Patterns** that consist of simulacra processing pipelines sharing methods but applied to complacently different data.
+
+| **Analytical Pattern (The Folder Name)** | **The Logic (The "Why")**             | **The "Common Use Complex" (The "What")**                                                                                                                                                                                                                                                                                           |
+| ---------------------------------------- | ------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **1. Spatial Morphology**                | **Geometry & Form**                   | Analyzing the static arrangement, shape, and orientation of features. (e.g., Street Grids, Urban Texture, Fragmentation).                                                                                                                                                                                                           |
+| **2. Networked Systems & Flow**          | **Connectivity & Movement**           | Analyzing dynamic flow through constrained links. (e.g., **Danish Streams**, Traffic Routing, Accessibility).                                                                                                                                                                                                                       |
+| **3. Spatial Suitability & Allocation**  | **Evaluation & Optimization**         | Weighting multiple factors to decide the "best" location. (e.g., Wind Farms, **Land Use Planning**, Habitat Selection).                                                                                                                                                                                                             |
+| 4. Monitoring, Classification & Change   | State Comparison & Spectral Analysis. | - **Classification:** "What is at this location?" (e.g., classifying satellite pixels as 'Forest' or 'Concrete', or classifying register data).<br>    <br>- **Change Detection:** "How has the state differed between Time A and Time B?"<br>    <br>- **Monitoring:** The systematic repetition of this process to build a trend. |
+| 5. Place, Narrative & Context**          | **Meaning & Experience**              | Anchoring qualitative human data to locations. (e.g., **Spatial Humanities**, Ethnography, Historical Mapping).                                                                                                                                                                                                                     |

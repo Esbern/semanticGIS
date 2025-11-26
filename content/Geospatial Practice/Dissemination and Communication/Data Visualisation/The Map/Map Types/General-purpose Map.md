@@ -20,7 +20,7 @@ General-purpose maps are widely used in GIS and cartography as basemaps for vari
    - **Google Maps** and other proprietary maps also function in this role, often including business information, transportation networks, and real-time data, which enhance urban mapping.
 
 2. **Rural Areas and Countryside**: 
-   - In more rural or natural settings, a [[Topographical maps]] is often a more appropriate general-purpose map. Topographic maps focus on elevation, natural landforms, water bodies, and terrain features, making them invaluable in areas where natural geography is more relevant than man-made structures.
+   - In more rural or natural settings, a Topographical map is often a more appropriate general-purpose map. Topographic maps focus on elevation, natural landforms, water bodies, and terrain features, making them invaluable in areas where natural geography is more relevant than man-made structures.
    - These maps are widely used for hiking, rural planning, and land management, where detailed terrain understanding is crucial.
 
 3. **Small Areas or Large-Scale Maps**:

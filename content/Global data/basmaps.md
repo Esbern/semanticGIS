@@ -17,7 +17,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![BaseMapDE.Color Local](img/BaseMapDE_Color_local.jpg)<br>*Zoom 13* | ![BaseMapDE.Color National](img/BaseMapDE_Color_national.jpg)<br>*Zoom 7* |
+| ![BaseMapDE.Color Local](BaseMapDE_Color_local.jpg)<br>*Zoom 13* | ![BaseMapDE.Color National](BaseMapDE_Color_national.jpg)<br>*Zoom 7* |
 
 
 ### BaseMapDE.Grey
@@ -32,7 +32,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![BaseMapDE.Grey Local](img/BaseMapDE_Grey_local.jpg)<br>*Zoom 13* | ![BaseMapDE.Grey National](img/BaseMapDE_Grey_national.jpg)<br>*Zoom 7* |
+| ![BaseMapDE.Grey Local](BaseMapDE_Grey_local.jpg)<br>*Zoom 13* | ![BaseMapDE.Grey National](BaseMapDE_Grey_national.jpg)<br>*Zoom 7* |
 
 
 # BasemapAT
@@ -53,7 +53,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![CartoDB.DarkMatter Local](img/CartoDB_DarkMatter_local.jpg)<br>*Zoom 13* | ![CartoDB.DarkMatter National](img/CartoDB_DarkMatter_national.jpg)<br>*Zoom 7* |
+| ![CartoDB.DarkMatter Local](CartoDB_DarkMatter_local.jpg)<br>*Zoom 13* | ![CartoDB.DarkMatter National](CartoDB_DarkMatter_national.jpg)<br>*Zoom 7* |
 
 
 ### CartoDB.DarkMatterNoLabels
@@ -68,7 +68,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![CartoDB.DarkMatterNoLabels Local](img/CartoDB_DarkMatterNoLabels_local.jpg)<br>*Zoom 13* | ![CartoDB.DarkMatterNoLabels National](img/CartoDB_DarkMatterNoLabels_national.jpg)<br>*Zoom 7* |
+| ![CartoDB.DarkMatterNoLabels Local](CartoDB_DarkMatterNoLabels_local.jpg)<br>*Zoom 13* | ![CartoDB.DarkMatterNoLabels National](CartoDB_DarkMatterNoLabels_national.jpg)<br>*Zoom 7* |
 
 
 ### CartoDB.DarkMatterOnlyLabels
@@ -83,7 +83,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![CartoDB.DarkMatterOnlyLabels Local](img/CartoDB_DarkMatterOnlyLabels_local.jpg)<br>*Zoom 13* | ![CartoDB.DarkMatterOnlyLabels National](img/CartoDB_DarkMatterOnlyLabels_national.jpg)<br>*Zoom 7* |
+| ![CartoDB.DarkMatterOnlyLabels Local](CartoDB_DarkMatterOnlyLabels_local.jpg)<br>*Zoom 13* | ![CartoDB.DarkMatterOnlyLabels National](CartoDB_DarkMatterOnlyLabels_national.jpg)<br>*Zoom 7* |
 
 
 ### CartoDB.Positron
@@ -98,7 +98,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![CartoDB.Positron Local](img/CartoDB_Positron_local.jpg)<br>*Zoom 13* | ![CartoDB.Positron National](img/CartoDB_Positron_national.jpg)<br>*Zoom 7* |
+| ![CartoDB.Positron Local](CartoDB_Positron_local.jpg)<br>*Zoom 13* | ![CartoDB.Positron National](CartoDB_Positron_national.jpg)<br>*Zoom 7* |
 
 
 ### CartoDB.PositronNoLabels
@@ -113,7 +113,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![CartoDB.PositronNoLabels Local](img/CartoDB_PositronNoLabels_local.jpg)<br>*Zoom 13* | ![CartoDB.PositronNoLabels National](img/CartoDB_PositronNoLabels_national.jpg)<br>*Zoom 7* |
+| ![CartoDB.PositronNoLabels Local](CartoDB_PositronNoLabels_local.jpg)<br>*Zoom 13* | ![CartoDB.PositronNoLabels National](CartoDB_PositronNoLabels_national.jpg)<br>*Zoom 7* |
 
 
 ### CartoDB.PositronOnlyLabels
@@ -128,7 +128,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![CartoDB.PositronOnlyLabels Local](img/CartoDB_PositronOnlyLabels_local.jpg)<br>*Zoom 13* | ![CartoDB.PositronOnlyLabels National](img/CartoDB_PositronOnlyLabels_national.jpg)<br>*Zoom 7* |
+| ![CartoDB.PositronOnlyLabels Local](CartoDB_PositronOnlyLabels_local.jpg)<br>*Zoom 13* | ![CartoDB.PositronOnlyLabels National](CartoDB_PositronOnlyLabels_national.jpg)<br>*Zoom 7* |
 
 
 ### CartoDB.Voyager
@@ -143,7 +143,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![CartoDB.Voyager Local](img/CartoDB_Voyager_local.jpg)<br>*Zoom 13* | ![CartoDB.Voyager National](img/CartoDB_Voyager_national.jpg)<br>*Zoom 7* |
+| ![CartoDB.Voyager Local](CartoDB_Voyager_local.jpg)<br>*Zoom 13* | ![CartoDB.Voyager National](CartoDB_Voyager_national.jpg)<br>*Zoom 7* |
 
 
 ### CartoDB.VoyagerLabelsUnder
@@ -158,7 +158,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![CartoDB.VoyagerLabelsUnder Local](img/CartoDB_VoyagerLabelsUnder_local.jpg)<br>*Zoom 13* | ![CartoDB.VoyagerLabelsUnder National](img/CartoDB_VoyagerLabelsUnder_national.jpg)<br>*Zoom 7* |
+| ![CartoDB.VoyagerLabelsUnder Local](CartoDB_VoyagerLabelsUnder_local.jpg)<br>*Zoom 13* | ![CartoDB.VoyagerLabelsUnder National](CartoDB_VoyagerLabelsUnder_national.jpg)<br>*Zoom 7* |
 
 
 ### CartoDB.VoyagerNoLabels
@@ -173,7 +173,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![CartoDB.VoyagerNoLabels Local](img/CartoDB_VoyagerNoLabels_local.jpg)<br>*Zoom 13* | ![CartoDB.VoyagerNoLabels National](img/CartoDB_VoyagerNoLabels_national.jpg)<br>*Zoom 7* |
+| ![CartoDB.VoyagerNoLabels Local](CartoDB_VoyagerNoLabels_local.jpg)<br>*Zoom 13* | ![CartoDB.VoyagerNoLabels National](CartoDB_VoyagerNoLabels_national.jpg)<br>*Zoom 7* |
 
 
 ### CartoDB.VoyagerOnlyLabels
@@ -188,7 +188,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![CartoDB.VoyagerOnlyLabels Local](img/CartoDB_VoyagerOnlyLabels_local.jpg)<br>*Zoom 13* | ![CartoDB.VoyagerOnlyLabels National](img/CartoDB_VoyagerOnlyLabels_national.jpg)<br>*Zoom 7* |
+| ![CartoDB.VoyagerOnlyLabels Local](CartoDB_VoyagerOnlyLabels_local.jpg)<br>*Zoom 13* | ![CartoDB.VoyagerOnlyLabels National](CartoDB_VoyagerOnlyLabels_national.jpg)<br>*Zoom 7* |
 
 
 ## CyclOSM
@@ -203,7 +203,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![CyclOSM Local](img/CyclOSM_local.jpg)<br>*Zoom 13* | ![CyclOSM National](img/CyclOSM_national.jpg)<br>*Zoom 7* |
+| ![CyclOSM Local](CyclOSM_local.jpg)<br>*Zoom 13* | ![CyclOSM National](CyclOSM_national.jpg)<br>*Zoom 7* |
 
 
 # Esri
@@ -236,7 +236,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![Esri.AntarcticImagery Local](img/Esri_AntarcticImagery_local.jpg)<br>*Zoom 13* | ![Esri.AntarcticImagery National](img/Esri_AntarcticImagery_national.jpg)<br>*Zoom 7* |
+| ![Esri.AntarcticImagery Local](Esri_AntarcticImagery_local.jpg)<br>*Zoom 13* | ![Esri.AntarcticImagery National](Esri_AntarcticImagery_national.jpg)<br>*Zoom 7* |
 
 
 ### Esri.ArcticImagery
@@ -251,7 +251,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![Esri.ArcticImagery Local](img/Esri_ArcticImagery_local.jpg)<br>*Zoom 13* | ![Esri.ArcticImagery National](img/Esri_ArcticImagery_national.jpg)<br>*Zoom 7* |
+| ![Esri.ArcticImagery Local](Esri_ArcticImagery_local.jpg)<br>*Zoom 13* | ![Esri.ArcticImagery National](Esri_ArcticImagery_national.jpg)<br>*Zoom 7* |
 
 
 ### Esri.ArcticOceanBase
@@ -266,7 +266,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![Esri.ArcticOceanBase Local](img/Esri_ArcticOceanBase_local.jpg)<br>*Zoom 13* | ![Esri.ArcticOceanBase National](img/Esri_ArcticOceanBase_national.jpg)<br>*Zoom 7* |
+| ![Esri.ArcticOceanBase Local](Esri_ArcticOceanBase_local.jpg)<br>*Zoom 13* | ![Esri.ArcticOceanBase National](Esri_ArcticOceanBase_national.jpg)<br>*Zoom 7* |
 
 
 ### Esri.ArcticOceanReference
@@ -281,7 +281,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![Esri.ArcticOceanReference Local](img/Esri_ArcticOceanReference_local.jpg)<br>*Zoom 13* | ![Esri.ArcticOceanReference National](img/Esri_ArcticOceanReference_national.jpg)<br>*Zoom 7* |
+| ![Esri.ArcticOceanReference Local](Esri_ArcticOceanReference_local.jpg)<br>*Zoom 13* | ![Esri.ArcticOceanReference National](Esri_ArcticOceanReference_national.jpg)<br>*Zoom 7* |
 
 
 ### Esri.NatGeoWorldMap
@@ -296,7 +296,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![Esri.NatGeoWorldMap Local](img/Esri_NatGeoWorldMap_local.jpg)<br>*Zoom 13* | ![Esri.NatGeoWorldMap National](img/Esri_NatGeoWorldMap_national.jpg)<br>*Zoom 7* |
+| ![Esri.NatGeoWorldMap Local](Esri_NatGeoWorldMap_local.jpg)<br>*Zoom 13* | ![Esri.NatGeoWorldMap National](Esri_NatGeoWorldMap_national.jpg)<br>*Zoom 7* |
 
 
 ### Esri.OceanBasemap
@@ -311,7 +311,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![Esri.OceanBasemap Local](img/Esri_OceanBasemap_local.jpg)<br>*Zoom 13* | ![Esri.OceanBasemap National](img/Esri_OceanBasemap_national.jpg)<br>*Zoom 7* |
+| ![Esri.OceanBasemap Local](Esri_OceanBasemap_local.jpg)<br>*Zoom 13* | ![Esri.OceanBasemap National](Esri_OceanBasemap_national.jpg)<br>*Zoom 7* |
 
 
 ### Esri.WorldGrayCanvas
@@ -326,7 +326,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![Esri.WorldGrayCanvas Local](img/Esri_WorldGrayCanvas_local.jpg)<br>*Zoom 13* | ![Esri.WorldGrayCanvas National](img/Esri_WorldGrayCanvas_national.jpg)<br>*Zoom 7* |
+| ![Esri.WorldGrayCanvas Local](Esri_WorldGrayCanvas_local.jpg)<br>*Zoom 13* | ![Esri.WorldGrayCanvas National](Esri_WorldGrayCanvas_national.jpg)<br>*Zoom 7* |
 
 
 ### Esri.WorldImagery
@@ -341,7 +341,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![Esri.WorldImagery Local](img/Esri_WorldImagery_local.jpg)<br>*Zoom 13* | ![Esri.WorldImagery National](img/Esri_WorldImagery_national.jpg)<br>*Zoom 7* |
+| ![Esri.WorldImagery Local](Esri_WorldImagery_local.jpg)<br>*Zoom 13* | ![Esri.WorldImagery National](Esri_WorldImagery_national.jpg)<br>*Zoom 7* |
 
 
 ### Esri.WorldPhysical
@@ -356,7 +356,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![Esri.WorldPhysical Local](img/Esri_WorldPhysical_local.jpg)<br>*Zoom 8 (Capped)* | ![Esri.WorldPhysical National](img/Esri_WorldPhysical_national.jpg)<br>*Zoom 7* |
+| ![Esri.WorldPhysical Local](Esri_WorldPhysical_local.jpg)<br>*Zoom 8 (Capped)* | ![Esri.WorldPhysical National](Esri_WorldPhysical_national.jpg)<br>*Zoom 7* |
 
 
 ### Esri.WorldShadedRelief
@@ -371,7 +371,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![Esri.WorldShadedRelief Local](img/Esri_WorldShadedRelief_local.jpg)<br>*Zoom 13* | ![Esri.WorldShadedRelief National](img/Esri_WorldShadedRelief_national.jpg)<br>*Zoom 7* |
+| ![Esri.WorldShadedRelief Local](Esri_WorldShadedRelief_local.jpg)<br>*Zoom 13* | ![Esri.WorldShadedRelief National](Esri_WorldShadedRelief_national.jpg)<br>*Zoom 7* |
 
 
 ### Esri.WorldStreetMap
@@ -386,7 +386,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![Esri.WorldStreetMap Local](img/Esri_WorldStreetMap_local.jpg)<br>*Zoom 13* | ![Esri.WorldStreetMap National](img/Esri_WorldStreetMap_national.jpg)<br>*Zoom 7* |
+| ![Esri.WorldStreetMap Local](Esri_WorldStreetMap_local.jpg)<br>*Zoom 13* | ![Esri.WorldStreetMap National](Esri_WorldStreetMap_national.jpg)<br>*Zoom 7* |
 
 
 ### Esri.WorldTerrain
@@ -401,7 +401,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![Esri.WorldTerrain Local](img/Esri_WorldTerrain_local.jpg)<br>*Zoom 13* | ![Esri.WorldTerrain National](img/Esri_WorldTerrain_national.jpg)<br>*Zoom 7* |
+| ![Esri.WorldTerrain Local](Esri_WorldTerrain_local.jpg)<br>*Zoom 13* | ![Esri.WorldTerrain National](Esri_WorldTerrain_national.jpg)<br>*Zoom 7* |
 
 
 ### Esri.WorldTopoMap
@@ -416,7 +416,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![Esri.WorldTopoMap Local](img/Esri_WorldTopoMap_local.jpg)<br>*Zoom 13* | ![Esri.WorldTopoMap National](img/Esri_WorldTopoMap_national.jpg)<br>*Zoom 7* |
+| ![Esri.WorldTopoMap Local](Esri_WorldTopoMap_local.jpg)<br>*Zoom 13* | ![Esri.WorldTopoMap National](Esri_WorldTopoMap_national.jpg)<br>*Zoom 7* |
 
 
 # Gaode
@@ -434,7 +434,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![Gaode.Normal Local](img/Gaode_Normal_local.jpg)<br>*Zoom 13* | ![Gaode.Normal National](img/Gaode_Normal_national.jpg)<br>*Zoom 7* |
+| ![Gaode.Normal Local](Gaode_Normal_local.jpg)<br>*Zoom 13* | ![Gaode.Normal National](Gaode_Normal_national.jpg)<br>*Zoom 7* |
 
 
 ### Gaode.Satellite
@@ -449,7 +449,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![Gaode.Satellite Local](img/Gaode_Satellite_local.jpg)<br>*Zoom 13* | ![Gaode.Satellite National](img/Gaode_Satellite_national.jpg)<br>*Zoom 7* |
+| ![Gaode.Satellite Local](Gaode_Satellite_local.jpg)<br>*Zoom 13* | ![Gaode.Satellite National](Gaode_Satellite_national.jpg)<br>*Zoom 7* |
 
 
 # GeoportailFrance
@@ -722,7 +722,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Buildings_Buildings National](img/GeoportailFrance_Buildings_Buildings_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Buildings_Buildings National](GeoportailFrance_Buildings_Buildings_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Cadastral_Parcels_Sections
@@ -797,7 +797,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![GeoportailFrance.Cartes_Naturalearth Local](img/GeoportailFrance_Cartes_Naturalearth_local.jpg)<br>*Zoom 9 (Capped)* | ![GeoportailFrance.Cartes_Naturalearth National](img/GeoportailFrance_Cartes_Naturalearth_national.jpg)<br>*Zoom 7* |
+| ![GeoportailFrance.Cartes_Naturalearth Local](GeoportailFrance_Cartes_Naturalearth_local.jpg)<br>*Zoom 9 (Capped)* | ![GeoportailFrance.Cartes_Naturalearth National](GeoportailFrance_Cartes_Naturalearth_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Cget_qp_bdd_wld_wm_wmts_20150914
@@ -932,7 +932,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Elevation_Slopes National](img/GeoportailFrance_Elevation_Slopes_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Elevation_Slopes National](GeoportailFrance_Elevation_Slopes_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Elevationgridcoverage_Highres_Quality
@@ -1022,7 +1022,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Geographicalgridsystems_Maps_Bduni_J1 National](img/GeoportailFrance_Geographicalgridsystems_Maps_Bduni_J1_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Geographicalgridsystems_Maps_Bduni_J1 National](GeoportailFrance_Geographicalgridsystems_Maps_Bduni_J1_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Geographicalgridsystems_Maps_Overview
@@ -1037,7 +1037,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![GeoportailFrance.Geographicalgridsystems_Maps_Overview Local](img/GeoportailFrance_Geographicalgridsystems_Maps_Overview_local.jpg)<br>*Zoom 8 (Capped)* | ![GeoportailFrance.Geographicalgridsystems_Maps_Overview National](img/GeoportailFrance_Geographicalgridsystems_Maps_Overview_national.jpg)<br>*Zoom 7* |
+| ![GeoportailFrance.Geographicalgridsystems_Maps_Overview Local](GeoportailFrance_Geographicalgridsystems_Maps_Overview_local.jpg)<br>*Zoom 8 (Capped)* | ![GeoportailFrance.Geographicalgridsystems_Maps_Overview National](GeoportailFrance_Geographicalgridsystems_Maps_Overview_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Geographicalgridsystems_Maps_Scan50_1950
@@ -1052,7 +1052,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Geographicalgridsystems_Maps_Scan50_1950 National](img/GeoportailFrance_Geographicalgridsystems_Maps_Scan50_1950_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Geographicalgridsystems_Maps_Scan50_1950 National](GeoportailFrance_Geographicalgridsystems_Maps_Scan50_1950_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Geographicalgridsystems_Slopes_Mountain
@@ -1097,7 +1097,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Geographicalnames_Names National](img/GeoportailFrance_Geographicalnames_Names_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Geographicalnames_Names National](GeoportailFrance_Geographicalnames_Names_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Hedge_Hedge
@@ -1127,7 +1127,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Hr_Orthoimagery_Orthophotos National](img/GeoportailFrance_Hr_Orthoimagery_Orthophotos_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Hr_Orthoimagery_Orthophotos National](GeoportailFrance_Hr_Orthoimagery_Orthophotos_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Hydrography_Hydrography
@@ -1142,7 +1142,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Hydrography_Hydrography National](img/GeoportailFrance_Hydrography_Hydrography_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Hydrography_Hydrography National](GeoportailFrance_Hydrography_Hydrography_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Ignf_cosia_2017-2020
@@ -1157,7 +1157,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Ignf_cosia_2017-2020 National](img/GeoportailFrance_Ignf_cosia_2017-2020_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Ignf_cosia_2017-2020 National](GeoportailFrance_Ignf_cosia_2017-2020_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Ignf_cosia_2021-2023
@@ -1172,7 +1172,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Ignf_cosia_2021-2023 National](img/GeoportailFrance_Ignf_cosia_2021-2023_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Ignf_cosia_2021-2023 National](GeoportailFrance_Ignf_cosia_2021-2023_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Ignf_cosia_2024
@@ -1187,7 +1187,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Ignf_cosia_2024 National](img/GeoportailFrance_Ignf_cosia_2024_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Ignf_cosia_2024 National](GeoportailFrance_Ignf_cosia_2024_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Ignf_lidar_hd_mnh_elevation_Elevationgridcoverage_Shadow
@@ -1202,7 +1202,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Ignf_lidar_hd_mnh_elevation_Elevationgridcoverage_Shadow National](img/GeoportailFrance_Ignf_lidar_hd_mnh_elevation_Elevationgridcoverage_Shadow_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Ignf_lidar_hd_mnh_elevation_Elevationgridcoverage_Shadow National](GeoportailFrance_Ignf_lidar_hd_mnh_elevation_Elevationgridcoverage_Shadow_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Ignf_lidar_hd_mns_elevation_Elevationgridcoverage_Shadow
@@ -1217,7 +1217,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Ignf_lidar_hd_mns_elevation_Elevationgridcoverage_Shadow National](img/GeoportailFrance_Ignf_lidar_hd_mns_elevation_Elevationgridcoverage_Shadow_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Ignf_lidar_hd_mns_elevation_Elevationgridcoverage_Shadow National](GeoportailFrance_Ignf_lidar_hd_mns_elevation_Elevationgridcoverage_Shadow_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Ignf_lidar_hd_mnt_elevation_Elevationgridcoverage_Shadow
@@ -1232,7 +1232,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Ignf_lidar_hd_mnt_elevation_Elevationgridcoverage_Shadow National](img/GeoportailFrance_Ignf_lidar_hd_mnt_elevation_Elevationgridcoverage_Shadow_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Ignf_lidar_hd_mnt_elevation_Elevationgridcoverage_Shadow National](GeoportailFrance_Ignf_lidar_hd_mnt_elevation_Elevationgridcoverage_Shadow_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Ignf_nature-en-ville_2021-2023
@@ -2132,7 +2132,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Landcover_Grid_Clc06 National](img/GeoportailFrance_Landcover_Grid_Clc06_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Landcover_Grid_Clc06 National](GeoportailFrance_Landcover_Grid_Clc06_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Landcover_Grid_Clc06_dom
@@ -2192,7 +2192,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Landcover_Grid_Clc12 National](img/GeoportailFrance_Landcover_Grid_Clc12_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Landcover_Grid_Clc12 National](GeoportailFrance_Landcover_Grid_Clc12_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Landcover_Grid_Clc12_dom
@@ -2222,7 +2222,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Landcover_Hr_Dlt_Clc12 National](img/GeoportailFrance_Landcover_Hr_Dlt_Clc12_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Landcover_Hr_Dlt_Clc12 National](GeoportailFrance_Landcover_Hr_Dlt_Clc12_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Landcover_Hr_Dlt_Clc15
@@ -2237,7 +2237,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Landcover_Hr_Dlt_Clc15 National](img/GeoportailFrance_Landcover_Hr_Dlt_Clc15_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Landcover_Hr_Dlt_Clc15 National](GeoportailFrance_Landcover_Hr_Dlt_Clc15_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Landcover_Hr_Gra_Clc15
@@ -2252,7 +2252,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Landcover_Hr_Gra_Clc15 National](img/GeoportailFrance_Landcover_Hr_Gra_Clc15_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Landcover_Hr_Gra_Clc15 National](GeoportailFrance_Landcover_Hr_Gra_Clc15_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Landcover_Hr_Imd_Clc12
@@ -2267,7 +2267,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Landcover_Hr_Imd_Clc12 National](img/GeoportailFrance_Landcover_Hr_Imd_Clc12_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Landcover_Hr_Imd_Clc12 National](GeoportailFrance_Landcover_Hr_Imd_Clc12_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Landcover_Hr_Imd_Clc15
@@ -2282,7 +2282,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Landcover_Hr_Imd_Clc15 National](img/GeoportailFrance_Landcover_Hr_Imd_Clc15_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Landcover_Hr_Imd_Clc15 National](GeoportailFrance_Landcover_Hr_Imd_Clc15_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Landcover_Hr_Tcd_Clc12
@@ -2297,7 +2297,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Landcover_Hr_Tcd_Clc12 National](img/GeoportailFrance_Landcover_Hr_Tcd_Clc12_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Landcover_Hr_Tcd_Clc12 National](GeoportailFrance_Landcover_Hr_Tcd_Clc12_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Landcover_Hr_Tcd_Clc15
@@ -2312,7 +2312,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Landcover_Hr_Tcd_Clc15 National](img/GeoportailFrance_Landcover_Hr_Tcd_Clc15_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Landcover_Hr_Tcd_Clc15 National](GeoportailFrance_Landcover_Hr_Tcd_Clc15_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Landcover_Hr_Waw_Clc15
@@ -2327,7 +2327,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Landcover_Hr_Waw_Clc15 National](img/GeoportailFrance_Landcover_Hr_Waw_Clc15_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Landcover_Hr_Waw_Clc15 National](GeoportailFrance_Landcover_Hr_Waw_Clc15_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Landuse_Agriculture2007
@@ -2492,7 +2492,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Landuse_Agriculture2017 National](img/GeoportailFrance_Landuse_Agriculture2017_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Landuse_Agriculture2017 National](GeoportailFrance_Landuse_Agriculture2017_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Landuse_Agriculture2018
@@ -2792,7 +2792,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Ortho_sat_Pleiades_2013 National](img/GeoportailFrance_Orthoimagery_Ortho_sat_Pleiades_2013_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Ortho_sat_Pleiades_2013 National](GeoportailFrance_Orthoimagery_Ortho_sat_Pleiades_2013_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Orthoimagery_Ortho_sat_Pleiades_2014
@@ -2807,7 +2807,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Ortho_sat_Pleiades_2014 National](img/GeoportailFrance_Orthoimagery_Ortho_sat_Pleiades_2014_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Ortho_sat_Pleiades_2014 National](GeoportailFrance_Orthoimagery_Ortho_sat_Pleiades_2014_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Orthoimagery_Ortho_sat_Pleiades_2015
@@ -2942,7 +2942,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Ortho_sat_Spot_2014 National](img/GeoportailFrance_Orthoimagery_Ortho_sat_Spot_2014_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Ortho_sat_Spot_2014 National](GeoportailFrance_Orthoimagery_Ortho_sat_Spot_2014_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Orthoimagery_Ortho_sat_Spot_2015
@@ -3272,7 +3272,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos2016_2020 National](img/GeoportailFrance_Orthoimagery_Orthophotos2016_2020_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos2016_2020 National](GeoportailFrance_Orthoimagery_Orthophotos2016_2020_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Orthoimagery_Orthophotos2017
@@ -3302,7 +3302,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos2018 National](img/GeoportailFrance_Orthoimagery_Orthophotos2018_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos2018 National](GeoportailFrance_Orthoimagery_Orthophotos2018_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Orthoimagery_Orthophotos2021
@@ -3317,7 +3317,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos2021 National](img/GeoportailFrance_Orthoimagery_Orthophotos2021_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos2021 National](GeoportailFrance_Orthoimagery_Orthophotos2021_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Orthoimagery_Orthophotos2022
@@ -3332,7 +3332,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos2022 National](img/GeoportailFrance_Orthoimagery_Orthophotos2022_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos2022 National](GeoportailFrance_Orthoimagery_Orthophotos2022_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Orthoimagery_Orthophotos2023
@@ -3347,7 +3347,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos2023 National](img/GeoportailFrance_Orthoimagery_Orthophotos2023_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos2023 National](GeoportailFrance_Orthoimagery_Orthophotos2023_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Orthoimagery_Orthophotos2024
@@ -3362,7 +3362,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos2024 National](img/GeoportailFrance_Orthoimagery_Orthophotos2024_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos2024 National](GeoportailFrance_Orthoimagery_Orthophotos2024_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Orthoimagery_Orthophotos_1950_1965
@@ -3392,7 +3392,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Bdortho National](img/GeoportailFrance_Orthoimagery_Orthophotos_Bdortho_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Bdortho National](GeoportailFrance_Orthoimagery_Orthophotos_Bdortho_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Orthoimagery_Orthophotos_Irc
@@ -3407,7 +3407,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Irc National](img/GeoportailFrance_Orthoimagery_Orthophotos_Irc_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Irc National](GeoportailFrance_Orthoimagery_Orthophotos_Irc_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Orthoimagery_Orthophotos_Irc_2012
@@ -3422,7 +3422,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Irc_2012 National](img/GeoportailFrance_Orthoimagery_Orthophotos_Irc_2012_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Irc_2012 National](GeoportailFrance_Orthoimagery_Orthophotos_Irc_2012_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Orthoimagery_Orthophotos_Irc_2013
@@ -3437,7 +3437,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Irc_2013 National](img/GeoportailFrance_Orthoimagery_Orthophotos_Irc_2013_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Irc_2013 National](GeoportailFrance_Orthoimagery_Orthophotos_Irc_2013_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Orthoimagery_Orthophotos_Irc_2014
@@ -3452,7 +3452,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Irc_2014 National](img/GeoportailFrance_Orthoimagery_Orthophotos_Irc_2014_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Irc_2014 National](GeoportailFrance_Orthoimagery_Orthophotos_Irc_2014_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Orthoimagery_Orthophotos_Irc_2016
@@ -3467,7 +3467,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Irc_2016 National](img/GeoportailFrance_Orthoimagery_Orthophotos_Irc_2016_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Irc_2016 National](GeoportailFrance_Orthoimagery_Orthophotos_Irc_2016_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Orthoimagery_Orthophotos_Irc_2017
@@ -3482,7 +3482,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Irc_2017 National](img/GeoportailFrance_Orthoimagery_Orthophotos_Irc_2017_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Irc_2017 National](GeoportailFrance_Orthoimagery_Orthophotos_Irc_2017_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Orthoimagery_Orthophotos_Irc_2020
@@ -3497,7 +3497,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Irc_2020 National](img/GeoportailFrance_Orthoimagery_Orthophotos_Irc_2020_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Irc_2020 National](GeoportailFrance_Orthoimagery_Orthophotos_Irc_2020_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Orthoimagery_Orthophotos_Irc_2021
@@ -3512,7 +3512,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Irc_2021 National](img/GeoportailFrance_Orthoimagery_Orthophotos_Irc_2021_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Irc_2021 National](GeoportailFrance_Orthoimagery_Orthophotos_Irc_2021_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Orthoimagery_Orthophotos_Irc_2022
@@ -3527,7 +3527,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Irc_2022 National](img/GeoportailFrance_Orthoimagery_Orthophotos_Irc_2022_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Irc_2022 National](GeoportailFrance_Orthoimagery_Orthophotos_Irc_2022_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Orthoimagery_Orthophotos_Irc_2023
@@ -3542,7 +3542,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Irc_2023 National](img/GeoportailFrance_Orthoimagery_Orthophotos_Irc_2023_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Irc_2023 National](GeoportailFrance_Orthoimagery_Orthophotos_Irc_2023_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Orthoimagery_Orthophotos_Irc_2024
@@ -3557,7 +3557,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Irc_2024 National](img/GeoportailFrance_Orthoimagery_Orthophotos_Irc_2024_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Irc_2024 National](GeoportailFrance_Orthoimagery_Orthophotos_Irc_2024_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Orthoimagery_Orthophotos_Irc_express_2023
@@ -3572,7 +3572,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Irc_express_2023 National](img/GeoportailFrance_Orthoimagery_Orthophotos_Irc_express_2023_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Irc_express_2023 National](GeoportailFrance_Orthoimagery_Orthophotos_Irc_express_2023_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Orthoimagery_Orthophotos_Irc_express_2024
@@ -3587,7 +3587,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Irc_express_2024 National](img/GeoportailFrance_Orthoimagery_Orthophotos_Irc_express_2024_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Irc_express_2024 National](GeoportailFrance_Orthoimagery_Orthophotos_Irc_express_2024_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Orthoimagery_Orthophotos_Irc_express_2025
@@ -3602,7 +3602,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Irc_express_2025 National](img/GeoportailFrance_Orthoimagery_Orthophotos_Irc_express_2025_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Irc_express_2025 National](GeoportailFrance_Orthoimagery_Orthophotos_Irc_express_2025_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Orthoimagery_Orthophotos_Low_res_Crs84
@@ -3617,7 +3617,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![GeoportailFrance.Orthoimagery_Orthophotos_Low_res_Crs84 Local](img/GeoportailFrance_Orthoimagery_Orthophotos_Low_res_Crs84_local.jpg)<br>*Zoom 12 (Capped)* | ![GeoportailFrance.Orthoimagery_Orthophotos_Low_res_Crs84 National](img/GeoportailFrance_Orthoimagery_Orthophotos_Low_res_Crs84_national.jpg)<br>*Zoom 7* |
+| ![GeoportailFrance.Orthoimagery_Orthophotos_Low_res_Crs84 Local](GeoportailFrance_Orthoimagery_Orthophotos_Low_res_Crs84_local.jpg)<br>*Zoom 12 (Capped)* | ![GeoportailFrance.Orthoimagery_Orthophotos_Low_res_Crs84 National](GeoportailFrance_Orthoimagery_Orthophotos_Low_res_Crs84_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Orthoimagery_Orthophotos_Ncl
@@ -3632,7 +3632,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Ncl National](img/GeoportailFrance_Orthoimagery_Orthophotos_Ncl_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Ncl National](GeoportailFrance_Orthoimagery_Orthophotos_Ncl_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Orthoimagery_Orthophotos_Ortho_asp_pac2020
@@ -3647,7 +3647,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Ortho_asp_pac2020 National](img/GeoportailFrance_Orthoimagery_Orthophotos_Ortho_asp_pac2020_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Ortho_asp_pac2020 National](GeoportailFrance_Orthoimagery_Orthophotos_Ortho_asp_pac2020_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Orthoimagery_Orthophotos_Ortho_asp_pac2021
@@ -3662,7 +3662,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Ortho_asp_pac2021 National](img/GeoportailFrance_Orthoimagery_Orthophotos_Ortho_asp_pac2021_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Ortho_asp_pac2021 National](GeoportailFrance_Orthoimagery_Orthophotos_Ortho_asp_pac2021_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Orthoimagery_Orthophotos_Ortho_asp_pac2022
@@ -3677,7 +3677,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Ortho_asp_pac2022 National](img/GeoportailFrance_Orthoimagery_Orthophotos_Ortho_asp_pac2022_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Ortho_asp_pac2022 National](GeoportailFrance_Orthoimagery_Orthophotos_Ortho_asp_pac2022_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Orthoimagery_Orthophotos_Ortho_asp_pac2025
@@ -3692,7 +3692,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Ortho_asp_pac2025 National](img/GeoportailFrance_Orthoimagery_Orthophotos_Ortho_asp_pac2025_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Ortho_asp_pac2025 National](GeoportailFrance_Orthoimagery_Orthophotos_Ortho_asp_pac2025_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Orthoimagery_Orthophotos_Ortho_express_2023
@@ -3707,7 +3707,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Ortho_express_2023 National](img/GeoportailFrance_Orthoimagery_Orthophotos_Ortho_express_2023_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Ortho_express_2023 National](GeoportailFrance_Orthoimagery_Orthophotos_Ortho_express_2023_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Orthoimagery_Orthophotos_Ortho_express_2024
@@ -3722,7 +3722,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Ortho_express_2024 National](img/GeoportailFrance_Orthoimagery_Orthophotos_Ortho_express_2024_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Ortho_express_2024 National](GeoportailFrance_Orthoimagery_Orthophotos_Ortho_express_2024_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Orthoimagery_Orthophotos_Ortho_express_2025
@@ -3737,7 +3737,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Ortho_express_2025 National](img/GeoportailFrance_Orthoimagery_Orthophotos_Ortho_express_2025_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Ortho_express_2025 National](GeoportailFrance_Orthoimagery_Orthophotos_Ortho_express_2025_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Orthoimagery_Orthophotos_Socle_asp_2018
@@ -3752,7 +3752,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Socle_asp_2018 National](img/GeoportailFrance_Orthoimagery_Orthophotos_Socle_asp_2018_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Orthoimagery_Orthophotos_Socle_asp_2018 National](GeoportailFrance_Orthoimagery_Orthophotos_Socle_asp_2018_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Part_Enr_Commune
@@ -4697,7 +4697,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Test_pbe_le_havre National](img/GeoportailFrance_Test_pbe_le_havre_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Test_pbe_le_havre National](GeoportailFrance_Test_pbe_le_havre_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Thr_Orthoimagery_Orthophotos
@@ -4712,7 +4712,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Thr_Orthoimagery_Orthophotos National](img/GeoportailFrance_Thr_Orthoimagery_Orthophotos_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Thr_Orthoimagery_Orthophotos National](GeoportailFrance_Thr_Orthoimagery_Orthophotos_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Tn_Roadtransportnetwork_Roadlink
@@ -4727,7 +4727,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Tn_Roadtransportnetwork_Roadlink National](img/GeoportailFrance_Tn_Roadtransportnetwork_Roadlink_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Tn_Roadtransportnetwork_Roadlink National](GeoportailFrance_Tn_Roadtransportnetwork_Roadlink_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Tourbieres_zones_humides_Bcae
@@ -4787,7 +4787,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Transportnetworks_Railways National](img/GeoportailFrance_Transportnetworks_Railways_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Transportnetworks_Railways National](GeoportailFrance_Transportnetworks_Railways_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Transportnetworks_Roads
@@ -4802,7 +4802,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Transportnetworks_Roads National](img/GeoportailFrance_Transportnetworks_Roads_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Transportnetworks_Roads National](GeoportailFrance_Transportnetworks_Roads_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Transportnetworks_Roads_Direction
@@ -4832,7 +4832,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.Transportnetworks_Runways National](img/GeoportailFrance_Transportnetworks_Runways_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.Transportnetworks_Runways National](GeoportailFrance_Transportnetworks_Runways_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.Transports_Drones_Restrictions
@@ -4877,7 +4877,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.orthos National](img/GeoportailFrance_orthos_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.orthos National](GeoportailFrance_orthos_national.jpg)<br>*Zoom 7* |
 
 
 ### GeoportailFrance.parcels
@@ -4907,7 +4907,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![GeoportailFrance.plan National](img/GeoportailFrance_plan_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![GeoportailFrance.plan National](GeoportailFrance_plan_national.jpg)<br>*Zoom 7* |
 
 
 # HikeBike
@@ -5093,7 +5093,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![MtbMap Local](img/MtbMap_local.jpg)<br>*Zoom 13* | ![MtbMap National](img/MtbMap_national.jpg)<br>*Zoom 7* |
+| ![MtbMap Local](MtbMap_local.jpg)<br>*Zoom 13* | ![MtbMap National](MtbMap_national.jpg)<br>*Zoom 7* |
 
 
 # NASAGIBS
@@ -5111,7 +5111,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![NASAGIBS.ASTER_GDEM_Greyscale_Shaded_Relief Local](img/NASAGIBS_ASTER_GDEM_Greyscale_Shaded_Relief_local.jpg)<br>*Zoom 12 (Capped)* | ![NASAGIBS.ASTER_GDEM_Greyscale_Shaded_Relief National](img/NASAGIBS_ASTER_GDEM_Greyscale_Shaded_Relief_national.jpg)<br>*Zoom 7* |
+| ![NASAGIBS.ASTER_GDEM_Greyscale_Shaded_Relief Local](NASAGIBS_ASTER_GDEM_Greyscale_Shaded_Relief_local.jpg)<br>*Zoom 12 (Capped)* | ![NASAGIBS.ASTER_GDEM_Greyscale_Shaded_Relief National](NASAGIBS_ASTER_GDEM_Greyscale_Shaded_Relief_national.jpg)<br>*Zoom 7* |
 
 
 ### NASAGIBS.BlueMarble
@@ -5126,7 +5126,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![NASAGIBS.BlueMarble Local](img/NASAGIBS_BlueMarble_local.jpg)<br>*Zoom 8 (Capped)* | ![NASAGIBS.BlueMarble National](img/NASAGIBS_BlueMarble_national.jpg)<br>*Zoom 7* |
+| ![NASAGIBS.BlueMarble Local](NASAGIBS_BlueMarble_local.jpg)<br>*Zoom 8 (Capped)* | ![NASAGIBS.BlueMarble National](NASAGIBS_BlueMarble_national.jpg)<br>*Zoom 7* |
 
 
 ### NASAGIBS.BlueMarble3031
@@ -5201,7 +5201,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![NASAGIBS.MEaSUREsIceVelocity3031 Local](img/NASAGIBS_MEaSUREsIceVelocity3031_local.jpg)<br>*Zoom 4 (Capped)* | ![NASAGIBS.MEaSUREsIceVelocity3031 National](img/NASAGIBS_MEaSUREsIceVelocity3031_national.jpg)<br>*Zoom 4 (Capped)* |
+| ![NASAGIBS.MEaSUREsIceVelocity3031 Local](NASAGIBS_MEaSUREsIceVelocity3031_local.jpg)<br>*Zoom 4 (Capped)* | ![NASAGIBS.MEaSUREsIceVelocity3031 National](NASAGIBS_MEaSUREsIceVelocity3031_national.jpg)<br>*Zoom 4 (Capped)* |
 
 
 ### NASAGIBS.MEaSUREsIceVelocity3413
@@ -5216,7 +5216,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![NASAGIBS.MEaSUREsIceVelocity3413 Local](img/NASAGIBS_MEaSUREsIceVelocity3413_local.jpg)<br>*Zoom 4 (Capped)* | ![NASAGIBS.MEaSUREsIceVelocity3413 National](img/NASAGIBS_MEaSUREsIceVelocity3413_national.jpg)<br>*Zoom 4 (Capped)* |
+| ![NASAGIBS.MEaSUREsIceVelocity3413 Local](NASAGIBS_MEaSUREsIceVelocity3413_local.jpg)<br>*Zoom 4 (Capped)* | ![NASAGIBS.MEaSUREsIceVelocity3413 National](NASAGIBS_MEaSUREsIceVelocity3413_national.jpg)<br>*Zoom 4 (Capped)* |
 
 
 ### NASAGIBS.ModisAquaBands721CR
@@ -5231,7 +5231,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![NASAGIBS.ModisAquaBands721CR Local](img/NASAGIBS_ModisAquaBands721CR_local.jpg)<br>*Zoom 9 (Capped)* | ![NASAGIBS.ModisAquaBands721CR National](img/NASAGIBS_ModisAquaBands721CR_national.jpg)<br>*Zoom 7* |
+| ![NASAGIBS.ModisAquaBands721CR Local](NASAGIBS_ModisAquaBands721CR_local.jpg)<br>*Zoom 9 (Capped)* | ![NASAGIBS.ModisAquaBands721CR National](NASAGIBS_ModisAquaBands721CR_national.jpg)<br>*Zoom 7* |
 
 
 ### NASAGIBS.ModisAquaTrueColorCR
@@ -5246,7 +5246,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![NASAGIBS.ModisAquaTrueColorCR Local](img/NASAGIBS_ModisAquaTrueColorCR_local.jpg)<br>*Zoom 9 (Capped)* | ![NASAGIBS.ModisAquaTrueColorCR National](img/NASAGIBS_ModisAquaTrueColorCR_national.jpg)<br>*Zoom 7* |
+| ![NASAGIBS.ModisAquaTrueColorCR Local](NASAGIBS_ModisAquaTrueColorCR_local.jpg)<br>*Zoom 9 (Capped)* | ![NASAGIBS.ModisAquaTrueColorCR National](NASAGIBS_ModisAquaTrueColorCR_national.jpg)<br>*Zoom 7* |
 
 
 ### NASAGIBS.ModisTerraAOD
@@ -5261,7 +5261,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![NASAGIBS.ModisTerraAOD Local](img/NASAGIBS_ModisTerraAOD_local.jpg)<br>*Zoom 6 (Capped)* | *Gen Failed* |
+| ![NASAGIBS.ModisTerraAOD Local](NASAGIBS_ModisTerraAOD_local.jpg)<br>*Zoom 6 (Capped)* | *Gen Failed* |
 
 
 ### NASAGIBS.ModisTerraBands367CR
@@ -5276,7 +5276,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![NASAGIBS.ModisTerraBands367CR Local](img/NASAGIBS_ModisTerraBands367CR_local.jpg)<br>*Zoom 9 (Capped)* | ![NASAGIBS.ModisTerraBands367CR National](img/NASAGIBS_ModisTerraBands367CR_national.jpg)<br>*Zoom 7* |
+| ![NASAGIBS.ModisTerraBands367CR Local](NASAGIBS_ModisTerraBands367CR_local.jpg)<br>*Zoom 9 (Capped)* | ![NASAGIBS.ModisTerraBands367CR National](NASAGIBS_ModisTerraBands367CR_national.jpg)<br>*Zoom 7* |
 
 
 ### NASAGIBS.ModisTerraBands721CR
@@ -5291,7 +5291,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![NASAGIBS.ModisTerraBands721CR Local](img/NASAGIBS_ModisTerraBands721CR_local.jpg)<br>*Zoom 9 (Capped)* | ![NASAGIBS.ModisTerraBands721CR National](img/NASAGIBS_ModisTerraBands721CR_national.jpg)<br>*Zoom 7* |
+| ![NASAGIBS.ModisTerraBands721CR Local](NASAGIBS_ModisTerraBands721CR_local.jpg)<br>*Zoom 9 (Capped)* | ![NASAGIBS.ModisTerraBands721CR National](NASAGIBS_ModisTerraBands721CR_national.jpg)<br>*Zoom 7* |
 
 
 ### NASAGIBS.ModisTerraChlorophyll
@@ -5321,7 +5321,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![NASAGIBS.ModisTerraLSTDay Local](img/NASAGIBS_ModisTerraLSTDay_local.jpg)<br>*Zoom 7 (Capped)* | ![NASAGIBS.ModisTerraLSTDay National](img/NASAGIBS_ModisTerraLSTDay_national.jpg)<br>*Zoom 7* |
+| ![NASAGIBS.ModisTerraLSTDay Local](NASAGIBS_ModisTerraLSTDay_local.jpg)<br>*Zoom 7 (Capped)* | ![NASAGIBS.ModisTerraLSTDay National](NASAGIBS_ModisTerraLSTDay_national.jpg)<br>*Zoom 7* |
 
 
 ### NASAGIBS.ModisTerraSnowCover
@@ -5336,7 +5336,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![NASAGIBS.ModisTerraSnowCover Local](img/NASAGIBS_ModisTerraSnowCover_local.jpg)<br>*Zoom 8 (Capped)* | ![NASAGIBS.ModisTerraSnowCover National](img/NASAGIBS_ModisTerraSnowCover_national.jpg)<br>*Zoom 7* |
+| ![NASAGIBS.ModisTerraSnowCover Local](NASAGIBS_ModisTerraSnowCover_local.jpg)<br>*Zoom 8 (Capped)* | ![NASAGIBS.ModisTerraSnowCover National](NASAGIBS_ModisTerraSnowCover_national.jpg)<br>*Zoom 7* |
 
 
 ### NASAGIBS.ModisTerraTrueColorCR
@@ -5351,7 +5351,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![NASAGIBS.ModisTerraTrueColorCR Local](img/NASAGIBS_ModisTerraTrueColorCR_local.jpg)<br>*Zoom 9 (Capped)* | ![NASAGIBS.ModisTerraTrueColorCR National](img/NASAGIBS_ModisTerraTrueColorCR_national.jpg)<br>*Zoom 7* |
+| ![NASAGIBS.ModisTerraTrueColorCR Local](NASAGIBS_ModisTerraTrueColorCR_local.jpg)<br>*Zoom 9 (Capped)* | ![NASAGIBS.ModisTerraTrueColorCR National](NASAGIBS_ModisTerraTrueColorCR_national.jpg)<br>*Zoom 7* |
 
 
 ### NASAGIBS.ViirsEarthAtNight2012
@@ -5366,7 +5366,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![NASAGIBS.ViirsEarthAtNight2012 Local](img/NASAGIBS_ViirsEarthAtNight2012_local.jpg)<br>*Zoom 8 (Capped)* | ![NASAGIBS.ViirsEarthAtNight2012 National](img/NASAGIBS_ViirsEarthAtNight2012_national.jpg)<br>*Zoom 7* |
+| ![NASAGIBS.ViirsEarthAtNight2012 Local](NASAGIBS_ViirsEarthAtNight2012_local.jpg)<br>*Zoom 8 (Capped)* | ![NASAGIBS.ViirsEarthAtNight2012 National](NASAGIBS_ViirsEarthAtNight2012_national.jpg)<br>*Zoom 7* |
 
 
 ### NASAGIBS.ViirsTrueColorCR
@@ -5381,7 +5381,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![NASAGIBS.ViirsTrueColorCR Local](img/NASAGIBS_ViirsTrueColorCR_local.jpg)<br>*Zoom 9 (Capped)* | ![NASAGIBS.ViirsTrueColorCR National](img/NASAGIBS_ViirsTrueColorCR_national.jpg)<br>*Zoom 7* |
+| ![NASAGIBS.ViirsTrueColorCR Local](NASAGIBS_ViirsTrueColorCR_local.jpg)<br>*Zoom 9 (Capped)* | ![NASAGIBS.ViirsTrueColorCR National](NASAGIBS_ViirsTrueColorCR_national.jpg)<br>*Zoom 7* |
 
 
 ## OPNVKarte
@@ -5396,7 +5396,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![OPNVKarte Local](img/OPNVKarte_local.jpg)<br>*Zoom 13* | ![OPNVKarte National](img/OPNVKarte_national.jpg)<br>*Zoom 7* |
+| ![OPNVKarte Local](OPNVKarte_local.jpg)<br>*Zoom 13* | ![OPNVKarte National](OPNVKarte_national.jpg)<br>*Zoom 7* |
 
 
 # OneMapSG
@@ -5444,7 +5444,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![OpenRailwayMap Local](img/OpenRailwayMap_local.jpg)<br>*Zoom 13* | ![OpenRailwayMap National](img/OpenRailwayMap_national.jpg)<br>*Zoom 7* |
+| ![OpenRailwayMap Local](OpenRailwayMap_local.jpg)<br>*Zoom 13* | ![OpenRailwayMap National](OpenRailwayMap_national.jpg)<br>*Zoom 7* |
 
 
 ## OpenSeaMap
@@ -5459,7 +5459,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![OpenSeaMap Local](img/OpenSeaMap_local.jpg)<br>*Zoom 13* | ![OpenSeaMap National](img/OpenSeaMap_national.jpg)<br>*Zoom 7* |
+| ![OpenSeaMap Local](OpenSeaMap_local.jpg)<br>*Zoom 13* | ![OpenSeaMap National](OpenSeaMap_national.jpg)<br>*Zoom 7* |
 
 
 # OpenSnowMap
@@ -5477,7 +5477,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![OpenSnowMap.pistes Local](img/OpenSnowMap_pistes_local.jpg)<br>*Zoom 13* | *Gen Failed* |
+| ![OpenSnowMap.pistes Local](OpenSnowMap_pistes_local.jpg)<br>*Zoom 13* | *Gen Failed* |
 
 
 # OpenStreetMap
@@ -5510,7 +5510,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![OpenStreetMap.DE Local](img/OpenStreetMap_DE_local.jpg)<br>*Zoom 13* | ![OpenStreetMap.DE National](img/OpenStreetMap_DE_national.jpg)<br>*Zoom 7* |
+| ![OpenStreetMap.DE Local](OpenStreetMap_DE_local.jpg)<br>*Zoom 13* | ![OpenStreetMap.DE National](OpenStreetMap_DE_national.jpg)<br>*Zoom 7* |
 
 
 ### OpenStreetMap.France
@@ -5525,7 +5525,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![OpenStreetMap.France Local](img/OpenStreetMap_France_local.jpg)<br>*Zoom 13* | ![OpenStreetMap.France National](img/OpenStreetMap_France_national.jpg)<br>*Zoom 7* |
+| ![OpenStreetMap.France Local](OpenStreetMap_France_local.jpg)<br>*Zoom 13* | ![OpenStreetMap.France National](OpenStreetMap_France_national.jpg)<br>*Zoom 7* |
 
 
 ### OpenStreetMap.HOT
@@ -5540,7 +5540,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![OpenStreetMap.HOT Local](img/OpenStreetMap_HOT_local.jpg)<br>*Zoom 13* | ![OpenStreetMap.HOT National](img/OpenStreetMap_HOT_national.jpg)<br>*Zoom 7* |
+| ![OpenStreetMap.HOT Local](OpenStreetMap_HOT_local.jpg)<br>*Zoom 13* | ![OpenStreetMap.HOT National](OpenStreetMap_HOT_national.jpg)<br>*Zoom 7* |
 
 
 ### OpenStreetMap.Mapnik
@@ -5555,7 +5555,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![OpenStreetMap.Mapnik Local](img/OpenStreetMap_Mapnik_local.jpg)<br>*Zoom 13* | ![OpenStreetMap.Mapnik National](img/OpenStreetMap_Mapnik_national.jpg)<br>*Zoom 7* |
+| ![OpenStreetMap.Mapnik Local](OpenStreetMap_Mapnik_local.jpg)<br>*Zoom 13* | ![OpenStreetMap.Mapnik National](OpenStreetMap_Mapnik_national.jpg)<br>*Zoom 7* |
 
 
 ## OpenTopoMap
@@ -5570,7 +5570,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![OpenTopoMap Local](img/OpenTopoMap_local.jpg)<br>*Zoom 13* | ![OpenTopoMap National](img/OpenTopoMap_national.jpg)<br>*Zoom 7* |
+| ![OpenTopoMap Local](OpenTopoMap_local.jpg)<br>*Zoom 13* | ![OpenTopoMap National](OpenTopoMap_national.jpg)<br>*Zoom 7* |
 
 
 ## SafeCast
@@ -5585,7 +5585,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![SafeCast Local](img/SafeCast_local.jpg)<br>*Zoom 13* | ![SafeCast National](img/SafeCast_national.jpg)<br>*Zoom 7* |
+| ![SafeCast Local](SafeCast_local.jpg)<br>*Zoom 13* | ![SafeCast National](SafeCast_national.jpg)<br>*Zoom 7* |
 
 
 # Stadia
@@ -5861,7 +5861,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![Strava.All National](img/Strava_All_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![Strava.All National](Strava_All_national.jpg)<br>*Zoom 7* |
 
 
 ### Strava.Ride
@@ -5876,7 +5876,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![Strava.Ride National](img/Strava_Ride_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![Strava.Ride National](Strava_Ride_national.jpg)<br>*Zoom 7* |
 
 
 ### Strava.Run
@@ -5891,7 +5891,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![Strava.Run National](img/Strava_Run_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![Strava.Run National](Strava_Run_national.jpg)<br>*Zoom 7* |
 
 
 ### Strava.Water
@@ -5906,7 +5906,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![Strava.Water National](img/Strava_Water_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![Strava.Water National](Strava_Water_national.jpg)<br>*Zoom 7* |
 
 
 ### Strava.Winter
@@ -5942,7 +5942,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![TopPlusOpen.Color Local](img/TopPlusOpen_Color_local.jpg)<br>*Zoom 13* | ![TopPlusOpen.Color National](img/TopPlusOpen_Color_national.jpg)<br>*Zoom 7* |
+| ![TopPlusOpen.Color Local](TopPlusOpen_Color_local.jpg)<br>*Zoom 13* | ![TopPlusOpen.Color National](TopPlusOpen_Color_national.jpg)<br>*Zoom 7* |
 
 
 ### TopPlusOpen.Grey
@@ -5957,7 +5957,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![TopPlusOpen.Grey Local](img/TopPlusOpen_Grey_local.jpg)<br>*Zoom 13* | ![TopPlusOpen.Grey National](img/TopPlusOpen_Grey_national.jpg)<br>*Zoom 7* |
+| ![TopPlusOpen.Grey Local](TopPlusOpen_Grey_local.jpg)<br>*Zoom 13* | ![TopPlusOpen.Grey National](TopPlusOpen_Grey_national.jpg)<br>*Zoom 7* |
 
 
 # UN
@@ -5975,7 +5975,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![UN.ClearMap National](img/UN_ClearMap_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![UN.ClearMap National](UN_ClearMap_national.jpg)<br>*Zoom 7* |
 
 
 # USGS
@@ -5993,7 +5993,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![USGS.USImagery National](img/USGS_USImagery_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![USGS.USImagery National](USGS_USImagery_national.jpg)<br>*Zoom 7* |
 
 
 ### USGS.USImageryTopo
@@ -6008,7 +6008,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![USGS.USImageryTopo National](img/USGS_USImageryTopo_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![USGS.USImageryTopo National](USGS_USImageryTopo_national.jpg)<br>*Zoom 7* |
 
 
 ### USGS.USTopo
@@ -6023,7 +6023,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| *Gen Failed* | ![USGS.USTopo National](img/USGS_USTopo_national.jpg)<br>*Zoom 7* |
+| *Gen Failed* | ![USGS.USTopo National](USGS_USTopo_national.jpg)<br>*Zoom 7* |
 
 
 # WaymarkedTrails
@@ -6041,7 +6041,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![WaymarkedTrails.cycling Local](img/WaymarkedTrails_cycling_local.jpg)<br>*Zoom 13* | ![WaymarkedTrails.cycling National](img/WaymarkedTrails_cycling_national.jpg)<br>*Zoom 7* |
+| ![WaymarkedTrails.cycling Local](WaymarkedTrails_cycling_local.jpg)<br>*Zoom 13* | ![WaymarkedTrails.cycling National](WaymarkedTrails_cycling_national.jpg)<br>*Zoom 7* |
 
 
 ### WaymarkedTrails.hiking
@@ -6056,7 +6056,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![WaymarkedTrails.hiking Local](img/WaymarkedTrails_hiking_local.jpg)<br>*Zoom 13* | ![WaymarkedTrails.hiking National](img/WaymarkedTrails_hiking_national.jpg)<br>*Zoom 7* |
+| ![WaymarkedTrails.hiking Local](WaymarkedTrails_hiking_local.jpg)<br>*Zoom 13* | ![WaymarkedTrails.hiking National](WaymarkedTrails_hiking_national.jpg)<br>*Zoom 7* |
 
 
 ### WaymarkedTrails.mtb
@@ -6071,7 +6071,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![WaymarkedTrails.mtb Local](img/WaymarkedTrails_mtb_local.jpg)<br>*Zoom 13* | ![WaymarkedTrails.mtb National](img/WaymarkedTrails_mtb_national.jpg)<br>*Zoom 7* |
+| ![WaymarkedTrails.mtb Local](WaymarkedTrails_mtb_local.jpg)<br>*Zoom 13* | ![WaymarkedTrails.mtb National](WaymarkedTrails_mtb_national.jpg)<br>*Zoom 7* |
 
 
 ### WaymarkedTrails.riding
@@ -6086,7 +6086,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![WaymarkedTrails.riding Local](img/WaymarkedTrails_riding_local.jpg)<br>*Zoom 13* | ![WaymarkedTrails.riding National](img/WaymarkedTrails_riding_national.jpg)<br>*Zoom 7* |
+| ![WaymarkedTrails.riding Local](WaymarkedTrails_riding_local.jpg)<br>*Zoom 13* | ![WaymarkedTrails.riding National](WaymarkedTrails_riding_national.jpg)<br>*Zoom 7* |
 
 
 ### WaymarkedTrails.skating
@@ -6101,7 +6101,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![WaymarkedTrails.skating Local](img/WaymarkedTrails_skating_local.jpg)<br>*Zoom 13* | ![WaymarkedTrails.skating National](img/WaymarkedTrails_skating_national.jpg)<br>*Zoom 7* |
+| ![WaymarkedTrails.skating Local](WaymarkedTrails_skating_local.jpg)<br>*Zoom 13* | ![WaymarkedTrails.skating National](WaymarkedTrails_skating_national.jpg)<br>*Zoom 7* |
 
 
 ### WaymarkedTrails.slopes
@@ -6116,7 +6116,7 @@ Global `xyzservices` providers compatible with QGIS.
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![WaymarkedTrails.slopes Local](img/WaymarkedTrails_slopes_local.jpg)<br>*Zoom 13* | ![WaymarkedTrails.slopes National](img/WaymarkedTrails_slopes_national.jpg)<br>*Zoom 7* |
+| ![WaymarkedTrails.slopes Local](WaymarkedTrails_slopes_local.jpg)<br>*Zoom 13* | ![WaymarkedTrails.slopes National](WaymarkedTrails_slopes_national.jpg)<br>*Zoom 7* |
 
 
 # nlmaps

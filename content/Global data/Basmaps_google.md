@@ -18,7 +18,7 @@ Maps sourced dynamically from [NextGIS QuickMapServices](https://qms.nextgis.com
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![Local](img/Google_Maps_local.jpg)<br>*Zoom 13* | ![National](img/Google_Maps_national.jpg)<br>*Zoom 7* |
+| ![Local](Google_Maps_local.jpg)<br>*Zoom 13* | ![National](Google_Maps_national.jpg)<br>*Zoom 7* |
 
 ---
 ### Google Maps (Alternative rendering)
@@ -28,7 +28,7 @@ Maps sourced dynamically from [NextGIS QuickMapServices](https://qms.nextgis.com
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![Local](img/Google_Maps_(Alternative_rendering)_local.jpg)<br>*Zoom 13* | ![National](img/Google_Maps_(Alternative_rendering)_national.jpg)<br>*Zoom 7* |
+| ![Local](Google_Maps_(Alternative_rendering)_local.jpg)<br>*Zoom 13* | ![National](Google_Maps_(Alternative_rendering)_national.jpg)<br>*Zoom 7* |
 
 ---
 ### Google Maps (India)
@@ -38,7 +38,7 @@ Maps sourced dynamically from [NextGIS QuickMapServices](https://qms.nextgis.com
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![Local](img/Google_Maps_(India)_local.jpg)<br>*Zoom 13* | ![National](img/Google_Maps_(India)_national.jpg)<br>*Zoom 7* |
+| ![Local](Google_Maps_(India)_local.jpg)<br>*Zoom 13* | ![National](Google_Maps_(India)_national.jpg)<br>*Zoom 7* |
 
 ---
 ### Google Roads
@@ -48,7 +48,7 @@ Maps sourced dynamically from [NextGIS QuickMapServices](https://qms.nextgis.com
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![Local](img/Google_Roads_local.jpg)<br>*Zoom 13* | ![National](img/Google_Roads_national.jpg)<br>*Zoom 7* |
+| ![Local](Google_Roads_local.jpg)<br>*Zoom 13* | ![National](Google_Roads_national.jpg)<br>*Zoom 7* |
 
 ---
 ### Google Satellite
@@ -58,7 +58,7 @@ Maps sourced dynamically from [NextGIS QuickMapServices](https://qms.nextgis.com
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![Local](img/Google_Satellite_local.jpg)<br>*Zoom 13* | ![National](img/Google_Satellite_national.jpg)<br>*Zoom 7* |
+| ![Local](Google_Satellite_local.jpg)<br>*Zoom 13* | ![National](Google_Satellite_national.jpg)<br>*Zoom 7* |
 
 ---
 ### Google Satellite Hybrid
@@ -68,7 +68,7 @@ Maps sourced dynamically from [NextGIS QuickMapServices](https://qms.nextgis.com
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![Local](img/Google_Satellite_Hybrid_local.jpg)<br>*Zoom 13* | ![National](img/Google_Satellite_Hybrid_national.jpg)<br>*Zoom 7* |
+| ![Local](Google_Satellite_Hybrid_local.jpg)<br>*Zoom 13* | ![National](Google_Satellite_Hybrid_national.jpg)<br>*Zoom 7* |
 
 ---
 ### Google Terrain
@@ -78,7 +78,7 @@ Maps sourced dynamically from [NextGIS QuickMapServices](https://qms.nextgis.com
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![Local](img/Google_Terrain_local.jpg)<br>*Zoom 13* | ![National](img/Google_Terrain_national.jpg)<br>*Zoom 7* |
+| ![Local](Google_Terrain_local.jpg)<br>*Zoom 13* | ![National](Google_Terrain_national.jpg)<br>*Zoom 7* |
 
 ---
 ### Google Terrain Hybrid
@@ -88,7 +88,7 @@ Maps sourced dynamically from [NextGIS QuickMapServices](https://qms.nextgis.com
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![Local](img/Google_Terrain_Hybrid_local.jpg)<br>*Zoom 13* | ![National](img/Google_Terrain_Hybrid_national.jpg)<br>*Zoom 7* |
+| ![Local](Google_Terrain_Hybrid_local.jpg)<br>*Zoom 13* | ![National](Google_Terrain_Hybrid_national.jpg)<br>*Zoom 7* |
 
 ---
 ### Google Traffic
@@ -98,6 +98,6 @@ Maps sourced dynamically from [NextGIS QuickMapServices](https://qms.nextgis.com
 
 | Copenhagen (Target Z13) | Denmark (Target Z7) |
 | :---: | :---: |
-| ![Local](img/Google_Traffic_local.jpg)<br>*Zoom 13* | ![National](img/Google_Traffic_national.jpg)<br>*Zoom 7* |
+| ![Local](Google_Traffic_local.jpg)<br>*Zoom 13* | ![National](Google_Traffic_national.jpg)<br>*Zoom 7* |
 
 ---

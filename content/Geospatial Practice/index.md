@@ -32,11 +32,27 @@ Here, you acquire and prepare your data. Whether you're conducting fieldwork, do
 
 #### **4. [[Geospatial Practice/Analytical Modelling/index|Analytical Modelling]]**
 
-This is where you develop the methods to answer your research questions. In semanticGIS, we emphasize the **Abstract-First** approach here: you first design the _logical pipeline_ (the abstract recipe) that converts your data into results, and only then do you "compile" that logic into concrete software operations. This ensures your analysis is driven by scientific intent, not software limitations.
+This is where you develop the methods to answer your research questions. In semanticGIS, we adopt a **Documentation Driven Development (DDD)** approach:
+
+- **Think First:** You first write the "documentation"—defining the logical pipeline (the abstract recipe) in clear, human-readable terms.
+    
+- **Code Later:** Only once this logic is sound do you "compile" it—often using AI as an assistant—into concrete Python code or QGIS operations. This ensures that your analysis is driven by your scientific intent, not by syntax errors or software limitations.
+    
 
 #### **5. [[Geospatial Practice/Dissemination and Communication/index|Dissemination and Communication]]**
 
 The final phase involves sharing your work. This includes not only your final maps and reports but the **Design Rationale** and the **Analytical Recipe** itself. By publishing your process (Provenance), you empower others to understand, critique, and confidently build upon your findings, fostering a culture of open and reproducible science.
+
+## A Note on AI and Documentation Driven Development
+
+SemanticGIS embraces the modern reality of AI-assisted coding. By adopting **Documentation Driven Development**, we shift the focus from memorising syntax to designing logic.
+
+- **The Human's Role:** You are the **Architect**. You write the "Abstract Script" (the documentation) which defines _what_ happens to the data and _why_.
+    
+- **The AI's Role:** The AI acts as the **Compiler**. It takes your rigorous documentation and helps translate it into the specific Python syntax or software steps required.
+    
+
+This parallel to "Think First, Click Later" ensures that you remain in control of the process, even when using advanced tools to accelerate the execution.
 
 ## Exploratory Workflow vs. Prescriptive Workflow
 

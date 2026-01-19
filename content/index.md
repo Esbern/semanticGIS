@@ -4,9 +4,9 @@ tags:
 aliases:
   - Landing page
 ---
-# Semantic GIS: Think First, Click Later.
+# **Semantic GIS: Think First, Click Later.**
 
-GIS projects are often chaotic "black boxes," making them difficult to trust, reproduce, or build upon.  At the heart of semanticGIS is a desire to establish new [[Geospatial Practice/index|Geospatial Practices]] that focus on a structured, transparent, and well-documented process, from the first question to the final map. Through this process, your GIS project should become collaboration-friendly, trustworthy and portable.
+**GIS projects are often chaotic "black boxes," making them difficult to trust, reproduce, or build upon.  At the heart of semanticGIS is a desire to establish new [[Geospatial Practice/index|Geospatial Practices]] that focus on a structured, transparent, and well-documented process, from the first question to the final map. Through this process, your GIS project should become collaboration-friendly, trustworthy and portable.**
 
 ---
 

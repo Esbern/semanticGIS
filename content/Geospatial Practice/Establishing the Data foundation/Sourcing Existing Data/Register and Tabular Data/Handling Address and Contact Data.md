@@ -4,30 +4,13 @@ draft: false
 tags:
 ---
  
-# Best Practice: Handling Address & Contact Data
-
-[[Geospatial Practice/Project Stewardship/index|Project Stewardship]] > [[Geospatial Practice/Data Modelling/index|Data Modelling]]
-
-### The Principle: Don't Mix "Who" with "Where"
+## The Principle: Don't Mix "Who" with "Where"
 In many environmental projects, stakeholder data is collected haphazardly. A common mistake is treating a database cell like a postal label.
 * **The Mistake:** Lumping the person's name, the "Care of" (C/O), and the street address into a single column.
 * **The Consequence:**
     * **Geocoding fails:** The GIS cannot find a coordinate for "Farmer Jensen".
     * **Mail Merge fails:** You cannot write "Dear Mr. Jensen" automatically.
     * **Sorting fails:** You cannot group stakeholders by city or street.
-
----
-
-### ⚠️ The "No Newline" Rule
-**Never use `Alt+Enter` (Line Breaks) within a single Excel cell.**
-While this looks nice on a printed sheet, it breaks almost every data processing tool (GIS, Python, SQL). A line break is often interpreted by software as "End of Row," causing your dataset to scramble or truncate during import.
-
-* **Bad:**
-  `Søren Jensen [Line Break] Markvejen 1`
-* **Good:**
-  `Søren Jensen` in Column A, `Markvejen 1` in Column B.
-
----
 
 ### Level 1: Minimum Viable Normalization (The "Safe Enough" Approach)
 If you cannot enforce a strict database schema, you must *at absolute minimum* separate the **Entity** from the **Location**.
@@ -70,8 +53,35 @@ If you inherit a "messy" dataset (where everything is in one cell), do not rely 
 2.  **Use AI Assistance:** LLMs (like ChatGPT) are excellent at parsing unstructured addresses. You can paste a batch of messy addresses and ask it to "Output this as a CSV with columns: Name, Street, Number, Postcode."
 3.  **Manual Verification:** Always spot-check the results, especially for "C/O" addresses versus "Living at" addresses.
 
-### A Note on Farmers: CVR vs. BBR
-In agricultural projects, be aware of the "Accountant Trap":
-* **CVR Address:** Often points to the farm's *accountant* or a holding company in the city. Good for legal notices.
-* **BBR/Matrikel Address:** Points to the *physical farmhouse*. Good for field work and environmental analysis.
-* **Best Practice:** Maintain two sets of columns: `Legal_Address` and `Site_Address`.
+### ⚠️ Critical Concept: Legal Unit vs. Production Unit
+
+When working with business data (farmers, factories, shops), you must distinguish between the **Administrative** address and the **Physical** address. In the Danish CVR register, these are two separate entities:
+
+**1. The Legal Unit (_Virksomhed_ / CVR-nummer)**
+- **What is it?** The economic and legal entity.
+- **The Address:** Often points to an administration building, a holding company, or an **accountant**.
+- **Use for:** Mailing contracts, legal notices, or invoices.
+- **The Trap:** If you geocode this, your "farm" might appear in the middle of a city center (at the accountant's office).
+    
+
+**2. The Production Unit (_P-enhed_ / P-nummer)**
+- **What is it?** The physical location where the activity takes place.
+- **The Address:** Points to the actual farm, factory, or shop.
+- **Use for:** Fieldwork, environmental analysis, and mapping "where the cows are."
+    
+
+**Best Practice:**
+- Always check if your dataset contains CVR-numbers or P-numbers.
+- For environmental projects, you almost always want the **P-enhed**.
+    
+- _Note:_ A single Legal Unit (Firm/) can own multiple Production Units (several distinct locations).
+---
+### ⚠️ The "No Newline" Rule
+
+**Never use `Alt+Enter` (Line Breaks) within a single Excel cell.**
+While this looks nice on a printed sheet, it breaks almost every data processing tool (GIS, Python, SQL). A line break is often interpreted by software as "End of Row," causing your dataset to scramble or truncate during import.
+
+* **Bad:**
+  `Markvejen 1 [Line Break] 4000 Roskilde`
+* **Good:**
+  `Markvejen 1, 4000 Roskilde`

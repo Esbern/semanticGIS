@@ -35,7 +35,7 @@ Having defined your **Domain of Discourse (DoD)** in Phase 2, you must now popul
 
 - **Workflow:** Download, Document Provenance, and Transform (Filter/Clip/Join).
     
-- **Key Task:** See [[Geospatial Practice/Establishing the Data Foundation/Sourcing Existing Data/Handling Address and Contact Data|Handling Address and Contact Data]] for a guide on cleaning tabular registers.
+- **Key Task:** See [[Handling Address and Contact Data|Handling Address and Contact Data]] for a guide on cleaning tabular registers.
     
 
 ### B. [[Geospatial Practice/Establishing the Data Foundation/Sensor-Based Capture/index|Sensor-Based Capture]]

@@ -1,6 +1,6 @@
 ---
 title: " Best Practice: Handling Address & Contact Data"
-draft: true
+draft: false
 tags:
 ---
  

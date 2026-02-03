@@ -1,6 +1,6 @@
 ---
 title: buffer
-draft: true
+draft: false
 tags:
 aliases:
   - buffer

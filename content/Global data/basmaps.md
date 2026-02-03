@@ -30,8 +30,8 @@ Global `xyzservices` providers compatible with QGIS.
 - **Bounds:** `Global`
 - **Attribution:** Map data: (C) dl-de/by-2-0
 
-| Copenhagen (Target Z13) | Denmark (Target Z7) |
-| :---: | :---: |
+|                    Copenhagen (Target Z13)                     |                         Denmark (Target Z7)                         |
+| :------------------------------------------------------------: | :-----------------------------------------------------------------: |
 | ![BaseMapDE.Grey Local](BaseMapDE_Grey_local.jpg)<br>*Zoom 13* | ![BaseMapDE.Grey National](BaseMapDE_Grey_national.jpg)<br>*Zoom 7* |
 
 
@@ -51,8 +51,8 @@ Global `xyzservices` providers compatible with QGIS.
 - **Bounds:** `Global`
 - **Attribution:** (C) OpenStreetMap contributors (C) CARTO
 
-| Copenhagen (Target Z13) | Denmark (Target Z7) |
-| :---: | :---: |
+|                        Copenhagen (Target Z13)                         |                             Denmark (Target Z7)                             |
+| :--------------------------------------------------------------------: | :-------------------------------------------------------------------------: |
 | ![CartoDB.DarkMatter Local](CartoDB_DarkMatter_local.jpg)<br>*Zoom 13* | ![CartoDB.DarkMatter National](CartoDB_DarkMatter_national.jpg)<br>*Zoom 7* |
 
 

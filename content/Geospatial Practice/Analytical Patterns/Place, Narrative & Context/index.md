@@ -13,7 +13,6 @@ For studies focused on smaller or highly localised areas, the use of an [[Orthop
 
 Alternatively, the General-purpose Map can be enriched with additional layers of information to make it more relevant to the ethnographic context. For instance, urban features, areas dominatet by shade from surrounding buildings, or other elements that shape the environment can be added. This approach allows for a more comprehensive understanding of how the physical setting interacts with the social activities being studied, offering insight into the spatial dynamics that influence everyday life.
 
-AHere’s a revised version that focuses purely on the **spatial character** or **genius loci** without including human interaction, which is the subject of study itself:
 
 ### **Describing the Spatial Character (Genius Loci)**
 

@@ -18,7 +18,13 @@ Analysis cannot occur on a hard drive; it happens in active memory. This complex
 
 Establishing a Common Spatial Language
 
-Before two datasets can be compared, they must "speak" the same spatial language. This complex houses operations that transform the mathematical framework used to describe location. This includes traditional coordinate transformations (reprojecting from Lat/Lon to UTM) and modern indexing strategies (calculating DGGS indices like H3 or S2). Unlike geometric tools that reshape objects, these operations fundamentally alter the coordinates or keys used to define where an object exists, ensuring mathematical interoperability across the entire project.![[licensed-image.jpg]]
+Before two datasets can be compared, they must "speak" the same spatial language. This complex houses operations that transform the method used to describe location.
+
+This includes:
+- **Semantic Translation (Geocoding):** Converting human-readable references (addresses, place names) into spatial coordinates.
+- **Coordinate Transformations:** Reprojecting data from one mathematical framework (e.g., Lat/Lon) to another (e.g., UTM) to ensure alignment.
+- **Indexing Strategies:** Calculating discrete global grid indices (like H3 or S2) to bin continuous space into standard units.
+Unlike geometric tools that reshape objects, these operations fundamentally alter the **reference keys** used to define where an object exists, ensuring interoperability across the entire project.
 
 ### 3. Extraction & Filtering
 

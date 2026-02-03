@@ -6,23 +6,25 @@ aliases:
 ---
 # Semantic GIS: Think First, Click Later.
 
-GIS projects are often chaotic "black boxes," making them difficult to trust, reproduce, or build upon.  At the heart of semanticGIS is a desire to establish new [[Geospatial Practice/index|Geospatial Practices]] that focus on a structured, transparent, and well-documented process, from the first question to the final map. Through this process, your GIS project should become collaboration-friendly, trustworthy and portable.
+Modern GIS tools are incredibly powerful, but that power comes with a risk: it is all too easy for the "why" of your analysis to get lost in the "how." Without rigorous management, even the best-intentioned project can drift into a "black box" state—where the logic behind the map becomes invisible, making the results difficult to verify or reproduce.
 
----
+**semanticGIS** establishes a new standard for [[Geospatial Practice/index|Geospatial Practice]]. We enforce this through Documentation Driven Development: prioritising the capture of your scientific intent before you execute a single operation. By explicitly defining your analytical pipeline in clear, human-readable terms, we ensure your project remains a transparent "glass box"—collaboration-friendly, trustworthy, and fully portable from the first question to the final map.
 
-### Our Approach: A new geospatial practice, Not Just a Tool 
+To support better [[Geospatial Practice/index|Geospatial Practice]], the system provides two core tools:
 
-In the section [[Geospatial Practice/index|Geospatial Practice]], we outline five clear phases your GIS project should go through, plus one overarching activity of [[Geospatial Practice/Project Stewardship/index|Project Stewardship]], of which maintaining [[Geospatial Practice/Project Stewardship/Design rationale|Design rationale]] is the key activity.
-Although semanticGIS focuses on the intellectual process, certain actions must be taken for the thoughts to manifest. The section on the Geospatial Technology Stack contains an overview of and guides to the most common software components of a GIS project.
+1. **[[Geospatial Operations/index|SemanticGIS Pipeline Language]]**: A tool for defining abstract analytical workflows.
+    
+2. **[[Geospatial Data Framework/index|Geospatial Data Framework]]**: A framework for modeling geospatial reality.
+    
 
-To support this better [[Geospatial Practice/index|Geospatial Practice]], SemanticGIS includes two tools:
-1. [[Geospatial Operations/index|SemanticGIS Pipeline language]]  
-   We use a simple, human-readable Domain-Specific Language (DSL) to define the analytical workflow _before_ implementing it in any specific GIS software. This **abstract recipe** is the single source of truth for your analysis and can be used to automatically generate several outputs:
-	- **Mermaid Flowcharts** for visualising the logical steps.
-    - **Step-by-step Recipes** for desktop GIS software (e.g., QGIS).
-    - **Executable Python Scripts** for automated processing.
-2. A [[Geospatial Data Framework/index|Geospatial Data Framework]], a framework for understanding how "reality" is represented in terms of geospatial data. 
+## Where to start?
 
-## What next?
-To start on the SemanticGIS, it is recommended to start by following the recommended [[Geospatial Practice/index|Geospatial Practice]], where each phase contains links to tools and methods relevant to that phase. Once you have understood the recommended  [[Geospatial Practice/index|Geospatial Practice]], you can use the website as a general reference tool. To navigate supports an advantage graph-based navigation available in the top right of each page
+We recommend a pragmatic approach to learning SemanticGIS:
+
+1. **Learn the Method:** Start by reading the [[Geospatial Practice/index|Geospatial Practice]] guide to understand the five phases of the project lifecycle.
+    
+2. **See it in Action:** Explore the [[Geospatial Practice/Analytical Patterns/index|Application domains & Frameworks]] to see how these phases are implemented in real-world contexts.
+    
+
+Power tip Once you are familiar with the concepts on the web site , use the **Graph View** (top right) to navigate the web site as a reference library. 
 

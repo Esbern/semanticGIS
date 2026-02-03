@@ -5,7 +5,7 @@ tags:
 aliases:
   - Place, Narrative & Context
 ---
-**Place, Narrative & Context**  is an pattern  that uses spatial technologies like GIS to study and visualise relationships between space, place, and human culture, history, and behaviour.  It combines methods from the humanities (such as history, literature, and archaeology) with geographical tools and spatial analysis to gain new perspectives on cultural development, historical events, and human experiences over time. This field creates interactive maps, visualizations, and immersive environments to represent and analyze complex humanistic data in a spatial context
+**Place, Narrative & Context**  is a pattern  that uses spatial technologies like GIS to study and visualise relationships between space, place, and human culture, history, and behaviour.  It combines methods from the humanities (such as history, literature, and archaeology) with geographical tools and spatial analysis to gain new perspectives on cultural development, historical events, and human experiences over time. This field creates interactive maps, visualizations, and immersive environments to represent and analyze complex humanistic data in a spatial context
 ## Describing the Spatial configuration
 In ethnography, understanding and describing the **spatial configuration** where the studied activities take place is crucial. One of the simplest and most effective ways to achieve this is by using a **[[General-purpose Map]]** such as [[OpenStreetMap]] to provide a geographical context. On such maps, key locations and activities can be marked to help visualise the spatial relationships and movements within the study area.
 

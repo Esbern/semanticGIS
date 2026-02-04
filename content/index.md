@@ -23,7 +23,7 @@ We recommend a pragmatic approach to learning SemanticGIS:
 
 1. **Learn the Method:** Start by reading the [[Geospatial Practice/index|Geospatial Practice]] guide to understand the five phases of the project lifecycle.
     
-2. **See it in Action:** Explore the [[Geospatial Practice/Analytical Patterns/index|Application domains & Frameworks]] to see how these phases are implemented in real-world contexts.
+2. **See it in Action:** Explore the [[Geospatial Practice/Analytical Modelling/Common Analytical Patterns/index|Application domains & Frameworks]] to see how these phases are implemented in real-world contexts.
     
 
 Power tip Once you are familiar with the concepts on the web site , use the **Graph View** (top right) to navigate the web site as a reference library. 

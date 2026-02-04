@@ -1,9 +1,9 @@
 ---
-title: Analytical Patterns
+title: Common Analytical Patterns
 draft: true
 tags:
 aliases:
-  - Analytical Patterns
+  - Common Analytical Patterns
 ---
  Although Geospatial data Processing can be seen as a knowledge domain in its own right. Different application domains have their own traditions for which data and business logic (workflows) to use.  However many of theas domains hare the same **Analytical Patterns** that consist of simulacra processing pipelines sharing methods but applied to complacently different data.
 

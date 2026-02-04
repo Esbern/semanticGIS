@@ -18,6 +18,8 @@ Moreover, the design rationale is essential for **documentation and feedback**. 
 In alignment with the concept developed by W.R. Kunz and Horst Rittel, the design rationale in a GIS project provides an argumentation-based structure that supports the collaborative and often complex process of designing geospatial systems. It ensures that decisions are not only recorded but also justified, considering all alternatives and trade-offs, ultimately leading to more robust and well-founded project outcomes.
 
 By maintaining a clear and detailed design rationale, GIS professionals can enhance the transparency, consistency, and effectiveness of their projects, ensuring that the reasoning behind every decision is well-documented and understood.
+
+
 ## Example Design Rationale: Identifying Entertainment Zones in Copenhagen
 
 Below is a sample design rationale for a fictive project where the client (in this case, your teacher) has asked for a data-driven identification and visualisation of Copenhagen's party/entertainment zones. This example follows the four phases outlined above.
@@ -50,7 +52,7 @@ In this case, any of the definitions (DoD) could be used and we can continue to 
 
 ---
 
-### 2.3 Data Sourcing and Preparation
+### 2.3 Establishing the Data Foundation
 
 The following is an example of the considerations you might make in this case, looking at data for bars.
 
@@ -83,7 +85,7 @@ Other datasets not described in detail:
 
 ---
 
-### 2.4 Analytical Approach
+### 2.4 Analytical Modelling
 
 The problem was deconstructed into a set of GIS operations:
 

@@ -10,7 +10,7 @@ At the heart of semanticGIS is a desire to establish **geospatial practices** th
 1.  **The Lifecycle (The 5 Phases):** A linear progression from question to result, moving from [[Geospatial Practice/Project Scoping/index|Scoping]] to [[Geospatial Practice/Dissemination and Communication/index|Dissemination]].
 2.  **The Discipline (Project Stewardship):** A continuous, parallel layer of governance. [[Geospatial Practice/Project Stewardship/index|Project Stewardship]] runs alongside every phase, ensuring your work remains organized, documented, and reproducible via the [[Geospatial Practice/Project Stewardship/Design rationale|Design Rationale]].
 
-Especially if you are new to doing geospatial analysis, it is advisable to study other projects and domain-specific considerations; therefore, this part of the website also contains links to a series of [[Geospatial Practice/Analytical Patterns/index|Application Domains & Frameworks]] that highlight how the five phases can be implemented in different contexts.
+Especially if you are new to doing geospatial analysis, it is advisable to study other projects and domain-specific considerations; therefore, this part of the website also contains links to a series of [[Geospatial Practice/Analytical Modelling/Common Analytical Patterns/index|Application Domains & Frameworks]] that highlight how the five phases can be implemented in different contexts.
 
 ---
 

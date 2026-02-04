@@ -6,7 +6,9 @@ aliases:
   - The SemanticGIS pipeline Language
 ---
  
-The Purpose of the semantic GIS pipeline language is to provide a simple way of stringing the GIS operations together. The following is an example of a SemanticGIS pipline 
+The Purpose of the semanticGIS pipeline language (sGPL) is to provide a simple way to string GIS operations together.  Primarily for the use in a [[Design rationale]] where sGPL in its own can function as a way of documenting the [[Geospatial Practice/Analytical Modelling/index|Analytical Modelling]] stage of a project. I, however, recommend writing sGPL in a Jupyter notebook like Google Colab because this enables the compilation of the sGPL to flowcharts and visual data models.
+
+The following is an example of a SemanticGIS pipeline 
 
 
 ``` 

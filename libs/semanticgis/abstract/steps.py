@@ -1,13 +1,24 @@
+from __future__ import annotations
+
+from typing import Any, Dict, Optional
+
+
 class PipelineStep:
-    """The base class for any step in a semanticGIS pipeline."""
-    def __init__(self, pipeline_ref, node_id):
+    """Base handle that references a node inside the semanticGIS pipeline graph."""
+
+    def __init__(self, pipeline_ref, node_id: str, semantic_signature: Optional[Dict[str, Any]] = None):
         self.pipeline = pipeline_ref
         self.id = node_id
+        self.semantic_signature = semantic_signature or {}
 
-class VectorStep(PipelineStep):
-    """A step that represents a vector dataset."""
-    pass
+    def describe(self) -> Dict[str, Any]:
+        """Return the raw node metadata stored in the pipeline graph."""
+        return self.pipeline.nodes.get(self.id, {})
 
-class RasterStep(PipelineStep):
-    """A step that represents a raster dataset."""
-    pass
+
+class SemanticStep(PipelineStep):
+    """Represents a semantically described dataset (independent of storage model)."""
+
+
+class VisualisationStep(PipelineStep):
+    """Represents a sink step that emits insight instead of a new dataset."""

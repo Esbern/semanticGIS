@@ -1,6 +1,4 @@
-import inspect
 from semanticgis.abstract.pipeline import Pipeline
-from semanticgis.abstract.steps import PipelineStep
 
 def compile(pipeline: Pipeline, output: str = 'print'):
     """
@@ -35,45 +33,64 @@ def compile(pipeline: Pipeline, output: str = 'print'):
 
 
 def _get_validation_errors(pipeline: Pipeline) -> list[str]:
-    """
-    Internal logic to find all validation errors in a pipeline.
-    This function contains the logic we developed previously.
-    
-    Returns:
-        A list of error strings.
-    """
-    errors = []
-    # ... (All the validation logic we wrote and debugged goes here) ...
+    """Inspect the DAG for missing operations and semantic contract violations."""
+
+    errors: list[str] = []
+
     def get_method_from_name(op_name: str):
         try:
-            parts = op_name.split('.')
-            category_obj = getattr(pipeline, parts[0])
-            method = getattr(category_obj, parts[1])
-            return method
-        except (AttributeError, IndexError):
+            complex_key, op_key = op_name.split('.')
+        except ValueError:
             return None
+        complex_obj = getattr(pipeline, complex_key, None)
+        if complex_obj is None:
+            return None
+        return getattr(complex_obj, op_key, None)
 
     for node_id, node_data in pipeline.nodes.items():
         op_name = node_data.get('operation')
-        if not op_name or 'load' in op_name:
+        label = node_data.get('label', node_id)
+        if not op_name:
+            errors.append(f"Node '{node_id}' ({label}): Missing operation identifier.")
             continue
+
         method = get_method_from_name(op_name)
         if not method:
-            errors.append(f"Node '{node_id}' ({node_data['label']}): Operation '{op_name}' not found.")
-            continue
+            errors.append(f"Node '{node_id}' ({label}): Operation '{op_name}' not found on pipeline complexes.")
+
         parent_edges = [edge for edge in pipeline.edges if edge[1] == node_id]
-        parent_nodes_with_ids = [(pipeline.nodes[from_id], from_id) for from_id, to_id in parent_edges]
-        sig = inspect.signature(method)
-        params_to_check = list(sig.parameters.values())
-        step_params = [p for p in params_to_check if inspect.isclass(p.annotation) and issubclass(p.annotation, PipelineStep)]
-        if len(parent_nodes_with_ids) != len(step_params):
-            errors.append(f"Node '{node_id}' ({node_data['label']}): Mismatched number of inputs. Expected {len(step_params)}, got {len(parent_nodes_with_ids)}.")
+        parent_nodes_with_ids = [(pipeline.nodes[from_id], from_id) for from_id, _ in parent_edges]
+        data_requirements = node_data.get('data_requirements') or []
+
+        if data_requirements and len(parent_nodes_with_ids) != len(data_requirements):
+            errors.append(
+                f"Node '{node_id}' ({label}): Expected {len(data_requirements)} inputs based on semantic rules "
+                f"but received {len(parent_nodes_with_ids)}."
+            )
             continue
-        for i, param in enumerate(step_params):
-            parent_node, parent_node_id = parent_nodes_with_ids[i]
-            expected_type = param.annotation
-            actual_type = parent_node.get('type', PipelineStep)
-            if not issubclass(actual_type, expected_type):
-                errors.append(f"Node '{node_id}' ({node_data['label']}): Argument '{param.name}' expected type <{expected_type.__name__}> but received <{actual_type.__name__}> from parent '{parent_node_id}' ({parent_node['label']}).")
-    
+
+        for idx, (parent_node, parent_node_id) in enumerate(parent_nodes_with_ids):
+            expectation = data_requirements[idx] if idx < len(data_requirements) else {}
+            semantics = parent_node.get('output_semantics') or {}
+            for key, expected_value in expectation.items():
+                if not expected_value or expected_value == 'any':
+                    continue
+                actual_value = semantics.get(key)
+                if actual_value is None:
+                    errors.append(
+                        f"Node '{node_id}' ({label}): Parent '{parent_node_id}' lacks semantic key '{key}' required by the operation."
+                    )
+                    continue
+                if isinstance(expected_value, (list, tuple, set)):
+                    if actual_value not in expected_value:
+                        errors.append(
+                            f"Node '{node_id}' ({label}): Parent '{parent_node_id}' provides {key}='{actual_value}' "
+                            f"but operation requires one of {sorted(expected_value)}."
+                        )
+                elif expected_value != actual_value:
+                    errors.append(
+                        f"Node '{node_id}' ({label}): Parent '{parent_node_id}' provides {key}='{actual_value}' "
+                        f"but operation requires '{expected_value}'."
+                    )
+
     return errors

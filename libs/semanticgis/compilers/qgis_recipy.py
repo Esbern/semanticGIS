@@ -2,47 +2,88 @@
 
 from semanticgis.abstract.pipeline import Pipeline
 
+
 def compile(pipeline: Pipeline) -> str:
-    """
-    Compiles the pipeline into a human-readable, step-by-step recipe
-    in Markdown format.
-    """
-    recipe_steps = []
-    
-    recipe_steps.append(f"# QGIS Recipe: {pipeline.name}")
-    
+    """Compile the abstract DAG into a sequential QGIS-friendly recipe."""
+
+    recipe_steps = [f"# QGIS Recipe: {pipeline.name}"]
+
     step_number = 1
     for node_id, node_data in pipeline.nodes.items():
         op_name = node_data.get('operation', '')
         label = node_data.get('label', node_id)
-        
-        step_md = f"### Step {step_number}: {label}\n\n"
-        
-        if 'vector.load' in op_name:
-            path = node_data.get('path', 'N/A')
-            step_md += f"**Action**: Load a vector layer.\n\n"
-            step_md += f"* **Details**: From the main menu, go to `Layer > Add Layer > Add Vector Layer...` and browse to the file at `{path}`."
-        
-        elif 'raster.load' in op_name:
-            path = node_data.get('path', 'N/A')
-            step_md += f"**Action**: Load a raster layer.\n\n"
-            step_md += f"* **Details**: From the main menu, go to `Layer > Add Layer > Add Raster Layer...` and browse to the file at `{path}`."
+        complex_name = node_data.get('complex', '')
+        parameters = node_data.get('parameters', {})
 
-        elif 'vector.buffer' in op_name:
-            distance = node_data.get('distance', 'N/A')
-            input_node_id = next((from_node for from_node, to_node in pipeline.edges if to_node == node_id), None)
-            input_label = pipeline.nodes[input_node_id]['label'] if input_node_id else "the previous step's output"
-            
-            step_md += f"**Action**: Create a buffer.\n\n"
-            step_md += f"* **Details**: Go to the `Processing Toolbox` and search for the **Buffer** tool.\n"
-            step_md += f"* **Settings**:\n"
-            step_md += f"    * *Input layer*: `{input_label}`\n"
-            step_md += f"    * *Distance*: `{distance}`"
-        
+        step_lines = [f"### Step {step_number}: {label}", ""]
+
+        if op_name == 'data_io.declare_input' or op_name == 'data_io.ingest_asset':
+            source = node_data.get('provenance', {}).get('source', 'N/A')
+            data_model = (node_data.get('output_semantics') or {}).get('data_model', 'vector')
+            if data_model == 'raster':
+                action = "Load a raster layer"
+                menu = "Layer > Add Layer > Add Raster Layer..."
+            else:
+                action = "Load a vector layer"
+                menu = "Layer > Add Layer > Add Vector Layer..."
+            step_lines.append(f"**Action**: {action} and register it as `{node_data.get('output_name')}`.")
+            step_lines.append("")
+            step_lines.append(f"* **Details**: Use `{menu}` and browse to `{source}`. Record metadata such as CRS `{parameters.get('crs')}` if provided.")
+
+        elif op_name == 'extraction.filter_by_attribute':
+            attribute = parameters.get('attribute')
+            operator = parameters.get('operator')
+            value = parameters.get('value')
+            input_node_id = next((frm for frm, to in pipeline.edges if to == node_id), None)
+            input_label = pipeline.nodes[input_node_id]['label'] if input_node_id else 'previous result'
+            step_lines.append("**Action**: Use the Field Calculator or Expression Selection to filter features.")
+            step_lines.append("")
+            step_lines.append("* **Details**:")
+            step_lines.append(f"    * *Layer*: `{input_label}`")
+            step_lines.append(f"    * *Expression*: `{attribute} {operator} {value}`")
+
+        elif op_name == 'extraction.filter_by_sql':
+            where_clause = parameters.get('where_clause')
+            input_node_id = next((frm for frm, to in pipeline.edges if to == node_id), None)
+            input_label = pipeline.nodes[input_node_id]['label'] if input_node_id else 'previous result'
+            step_lines.append("**Action**: Run a SQL query using the DB Manager or Virtual Layer feature.")
+            step_lines.append("")
+            step_lines.append("* **Details**:")
+            step_lines.append(f"    * *Source layer*: `{input_label}`")
+            step_lines.append(f"    * *WHERE clause*: `{where_clause}`")
+
+        elif op_name == 'proximity.buffer':
+            distance = parameters.get('distance', 'N/A')
+            units = parameters.get('units', 'meters')
+            input_node_id = next((frm for frm, to in pipeline.edges if to == node_id), None)
+            input_label = pipeline.nodes[input_node_id]['label'] if input_node_id else 'previous result'
+            step_lines.append("**Action**: Run the Processing Toolbox → Buffer tool.")
+            step_lines.append("")
+            step_lines.append("* **Settings**:")
+            step_lines.append(f"    * *Input*: `{input_label}`")
+            step_lines.append(f"    * *Distance*: `{distance} {units}`")
+            step_lines.append("    * Ensure the layer is in an appropriate projected CRS before buffering.")
+
+        elif op_name == 'visualise.map':
+            emphasis = parameters.get('emphasis')
+            step_lines.append("**Action**: Configure a map layout or styling preset for presentation.")
+            step_lines.append("")
+            if emphasis:
+                step_lines.append(f"* **Story Focus**: {emphasis}")
+            style = parameters.get('style') or {}
+            if style:
+                step_lines.append("* **Style Hints**:")
+                for key, value in style.items():
+                    step_lines.append(f"    * {key}: {value}")
+
         else:
-            step_md += f"**Operation**: `{op_name}`"
+            step_lines.append(f"**Operation**: `{op_name}` (complex: {complex_name}).")
+            if parameters:
+                step_lines.append("* **Parameters**:")
+                for key, value in parameters.items():
+                    step_lines.append(f"    * {key}: {value}")
 
-        recipe_steps.append(step_md)
+        recipe_steps.append("\n".join(step_lines))
         step_number += 1
-        
+
     return "\n\n---\n\n".join(recipe_steps)

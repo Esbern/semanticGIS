@@ -1,7 +1,20 @@
 # semanticgis/abstract/pipeline.py
-from .vector_ops import VectorOperations
-from .raster_ops import RasterOperations
-from .steps import PipelineStep 
+from __future__ import annotations
+
+from typing import Any, Dict, List, Optional, Sequence, Union
+
+from .steps import PipelineStep, SemanticStep, VisualisationStep
+from .functional_complexes import (
+    AggregationSummarizationComplex,
+    DataIOComplex,
+    ExtractionFilteringComplex,
+    FuseComplex,
+    GeometryGenerationComplex,
+    MorphometryComplex,
+    ProximityComplex,
+    ReferencingNormalizationComplex,
+    VisualiseComplex,
+)
 
 class Pipeline:
     """Represents an abstract workflow of geospatial operations.
@@ -26,13 +39,22 @@ class Pipeline:
                 Defaults to "SemanticGIS Workflow".
         """
         self.name = name
-        self.nodes = {}
-        self.edges = []
+        self.nodes: Dict[str, Dict[str, Any]] = {}
+        self.edges: List[tuple[str, str]] = []
         self._next_id = 0
 
-        # The accessor objects that provide the hierarchical API
-        self.vector = VectorOperations(self)
-        self.raster = RasterOperations(self)
+        self.io = DataIOComplex(self)
+        self.data_io = self.io  # alias for validator lookups
+        self.referencing = ReferencingNormalizationComplex(self)
+        self.referencing_normalization = self.referencing
+        self.extraction = ExtractionFilteringComplex(self)
+        self.aggregation = AggregationSummarizationComplex(self)
+        self.fuse = FuseComplex(self)
+        self.geometry = GeometryGenerationComplex(self)
+        self.geometry_generation = self.geometry
+        self.morphometry = MorphometryComplex(self)
+        self.proximity = ProximityComplex(self)
+        self.visualise = VisualiseComplex(self)
 
     def _get_new_id(self) -> str:
         """Generates a new unique ID for a pipeline node."""
@@ -50,22 +72,62 @@ class Pipeline:
                 return node_id
         raise ValueError(f"No step in the pipeline is configured to output the data named '{name}'.")
     
-    def _get_input_node_id(self, input_name: str = None, input_step: PipelineStep = None) -> str:
-        """
-        Finds the node ID for an input, whether it's given as a name or a step handle.
-        """
-        if input_name and input_step:
-            raise ValueError("Provide either 'input_name' or 'input_step', not both.")
-        
-        if input_name:
-            # Find the node that has this name as its output
-            for node_id, node_data in self.nodes.items():
-                if node_data.get('output_name') == input_name:
-                    return node_id
-            raise ValueError(f"No step in the pipeline is configured to output the data named '{input_name}'.")
-        
-        if input_step:
-            # The handle object already knows its own node ID
-            return input_step.id
-            
-        raise ValueError("No input was provided. You must specify either 'input_name' or 'input_step'.")
+    def _resolve_inputs(self, *inputs: Union[str, PipelineStep]) -> List[str]:
+        """Normalize a collection of names or step handles into node IDs."""
+        resolved: List[str] = []
+        for candidate in inputs:
+            if candidate is None:
+                continue
+            if isinstance(candidate, PipelineStep):
+                resolved.append(candidate.id)
+            elif isinstance(candidate, str):
+                resolved.append(self._find_node_id_by_name(candidate))
+            elif isinstance(candidate, Sequence):
+                resolved.extend(self._resolve_inputs(*candidate))
+            else:
+                raise TypeError(f"Unsupported input reference type: {type(candidate)}")
+        return resolved
+
+    def _inherit_semantics(self, node_id: str, overrides: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
+        """Copy the semantic signature of a node and optionally update selected keys."""
+        base = dict(self.nodes.get(node_id, {}).get('output_semantics') or {})
+        if overrides:
+            for key, value in overrides.items():
+                if value is not None:
+                    base[key] = value
+        return base
+
+    def _register_node(
+        self,
+        *,
+        complex_name: str,
+        operation: str,
+        label: str,
+        input_nodes: Optional[List[str]] = None,
+        output_semantics: Optional[Dict[str, Any]] = None,
+        output_name: Optional[str] = None,
+        data_requirements: Optional[List[Dict[str, Any]]] = None,
+        provenance: Optional[Dict[str, Any]] = None,
+        parameters: Optional[Dict[str, Any]] = None,
+        sink: bool = False,
+    ) -> PipelineStep:
+        node_id = self._get_new_id()
+        step_class = VisualisationStep if sink else SemanticStep
+
+        node_payload: Dict[str, Any] = {
+            'operation': f"{complex_name}.{operation}",
+            'complex': complex_name,
+            'label': label,
+            'output_name': output_name,
+            'output_semantics': output_semantics,
+            'data_requirements': data_requirements or [],
+            'provenance': provenance or {},
+            'parameters': parameters or {},
+            'type': step_class,
+        }
+        self.nodes[node_id] = node_payload
+
+        for input_id in input_nodes or []:
+            self.edges.append((input_id, node_id))
+
+        return step_class(self, node_id, output_semantics)

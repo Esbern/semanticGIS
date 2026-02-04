@@ -1,5 +1,6 @@
-# Cell 1: Import core components
-from semanticgis.abstract import Pipeline, RasterStep, VectorStep
+"""Smoke-test the semanticGIS functional complexes within an interactive notebook."""
+
+from semanticgis.abstract import Pipeline
 from semanticgis.compilers import mermaid, validate, qgis_recipy
 
 from IPython.display import display, Markdown
@@ -9,27 +10,37 @@ print("✅ semanticGIS libraries imported successfully!")
 p = Pipeline(name="Scaffold Test Workflow")
 print(f"Pipeline '{p.name}' created.")
 
-# Step 1: Load a vector layer (Correct)
-buildings = p.vector.load(
-    path="path/to/some/buildings.geojson", #<-- CHANGE THIS PATH
+# Step 1: Register inputs via the Data I/O complex
+buildings = p.io.ingest_asset(
+    source="path/to/some/buildings.geojson",  # <-- CHANGE THIS PATH
+    name="building_footprints",
+    data_model="vector",
     label="Building Footprints"
 )
 print(f"Defined step: {buildings.id} ({p.nodes[buildings.id]['label']})")
 
-# Step 2: Load a raster layer (Correct)
-elevation = p.raster.load(
-    path="path/to/some/elevation.tif", #<-- CHANGE THIS PATH
+elevation = p.io.ingest_asset(
+    source="path/to/some/elevation.tif",  # <-- CHANGE THIS PATH
+    name="elevation_model",
+    data_model="raster",
+    measurement_scale="interval",
+    nature="continuous",
     label="Elevation Model"
 )
 print(f"Defined step: {elevation.id} ({p.nodes[elevation.id]['label']})")
 
-# Step 3: Intentionally try to buffer the raster layer (INCORRECT!)
-# The 'buffer' method in our VectorOperations class expects a VectorStep.
-# This will test our type-checking validator.
-invalid_buffer_step = p.vector.buffer(
-    input_vector=elevation, 
+# Step 2: Intentionally attempt an invalid proximity operation on a raster semantic
+invalid_buffer_step = p.proximity.buffer(
+    dataset=elevation,
     distance=50.0,
     label="Invalid Buffer on Raster"
 )
 print(f"Defined step: {invalid_buffer_step.id} ({p.nodes[invalid_buffer_step.id]['label']})")
-validate.compile(p)
+
+# Trigger the validator to surface the semantic contract violation
+issues = validate.compile(p, output='list')
+display(Markdown("\n".join(f"- {issue}" for issue in issues)))
+
+# Render the documentation artifacts for visual inspection
+display(Markdown(mermaid.compile(p)))
+display(Markdown(qgis_recipy.compile(p)))

@@ -90,3 +90,15 @@ Every method in a Functional Complex MUST follow a strict docstring structure. D
 6.  **See Also:** A direct link to `https://semanticgis.org/Geospatial-Operations/[Complex]/[Operation]`.
 
 **Refactoring Rule:** If you see a method without this structure, your primary task is to reconstruct the docstring using the documentation at semanticgis.org as the source of truth.
+
+## 6. Remote Documentation Injection (QGIS Compiler)
+The QGIS recipe compiler must not hard-code help text. Instead, it must implement a "Just-In-Time" (JIT) documentation fetcher.
+
+- **Source:** `hhttps://raw.githubusercontent.com/Esbern/semanticGIS/refs/heads/main/content/Geospatial%20Operations/[complex]/[operation].md`
+
+- **Mechanism:** 1. Identify the node's semantic operation (e.g., `Proximity.Buffer`).
+    2. Fetch the corresponding Markdown.
+    3. Parse the `# GIS Concept` header.
+    4. Inject this text into the QGIS `.py` or `.model3` help metadata.
+    
+**Rule:** When refactoring the `compile_to_qgis` method, ensure it utilizes the `semantic_metadata_fetcher` utility rather than static strings.

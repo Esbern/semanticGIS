@@ -45,6 +45,13 @@ semanticGIS/
 
 ---
 
+    ## 📓 Notebooks & Verification
+
+    - The notebook at [tests/semantictest/semanticgis%20demoe.ipynb](tests/semantictest/semanticgis%20demoe.ipynb) walks through importing `semanticgis.abstract.Pipeline`, declaring semantic inputs, and compiling the DAG into Mermaid and QGIS documentation. Run Cell 1 to import the library before executing downstream cells.
+    - Automated checks for the nine functional complexes live in [tests/semantictest/test_functional_complexes.py](tests/semantictest/test_functional_complexes.py). Execute `pytest tests/semantictest/test_functional_complexes.py` after activating the environment to confirm the semantic contracts.
+
+    ---
+
 ## 🚀 Getting Started: Installation
 
 Follow these steps to set up the complete `semanticGIS` environment on your computer. The process uses a setup script to automate as much as possible.

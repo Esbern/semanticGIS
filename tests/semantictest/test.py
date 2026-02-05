@@ -1,6 +1,6 @@
 """Smoke-test the semanticGIS functional complexes within an interactive notebook."""
 
-from semanticgis.abstract import Pipeline
+from semanticgis.abstract import Pipeline, DataModel, SpatialNature
 from semanticgis.compilers import mermaid, validate, qgis_recipy
 
 from IPython.display import display, Markdown
@@ -14,7 +14,7 @@ print(f"Pipeline '{p.name}' created.")
 buildings = p.io.ingest_asset(
     source="path/to/some/buildings.geojson",  # <-- CHANGE THIS PATH
     name="building_footprints",
-    data_model="vector",
+    data_model=DataModel.VECTOR,
     label="Building Footprints"
 )
 print(f"Defined step: {buildings.id} ({p.nodes[buildings.id]['label']})")
@@ -22,9 +22,9 @@ print(f"Defined step: {buildings.id} ({p.nodes[buildings.id]['label']})")
 elevation = p.io.ingest_asset(
     source="path/to/some/elevation.tif",  # <-- CHANGE THIS PATH
     name="elevation_model",
-    data_model="raster",
+    data_model=DataModel.RASTER,
     measurement_scale="interval",
-    nature="continuous",
+    nature=SpatialNature.CONTINUOUS,
     label="Elevation Model"
 )
 print(f"Defined step: {elevation.id} ({p.nodes[elevation.id]['label']})")
@@ -33,6 +33,7 @@ print(f"Defined step: {elevation.id} ({p.nodes[elevation.id]['label']})")
 invalid_buffer_step = p.proximity.buffer(
     dataset=elevation,
     distance=50.0,
+    output_name="invalid_buffer",
     label="Invalid Buffer on Raster"
 )
 print(f"Defined step: {invalid_buffer_step.id} ({p.nodes[invalid_buffer_step.id]['label']})")

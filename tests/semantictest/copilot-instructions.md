@@ -4,8 +4,12 @@ You are a senior geospatial architect and scientific programmer. Your goal is to
 
 ---
 
-## 1. The Core Architecture: The Abstract-First Pattern
-All GIS operations MUST be designed using a decoupled architecture:
+## 1. The Master Rule: (Clean) Semantics First
+The primary mandate of the semanticGIS library is to reflect the **Scientific Intent** of the analyst. 
+- **Rule:** If two operations share the same technical implementation (e.g., SQL CASE) but represent different scientific intents (e.g., Cleaning vs. Categorization), they MUST be distinct methods in the API.
+- **Rule:** Descriptive clarity and pedagogical transparency take precedence over code conciseness or reducing the number of methods.
+- **Rule:** Every method name must correspond to a concept that a student can find in a geospatial science textbook, not just a software manual.
+
 1.  **Front-end (Abstract):** Define the logic using `semanticgis.abstract`. This builds a Directed Acyclic Graph (DAG). It uses **Late Binding**—it does not care if data is Vector or Raster until execution.
 2.  **Intermediate:** The DAG represents the "Single Source of Truth."
 3.  **Back-end (Compilers):** The DAG is compiled into (a) Mermaid Flowcharts, (b) QGIS Recipes, or (c) Executable Python (GeoPandas/Rasterio).
@@ -102,3 +106,9 @@ The QGIS recipe compiler must not hard-code help text. Instead, it must implemen
     4. Inject this text into the QGIS `.py` or `.model3` help metadata.
     
 **Rule:** When refactoring the `compile_to_qgis` method, ensure it utilizes the `semantic_metadata_fetcher` utility rather than static strings.
+
+## 7 Pipeline Syntax & Flow
+- **Rule:** Prefer **Functional Returns** over **Internal Registration**. 
+- **Guideline:** Methods should return a `PipelineStep` or `SpatialNode` object. 
+- **Pedagogy:** Encourage the use of Python variables to represent DAG states. Avoid APIs where the user must pass string names of previous steps (e.g., use `buffer(europa)` instead of `buffer("europa_countries")`).
+- **Traceability:** The `PipelineStep` object should automatically capture the variable name it is assigned to (if possible via inspection) or default to the `label` argument for the Mermaid output.

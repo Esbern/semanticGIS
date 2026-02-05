@@ -13,10 +13,10 @@ class ProximityComplex(FunctionalComplex):
         self,
         dataset: SemanticInput,
         *,
+        output_name: str,
         distance: float,
         units: str = "meters",
         label: Optional[str] = None,
-        output_name: Optional[str] = None,
         measurement_scale: Optional[str] = None,
     ) -> SemanticStep:
         """Define an influence zone around input geometries with a specified radial distance."""
@@ -31,7 +31,8 @@ class ProximityComplex(FunctionalComplex):
             "measurement_scale",
             "ratio",
         )
-        label = label or f"Buffer {distance} {units}"
+        symbol = self._require_symbol(output_name)
+        label = label or symbol
         parameters = {"distance": distance, "units": units}
         requirements = [{"data_model": "vector"}]
         return cast(
@@ -41,7 +42,7 @@ class ProximityComplex(FunctionalComplex):
                 label=label,
                 input_nodes=input_nodes,
                 output_semantics=inherited_semantics,
-                output_name=output_name,
+                output_name=symbol,
                 data_requirements=requirements,
                 parameters=parameters,
             ),

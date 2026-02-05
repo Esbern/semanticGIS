@@ -13,14 +13,15 @@ class ExtractionFilteringComplex(FunctionalComplex):
         self,
         dataset: SemanticInput,
         *,
+        output_name: str,
         attribute: str,
         operator: str,
         value: Any,
         label: Optional[str] = None,
-        output_name: Optional[str] = None,
     ) -> SemanticStep:
         """Reduce a dataset to the subset of features that satisfy a single attribute comparison."""
-        label = label or f"Attribute filter: {attribute} {operator} {value}"
+        symbol = self._require_symbol(output_name)
+        label = label or symbol
         input_nodes = self._resolve_inputs(dataset)
         if not input_nodes:
             raise ValueError("At least one dataset must be supplied to filter_by_attribute.")
@@ -38,7 +39,7 @@ class ExtractionFilteringComplex(FunctionalComplex):
                 label=label,
                 input_nodes=input_nodes,
                 output_semantics=inherited_semantics,
-                output_name=output_name,
+                output_name=symbol,
                 data_requirements=requirements,
                 parameters=parameters,
             ),
@@ -48,16 +49,17 @@ class ExtractionFilteringComplex(FunctionalComplex):
         self,
         dataset: SemanticInput,
         *,
+        output_name: str,
         where_clause: str,
         label: Optional[str] = None,
-        output_name: Optional[str] = None,
     ) -> SemanticStep:
         """Express a complex predicate as a SQL WHERE clause and bind it to the dataset symbolically."""
         input_nodes = self._resolve_inputs(dataset)
         if not input_nodes:
             raise ValueError("filter_by_sql requires a dataset reference.")
         inherited_semantics = self._inherit_semantics(input_nodes[0])
-        label = label or f"SQL filter: {where_clause}"
+        symbol = self._require_symbol(output_name)
+        label = label or symbol
         parameters = {"where_clause": where_clause}
         requirements = [{"data_model": inherited_semantics.get("data_model", "any")}]
         return cast(
@@ -67,7 +69,7 @@ class ExtractionFilteringComplex(FunctionalComplex):
                 label=label,
                 input_nodes=input_nodes,
                 output_semantics=inherited_semantics,
-                output_name=output_name,
+                output_name=symbol,
                 data_requirements=requirements,
                 parameters=parameters,
             ),

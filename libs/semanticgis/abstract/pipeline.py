@@ -1,6 +1,8 @@
 # semanticgis/abstract/pipeline.py
 from __future__ import annotations
 
+import re
+
 from typing import Any, Dict, List, Optional, Sequence, Union
 
 from .steps import PipelineStep, SemanticStep, VisualisationStep
@@ -15,6 +17,13 @@ from .functional_complexes import (
     ReferencingNormalizationComplex,
     VisualiseComplex,
 )
+
+
+def _normalise_symbol(name: str) -> Optional[str]:
+    """Derive a pipeline-safe symbol from arbitrary user-facing text."""
+
+    cleaned = re.sub(r"[^0-9A-Za-z]+", "_", name).strip("_")
+    return cleaned or None
 
 class Pipeline:
     """Represents an abstract workflow of geospatial operations.
@@ -62,14 +71,29 @@ class Pipeline:
         return f"node_{self._next_id}"
     
     def _find_node_id_by_name(self, name: str) -> str:
-        """Finds the ID of a node that created a named data concept."""
+        """Find the node ID backing a symbolic name or human-friendly label."""
+
+        candidate = (name or "").strip()
+        if not candidate:
+            raise ValueError("Input references must be non-empty strings.")
+
+        sanitized_candidate = _normalise_symbol(candidate)
+
         for node_id, node_data in self.nodes.items():
-            if node_data.get('output_name') == name:
+            output_name = node_data.get('output_name')
+            if output_name == candidate:
                 return node_id
-        # Also check the original data_input nodes
+            if sanitized_candidate and output_name == sanitized_candidate:
+                return node_id
+
         for node_id, node_data in self.nodes.items():
-            if node_data.get('name') == name and 'data_input' in node_data.get('operation', ''):
+            if node_data.get('name') == candidate and 'data_input' in node_data.get('operation', ''):
                 return node_id
+
+        for node_id, node_data in self.nodes.items():
+            if node_data.get('label') == candidate:
+                return node_id
+
         raise ValueError(f"No step in the pipeline is configured to output the data named '{name}'.")
     
     def _resolve_inputs(self, *inputs: Union[str, PipelineStep]) -> List[str]:
@@ -124,6 +148,7 @@ class Pipeline:
             'provenance': provenance or {},
             'parameters': parameters or {},
             'type': step_class,
+            'sink': sink,
         }
         self.nodes[node_id] = node_payload
 

@@ -1,21 +1,30 @@
 """Unit tests for the semanticGIS functional complexes abstraction layer."""
 from __future__ import annotations
 
+import pathlib
+import sys
+
 import pytest
 
-from semanticgis.abstract import Pipeline
+REPO_ROOT = pathlib.Path(__file__).resolve().parents[2]
+LIB_PATH = REPO_ROOT / "libs"
+if str(LIB_PATH) not in sys.path:
+    sys.path.insert(0, str(LIB_PATH))
+
+from semanticgis.abstract import Pipeline, DataModel, SpatialNature
 from semanticgis.compilers import mermaid, qgis_recipy, validate
 
 
 def _build_vector_buffer_pipeline() -> Pipeline:
     pipeline = Pipeline(name="Vector Buffer Happy Path")
     parks = pipeline.io.declare_input(
-        name="urban_parks",
         source="memory://parks",
-        data_model="vector",
+        output_name="urban_parks",
+        data_model=DataModel.VECTOR,
         measurement_scale="ratio",
-        nature="discrete",
+        nature=SpatialNature.DISCRETE,
         description="Synthetic green infrastructure polygons",
+        label="Urban Parks",
     )
     pipeline.proximity.buffer(
         dataset=parks,
@@ -40,14 +49,15 @@ def test_proximity_buffer_rejects_raster_inputs() -> None:
     raster = pipeline.io.ingest_asset(
         source="memory://thermal",
         name="thermal_field",
-        data_model="raster",
+        data_model=DataModel.RASTER,
         measurement_scale="interval",
-        nature="continuous",
+        nature=SpatialNature.CONTINUOUS,
     )
     pipeline.proximity.buffer(
         dataset=raster,
         distance=25,
         units="meters",
+        output_name="invalid_buffer",
         label="Invalid raster buffer",
     )
     errors = validate.compile(pipeline, output="list")
@@ -72,13 +82,104 @@ def test_declare_input_captures_attribute_metadata() -> None:
         "POP_EST": {"scale": "ratio", "description": "Population"},
     }
     step = pipeline.io.declare_input(
-        name="Europa_countries",
         source="memory://eu",
-        spatial_nature="discrete",
-        data_model="vector",
+        output_name="eu_dataset",
+        spatial_nature=SpatialNature.DISCRETE,
+        data_model=DataModel.VECTOR,
         attributes=attributes,
     )
 
     node = pipeline.nodes[step.id]
     assert node["output_semantics"]["nature"] == "discrete"
     assert node["parameters"]["attributes"] == attributes
+
+
+def test_declare_input_defaults_label_from_output() -> None:
+    pipeline = Pipeline(name="Auto Label")
+    step = pipeline.io.declare_input(
+        source="memory://auto",
+        output_name="Europa_countries",
+        data_model=DataModel.VECTOR,
+    )
+
+    node = pipeline.nodes[step.id]
+    assert node["label"] == "Europa_countries"
+    assert node["output_name"] == "Europa_countries"
+
+
+def test_declare_named_input_sets_output_name() -> None:
+    pipeline = Pipeline(name="Named Input Convenience")
+    step = pipeline.io.declare_named_input(
+        name="Europa_countries",
+        source="memory://eu",
+        spatial_nature=SpatialNature.DISCRETE,
+        data_model=DataModel.VECTOR,
+    )
+
+    node = pipeline.nodes[step.id]
+    assert node["output_name"] == "Europa_countries"
+    assert node["label"] == "Europa_countries"
+
+
+def test_validator_flags_duplicate_output_symbols() -> None:
+    pipeline = Pipeline(name="Duplicate outputs")
+    pipeline.io.declare_input(
+        source="memory://parks_a",
+        output_name="shared_dataset",
+        data_model=DataModel.VECTOR,
+    )
+    pipeline.io.declare_input(
+        source="memory://parks_b",
+        output_name="shared_dataset",
+        data_model=DataModel.VECTOR,
+    )
+
+    errors = validate.compile(pipeline, output="list")
+    assert any("declare the output 'shared_dataset'" in error for error in errors)
+
+
+def test_validator_requires_upstream_source_for_operations() -> None:
+    pipeline = Pipeline(name="Dangling step")
+    pipeline.io.declare_input(
+        source="memory://parks",
+        output_name="parks",
+        data_model=DataModel.VECTOR,
+    )
+
+    pipeline._register_node(
+        complex_name="extraction",
+        operation="filter_by_sql",
+        label="Dangling filter",
+        input_nodes=[],
+        output_semantics={"data_model": "vector"},
+        output_name="lonely_dataset",
+        data_requirements=[{"data_model": "vector"}],
+        parameters={"where_clause": "1=1"},
+    )
+
+    errors = validate.compile(pipeline, output="list")
+    assert any("Must reference at least one upstream dataset" in error for error in errors)
+
+
+def test_pipeline_resolves_dataset_by_label_reference() -> None:
+    pipeline = Pipeline(name="Label Reference Convenience")
+    pipeline.io.declare_input(
+        source="memory://auto",
+        output_name="europa_countries",
+        label="Europa countries dataset",
+        data_model=DataModel.VECTOR,
+    )
+
+    filtered = pipeline.extraction.filter_by_sql(
+        dataset="Europa countries dataset",
+        where_clause="SOVEREIGNT = 'Denmark'",
+        output_name="denmark_subset",
+        label="Kingdom of Denmark",
+    )
+
+    input_node_id = next(
+        node_id
+        for node_id, node_data in pipeline.nodes.items()
+        if node_data["label"] == "Europa countries dataset"
+    )
+    assert (input_node_id, filtered.id) in pipeline.edges

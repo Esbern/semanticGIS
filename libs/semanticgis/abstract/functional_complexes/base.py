@@ -32,6 +32,18 @@ class FunctionalComplex:
     def _inherit_semantics(self, node_id: str, overrides: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
         return self._pipeline._inherit_semantics(node_id, overrides or {})
 
+    def _require_symbol(self, value: Optional[str], *, parameter: str = "output_name") -> str:
+        """Ensure a human-specified symbol exists for string-based referencing."""
+
+        if value is None:
+            raise ValueError(f"{self.complex_name}.{parameter} must be provided.")
+        if not isinstance(value, str):
+            raise TypeError(f"{self.complex_name}.{parameter} must be a string, not {type(value)!r}.")
+        candidate = value.strip()
+        if not candidate:
+            raise ValueError(f"{self.complex_name}.{parameter} cannot be empty or whitespace.")
+        return candidate
+
     def _register(
         self,
         *,

@@ -36,6 +36,8 @@ def _get_validation_errors(pipeline: Pipeline) -> list[str]:
     """Inspect the DAG for missing operations and semantic contract violations."""
 
     errors: list[str] = []
+    output_registry: dict[str, str] = {}
+    data_entry_operations = {"data_io.declare_input", "data_io.ingest_asset"}
 
     def get_method_from_name(op_name: str):
         try:
@@ -50,6 +52,8 @@ def _get_validation_errors(pipeline: Pipeline) -> list[str]:
     for node_id, node_data in pipeline.nodes.items():
         op_name = node_data.get('operation')
         label = node_data.get('label', node_id)
+        sink = bool(node_data.get('sink'))
+        output_symbol = node_data.get('output_name')
         if not op_name:
             errors.append(f"Node '{node_id}' ({label}): Missing operation identifier.")
             continue
@@ -58,7 +62,34 @@ def _get_validation_errors(pipeline: Pipeline) -> list[str]:
         if not method:
             errors.append(f"Node '{node_id}' ({label}): Operation '{op_name}' not found on pipeline complexes.")
 
+        if not sink:
+            if output_symbol is None:
+                errors.append(
+                    f"Node '{node_id}' ({label}): Missing output symbol. Specify 'output_name' so downstream steps can reference it."
+                )
+            elif not isinstance(output_symbol, str):
+                errors.append(
+                    f"Node '{node_id}' ({label}): Output symbol must be a string, not {type(output_symbol).__name__}."
+                )
+            else:
+                stripped_symbol = output_symbol.strip()
+                if not stripped_symbol:
+                    errors.append(
+                        f"Node '{node_id}' ({label}): Output symbol cannot be empty or whitespace."
+                    )
+                else:
+                    owner = output_registry.setdefault(stripped_symbol, node_id)
+                    if owner != node_id:
+                        other_label = pipeline.nodes[owner].get('label', owner)
+                        errors.append(
+                            f"Nodes '{owner}' ({other_label}) and '{node_id}' ({label}) both declare the output '{stripped_symbol}'."
+                        )
+
         parent_edges = [edge for edge in pipeline.edges if edge[1] == node_id]
+        if not sink and op_name not in data_entry_operations and not parent_edges:
+            errors.append(
+                f"Node '{node_id}' ({label}): Must reference at least one upstream dataset. Only data_io.declare_input may omit sources."
+            )
         parent_nodes_with_ids = [(pipeline.nodes[from_id], from_id) for from_id, _ in parent_edges]
         data_requirements = node_data.get('data_requirements') or []
 

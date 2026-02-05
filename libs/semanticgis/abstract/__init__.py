@@ -9,6 +9,7 @@ a semanticGIS workflow. This is the primary user-facing API.
 # This allows users to write 'from semanticgis.abstract import Pipeline'.
 from .pipeline import Pipeline
 from .steps import SemanticStep, VisualisationStep
+from .enums import SpatialNature, DataModel
 
 # Note: The user interacts with operations through the functional complexes
 # (e.g., my_pipeline.proximity.buffer(...)) instead of importing operations directly.
@@ -19,4 +20,6 @@ __all__ = [
     'Pipeline',
     'SemanticStep',
     'VisualisationStep',
+    'SpatialNature',
+    'DataModel',
 ]

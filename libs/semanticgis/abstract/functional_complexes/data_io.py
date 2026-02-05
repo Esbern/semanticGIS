@@ -72,20 +72,17 @@ class DataIOComplex(FunctionalComplex):
         spatial_filter: Optional[SemanticInput] = None,
         data_format: DataFormatLike = DataFormat.TBD,
     ) -> SemanticStep:
-        """Register a semantically described data source inside the pipeline graph.
-
-        Every declared input must expose an ``output_name``. This symbol is how
-        downstream operations reference the dataset in a fully declarative style.
-        Provide a ``label`` when you would like the human-facing graph text to
-        differ from the symbolic name; otherwise the label defaults to
-        ``output_name``.
-
+        """This operation establishes the "Scientific Contract" for a dataset before any analysis begins.
+        Key Concepts:
+            output_name: The unique symbolic name (registry key) used to reference this data in all downstream steps.
+            Semantic Gating: Use pre_filter (attribute logic) and spatial_filter (geographic bounds) to define the specific subset of the world you are analyzing.
+            Attribute Metadata: Defining the scale (Nominal, Ratio, etc.) of your columns enables the pipeline to validate the scientific logic of your calculations.
         Optionally specify ``pre_filter`` (a SQL WHERE clause applied before the
         dataset is registered) and/or ``spatial_filter`` (a polygon dataset that
-        constrains the declared input). Any spatial filter is represented as an
-        upstream dependency inside the DAG. ``data_format`` documents how the
-        source is stored so downstream tooling can pick the most appropriate
-        connector.
+        constrains the declared input).
+        
+        Full Specification: https://semanticgis.org/Geospatial-Operations/Data-IO/declare_input
+       
         """
 
         symbol = self._require_symbol(output_name)

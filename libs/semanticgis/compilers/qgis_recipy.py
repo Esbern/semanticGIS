@@ -17,9 +17,10 @@ def compile(pipeline: Pipeline) -> str:
 
         step_lines = [f"### Step {step_number}: {label}", ""]
 
-        if op_name == 'data_io.declare_input' or op_name == 'data_io.ingest_asset':
-            source = node_data.get('provenance', {}).get('source', 'N/A')
+        if op_name == 'data_io.declare_input':
+            source = parameters.get('source') or node_data.get('provenance', {}).get('source', 'N/A')
             data_model = (node_data.get('output_semantics') or {}).get('data_model', 'vector')
+            data_format = parameters.get('format')
             if data_model == 'raster':
                 action = "Load a raster layer"
                 menu = "Layer > Add Layer > Add Raster Layer..."
@@ -28,7 +29,13 @@ def compile(pipeline: Pipeline) -> str:
                 menu = "Layer > Add Layer > Add Vector Layer..."
             step_lines.append(f"**Action**: {action} and register it as `{node_data.get('output_name')}`.")
             step_lines.append("")
-            step_lines.append(f"* **Details**: Use `{menu}` and browse to `{source}`. Record metadata such as CRS `{parameters.get('crs')}` if provided.")
+            detail_line = f"* **Details**: Use `{menu}` and browse to `{source}`."
+            if data_format:
+                detail_line += f" Format hint: `{data_format}`."
+            crs = parameters.get('crs')
+            if crs:
+                detail_line += f" Record CRS `{crs}`."
+            step_lines.append(detail_line)
 
         elif op_name == 'extraction.filter_by_attribute':
             attribute = parameters.get('attribute')

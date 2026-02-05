@@ -11,20 +11,20 @@ p = Pipeline(name="Scaffold Test Workflow")
 print(f"Pipeline '{p.name}' created.")
 
 # Step 1: Register inputs via the Data I/O complex
-buildings = p.io.ingest_asset(
+buildings = p.io.declare_input(
     source="path/to/some/buildings.geojson",  # <-- CHANGE THIS PATH
-    name="building_footprints",
+    output_name="building_footprints",
     data_model=DataModel.VECTOR,
+    spatial_nature=SpatialNature.DISCRETE,
     label="Building Footprints"
 )
 print(f"Defined step: {buildings.id} ({p.nodes[buildings.id]['label']})")
 
-elevation = p.io.ingest_asset(
+elevation = p.io.declare_input(
     source="path/to/some/elevation.tif",  # <-- CHANGE THIS PATH
-    name="elevation_model",
+    output_name="elevation_model",
     data_model=DataModel.RASTER,
-    measurement_scale="interval",
-    nature=SpatialNature.CONTINUOUS,
+    spatial_nature=SpatialNature.CONTINUOUS,
     label="Elevation Model"
 )
 print(f"Defined step: {elevation.id} ({p.nodes[elevation.id]['label']})")

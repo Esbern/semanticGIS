@@ -18,4 +18,26 @@ class DataModel(str, Enum):
     TBD = "tbd"
 
 
-__all__ = ["SpatialNature", "DataModel"]
+class MeasurementScale(str, Enum):
+    """Enumerates supported measurement scales for attribute metadata."""
+
+    NOMINAL = "nominal"
+    ORDINAL = "ordinal"
+    INTERVAL = "interval"
+    RATIO = "ratio"
+
+
+class DataFormat(str, Enum):
+    """Canonical identifiers for common geospatial storage formats."""
+
+    GEOPACKAGE = "gpkg"
+    GEOJSON = "geojson"
+    SHAPEFILE = "shp"
+    CSV = "csv"
+    POSTGIS = "postgis"
+    COG = "cog"
+    WFS = "wfs"
+    TBD = "tbd"
+
+
+__all__ = ["SpatialNature", "DataModel", "MeasurementScale", "DataFormat"]

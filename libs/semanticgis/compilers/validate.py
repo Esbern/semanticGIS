@@ -37,7 +37,7 @@ def _get_validation_errors(pipeline: Pipeline) -> list[str]:
 
     errors: list[str] = []
     output_registry: dict[str, str] = {}
-    data_entry_operations = {"data_io.declare_input", "data_io.ingest_asset"}
+    data_entry_operations = {"data_io.declare_input"}
 
     def get_method_from_name(op_name: str):
         try:

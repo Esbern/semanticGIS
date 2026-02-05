@@ -11,7 +11,13 @@ LIB_PATH = REPO_ROOT / "libs"
 if str(LIB_PATH) not in sys.path:
     sys.path.insert(0, str(LIB_PATH))
 
-from semanticgis.abstract import Pipeline, DataModel, SpatialNature
+from semanticgis.abstract import (
+    Pipeline,
+    DataModel,
+    SpatialNature,
+    MeasurementScale,
+    DataFormat,
+)
 from semanticgis.compilers import mermaid, qgis_recipy, validate
 
 
@@ -21,8 +27,7 @@ def _build_vector_buffer_pipeline() -> Pipeline:
         source="memory://parks",
         output_name="urban_parks",
         data_model=DataModel.VECTOR,
-        measurement_scale="ratio",
-        nature=SpatialNature.DISCRETE,
+        spatial_nature=SpatialNature.DISCRETE,
         description="Synthetic green infrastructure polygons",
         label="Urban Parks",
     )
@@ -46,12 +51,11 @@ def test_proximity_buffer_accepts_vector_inputs() -> None:
 def test_proximity_buffer_rejects_raster_inputs() -> None:
     """Raster semantics should trigger a validation error when buffered."""
     pipeline = Pipeline(name="Raster Buffer Negative Case")
-    raster = pipeline.io.ingest_asset(
+    raster = pipeline.io.declare_input(
         source="memory://thermal",
-        name="thermal_field",
+        output_name="thermal_field",
         data_model=DataModel.RASTER,
-        measurement_scale="interval",
-        nature=SpatialNature.CONTINUOUS,
+        spatial_nature=SpatialNature.CONTINUOUS,
     )
     pipeline.proximity.buffer(
         dataset=raster,
@@ -70,6 +74,7 @@ def test_compilers_emit_artifacts() -> None:
     mermaid_output = mermaid.compile(pipeline)
     qgis_output = qgis_recipy.compile(pipeline)
 
+
     assert mermaid_output.startswith("```mermaid")
     assert f"# QGIS Recipe: {pipeline.name}" in qgis_output
 
@@ -78,8 +83,8 @@ def test_declare_input_captures_attribute_metadata() -> None:
     """Attribute schemas should be stored in the node parameters for provenance."""
     pipeline = Pipeline(name="Metadata Capture")
     attributes = {
-        "SOVEREIGNT": {"scale": "nominal", "description": "State name"},
-        "POP_EST": {"scale": "ratio", "description": "Population"},
+        "SOVEREIGNT": {"scale": MeasurementScale.NOMINAL, "description": "State name"},
+        "POP_EST": {"scale": MeasurementScale.RATIO, "description": "Population"},
     }
     step = pipeline.io.declare_input(
         source="memory://eu",
@@ -87,11 +92,51 @@ def test_declare_input_captures_attribute_metadata() -> None:
         spatial_nature=SpatialNature.DISCRETE,
         data_model=DataModel.VECTOR,
         attributes=attributes,
+        data_format=DataFormat.GEOJSON,
     )
 
     node = pipeline.nodes[step.id]
     assert node["output_semantics"]["nature"] == "discrete"
     assert node["parameters"]["attributes"] == attributes
+    assert node["parameters"]["format"] == DataFormat.GEOJSON.value
+
+
+def test_declare_input_pre_and_spatial_filters() -> None:
+    pipeline = Pipeline(name="Input Filters")
+    mask = pipeline.io.declare_input(
+        source="memory://mask",
+        output_name="nordic_mask",
+        data_model=DataModel.VECTOR,
+        label="Nordic AOI",
+        spatial_nature=SpatialNature.DISCRETE,
+    )
+
+    step = pipeline.io.declare_input(
+        source="memory://eu",
+        output_name="eu_dataset",
+        data_model=DataModel.VECTOR,
+        spatial_nature=SpatialNature.DISCRETE,
+        pre_filter="POP_EST > 0",
+        spatial_filter=mask,
+        attributes={
+            "POP_EST": {"scale": MeasurementScale.RATIO, "description": "Population"}
+        },
+    )
+
+    node = pipeline.nodes[step.id]
+    assert node["parameters"]["pre_filter"] == "POP_EST > 0"
+    assert node["parameters"]["spatial_filter"] == mask.id
+    assert (mask.id, step.id) in pipeline.edges
+
+
+def test_declare_input_rejects_attributes_missing_scale() -> None:
+    pipeline = Pipeline(name="Invalid Attributes")
+    with pytest.raises(ValueError):
+        pipeline.io.declare_input(
+            source="memory://eu",
+            output_name="invalid",
+            attributes={"POP_EST": {"description": "Population"}},
+        )
 
 
 def test_declare_input_defaults_label_from_output() -> None:
@@ -100,42 +145,36 @@ def test_declare_input_defaults_label_from_output() -> None:
         source="memory://auto",
         output_name="Europa_countries",
         data_model=DataModel.VECTOR,
-    )
-
-    node = pipeline.nodes[step.id]
-    assert node["label"] == "Europa_countries"
-    assert node["output_name"] == "Europa_countries"
-
-
-def test_declare_named_input_sets_output_name() -> None:
-    pipeline = Pipeline(name="Named Input Convenience")
-    step = pipeline.io.declare_named_input(
-        name="Europa_countries",
-        source="memory://eu",
         spatial_nature=SpatialNature.DISCRETE,
-        data_model=DataModel.VECTOR,
     )
 
     node = pipeline.nodes[step.id]
-    assert node["output_name"] == "Europa_countries"
     assert node["label"] == "Europa_countries"
+    assert node["output_name"] == "Europa_countries"
+def test_redeclaring_output_overwrites_existing_node() -> None:
 
-
-def test_validator_flags_duplicate_output_symbols() -> None:
-    pipeline = Pipeline(name="Duplicate outputs")
-    pipeline.io.declare_input(
+    pipeline = Pipeline(name="Redeclare input")
+    first = pipeline.io.declare_input(
         source="memory://parks_a",
         output_name="shared_dataset",
         data_model=DataModel.VECTOR,
+        label="Original Parks",
+        description="First version",
+        spatial_nature=SpatialNature.DISCRETE,
     )
-    pipeline.io.declare_input(
+    second = pipeline.io.declare_input(
         source="memory://parks_b",
         output_name="shared_dataset",
         data_model=DataModel.VECTOR,
+        label="Updated Parks",
+        description="Second version",
+        spatial_nature=SpatialNature.DISCRETE,
     )
 
-    errors = validate.compile(pipeline, output="list")
-    assert any("declare the output 'shared_dataset'" in error for error in errors)
+    assert first.id == second.id
+    node = pipeline.nodes[first.id]
+    assert node["label"] == "Updated Parks"
+    assert node["parameters"]["description"] == "Second version"
 
 
 def test_validator_requires_upstream_source_for_operations() -> None:
@@ -144,6 +183,7 @@ def test_validator_requires_upstream_source_for_operations() -> None:
         source="memory://parks",
         output_name="parks",
         data_model=DataModel.VECTOR,
+        spatial_nature=SpatialNature.DISCRETE,
     )
 
     pipeline._register_node(
@@ -168,6 +208,7 @@ def test_pipeline_resolves_dataset_by_label_reference() -> None:
         output_name="europa_countries",
         label="Europa countries dataset",
         data_model=DataModel.VECTOR,
+        spatial_nature=SpatialNature.DISCRETE,
     )
 
     filtered = pipeline.extraction.filter_by_sql(

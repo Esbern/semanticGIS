@@ -135,7 +135,17 @@ class Pipeline:
         parameters: Optional[Dict[str, Any]] = None,
         sink: bool = False,
     ) -> PipelineStep:
-        node_id = self._get_new_id()
+        node_id = None
+        if output_name:
+            for existing_id, node_data in self.nodes.items():
+                if node_data.get('output_name') == output_name:
+                    node_id = existing_id
+                    break
+
+        reuse_existing = node_id is not None
+        if not reuse_existing:
+            node_id = self._get_new_id()
+
         step_class = VisualisationStep if sink else SemanticStep
 
         node_payload: Dict[str, Any] = {
@@ -151,6 +161,9 @@ class Pipeline:
             'sink': sink,
         }
         self.nodes[node_id] = node_payload
+
+        if reuse_existing:
+            self.edges = [edge for edge in self.edges if edge[1] != node_id]
 
         for input_id in input_nodes or []:
             self.edges.append((input_id, node_id))

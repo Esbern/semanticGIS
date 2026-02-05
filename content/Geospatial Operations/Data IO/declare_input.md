@@ -5,8 +5,6 @@ tags:
 aliases:
   - Declare Input
 ---
-
-
 ### 1. Philosophical Intent
 
 The `declare_input` operation is the bridge between a physical file and a scientific concept. In **semanticGIS**, we do not simply "open files"; we declare the nature of the evidence we are bringing into our analytical environment. By being explicit about the **Data Model**, **Spatial Nature**, and **Measurement Scales**, you enable the system to protect you from illogical operations (e.g., trying to calculate the "average" of a categorical soil map).

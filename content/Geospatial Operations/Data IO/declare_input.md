@@ -1,9 +1,9 @@
 ---
-title: load
-draft: true
+title: declare_input
+draft: false
 tags:
 aliases:
-  - load
+  - declare_input
 ---
 load reads a dataset as specifyed by semanticgis data link or a local specifiation file.
 the metadata contains a description of the attributes and 

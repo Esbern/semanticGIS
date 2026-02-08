@@ -19,6 +19,10 @@
         "/^cd /Users/holmes/local_dev/semanticGIS && python3 - <<'PY'\nimport json, pathlib\npath = pathlib\\.Path\\('tests/semantictest/xml_models/class_summary\\.json'\\)\ndata = json\\.loads\\(path\\.read_text\\(\\)\\)\nattrs = None\nfor cls in data\\['DanmarksAdresser'\\]\\['classes'\\]:\n    if cls\\['name'\\] == 'Husnummer':\n        attrs = cls\n        break\nif attrs:\n    for attr in attrs\\['attributes'\\]:\n        if attr\\['name'\\] == 'husnummerretning':\n            print\\(attr\\)\n            break\nPY$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd /Users/holmes/local_dev/semanticGIS && python3 - <<'PY'\nimport json, pathlib, itertools\npath = pathlib\\.Path\\('tests/semantictest/xml_models/class_summary\\.json'\\)\ndata = json\\.loads\\(path\\.read_text\\(\\)\\)\ndocs = \\[\\]\nfor reg in data\\.values\\(\\):\n    for cls in reg\\['classes'\\]:\n        for attr in cls\\['ownAttributes'\\]:\n            if 'documentation' in attr:\n                docs\\.append\\(\\(cls\\['name'\\], attr\\['name'\\], attr\\['documentation'\\]\\)\\)\n                break\n        if docs:\n            break\n    if docs:\n        break\nprint\\('Found doc count', len\\(docs\\)\\)\nif docs:\n    print\\(docs\\[0\\]\\)\nPY$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }

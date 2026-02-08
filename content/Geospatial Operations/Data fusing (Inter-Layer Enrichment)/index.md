@@ -1,6 +1,6 @@
 ---
 title: Index
-draft: true
+draft: false
 tags:
 aliases:
   - Index

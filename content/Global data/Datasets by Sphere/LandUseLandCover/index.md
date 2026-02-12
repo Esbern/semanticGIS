@@ -1,4 +1,12 @@
-- **Description:** This sphere encompasses data that classifies and maps the Earth's surface based on its **observed physical cover (land cover) and the human activities conducted upon it (land use).** It focuses on the spatial partitioning of the surface into distinct _thematic categories_ for inventory, analysis, and management, often serving as a comprehensive surface inventory.
+---
+title: LandUseLandCover
+draft: true
+tags:
+aliases:
+  - LandUseLandCover
+---
+- **Description 
+:** This sphere encompasses data that classifies and maps the Earth's surface based on its **observed physical cover (land cover) and the human activities conducted upon it (land use).** It focuses on the spatial partitioning of the surface into distinct _thematic categories_ for inventory, analysis, and management, often serving as a comprehensive surface inventory.
 - **Subclasses (Complexes):**
     - `landuselancover_classified_products`: Standard land cover and land use maps/datasets, where the surface is divided into thematic categories. This includes maps of forests, agricultural lands, urban areas, water bodies, bare land, and ice/snow _when classified as a land cover type_.
     - `landuselancover_change_monitoring`: Data specifically related to changes in land use and land cover over time (e.g., deforestation maps, urban sprawl statistics, LULC transition matrices, historical LULC datasets focused on change analysis).

@@ -1,3 +1,11 @@
+---
+title: Hydrosphere
+draft: true
+tags:
+aliases:
+  - Hydrosphere
+---
+ 
 - **Description:** This sphere includes all of Earth's water, whether in liquid, solid (ice), or gaseous (water vapor) form, focusing on the water body or phenomenon itself.
 - **Subclasses (Complexes):**
     - `hydrosphere_freshwater_surface`: Data related to freshwater bodies on the Earth's surface (e.g., rivers, lakes, ponds, wetlands, estuaries, streamflow, lake levels).

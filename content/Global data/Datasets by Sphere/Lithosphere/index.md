@@ -1,3 +1,11 @@
+---
+title: Lithosphere
+draft: true
+tags:
+aliases:
+  - Lithosphere
+---
+ 
 - **Description:** This sphere encompasses the Earth's solid, rocky outer part, including the crust and upper mantle. It deals with the physical structure, composition, and processes of the Earth's bedrock geology and subsurface geological features.
 - **Subclasses (Complexes):**
     - `lithosphere_geology`: Information about the rocks, minerals, and geological formations (e.g., geological maps of bedrock, borehole data, subsurface stratigraphy, structural geology, geochemistry of bedrock).

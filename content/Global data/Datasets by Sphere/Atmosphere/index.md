@@ -1,3 +1,11 @@
+---
+title: Atmosphere
+draft: false
+tags:
+aliases:
+  - Atmosphere
+---
+ 
 
 **Description:** This sphere is the gaseous envelope surrounding the Earth, encompassing its composition, dynamics, and energy exchanges. It drives weather patterns and influences climate.
 - **Subclasses (Complexes):**

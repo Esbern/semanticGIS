@@ -1,3 +1,11 @@
+---
+title: Pedosphere
+draft: true
+tags:
+aliases:
+  - Pedosphere
+---
+ 
 - **Description:** This sphere encompasses the Earth's unconsolidated material on the surface (soil), formed by the interaction of climate, organisms, relief, parent material, and time. It includes soil profiles, their physical, chemical, and biological properties, and dynamic processes. It is the biologically active interface where the lithosphere, hydrosphere, atmosphere, and biosphere extensively interact.
 - **Subclasses (Complexes):**
     - `pedosphere_soil_properties`: Data describing specific physical, chemical, and biological attributes of soil (e.g., texture, pH, organic carbon content, bulk density, nutrient levels, intrinsic hydraulic conductivity).

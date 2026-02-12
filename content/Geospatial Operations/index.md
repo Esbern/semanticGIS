@@ -6,63 +6,122 @@ aliases:
   - Geospatial Operations
 ---
 
-In `semanticGIS`, we distinguish strictly between **Structure** (the nouns: vectors, rasters, lists) and **Operations** (the verbs: transforming, filtering, measuring). Every analytical step you take will fall into one of the following nine foundational complexes.
+In `semanticGIS`, the geospatial operations are defined into nine semantic groups that try to capture the semantics of the GIS project, as well as the five core phases described in [[Geospatial Practice/index|Geospatial Practice]]
 
-### 1. Data I/O
+## 1. Data Modelling
 
-The Bridge Between Storage and Memory
+### The Architect’s Blueprint
 
-Analysis cannot occur on a hard drive; it happens in active memory. This complex manages the critical transition of data between its persistent "resting" state (files like GeoPackages, CSVs, GeoTIFFs, or remote API streams) and the "active" AbstractFeatureSet objects used in our pipelines. Operations here are not about changing data, but about accessing and persisting it. It forces the user to be explicit about the provenance of their inputs and the format of their outputs, ensuring that the entry and exit points of the analytical chain are clearly defined.
+This complex is where the project’s **Ontology** is translated into technical reality. It governs the lifecycle of an asset from its external origin to its "registered" status in the project’s sanctuary.
 
-### 2. Referencing & Normalization
+- **Dimensional Slicing:** Explicitly declaring the scale (e.g., NUTS 3, 1:25k) and temporal window (e.g., bi-temporal start/end) of the data.
+    
+- **Semantic Assumptions:** Stating domain-specific truths (e.g., "assume dangling road segments") that override generic geometric rules.
+    
+- **Structural Assertions:** Enforcing the "Contract of Readiness" (e.g., `declare_atomic`, `declare_planar`) through automated repairs like fixing self-intersections or exploding multiparts.
+    
+- **Asset Registration:** The final "handshake" where a dataset is named and assigned its `SpatialNature` and `MeasurementScale`.
+    
 
-Establishing a Common Spatial Language
+## 2. Referencing & Normalization
 
-Before two datasets can be compared, they must "speak" the same spatial language. This complex houses operations that transform the method used to describe location.
+### Establishing a Common Spatial Language
 
-This includes:
-- **Semantic Translation (Geocoding):** Converting human-readable references (addresses, place names) into spatial coordinates.
-- **Coordinate Transformations:** Reprojecting data from one mathematical framework (e.g., Lat/Lon) to another (e.g., UTM) to ensure alignment.
-- **Indexing Strategies:** Calculating discrete global grid indices (like H3 or S2) to bin continuous space into standard units.
-Unlike geometric tools that reshape objects, these operations fundamentally alter the **reference keys** used to define where an object exists, ensuring interoperability across the entire project.
+Before disparate assets can interact, they must be brought into mathematical alignment. This complex manages the translation of location.
 
-### 3. Extraction & Filtering
+- **Coordinate Transformations:** Declaratively reprojecting assets into a shared mathematical framework (e.g., ETRS89/UTM32N).
+    
+- **Semantic Geocoding:** Translating human-readable references (addresses, place-names) into coordinates.
+    
+- **Indexing Strategies:** Binning continuous space into discrete global grids (H3, S2) to normalize observations across different source geometries.
+    
 
-The Sieve: Refining the Dataset
+## 3. Extraction & Filtering
 
-Scientific inquiry is often about reduction—isolating the signal from the noise. This complex contains the tools used to reduce a dataset to a specific subset of interest based on defined criteria. Whether you are selecting features based on their attributes (e.g., "Select cities with population > 1 million") or their location (e.g., "Select wells inside this watershed"), the goal is identical: to discard irrelevant data. This is the "WHERE" clause of GIS, focusing the analysis solely on the features that matter to the specific scientific question.
+### The Sieve: Isolating Scientific Inquiry
 
-### 4. Aggregation & Summarization
-Changing the Scale of Observation
+This complex focuses the analysis on the specific subset of features relevant to the research question.
 
-Raw data is often too granular to reveal broad patterns. This complex transforms detailed data into meaningful summaries by grouping elements together. It includes Vector operations like "Group By" and "Dissolve" (merging counties into states) and Raster operations like Resampling (coarsening pixel resolution). By calculating statistics (sums, means, counts) over these groups, we move from describing individual instances to describing systemic trends. This is the primary engine for statistical reporting and multi-scale analysis.
+- **Attribute Selection:** Filtering by SQL-like queries to isolate specific classes (e.g., "existing roads" vs "planned roads").
+    
+- **Spatial Slicing:** Clipping or selecting features based on their relationship to a study area boundary.
+    
+- **Semantic Refinement:** Discarding "noise" to ensure the analysis-ready database contains only the "signal."
+    
 
-### 5. Fuse
+## 4. Aggregation & Summarization
 
-Synthesising Disparate Sources
+### Changing the Scale of Observation
 
-The power of GIS lies in connecting data that was collected separately. The fuse complex handles the logic of combination, bridging the gap between distinct layers. This includes Attribute Joins (linking tables via ID codes), Spatial Joins (transferring attributes based on location), and Overlays (Intersections and Unions that geometrically combine features). These operations answer questions of relationship: "How does Layer A relate to Layer B?" and are essential for multi-criteria decision making.
+Raw data is often too granular for systemic insight. This complex transforms individual features into statistical summaries.
 
-### 6. Geometry Generation
+- **Spatial Grouping:** Dissolving boundaries based on shared attributes (e.g., merging field plots into a "Farm" asset).
+    
+- **Statistical Reduction:** Calculating sums, means, or counts over a group to move from describing instances to describing trends.
+    
+- **Raster Resampling:** Coarsening pixel resolution to align with macro-scale environmental variables.
+    
 
-Creating New Spatial Features
+## 5. Fuse
 
-Sometimes the data you need does not exist; it must be created. This complex covers operations that generate new geometries from scratch or based on algorithmic patterns, rather than modifying existing ones. This includes creating sampling frameworks (random points), defining study extents (bounding boxes), and—crucially—materialising DGGS grids (generating the actual polygon boundaries of H3/S2 cells). These tools allow you to impose a theoretical structure or sampling design onto the physical world.
+### Synthesizing Disparate Realities
 
-### 7. Morphometry
+The power of GIS lies in connecting data that was collected separately. This complex handles the logic of combination.
 
-Quantifying Form and Structure
+- **Topological Overlays:** Intersections, Unions, and Erasures that create new geometries from the overlap of two assets.
+    
+- **Spatial Joins:** Transferring attributes based on location (e.g., "Attach soil type to this well location").
+    
+- **Attribute Joins:** Linking tables via unique semantic keys (e.g., NUTS codes).
+    
 
-Everything in the physical world has a shape, and that shape drives environmental processes. This complex focuses on measuring the geometric properties of objects and surfaces. For Rasters (terrain), this means calculating slope, aspect, and roughness. For Vectors, it involves measuring perimeter, area, shape compactness, or fractal dimension. These operations turn the visual geometry of a feature into quantifiable metrics that can be used as variables in statistical models.
+## 6. Geometry Generation
 
-### 8. Proximity
+### Materializing Theoretical Structures
 
-Measuring Influence and Distance
+Sometimes the required data does not exist; it must be algorithmically created to support the research design.
 
-Based on Tobler's First Law of Geography ("Near things are more related than distant things"), this complex quantifies the "friction" of distance. It includes calculating distance matrices between points, generating Buffers to define zones of protection or hazard, and estimating Density (like heatmaps) to visualize clustering. These tools allow us to move beyond simple location ("Where is it?") to context ("What is it near, and how does that neighborhood influence it?").
+- **Sampling Frameworks:** Generating random points, regular grids, or transects for fieldwork.
+    
+- **Convex Hulls & Envelopes:** Generating minimum bounding geometries to define study extents.
+    
+- **Grid Materialization:** Creating the physical polygon boundaries for DGGS cells (H3/S2) declared in Complex 2.
+    
 
-### 9. Visualise
+## 7. Morphometry
 
-The Ephemeral View
+### Quantifying Form and Structure
 
-The ultimate goal of analysis is insight, and insight often requires visual representation. This complex handles the generation of human-readable outputs—maps, charts, histograms, and scatter plots. Unlike other operations that produce data for the next step in the pipeline, visualize operations are "sinks"—they produce ephemeral views for interpretation. They translate the abstract numbers and geometries of the machine into the cognitive patterns of the human analyst.
+Everything in the physical world has a shape that drives processes. This complex turns form into a variable.
+
+- **Terrain Analysis:** Calculating slope, aspect, and curvature from continuous surfaces.
+    
+- **Geometric Metrics:** Measuring area, perimeter, shape compactness, or fractal dimension.
+    
+- **Surface Interpolation:** Turning discrete points (fieldwork) into a continuous surface (e.g., Kriging or IDW), creating a new "Registered" asset.
+    
+
+## 8. Proximity
+
+### Measuring Influence and Distance
+
+Based on Tobler’s First Law, this complex quantifies the "friction" of the space between assets.
+
+- **Distance Matrices:** Calculating the cost or Euclidean distance between points.
+    
+- **Buffer Generation:** Creating zones of influence or protection around a feature.
+    
+- **Density Estimation:** Generating heatmaps (Kernel Density) to visualize the clustering of occurrences.
+    
+
+## 9. Visualize
+
+### The Ephemeral View
+
+The ultimate goal of analysis is insight. This complex translates abstract machine data into cognitive patterns.
+
+- **Cartographic Mapping:** Applying symbology, scale bars, and layouts for dissemination.
+    
+- **Statistical Plotting:** Generating histograms, scatter plots, and box plots to visualize attribute distributions.
+    
+- **Dashboarding:** Creating interactive views that allow the researcher to "interrogate" the registered assets.

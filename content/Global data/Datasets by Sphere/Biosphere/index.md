@@ -1,3 +1,11 @@
+---
+title: Biosphere
+draft: false
+tags:
+aliases:
+  - Biosphere
+---
+ 
 - **Description:** This sphere encompasses all living organisms on Earth, including plants, animals, fungi, and microorganisms, as well as their ecological communities and interdependencies. It focuses on life itself and the natural processes within ecosystems.
 - **Subclasses (Complexes):**
     - `Vegetation`: Specific information about plant life (e.g., forest types, crop health indices like NDVI, species distribution of plants, primary productivity).

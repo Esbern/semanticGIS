@@ -18,4 +18,5 @@ Only files placed under `content/` are treated as website content by Quartz.
 
 ## Current experiments
 
+- [[projects/using-semanticgis-template|Using the SemanticGIS Project Template]]
 - [[projects/copenhagen-bars-restaurants|Copenhagen Bars and Restaurants (SemanticGIS test)]]

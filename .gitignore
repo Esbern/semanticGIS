@@ -13,4 +13,5 @@ __pycache__/
 DanishData/
 projects/*/
 !projects/readme.md
+!projects/semanticGIS-template/
 node_modules

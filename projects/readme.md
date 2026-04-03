@@ -3,6 +3,10 @@
 The projects in this folder are for experiments (for example, bars and restaurants in Copenhagen).
 Each project should be its own repository and should not be committed into the top-level SemanticGIS repository.
 
+Exception:
+
+- `projects/semanticGIS-template` is intentionally tracked from the parent repository as the canonical reusable SemanticGIS project template.
+
 ## Recommended workflow
 
 1. Keep raw experiment code and local working files inside `projects/<project_name>/`.

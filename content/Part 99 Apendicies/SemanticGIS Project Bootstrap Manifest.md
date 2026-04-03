@@ -27,18 +27,19 @@ manifest_version: 1.0
 manifest_type: semanticgis_project_bootstrap
 
 project:
-  semantic_id: cph_partyzones_v1
-  title: Copenhagen Party Zones
+  semantic_id: [project_semantic_id]
+  title: [project_title]
   intent: |
-    Identify and communicate party-zone patterns in Copenhagen,
-    balancing nightlife accessibility, resident impact, and governance constraints.
-  epistemic_mode: heuristic
+    [Describe the scientific and practical intent of the project in 2-4 lines.]
+  epistemic_mode: [heuristic | teleological]
 
 structure:
   root_files:
     - Design_Rationale.md
     - copilot-instructions.md
     - README.md
+    - .gitignore
+    - .env.example
   folders:
     - 01_Scoping
     - 02_Modelling
@@ -46,6 +47,28 @@ structure:
     - 03_Sanctuary/processed
     - 04_Analytics
     - 05_Outputs
+
+secrets_and_env:
+  required_env_vars:
+    - DATAFORDELER_API_KEY
+  rules:
+    - Never commit real secrets to Git.
+    - Keep only placeholder values in .env.example.
+    - Add .env to .gitignore.
+  starter_env_example: |
+    # Copy this file to .env and fill with real values locally.
+    DATAFORDELER_API_KEY=replace_with_real_key
+
+git_hygiene:
+  required_gitignore_entries:
+    - .env
+    - .venv/
+    - __pycache__/
+    - *.pyc
+    - *.log
+    - .DS_Store
+    - 03_Sanctuary/raw/**
+  note: Keep raw/sensitive local material out of version control unless explicitly sanitized.
 
 phase_outputs:
   01_Scoping:
@@ -75,15 +98,15 @@ agent_brief:
     - Keep public-source manifests external (semanticgis.dk).
     - Keep local sanctuary focused on sanitized project data.
     - Avoid exposing restricted or personal data in outputs.
+    - Never print, persist, or commit real API keys.
 
 starter_data_hints:
   candidate_sources:
-    - semanticgis.dk Datafordeleren source manifests
-    - CVR for business entities
-    - DAR for address grounding
+    - [source_manifest_1]
+    - [source_manifest_2]
   first_task_prompt: |
     Create the project structure, initialize Design_Rationale.md,
-    and propose a first scoping interview for party-zone analysis.
+    and propose a first scoping interview aligned with the project intent.
 ```
 
 ## How users can use it with AI
@@ -109,9 +132,10 @@ Use the following pages as canonical references:
 Task:
 1. Summarize project intent in 5 bullets.
 2. Create the project scaffold exactly as defined in the bootstrap manifest.
-3. Create Design_Rationale.md and copilot-instructions.md.
-4. Ask me 5 scoping questions before any data download or analysis code.
-5. Keep public source manifests external (semanticgis.dk), and keep local sanctuary focused on sanitized project outputs.
+3. Create Design_Rationale.md, copilot-instructions.md, .gitignore, and .env.example.
+4. Add DATAFORDELER_API_KEY placeholder to .env.example and ensure .env is gitignored.
+5. Ask me 5 scoping questions before any data download or analysis code.
+6. Keep public source manifests external (semanticgis.dk), and keep local sanctuary focused on sanitized project outputs.
 
 After scaffolding and questions, stop and wait for my confirmation.
 ```
@@ -134,13 +158,43 @@ Then do the following:
 1. Initialize this folder as a Git repository.
 2. Ask whether I want a new GitHub repository created and connected.
 3. Create the SemanticGIS folder scaffold and root files from the bootstrap manifest.
-4. Create a minimal copilot-instructions.md using the intent-first template.
-5. Ask me 5 scoping questions and draft 01_Scoping/Project_Outline.md.
-6. Stop and wait for approval before data download or analysis code.
+4. Create .gitignore and .env.example (with DATAFORDELER_API_KEY placeholder) and do not create/commit .env.
+5. Create a minimal copilot-instructions.md using the intent-first template.
+6. Ask me 5 scoping questions and draft 01_Scoping/Project_Outline.md.
+7. Stop and wait for approval before data download or analysis code.
 
 Rules:
 - Keep public source manifests external on semanticgis.dk.
 - Keep local 03_Sanctuary focused on sanitized project outputs.
+- Never commit real credentials.
+```
+
+## Template Repository Recommendation
+
+Yes. A GitHub template repository is the most stable way to bootstrap many similar projects.
+
+Current SemanticGIS template repository:
+
+- Local parent path: `projects/semanticGIS-template`
+- GitHub: https://github.com/Esbern/semanticGIS-template
+
+Recommended baseline in the template repository:
+
+- the full scaffold from this bootstrap manifest
+- `.gitignore` with secret and local-runtime exclusions
+- `.env.example` with placeholders only
+- starter `README.md` describing setup and env variables
+- optional CI checks (lint/test) if your team uses them
+
+Suggested user flow:
+
+1. Click "Use this template" on GitHub
+2. Create new project repository from template
+3. Clone locally
+4. Copy `.env.example` to `.env` and fill local key values
+5. Start Phase 1 scoping with AI
+
+This gives consistent project structure, better stewardship, and safer default secret handling.
 ```
 
 ### Feasibility note

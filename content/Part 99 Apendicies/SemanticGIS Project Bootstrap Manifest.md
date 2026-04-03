@@ -117,67 +117,39 @@ starter_data_hints:
 
 ## How users can use it with AI
 
-Prompt pattern:
+Use this manifest as a structure contract, and use the template repository as the default start path.
+
+## Getting Started (Recommended)
+
+### Option A: GitHub template + clone (default)
+
+1. Open https://github.com/Esbern/semanticGIS-template
+2. Click **Use this template**
+3. Create a new repository
+4. Clone the new repository locally
+5. Copy `.env.example` to `.env` and set local values (for example `DATAFORDELER_API_KEY`)
+6. Start Phase 1 scoping with AI
+
+### Option B: No Git workflow (ZIP)
+
+1. Open https://github.com/Esbern/semanticGIS-template
+2. Click **Code** -> **Download ZIP**
+3. Unpack into a local project folder
+4. Copy `.env.example` to `.env` and set local values
+5. Start Phase 1 scoping with AI
+
+### Minimal AI start instruction
 
 ```text
-I want to run a SemanticGIS project. Use the attached bootstrap manifest.
-Create the folder structure and required files, then guide me through Phase 1 scoping.
-```
-
-## Copy-Paste First Prompt (Empty Folder)
-
-Use this prompt as-is when starting from an empty folder:
-
-```text
-Start a SemanticGIS project in this empty folder.
-Use the following pages as canonical references:
-- SemanticGIS Project Bootstrap Manifest
-- Intent-First Copilot Instructions Template
-- Introduction: The SemanticGIS Manifesto
-
-Task:
+Use this folder as a SemanticGIS project scaffold.
+Before any data download or analysis code:
 1. Summarize project intent in 5 bullets.
-2. Create the project scaffold exactly as defined in the bootstrap manifest.
-3. Create Design_Rationale.md, copilot-instructions.md, .gitignore, and .env.example.
-4. Add DATAFORDELER_API_KEY placeholder to .env.example and ensure .env is gitignored.
-5. Ask me 5 scoping questions before any data download or analysis code.
-6. Keep public source manifests external (semanticgis.dk), and keep local sanctuary focused on sanitized project outputs.
-
-After scaffolding and questions, stop and wait for my confirmation.
+2. Ask 5 scoping questions.
+3. Confirm credentials are loaded from .env and never committed.
+Then stop and wait for approval.
 ```
 
-If the AI cannot access website content directly, paste the manifest content into the chat first and then run the same prompt.
-
-## One-Shot Beginner Prompt (GitHub + Scaffold)
-
-Use this prompt when users want the AI to handle setup end-to-end:
-
-```text
-I want to create a SemanticGIS project as described at semanticgis.org.
-
-Read these canonical references first:
-1. SemanticGIS Project Bootstrap Manifest
-2. Intent-First Copilot Instructions Template
-3. Introduction: The SemanticGIS Manifesto
-
-Then do the following:
-1. Initialize this folder as a Git repository.
-2. Ask whether I want a new GitHub repository created and connected.
-3. Create the SemanticGIS folder scaffold and root files from the bootstrap manifest.
-4. Create .gitignore and .env.example (with DATAFORDELER_API_KEY placeholder) and do not create/commit .env.
-5. Create a minimal copilot-instructions.md using the intent-first template.
-6. Ask me 5 scoping questions and draft 01_Scoping/Project_Outline.md.
-7. Stop and wait for approval before data download or analysis code.
-
-Rules:
-- Keep public source manifests external on semanticgis.dk.
-- Keep local 03_Sanctuary focused on sanitized project outputs.
-- Never commit real credentials.
-```
-
-## Template Repository Recommendation
-
-Yes. A GitHub template repository is the most stable way to bootstrap many similar projects.
+## Template Repository
 
 Current SemanticGIS template repository:
 
@@ -201,17 +173,6 @@ Suggested user flow:
 5. Start Phase 1 scoping with AI
 
 This gives consistent project structure, better stewardship, and safer default secret handling.
-```
-
-### Feasibility note
-
-This is feasible in practice, with one caveat: some AI sessions cannot reliably fetch website pages.
-
-Fallback strategy:
-
-1. Copy the bootstrap manifest text into the chat.
-2. Copy the intent-first instructions template into the chat.
-3. Run the same one-shot prompt.
 
 ## Notes for Copenhagen party-zone case
 

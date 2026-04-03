@@ -31,6 +31,16 @@ Use this guide when you want to start a new SemanticGIS project with the standar
 5. Copy `.env.example` to `.env` and set local values.
 6. Start your Phase 1 scoping with AI.
 
+## No-Git fallback (ZIP)
+
+If you do not want to use Git at project start:
+
+1. Open the template repository on GitHub.
+2. Click **Code** -> **Download ZIP**.
+3. Unpack into a local folder.
+4. Copy `.env.example` to `.env` and set local values.
+5. Start your Phase 1 scoping with AI.
+
 ## Included scaffold
 
 The template includes:

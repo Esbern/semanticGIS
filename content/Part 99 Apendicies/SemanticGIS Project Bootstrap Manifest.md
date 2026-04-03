@@ -10,6 +10,12 @@ tags:
 
 Use this document when a user starts from an empty folder in VS Code and asks an AI agent to create a SemanticGIS project.
 
+## Quick Access
+
+If you want to start from a ready GitHub template instead of an empty folder, use:
+
+- [[projects/using-semanticgis-template|Using the SemanticGIS Project Template]]
+
 ## Why this is intent-first
 
 This manifest tells the agent:

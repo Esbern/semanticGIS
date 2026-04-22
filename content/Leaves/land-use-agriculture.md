@@ -1,54 +1,78 @@
 ---
 title: Agricultural Land Management
 type: leaf
-draft: true
+draft: false
 sphere: Socio_Technical
 subsphere: Socio_technical_resource_utilisation
-concept: >-
-  Agricultural production and management regimes describing cultivated use,
-  nutrient pressure, and farming practice categories
-question: >-
-  Which agricultural management patterns and production-use classes apply in
-  this area?
-realisations: []
+concept: Agricultural production and land management regimes describing cultivated use classes
+question: Which agricultural land-use classes apply in this area?
+realisations:
+  - OpenStreetMap
 threads: []
 tags:
   - socio_technical_resource_utilisation
-primary_collection:
-entities: []
-key_attributes: []
+  - agriculture
+  - land-use
+primary_collection: OpenStreetMap
 services: {}
 ---
 
-> Cognised existence: a land-use and agricultural management unit expressing how a surface area is used, regulated, and classified over time.
+> **Cognised existence:** Agricultural land management is the way cultivated surfaces are classified and used over time.
 
-## Core Question
+**Question:** Which agricultural land-use classes apply in this area?
 
-Which agricultural management patterns and production-use classes apply in this area?
+**OSM wiki:** [https://wiki.openstreetmap.org/wiki/Key:landuse](https://wiki.openstreetmap.org/wiki/Key:landuse)
 
-## Scope
+---
 
-- Agricultural land-use and production classes for cultivated parcels
-- Nutrient-pressure patterns tied to cultivated areas and coastal load pathways
-- Organic farming distribution as a management-regime signal
+## Realisations
 
-## Typical Realisations
+### OpenStreetMap — `landuse=*`
 
-- Arealanvendelse, landbrug, 2024
-- Markudledningskort 2025
-- Økologiske marker 2023
+OSM provides global land-use polygons, including agricultural classes such as farmland, meadow, orchard, and vineyard.
+
+#### osmnx access
+
+```python
+import osmnx as ox
+ox.settings.cache_folder = ".cache/"
+
+agri = ox.features_from_place(
+    "Denmark",
+    tags={"landuse": ["farmland", "meadow", "orchard", "vineyard", "greenhouse_horticulture"]},
+)
+```
+
+#### Geofabrik layer
+
+`gis_osm_landuse_a_free_1.shp` — polygon layer with `fclass` values for land-use classes.
+
+#### Key OSM tags
+
+| Tag | Meaning |
+| --- | --- |
+| `landuse=farmland` | Cultivated agricultural land |
+| `landuse=meadow` | Meadow / pasture |
+| `landuse=orchard` | Orchard |
+| `landuse=vineyard` | Vineyard |
+| `landuse=greenhouse_horticulture` | Greenhouse production |
+
+---
+
+## Geometry Representations
+
+| Rep ID | Source Dataset | Geometry Type | Native CRS | Suitable For | Not Suitable For |
+| --- | --- | --- | --- | --- | --- |
+| `agri_osm_polygons` | OSM via Geofabrik | Polygon | EPSG:4326 | Area totals, land-use share, overlap with protection zones | Crop-yield modelling and subsidy compliance |
+
+---
+
+## Limitations
+
+- Agricultural classes are broad and not crop-specific.
+- Mapping quality depends on local contributors.
+- For policy-grade agriculture statistics, use national LPIS or equivalent.
 
 ## Realised By Links
 
-- [[Datasets by Owner/seges-innovation-p-s/markudledningskort-2025.md|Markudledningskort 2025]] (owner)
-- [[Datasets by Owner/landbrugsstyrelsen/oekologiske-marker-jordbrugsanalyser.md|Økologiske marker - jordbrugsanalyser]] (owner)
-- [[Datasets by Collection/Grunddatamodellen/GeoDanmark/index.md|GeoDanmark]] (collection)
-
-### Unmatched Realisations
-
-- Arealanvendelse, landbrug, 2024
-## Related Leaves
-
-- [[Leaves/soil-properties|Soil Properties]]
-- [[Leaves/freshwater-bodies|Surface Freshwater Bodies]]
-- [[Leaves/groundwater-bodies|Groundwater Bodies]]
+- [[Datasets by Collection/OpenStreetMap/index|OpenStreetMap]] (collection)

@@ -1,101 +1,79 @@
 ---
 title: Population
 type: leaf
-draft: true
+draft: false
 sphere: Socio_Technical
 subsphere: Socio_technical_socioeconomic
-concept: Cognised spatial distribution of human inhabitants
-question: How is the population distributed and what are its characteristics?
-realisations: []
+concept: Cognised spatial distribution of human inhabitants and settlement hierarchy
+question: How is population distributed and what are settlement characteristics?
+realisations:
+  - OpenStreetMap
 threads: []
-tags: []
-primary_collection:
-entities: []
-key_attributes: []
+tags:
+  - socio_technical_socioeconomic
+  - population
+  - settlements
+primary_collection: OpenStreetMap
 services: {}
 ---
 
-> **Cognised existence:** Population is the spatial distribution of people — where they live, how many, their age, gender, household composition. It is the denominator for nearly every per-capita indicator.
+> **Cognised existence:** Population is the spatial distribution of people and settlement structure across territory.
 
-**Question:** How is the population distributed and what are its characteristics?
+**Question:** How is population distributed and what are settlement characteristics?
+
+**OSM wiki:** [https://wiki.openstreetmap.org/wiki/Key:place](https://wiki.openstreetmap.org/wiki/Key:place)
 
 ---
 
 ## Realisations
 
-### 1. Person Register (CPR)
+### OpenStreetMap — settlement proxy via `place=*`
 
-[[Datasets by Collection/Grunddatamodellen/Person/index|Person]] records every individual with legal residence in Denmark.
+OSM does not model full demographic registers, but it captures settlement hierarchy (city, town, village, hamlet) and some population-tagged places.
 
-#### Spatial Access Path
+#### osmnx access
 
+```python
+import osmnx as ox
+ox.settings.cache_folder = ".cache/"
+
+settlements = ox.features_from_place(
+    "Denmark",
+    tags={"place": ["city", "town", "village", "hamlet", "suburb"]},
+)
 ```
-person (individual record)
-  │  FK: person → adresse (registered address)
-  │       └─ see Addresses leaf for the address → geometry join chain
-  ▼
-adresse → husnummer → adgangspunkt.position
-```
 
-**3+ levels of joins** to get from a person to coordinates:
-person → adresse → husnummer → adgangspunkt
+#### Geofabrik layer
 
-This realisation is **restricted** — individual-level data requires authorisation. Aggregated to administrative units, it becomes freely available.
+`gis_osm_places_free_1.shp` — place points with optional `population` field.
 
-#### Key Attributes
+#### Key OSM tags
 
-| Attribute | Description |
+| Tag | Meaning |
 | --- | --- |
-| `foedselsdato` | Date of birth → age derivation |
-| `koen` | Gender |
-| `civilstand` | Marital status |
-| `kommunekode` | Municipality of residence → [[Leaves/administrative-units\\\|Administrative Units]] |
-
-### 2. Danmarks Statistik (DST)
-
-Pre-aggregated population statistics at municipal, parish, and 100m grid levels.
-
-#### Spatial Access Path
-
-```
-DST population table (aggregated counts)
-  │  Key: kommunekode, sognekode, or grid cell ID
-  │  Join to: DAGI (for kommune/sogn polygon) or statistical grid
-  ▼
-DAGI.kommune.geometri  OR  statistisk_gridcelle.geometri
-```
-
-**1 level of join** — aggregated statistics join directly to administrative or grid geometries.
+| `place=city` | Major settlement |
+| `place=town` | Town |
+| `place=village` | Village |
+| `place=hamlet` | Hamlet |
+| `place=suburb` | Suburb/neighborhood |
+| `population=*` | Population estimate (optional, sparse) |
 
 ---
 
-## Access Restrictions
+## Geometry Representations
 
-| Realisation | Access level | What you get |
-| --- | --- | --- |
-| CPR (individual) | Restricted (authorisation required) | Individual records with address FK |
-| DST (aggregated) | Open | Counts by municipality/parish/grid |
-| DST (microdata) | Research authorisation | Anonymised individual records |
+| Rep ID | Source Dataset | Geometry Type | Native CRS | Suitable For | Not Suitable For |
+| --- | --- | --- | --- | --- | --- |
+| `population_osm_place_points` | OSM via Geofabrik | Point | EPSG:4326 | Settlement hierarchy mapping, nearest-settlement analysis | Official population totals, demographic structure, per-capita reporting |
 
-## Classical Theme References
+---
 
-| Standard | Theme | Link |
-| --- | --- | --- |
-| ISO 19115 | Society | [[Classical Classifications/ISO 19115/society\\\|Society]] |
-| INSPIRE | Population Distribution | [[Classical Classifications/INSPIRE/population-distribution\\\|Population Distribution]] |
-| UN-GGIM | Population Distribution | [[Classical Classifications/UN-GGIM/population-distribution\\\|Population Distribution]] |
+## Limitations
+
+- OSM is not an official census dataset.
+- Population figures are sparse and inconsistent.
+- Use OSM for settlement structure, then enrich with official census products.
 
 ## Realised By Links
 
-- [[Datasets by Collection/Grunddatamodellen/Person/index.md|Person]] (collection)
-
-### Unmatched Realisations
-
-- DanmarksStatistik
-## Realised By Links
-
-- [[Datasets by Collection/Grunddatamodellen/Person/index.md|Person]] (collection)
-
-### Unmatched Realisations
-
-- DanmarksStatistik
+- [[Datasets by Collection/OpenStreetMap/index|OpenStreetMap]] (collection)

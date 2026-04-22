@@ -1,136 +1,92 @@
 ---
 title: Buildings
 type: leaf
-draft: true
+draft: false
 sphere: Socio_Technical
 subsphere: Socio_technical_infrastructure
 concept: Cognised physical structures sheltering human activity
 question: What buildings exist at a location and what are their characteristics?
-realisations: []
+realisations:
+  - OpenStreetMap
 threads: []
-tags: []
-primary_collection:
-entities: []
-key_attributes: []
+tags:
+  - socio_technical_infrastructure
+  - buildings
+primary_collection: OpenStreetMap
 services: {}
 ---
 
-> **Cognised existence:** A building is a roofed, permanent physical structure that shelters human activity. It has use, age, size, and technical characteristics — and it occupies space, but its *geometry* may come from different sources than its *attributes*.
+> **Cognised existence:** A building is a roofed, permanent physical structure that shelters human activity. It has use, age, size, and geometric footprint, and these properties may come from different sources.
 
 **Question:** What buildings exist at a location and what are their characteristics?
 
-## What is a Building?
-
-A building combines two kinds of data: **registry attributes** (what it is, when it was built, how it's used) and **geometric footprint** (its shape on the ground). These often come from different datasets. Understanding which to query depends on what you need.
+**OSM wiki:** [https://wiki.openstreetmap.org/wiki/Key:building](https://wiki.openstreetmap.org/wiki/Key:building)
 
 ---
 
 ## Realisations
 
-### 1. BygningerOgBoliger (BBR) — Attributes
+### OpenStreetMap — `building=*`
 
-[[Datasets by Collection/Grunddatamodellen/BygningerOgBoliger/index|BBR]] is the national building and housing register. It carries detailed attributes but **no native geometry**. Geometry arrives via joins.
+OSM contains building footprints globally. Coverage is excellent in urban areas and variable in rural and developing regions.
 
-#### Spatial Access Path
+**Primary tag:** `building=yes` (generic), or typed values such as `building=residential`, `building=commercial`, `building=school`, `building=hospital`.
 
+#### osmnx access
+
+```python
+import osmnx as ox
+ox.settings.cache_folder = ".cache/"
+
+buildings = ox.features_from_place(
+    "Copenhagen, Denmark",
+    tags={"building": True}
+)
+# Returns GeoDataFrame, geometry = Polygon/MultiPolygon, CRS = EPSG:4326
 ```
-bygning (building with attributes)
-  │  FK: bygning → grund → jordstykke (via Matrikel)
-  │  OR: bygning → adresse → husnummer → adgangspunkt (via DAR)
-  ▼
-Two routes to geometry:
-  Route A: grund → jordstykke.geometri (parcel footprint — approximate)
-  Route B: husnummer → adgangspunkt.position (point — geocoded)
-  Route C: Join to GeoDanmark bygning via shared identifier (precise footprint)
+
+#### Geofabrik layer
+
+`gis_osm_buildings_a_free_1.shp` — polygon layer, fields: `osm_id`, `code`, `fclass`, `name`.
+
+#### Overpass (fallback)
+
+```ql
+[out:json][timeout:90];
+area["name"="Copenhagen"]["admin_level"="7"]->.a;
+(way["building"](area.a); relation["building"](area.a););
+out body; >; out skel qt;
 ```
 
-#### Entity Hierarchy
+#### Key OSM attributes
 
-| Entity | Role |
+| Tag | Meaning |
 | --- | --- |
-| **bygning** | The building: use code, construction year, area, floors, heating |
-| **enhed** | Dwelling or commercial unit within a building |
-| **etage** | Floor level |
-| **opgang** | Staircase / entrance |
-| **grund** | Ground parcel the building sits on |
-| **tekniskanlæg** | Technical installations (heating plants, solar panels) |
-
-#### Key Attributes
-
-| Attribute | Description |
-| --- | --- |
-| `byg_anvendelse` | Building use code (residential, commercial, industrial, public) |
-| `byg_opfoerelsesaar` | Year of construction |
-| `byg_areal` | Area in m² (footprint, gross, net variants) |
-| `byg_antal_etager` | Number of floors |
-| `byg_varmeinstallation` | Heating type (district heating, gas, electric) |
-
-### 2. GeoDanmark — Geometry
-
-[[Datasets by Collection/Grunddatamodellen/GeoDanmark/index|GeoDanmark]] provides the authoritative **building footprint polygons** as part of the national topographic dataset. These are photogrammetrically measured outlines.
-
-#### Spatial Access Path
-
-```
-GeoDanmark.bygning → polygon geometry (direct, no joins needed)
-```
-
-**Join to BBR**: Match GeoDanmark footprints to BBR buildings via shared spatial location or building identifier to combine attributes + geometry.
-
-### 3. OpenStreetMap
-
-OSM contains building footprints with basic attributes.
-
-| OSM Tag | BBR Equivalent |
-| --- | --- |
-| `building=yes/residential/commercial/...` | byg_anvendelse |
-| `building:levels` | byg_antal_etager |
-| `start_date` | byg_opfoerelsesaar |
-
-**Spatial access**: Direct polygon geometry on the `building` way. Less detailed attributes than BBR but openly available.
+| `building=*` | Building type (residential, commercial, industrial, school) |
+| `building:levels=*` | Number of above-ground floors |
+| `start_date=*` | Construction year (sparse) |
+| `name=*` | Building name (public buildings) |
+| `addr:housenumber`, `addr:street` | Address tags (variable coverage) |
 
 ---
 
 ## Geometry Representations
 
-A building query must declare which geometric encoding is used. These representations are not interchangeable.
+| Rep ID | Source Dataset | Geometry Type | Native CRS | Suitable For | Not Suitable For |
+| --- | --- | --- | --- | --- | --- |
+| `buildings_osm_footprint` | OpenStreetMap | Polygon | EPSG:4326 | Footprint mapping, area calculation, building count, urban morphology | Register-quality attributes (year, use code, heating) are sparse in OSM |
+| `buildings_osm_centroid` | OpenStreetMap (derived) | Point | EPSG:4326 | Density mapping, point-in-polygon, proximity counts | Area statistics, shadow and solar analysis |
 
-| Rep ID | Source Dataset | Geometry Type | Native CRS | Field Path | Suitable For | Not Suitable For |
-|---|---|---|---|---|---|---|
-| `buildings_bbr_centroid` | BBR (`BBR_Bygning`) | Point | EPSG:25832 | `byg404Koordinat.wkt` | Density mapping, point-in-polygon queries, proximity counts | Area statistics, footprint overlap, spatial join to polygon layers |
-| `buildings_geodanmark_footprint` | GeoDanmark | Polygon | EPSG:25832 | `geometri` | Area calculation, footprint overlap, visual representation, join to BBR attributes | Network routing |
-| `buildings_dar_address_point` | DAR (`husnummer.adgangspunkt`) | Point | EPSG:25832 | `adgangspunkt.position` | Geocoding, address-level mapping | Building-specific attributes (requires join back to BBR via husnummer) |
-| `buildings_osm_footprint` | OpenStreetMap | Polygon | WGS84 | `way` geometry | General mapping, open-data contexts | Official Danish register accuracy, bitemporal analysis |
-
-**Default assumption is wrong:** BBR centroid is the easiest geometry to extract but is not suitable for area statistics, shadow/solar analysis, or any operation requiring the building outline. If the question involves shape, size, or spatial overlap — select `buildings_geodanmark_footprint` and join to BBR for attributes.
+**Note:** OSM building footprints are the best globally available open polygon source. Attribute quality varies strongly by region and editing community.
 
 ---
 
-## Classical Theme References
+## Limitations
 
-| Standard | Theme | Link |
-| --- | --- | --- |
-| ISO 19115 | Structure | [[Classical Classifications/ISO 19115/structure\\\|Structure]] |
-| INSPIRE | Buildings | [[Classical Classifications/INSPIRE/buildings\\\|Buildings]] |
-| UN-GGIM | Buildings and Settlements | [[Classical Classifications/UN-GGIM/buildings-and-settlements\\\|Buildings and Settlements]] |
-
-## Temporal Model
-
-Bitemporal in BBR. GeoDanmark footprints are updated periodically (annual campaign). Historical building states via `virkningFra`/`virkningTil` in BBR.
+- Attribute completeness varies widely by country and urban density.
+- Year of construction (`start_date`) is sparse globally.
+- Building type tags are inconsistent across regions.
 
 ## Realised By Links
 
-- [[Datasets by Collection/Grunddatamodellen/BygningerOgBoliger/index.md|Bygninger og boliger]] (collection)
-- [[Datasets by Collection/Grunddatamodellen/GeoDanmark/index.md|GeoDanmark]] (collection)
-
-### Unmatched Realisations
-
-- OpenStreetMap
-## Realised By Links
-
-- [[Datasets by Collection/Grunddatamodellen/BygningerOgBoliger/index.md|Bygninger og boliger]] (collection)
-- [[Datasets by Collection/Grunddatamodellen/GeoDanmark/index.md|GeoDanmark]] (collection)
-
-### Unmatched Realisations
-
-- OpenStreetMap
+- [[Datasets by Collection/OpenStreetMap/index|OpenStreetMap]] (collection)

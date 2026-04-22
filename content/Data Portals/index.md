@@ -6,9 +6,12 @@ tags: []
 
 This section documents international and global geospatial data portals and their access patterns.
 
+## Available Portals
+
+- [[Data Portals/OpenStreetMap/index|OpenStreetMap (OSM)]] — tile service, Geofabrik downloads, and Overpass/osmnx query workflow
+
 ## Planned Portals
 
-- OpenStreetMap (OSM) — global crowd-sourced vector data
 - Copernicus — EU Earth Observation programme (Sentinel imagery, land service, marine service, atmosphere service)
 - Natural Earth — free vector and raster map data at multiple scales
 - Overture Maps — open map dataset (buildings, places, divisions, transportation)

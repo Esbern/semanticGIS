@@ -6,9 +6,12 @@ tags: []
 
 This section organises datasets by the collection or programme they belong to.
 
+## Available Collections
+
+- [[Datasets by Collection/OpenStreetMap/index|OpenStreetMap]]
+
 ## Planned Collections
 
-- OpenStreetMap
 - Copernicus Land Monitoring Service
 - Copernicus Marine Service
 - Copernicus Atmosphere Monitoring Service

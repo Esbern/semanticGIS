@@ -1,80 +1,87 @@
 ---
 title: Geographical Names
 type: leaf
-draft: true
+draft: false
 sphere: Socio_Technical
 subsphere: Socio_technical_governance
-concept: Cognised place identifiers enabling natural-language geographic reference
-question: What is the official name of a place or feature?
-realisations: []
+concept: Named places and topographic features as spatial identifiers
+question: What is the name and location of a place or topographic feature?
+realisations:
+  - OpenStreetMap
 threads: []
-tags: []
-primary_collection:
-primary_collection_path: /Datasets-by-Collection/Grunddatamodellen/Stednavne/
-entities: []
-key_attributes: []
+tags:
+  - socio_technical_governance
+  - names
+  - places
+primary_collection: OpenStreetMap
 services: {}
 ---
 
-> **Cognised existence:** A geographical name is a human-assigned label for a location or feature — a city, an island, a forest, a lake. Names are how humans refer to places in natural language, making them essential for search and discovery.
+> **Cognised existence:** Geographical names are the human identifiers for places — cities, villages, mountains, rivers, regions. They are the primary keys for geocoding and the spatial anchors for most human communication about place.
 
-**Question:** What is the official name of a place or feature?
+**Question:** What is the name and location of a place or topographic feature?
+
+**OSM wiki:** [https://wiki.openstreetmap.org/wiki/Key:place](https://wiki.openstreetmap.org/wiki/Key:place) | [https://wiki.openstreetmap.org/wiki/Key:name](https://wiki.openstreetmap.org/wiki/Key:name)
 
 ---
 
 ## Realisations
 
-### 1. Stednavne
+### OpenStreetMap — `place=*`, `name=*`
 
-[[Datasets by Collection/Grunddatamodellen/Stednavne/index|Stednavne]] is the authoritative Danish gazetteer.
+OSM contains named place points globally, from cities to hamlets, plus named topographic features. It is the primary open dataset for geocoding and place labelling.
 
-#### Spatial Access Path
+#### osmnx access
 
+```python
+import osmnx as ox
+ox.settings.cache_folder = ".cache/"
+
+# All named places in an area
+places = ox.features_from_place(
+    "Denmark",
+    tags={"place": ["city", "town", "village", "hamlet", "suburb"]}
+)
+
+# Geocode a place name to coordinates + boundary polygon
+gdf = ox.geocode_to_gdf("Aarhus, Denmark")
 ```
-stednavn → geometri (point or polygon — direct, no joins needed)
-```
 
-Each place name carries its own geometry directly — a point for small features, a polygon for areas.
+#### Geofabrik layer
 
-#### Key Attributes
+`gis_osm_places_free_1.shp` — point layer, fields: `osm_id`, `code`, `fclass` (city/town/village/hamlet/suburb/island…), `name`, `population`.
 
-| Attribute | Description |
+#### Key OSM tags
+
+| Tag | Meaning |
 | --- | --- |
-| `navn` | Place name text |
-| `stednavntype` | Feature type (by, ø, skov, sø, å, ...) |
-| `geometri` | Point or polygon geometry |
-| `sprog` | Language (Danish, Greenlandic) |
-
-### 2. OpenStreetMap
-
-OSM carries `name` tags on all named features (places, natural features, administrative areas).
-
-**Spatial access**: Direct geometry on the named node/way/relation.
+| `place=city` | City (typically > 100k pop.) |
+| `place=town` | Town |
+| `place=village` | Village |
+| `place=hamlet` | Hamlet |
+| `place=suburb` | Suburb or named neighbourhood |
+| `place=island` | Island |
+| `place=locality` | Named uninhabited location |
+| `name=*` | Primary name (local language) |
+| `name:en=*` | English name |
+| `population=*` | Population estimate (sparse) |
 
 ---
 
-## Role in Data Discovery
+## Geometry Representations
 
-A gazetteer enables **natural-language geographic search** — "find data near Roskilde" requires resolving "Roskilde" to coordinates. This leaf is a bridge from human queries to spatial operations.
+| Rep ID | Source Dataset | Geometry Type | Native CRS | Suitable For | Not Suitable For |
+| --- | --- | --- | --- | --- | --- |
+| `names_osm_points` | OSM via Geofabrik | Point | EPSG:4326 | Geocoding, labelling, proximity search | Area-based aggregation (use admin boundary polygons instead) |
 
-## Classical Theme References
+---
 
-| Standard | Theme | Link |
-| --- | --- | --- |
-| INSPIRE | Geographical Names | [[Classical Classifications/INSPIRE/geographical-names\\\|Geographical Names]] |
-| UN-GGIM | Geographical Names | [[Classical Classifications/UN-GGIM/geographical-names\\\|Geographical Names]] |
+## Limitations
+
+- Population data is very sparse and not reliably maintained.
+- City/town/village classification is inconsistent across countries.
+- For authoritative national gazetteers, prefer official national datasets.
 
 ## Realised By Links
 
-- [[Datasets by Collection/Grunddatamodellen/Stednavne/index.md|Stednavne]] (collection)
-
-### Unmatched Realisations
-
-- OpenStreetMap
-## Realised By Links
-
-- [[Datasets by Collection/Grunddatamodellen/Stednavne/index.md|Stednavne]] (collection)
-
-### Unmatched Realisations
-
-- OpenStreetMap
+- [[Datasets by Collection/OpenStreetMap/index|OpenStreetMap]] (collection)

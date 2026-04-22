@@ -1,49 +1,95 @@
 ---
 title: Nature Protection Areas
 type: leaf
-draft: true
+draft: false
 sphere: Biosphere
-subsphere: biosphere_conservation
-concept: >-
-  Legally or administratively designated areas that protect habitats, species
-  corridors, and sensitive nature structures
-question: Which nature protection designations or restrictions apply at this location?
-realisations: []
+subsphere: Conservation
+concept: Designated areas where nature conservation is the primary land management objective
+question: What areas are designated for nature protection at a location?
+realisations:
+  - OpenStreetMap
 threads: []
 tags:
-  - biosphere_conservation
-primary_collection:
-entities: []
-key_attributes: []
+  - biosphere
+  - conservation
+  - protected-areas
+primary_collection: OpenStreetMap
 services: {}
 ---
 
-> Cognised existence: a designated nature-protection unit that carries legal or planning constraints to preserve habitat quality, ecological continuity, and biodiversity.
+> **Cognised existence:** Nature protection areas are politically designated zones where biodiversity and natural heritage take precedence over other land uses. Their boundaries carry legal weight and are the primary input for conservation planning.
 
-## Core Question
+**Question:** What areas are designated for nature protection at a location?
 
-Which nature protection designations or restrictions apply at this location?
+**OSM wiki:** [https://wiki.openstreetmap.org/wiki/Tag:boundary%3Dprotected_area](https://wiki.openstreetmap.org/wiki/Tag:boundary%3Dprotected_area) | [https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dnature_reserve](https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dnature_reserve)
 
-## Scope
+---
 
-- Statutory protection designations and protected nature categories
-- Protection lines and corridor-like restrictions around water and landscape elements
-- Designated areas with invasive species management relevance
+## Realisations
 
-## Typical Realisations
+### OpenStreetMap — `boundary=protected_area`, `leisure=nature_reserve`
 
-- Beskyttede naturtyper
-- Beskyttede vandløb
-- Åbeskyttelseslinjer
-- NP3 - Arealer med invasive arter (2016-2019)
+OSM maps protected areas globally. Coverage is linked to WDPA (World Database of Protected Areas) imports in many countries.
+
+#### osmnx access
+
+```python
+import osmnx as ox
+ox.settings.cache_folder = ".cache/"
+
+# Protected areas
+protected = ox.features_from_place(
+    "Denmark",
+    tags={"boundary": "protected_area"}
+)
+
+# Nature reserves
+reserves = ox.features_from_place(
+    "Denmark",
+    tags={"leisure": "nature_reserve"}
+)
+```
+
+#### Overpass (fallback)
+
+```ql
+[out:json][timeout:120];
+area["name"="Denmark"]["admin_level"="2"]->.dk;
+(
+  relation["boundary"="protected_area"](area.dk);
+  way["boundary"="protected_area"](area.dk);
+  relation["leisure"="nature_reserve"](area.dk);
+);
+out body; >; out skel qt;
+```
+
+#### Key OSM tags
+
+| Tag | Meaning |
+| --- | --- |
+| `boundary=protected_area` | Designated protected area of any type |
+| `protect_class=*` | IUCN protection category (1a, 1b, 2, 3, 4, 5, 6) |
+| `protection_title=*` | Official designation name (e.g. "National Park", "Nature Reserve") |
+| `leisure=nature_reserve` | Nature reserve |
+| `name=*` | Official name |
+| `ref:WDPA=*` | WDPA (World Database of Protected Areas) identifier |
+
+---
+
+## Geometry Representations
+
+| Rep ID | Source Dataset | Geometry Type | Native CRS | Suitable For | Not Suitable For |
+| --- | --- | --- | --- | --- | --- |
+| `protection_osm_polygon` | OSM via Overpass | Polygon (relation/way) | EPSG:4326 | Area calculation, overlap analysis, map display | Legal boundary disputes — always verify against official national source |
+
+---
+
+## Limitations
+
+- OSM protected area boundaries may lag official updates.
+- `protect_class` is not consistently tagged.
+- For authoritative data consider: EEA CDDA (Europe), WDPA (global), or national environment agency sources.
 
 ## Realised By Links
 
-- [[Datasets by Owner/kommunerne/beskyttede-naturtyper.md|Beskyttede naturtyper]] (owner)
-- [[Datasets by Owner/kommunerne/beskyttede-vandloeb.md|Beskyttede vandløb]] (owner)
-- [[Datasets by Owner/kommunerne/aabeskyttelseslinjer-2.md|Åbeskyttelseslinjer]] (owner)
-- [[Datasets by Owner/unknown/np3-2021-arealer-med-invasive-arter-2016-2019.md|NP3_2021 Arealer med invasive arter (2016-2019)]] (owner)
-## Related Leaves
-
-- [[Leaves/species-observations|Species Observations]]
-- [[Leaves/freshwater-bodies|Surface Freshwater Bodies]]
+- [[Datasets by Collection/OpenStreetMap/index|OpenStreetMap]] (collection)

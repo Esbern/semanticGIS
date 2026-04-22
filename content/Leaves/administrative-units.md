@@ -1,18 +1,18 @@
 ---
 title: Administrative Units
 type: leaf
-draft: true
+draft: false
 sphere: Socio_Technical
 subsphere: Socio_technical_governance
 concept: Cognised territorial divisions for governance and statistical aggregation
 question: Which administrative area does a location belong to?
-realisations: []
+realisations:
+  - OpenStreetMap
 threads: []
-tags: []
-primary_collection:
-primary_collection_path: /Datasets-by-Collection/Grunddatamodellen/DAGI/
-entities: []
-key_attributes: []
+tags:
+  - socio_technical_governance
+  - administrative
+primary_collection: OpenStreetMap
 services: {}
 ---
 
@@ -20,83 +20,82 @@ services: {}
 
 **Question:** Which administrative area does a location belong to?
 
-## What is an Administrative Unit?
-
-An administrative unit is an area with a name, a code, and a polygon boundary that groups other spatial objects (addresses, parcels, people, businesses) for governance purposes. Most countries have nested hierarchies (for example region → municipality → local district), often with parallel divisions for judicial, police, health, or electoral purposes.
+**OSM wiki:** [https://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative](https://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative)
 
 ---
 
 ## Realisations
 
-### 1. DAGI (Danmarks Administrative Geografiske Inddeling)
+### OpenStreetMap — `boundary=administrative`
 
-[[Datasets by Collection/Grunddatamodellen/DAGI/index|DAGI]] is the authoritative realisation.
+OSM carries administrative boundary relations globally, tagged with `admin_level=*`. The numeric level indicates hierarchical tier but the meaning varies by country.
 
-#### Spatial Access Path
+**Global `admin_level` conventions (varies by country):**
 
-```
-All DAGI entities carry direct polygon geometry — no joins needed.
-  kommune.geometri  → municipality boundary (polygon)
-  region.geometri   → region boundary (polygon)
-  sogn.geometri     → parish boundary (polygon)
-  ...etc.
-```
-
-#### Entity Hierarchy
-
-| Entity | Count | Code | Use |
-| --- | --- | --- | --- |
-| **region** | 5 | `regionskode` | Healthcare, spatial planning |
-| **kommune** | 98 | `kommunekode` | Primary governance unit, most statistics |
-| **sogn** | ~2,200 | `sognekode` | Church parishes, historical aggregation |
-| **retskreds** | 24 | `retskredskode` | Judicial districts |
-| **politikreds** | 12 | `politikredskode` | Police districts |
-| **opstillingskreds** | 92 | — | Electoral constituencies |
-| **afstemningsomraade** | ~1,400 | — | Polling districts (finest electoral unit) |
-
-#### Key Attributes
-
-| Attribute | Description |
+| admin_level | Common use |
 | --- | --- |
-| `kommunekode` | 4-digit municipality code (the most commonly used key in Danish data) |
-| `regionskode` | 4-digit region code |
-| `navn` | Name of the administrative unit |
-| `geometri` | Polygon boundary |
+| 2 | National boundary |
+| 4 | State / region / province |
+| 6 | County / department |
+| 7–8 | Municipality / district |
+| 9–10 | Sub-municipal (ward, parish) |
 
-**`kommunekode` is the universal aggregation key** — most Danish registers store it as a foreign key. Point-in-polygon queries against DAGI are the standard way to assign data to municipalities.
+Per-country mappings: [https://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative](https://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative)
 
-### 2. OpenStreetMap
+#### osmnx access (recommended)
 
-OSM carries `admin_level` boundaries for Denmark, with `admin_level=4` for regions and `admin_level=7` for municipalities.
+```python
+import osmnx as ox
+ox.settings.cache_folder = ".cache/"
 
-**Spatial access**: Direct polygon geometry on `boundary=administrative` relations.
+# Geocode a named area to its boundary polygon
+gdf = ox.geocode_to_gdf("Copenhagen Municipality, Denmark")
+
+# Get all municipalities in a country
+municipalities = ox.features_from_place(
+    "Denmark",
+    tags={"boundary": "administrative", "admin_level": "7"}
+)
+```
+
+#### Overpass (fallback)
+
+```ql
+[out:json][timeout:120];
+(
+  relation["boundary"="administrative"]["admin_level"="7"]["ISO3166-1"="DK"];
+);
+out body; >; out skel qt;
+```
+
+#### Key OSM tags
+
+| Tag | Meaning |
+| --- | --- |
+| `boundary=administrative` | Administrative boundary relation |
+| `admin_level=*` | Hierarchy level (country-specific meaning) |
+| `name=*` | Official name |
+| `name:en=*` | English name |
+| `ISO3166-1=*` | ISO country code (level 2) |
+| `ISO3166-2=*` | ISO sub-national code |
+| `ref=*` | Official code reference |
 
 ---
 
-## Classical Theme References
+## Geometry Representations
 
-| Standard | Theme | Link |
-| --- | --- | --- |
-| ISO 19115 | Boundaries | [[Classical Classifications/ISO 19115/boundaries\\\|Boundaries]] |
-| INSPIRE | Administrative Units | [[Classical Classifications/INSPIRE/administrative-units\\\|Administrative Units]] |
+| Rep ID | Source Dataset | Geometry Type | Native CRS | Suitable For | Not Suitable For |
+| --- | --- | --- | --- | --- | --- |
+| `admin_osm_polygon` | OSM via osmnx / Overpass | Polygon (relation) | EPSG:4326 | Area queries, point-in-polygon, map display, aggregation | Legal boundary disputes — OSM may lag official updates |
 
-## Temporal Model
+---
 
-Bitemporal. Municipal mergers (last major reform: 2007) are tracked historically.
+## Limitations
+
+- OSM administrative boundaries may lag official updates (elections, boundary changes).
+- `admin_level` values are country-specific — always check the OSM wiki for the country in question.
+- Boundary quality is highest in Europe and North America; variable elsewhere.
 
 ## Realised By Links
 
-- [[Datasets by Collection/Grunddatamodellen/DAGI/index.md|DAGI]] (collection)
-- [[Datasets by Collection/Grunddatamodellen/GeoDanmark/index.md|GeoDanmark]] (collection)
-
-### Unmatched Realisations
-
-- OpenStreetMap
-## Realised By Links
-
-- [[Datasets by Collection/Grunddatamodellen/DAGI/index.md|DAGI]] (collection)
-- [[Datasets by Collection/Grunddatamodellen/GeoDanmark/index.md|GeoDanmark]] (collection)
-
-### Unmatched Realisations
-
-- OpenStreetMap
+- [[Datasets by Collection/OpenStreetMap/index|OpenStreetMap]] (collection)

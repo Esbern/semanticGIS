@@ -19,7 +19,7 @@ primary_collection:
 primary_collection_path: /Datasets-by-Collection/Grunddatamodellen/CentraleVirksomhedsregister/
 entities: []
 key_attributes: []
-services: {}
+services:
   graphql: >-
     /assets/source-manifests/datafordeler/datafordeler.graphql.services.manifest.v1.json
   source_manifest: /assets/source-manifests/datafordeler/cvr.source.manifest.v1.json

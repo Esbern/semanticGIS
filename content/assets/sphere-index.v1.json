@@ -1,0 +1,1835 @@
+{
+  "$schema": "https://semanticgis.dk/assets/sphere-index.schema.v1.json",
+  "protocol": "SPHERE",
+  "version": "0.2.1",
+  "description": "Machine-readable index of spheres, leaves, and cross-domain connections for agent discovery",
+  "generated": "2026-04-18",
+  "documentation": "/SPHERE",
+  "extensions": {
+    "multi_twig_membership": true,
+    "optional_primary_lens": true,
+    "threads": true
+  },
+  "spheres": [
+    {
+      "id": "socio-technical",
+      "title": "Socio-Technical",
+      "path": "/SPHERE/Socio_Technical/",
+      "description": "Human-created systems: infrastructure, services, socioeconomic patterns, governance, ICT and flows, thematic perception, informal systems, risk",
+      "subspheres": [
+        "socio_technical_infrastructure",
+        "socio_technical_services",
+        "socio_technical_socioeconomic",
+        "socio_technical_governance",
+        "socio_technical_ict_flows",
+        "socio_technical_contaminants",
+        "socio_technical_hazard_vulnerability_risk",
+        "socio_technical_resource_utilisation",
+        "socio_technical_perception_thematics",
+        "socio_technical_informal_ephemeral"
+      ]
+    },
+    {
+      "id": "atmosphere",
+      "title": "Atmosphere",
+      "path": "/SPHERE/Atmosphere/",
+      "description": "Air, climate, weather patterns",
+      "subspheres": [
+        "atmosphere_climate",
+        "atmosphere_weather",
+        "atmosphere_composition",
+        "atmosphere_contaminants"
+      ]
+    },
+    {
+      "id": "biosphere",
+      "title": "Biosphere",
+      "path": "/SPHERE/Biosphere/",
+      "description": "Living organisms, ecosystems, ecological communities",
+      "subspheres": [
+        "Vegetation",
+        "Fauna",
+        "biosphere_microbial",
+        "biosphere_ecosystems",
+        "biosphere_contaminants"
+      ]
+    },
+    {
+      "id": "hydrosphere",
+      "title": "Hydrosphere",
+      "path": "/SPHERE/Hydrosphere/",
+      "description": "Water bodies, precipitation, water quality, hydrology",
+      "subspheres": [
+        "hydrosphere_freshwater_surface",
+        "hydrosphere_groundwater",
+        "hydrosphere_marine",
+        "hydrosphere_cryosphere",
+        "hydrosphere_atmosphericwater",
+        "hydrosphere_contaminants"
+      ]
+    },
+    {
+      "id": "lithosphere",
+      "title": "Lithosphere",
+      "path": "/SPHERE/Lithosphere/",
+      "description": "Geology, soil composition, minerals, subsurface",
+      "subspheres": [
+        "lithosphere_geology",
+        "lithosphere_tectonics",
+        "lithosphere_resources",
+        "lithosphere_hazards",
+        "lithosphere_contaminants"
+      ]
+    },
+    {
+      "id": "pedosphere",
+      "title": "Pedosphere",
+      "path": "/SPHERE/Pedosphere/",
+      "description": "Soil processes, pedological classification",
+      "subspheres": [
+        "pedosphere_soil_properties",
+        "pedosphere_soil_types_mapping",
+        "pedosphere_soil_moisture_temperature",
+        "pedosphere_soil_erosion_sedimentation",
+        "pedosphere_contaminants"
+      ]
+    },
+    {
+      "id": "toposphere",
+      "title": "Toposphere",
+      "path": "/SPHERE/Toposphere/",
+      "description": "Terrain, bathymetry, surface properties, remote-sensed observations, and coordinate reference systems",
+      "subspheres": [
+        "toposphere_geospatial_reference_framework",
+        "toposphere_topography_bathymetry",
+        "toposphere_surface_radiative_thermal",
+        "toposphere_surface_physical",
+        "toposphere_remote_sensed_observations"
+      ]
+    }
+  ],
+  "leaves": [
+    {
+      "id": "firms",
+      "title": "Firms",
+      "path": "/Leaves/firms",
+      "sphere": "socio-technical",
+      "subsphere": "Socio_technical_socioeconomic",
+      "primary_collection": "CentraleVirksomhedsregister",
+      "primary_collection_path": "/Datasets-by-Collection/Grunddatamodellen/CentraleVirksomhedsregister/",
+      "realisations": [
+        "CentraleVirksomhedsregister",
+        "SkatteforvaltningensVirksomhedsregister"
+      ],
+      "question": "What firm is this, as a legal registered entity?",
+      "entities": [
+        "CVREnhed",
+        "Virksomhed",
+        "Navn",
+        "Virksomhedsform",
+        "CVRAdresse"
+      ],
+      "key_attributes": [
+        "cvrnummer",
+        "navn",
+        "virksomhedsform",
+        "virksomhedstatus"
+      ],
+      "services": {
+        "graphql": "/assets/source-manifests/datafordeler/datafordeler.graphql.services.manifest.v1.json",
+        "source_manifest": "/assets/source-manifests/datafordeler/cvr.source.manifest.v1.json",
+        "semantic_map": "/assets/source-manifests/datafordeler/cvr.semantic.entity-attribute-map.v1.json"
+      },
+      "tags": [],
+      "threads": []
+    },
+    {
+      "id": "economic-activities",
+      "title": "Economic Activities",
+      "path": "/Leaves/economic-activities",
+      "sphere": "socio-technical",
+      "subsphere": "Socio_technical_socioeconomic",
+      "primary_collection": "CentraleVirksomhedsregister",
+      "primary_collection_path": "/Datasets-by-Collection/Grunddatamodellen/CentraleVirksomhedsregister/",
+      "realisations": [
+        "CentraleVirksomhedsregister",
+        "OpenStreetMap",
+        "DanmarksStatistik",
+        "SkatteforvaltningensVirksomhedsregister"
+      ],
+      "question": "What economic activity does a business perform?",
+      "entities": [
+        "Branche",
+        "Virksomhed",
+        "CVREnhed"
+      ],
+      "key_attributes": [
+        "branchekode",
+        "branchetekst",
+        "hovedbranche"
+      ],
+      "services": {
+        "graphql": "/assets/source-manifests/datafordeler/datafordeler.graphql.services.manifest.v1.json",
+        "source_manifest": "/assets/source-manifests/datafordeler/cvr.source.manifest.v1.json",
+        "semantic_map": "/assets/source-manifests/datafordeler/cvr.semantic.entity-attribute-map.v1.json"
+      },
+      "tags": [
+        "biosphere_ecosystems",
+        "socio_technical_perception_thematics"
+      ],
+      "flow_mode": "ant",
+      "temporal_mmu": "episodic",
+      "threads": [
+        "economic-activities-to-biosphere-ecosystems",
+        "economic-activities-to-perception-thematics"
+      ]
+    },
+    {
+      "id": "business-locations",
+      "title": "Business Locations",
+      "path": "/Leaves/business-locations",
+      "sphere": "socio-technical",
+      "subsphere": "Socio_technical_infrastructure",
+      "primary_collection": "CentraleVirksomhedsregister",
+      "primary_collection_path": "/Datasets-by-Collection/Grunddatamodellen/CentraleVirksomhedsregister/",
+      "realisations": [
+        "CentraleVirksomhedsregister",
+        "OpenStreetMap",
+        "BygningerOgBoliger",
+        "SkatteforvaltningensVirksomhedsregister"
+      ],
+      "question": "Where does a business physically operate?",
+      "entities": [
+        "Produktionsenhed",
+        "Adressering",
+        "Virksomhed"
+      ],
+      "key_attributes": [
+        "kommunekode",
+        "vejnavn",
+        "husnummer",
+        "postnummer"
+      ],
+      "services": {
+        "graphql": "/assets/source-manifests/datafordeler/datafordeler.graphql.services.manifest.v1.json",
+        "source_manifest": "/assets/source-manifests/datafordeler/cvr.source.manifest.v1.json",
+        "semantic_map": "/assets/source-manifests/datafordeler/cvr.semantic.entity-attribute-map.v1.json"
+      },
+      "tags": [
+        "toposphere_topography_bathymetry",
+        "socio_technical_perception_thematics"
+      ],
+      "flow_mode": "ant",
+      "temporal_mmu": "episodic",
+      "threads": [
+        "business-locations-to-topography",
+        "business-locations-to-perception-thematics"
+      ]
+    },
+    {
+      "id": "corporate-ownership",
+      "title": "Ownership and Governance",
+      "path": "/Leaves/corporate-ownership",
+      "sphere": "socio-technical",
+      "subsphere": "Socio_technical_socioeconomic",
+      "primary_collection": "CentraleVirksomhedsregister",
+      "primary_collection_path": "/Datasets-by-Collection/Grunddatamodellen/CentraleVirksomhedsregister/",
+      "realisations": [
+        "CentraleVirksomhedsregister",
+        "SkatteforvaltningensVirksomhedsregister"
+      ],
+      "question": "Who owns, controls, or governs a firm?",
+      "entities": [
+        "ejerforhold",
+        "reelejerrelation",
+        "legalejerrelation",
+        "andendeltager",
+        "fuldtansvarligdeltagerrelation",
+        "ledelse",
+        "ledelserelation",
+        "kapitalforhold"
+      ],
+      "key_attributes": [
+        "ejerandel",
+        "stemmeandel",
+        "rollebeskrivelse",
+        "CVREnhedsId"
+      ],
+      "services": {
+        "graphql": "/assets/source-manifests/datafordeler/datafordeler.graphql.services.manifest.v1.json",
+        "source_manifest": "/assets/source-manifests/datafordeler/cvr.source.manifest.v1.json",
+        "semantic_map": "/assets/source-manifests/datafordeler/cvr.semantic.entity-attribute-map.v1.json"
+      },
+      "tags": [],
+      "threads": []
+    },
+    {
+      "id": "business-financials",
+      "title": "Economics and Employment",
+      "path": "/Leaves/business-financials",
+      "sphere": "socio-technical",
+      "subsphere": "Socio_technical_socioeconomic",
+      "primary_collection": "CentraleVirksomhedsregister",
+      "primary_collection_path": "/Datasets-by-Collection/Grunddatamodellen/CentraleVirksomhedsregister/",
+      "realisations": [
+        "CentraleVirksomhedsregister",
+        "DanmarksStatistik",
+        "SkatteforvaltningensVirksomhedsregister"
+      ],
+      "question": "What are the economic and employment characteristics of a firm or establishment?",
+      "entities": [
+        "regnskab",
+        "revision",
+        "revisorrelation",
+        "finansiel",
+        "stadfæstelse",
+        "Beskaeftigelse",
+        "Kreditoplysninger"
+      ],
+      "key_attributes": [
+        "omsaetning",
+        "bruttofortjeneste",
+        "resultatfoerskat",
+        "balancesum",
+        "ansatte",
+        "aarsvaerk"
+      ],
+      "services": {
+        "graphql": "/assets/source-manifests/datafordeler/datafordeler.graphql.services.manifest.v1.json",
+        "source_manifest": "/assets/source-manifests/datafordeler/cvr.source.manifest.v1.json",
+        "semantic_map": "/assets/source-manifests/datafordeler/cvr.semantic.entity-attribute-map.v1.json"
+      },
+      "tags": [],
+      "threads": []
+    },
+    {
+      "id": "addresses",
+      "title": "Addresses",
+      "path": "/Leaves/addresses",
+      "sphere": "socio-technical",
+      "subsphere": "Socio_technical_governance",
+      "primary_collection": "DanmarksAdresser",
+      "primary_collection_path": "/Datasets-by-Collection/Grunddatamodellen/DanmarksAdresser/",
+      "realisations": [
+        "DanmarksAdresser",
+        "OpenStreetMap",
+        "BygningerOgBoliger"
+      ],
+      "question": "Where is a property located by its official address?",
+      "entities": [
+        "adresse",
+        "adressepunkt",
+        "husnummer",
+        "navngivenvej",
+        "postnummer"
+      ],
+      "key_attributes": [
+        "adressebetegnelse",
+        "husnummertekst",
+        "postnr",
+        "postnrnavn",
+        "etage",
+        "doer"
+      ],
+      "services": {},
+      "tags": [],
+      "threads": []
+    },
+    {
+      "id": "buildings",
+      "title": "Buildings",
+      "path": "/Leaves/buildings",
+      "sphere": "socio-technical",
+      "subsphere": "Socio_technical_infrastructure",
+      "primary_collection": "BygningerOgBoliger",
+      "realisations": [
+        "BygningerOgBoliger",
+        "GeoDanmark",
+        "OpenStreetMap"
+      ],
+      "question": "What buildings exist at a location and what are their characteristics?",
+      "entities": [
+        "bygning",
+        "enhed",
+        "etage",
+        "opgang",
+        "grund",
+        "tekniskanlæg"
+      ],
+      "key_attributes": [
+        "byg_anvendelse",
+        "byg_opfoerelsesaar",
+        "byg_areal",
+        "byg_antal_etager",
+        "byg_varmeinstallation"
+      ],
+      "services": {},
+      "tags": [],
+      "threads": []
+    },
+    {
+      "id": "administrative-units",
+      "title": "Administrative Units",
+      "path": "/Leaves/administrative-units",
+      "sphere": "socio-technical",
+      "subsphere": "Socio_technical_governance",
+      "primary_collection": "DAGI",
+      "primary_collection_path": "/Datasets-by-Collection/Grunddatamodellen/DAGI/",
+      "realisations": [
+        "DAGI",
+        "OpenStreetMap",
+        "GeoDanmark"
+      ],
+      "question": "Which administrative area does a location belong to?",
+      "entities": [
+        "kommune",
+        "region",
+        "sogn",
+        "retskreds",
+        "politikreds",
+        "opstillingskreds",
+        "afstemningsomraade"
+      ],
+      "key_attributes": [
+        "kommunekode",
+        "regionskode",
+        "navn",
+        "geometri"
+      ],
+      "services": {},
+      "tags": [],
+      "threads": []
+    },
+    {
+      "id": "cadastral-parcels",
+      "title": "Cadastral Parcels",
+      "path": "/Leaves/cadastral-parcels",
+      "sphere": "socio-technical",
+      "subsphere": "Socio_technical_governance",
+      "primary_collection": "Matrikel",
+      "primary_collection_path": "/Datasets-by-Collection/Grunddatamodellen/Matrikel/",
+      "realisations": [
+        "Matrikel",
+        "Ejerfortegnelsen",
+        "BygningerOgBoliger"
+      ],
+      "question": "What are the legal boundaries and ownership of land?",
+      "entities": [
+        "jordstykke",
+        "matrikelnummer",
+        "ejerlav",
+        "skelforretning"
+      ],
+      "key_attributes": [
+        "matrikelnummer",
+        "ejerlavskode",
+        "registreretareal",
+        "arealberegningsmetode",
+        "geometri"
+      ],
+      "services": {},
+      "tags": [],
+      "threads": []
+    },
+    {
+      "id": "geographical-names",
+      "title": "Geographical Names",
+      "path": "/Leaves/geographical-names",
+      "sphere": "socio-technical",
+      "subsphere": "Socio_technical_governance",
+      "primary_collection": "Stednavne",
+      "primary_collection_path": "/Datasets-by-Collection/Grunddatamodellen/Stednavne/",
+      "realisations": [
+        "Stednavne",
+        "OpenStreetMap"
+      ],
+      "question": "What is the official name of a place or feature?",
+      "entities": [
+        "stednavn",
+        "stednavntype"
+      ],
+      "key_attributes": [
+        "navn",
+        "stednavntype",
+        "geometri",
+        "sprog"
+      ],
+      "services": {},
+      "tags": [],
+      "threads": []
+    },
+    {
+      "id": "elevation",
+      "title": "Elevation",
+      "path": "/Leaves/elevation",
+      "sphere": "toposphere",
+      "subsphere": "toposphere_topography_bathymetry",
+      "primary_collection": "DHMOprindelse",
+      "realisations": [
+        "DHMOprindelse",
+        "Dataforsyningen",
+        "Danmarks Højdemodel - Historik (2007 Højdekurver)",
+        "Danmarks Højdemodel - Historik (2007 Overflademodel)",
+        "Danmarks Højdemodel - Historik (2007 Punktsky)",
+        "Danmarks Højdemodel - Historik (2007 Terrænmodel)",
+        "Danmarks Højdemodel - Historik (2015)",
+        "Danmarks Højdemodel - Højdekurver",
+        "Danmarks Højdemodel - Oprindelse",
+        "Danmarks Højdemodel - Overdrevet Skyggekort",
+        "Danmarks Højdemodel - Overflade",
+        "Danmarks Højdemodel - Punktsky",
+        "Danmarks Højdemodel - Quick DHM",
+        "GeoDanmark"
+      ],
+      "question": "What is the elevation at a given location?",
+      "entities": [
+        "DHM/Punktsky",
+        "DHM/Terræn",
+        "DHM/Overflade"
+      ],
+      "key_attributes": [
+        "elevation_value",
+        "horizontal_accuracy",
+        "vertical_accuracy",
+        "acquisition_date"
+      ],
+      "services": {},
+      "tags": [
+        "hydrosphere_freshwater_surface"
+      ],
+      "threads": [
+        "elevation-to-hydrosphere-freshwater-surface"
+      ]
+    },
+    {
+      "id": "orthoimagery",
+      "title": "Orthoimagery",
+      "path": "/Leaves/orthoimagery",
+      "sphere": "toposphere",
+      "subsphere": "toposphere_remote_sensed_observations",
+      "primary_collection": "GeoDanmark",
+      "realisations": [
+        "GeoDanmark",
+        "Dataforsyningen",
+        "Copernicus"
+      ],
+      "question": "What does the Earth's surface look like at a location?",
+      "entities": [
+        "orthophoto",
+        "image_tile"
+      ],
+      "key_attributes": [
+        "acquisition_date",
+        "ground_resolution",
+        "spectral_bands",
+        "cloud_cover"
+      ],
+      "services": {},
+      "tags": [
+        "toposphere_remote_sensed_observations",
+        "socio_technical_perception_thematics"
+      ],
+      "flow_mode": "gauge",
+      "temporal_mmu": "episodic",
+      "threads": [
+        "orthoimagery-to-remote-sensed-observations",
+        "orthoimagery-to-perception-thematics"
+      ]
+    },
+    {
+      "id": "population",
+      "title": "Population",
+      "path": "/Leaves/population",
+      "sphere": "socio-technical",
+      "subsphere": "Socio_technical_socioeconomic",
+      "primary_collection": "Person",
+      "realisations": [
+        "Person",
+        "DanmarksStatistik"
+      ],
+      "question": "How is the population distributed and what are its characteristics?",
+      "entities": [
+        "person",
+        "civilstand",
+        "statsborgerskab"
+      ],
+      "key_attributes": [
+        "foedselsdato",
+        "koen",
+        "civilstand",
+        "adresseringsnavn",
+        "kommunekode"
+      ],
+      "services": {},
+      "tags": [],
+      "threads": []
+    },
+    {
+      "id": "transport-networks",
+      "title": "Transport Networks",
+      "path": "/Leaves/transport-networks",
+      "sphere": "socio-technical",
+      "subsphere": "Socio_technical_infrastructure",
+      "primary_collection": "GeoDanmark",
+      "primary_collection_path": "/Datasets-by-Collection/Grunddatamodellen/GeoDanmark/",
+      "realisations": [
+        "GeoDanmark",
+        "OpenStreetMap",
+        "Vejdirektoratet"
+      ],
+      "question": "What transport routes and networks exist?",
+      "entities": [
+        "vejmidte",
+        "jernbane",
+        "sti",
+        "faergerute",
+        "lufthavn"
+      ],
+      "key_attributes": [
+        "vejklasse",
+        "vejnavn",
+        "hastighed",
+        "belægning",
+        "geometri"
+      ],
+      "services": {},
+      "tags": [],
+      "flow_mode": "ant",
+      "temporal_mmu": "stream",
+      "threads": []
+    },
+    {
+      "id": "services",
+      "title": "Services and Amenities",
+      "path": "/Leaves/services",
+      "sphere": "socio-technical",
+      "subsphere": "Socio_technical_services",
+      "primary_collection": "CentraleVirksomhedsregister",
+      "primary_collection_path": "/Datasets-by-Collection/Grunddatamodellen/CentraleVirksomhedsregister/",
+      "realisations": [
+        "CentraleVirksomhedsregister",
+        "OpenStreetMap",
+        "BygningerOgBoliger",
+        "GeoDanmark",
+        "SkatteforvaltningensVirksomhedsregister"
+      ],
+      "question": "What services or amenities are available at or near a location?",
+      "entities": [
+        "Virksomhed",
+        "Produktionsenhed",
+        "Branche"
+      ],
+      "key_attributes": [
+        "branchekode",
+        "branchetekst",
+        "hovedbranche"
+      ],
+      "services": {},
+      "tags": [
+        "socio_technical_services"
+      ],
+      "threads": []
+    },
+    {
+      "id": "bathing-water-quality",
+      "title": "Bathing Water Quality",
+      "path": "/Leaves/bathing-water-quality",
+      "sphere": "hydrosphere",
+      "subsphere": "hydrosphere_freshwater_surface",
+      "primary_collection": "Miljoeportalen PULS",
+      "realisations": [
+        "Badevand: Analyse- og Måleresultater",
+        "Badevand: Kontrolstation",
+        "Badevand: Stamdata"
+      ],
+      "question": "Is bathing water suitable and safe for human recreational use at this location and time?",
+      "entities": [
+        "bathing_site",
+        "monitoring_station",
+        "sample",
+        "measurement"
+      ],
+      "key_attributes": [
+        "sample_datetime",
+        "parameter_name",
+        "measured_value",
+        "unit",
+        "quality_class",
+        "risk_flag"
+      ],
+      "services": {},
+      "tags": [
+        "hydrosphere_freshwater_surface",
+        "hydrosphere_contaminants",
+        "socio_technical_contaminants",
+        "socio_technical_hazard_vulnerability_risk",
+        "socio_technical_services"
+      ],
+      "twig_membership": [
+        "hydrosphere_freshwater_surface",
+        "hydrosphere_contaminants",
+        "socio_technical_contaminants",
+        "socio_technical_hazard_vulnerability_risk",
+        "socio_technical_services"
+      ],
+      "primary_lens": "hydrosphere_freshwater_surface",
+      "flow_mode": "gauge",
+      "temporal_mmu": "stream",
+      "threads": [
+        "bathing-water-quality-hydrosphere-freshwater",
+        "bathing-water-quality-hydrosphere-contaminants",
+        "bathing-water-quality-socio-contaminants",
+        "bathing-water-quality-hvr",
+        "bathing-water-quality-services"
+      ]
+    },
+    {
+      "id": "freshwater-bodies",
+      "title": "Surface Freshwater Bodies",
+      "path": "/Leaves/freshwater-bodies",
+      "sphere": "hydrosphere",
+      "subsphere": "hydrosphere_freshwater_surface",
+      "primary_collection": "VP3 - Afgrænsning. Vandløb",
+      "realisations": [
+        "VP3 - Afgrænsning. Vandløb",
+        "VP3 - Afgrænsning. Søer",
+        "GeoDanmark"
+      ],
+      "question": "Which river, lake, wetland, or catchment is this location part of?",
+      "entities": [
+        "watercourse",
+        "lake",
+        "wetland",
+        "catchment",
+        "water_body"
+      ],
+      "key_attributes": [
+        "water_body_id",
+        "water_body_type",
+        "hydrological_district",
+        "ecological_status",
+        "plan_cycle"
+      ],
+      "services": {},
+      "tags": [
+        "hydrosphere_freshwater_surface"
+      ],
+      "threads": []
+    },
+    {
+      "id": "groundwater-bodies",
+      "title": "Groundwater Bodies",
+      "path": "/Leaves/groundwater-bodies",
+      "sphere": "hydrosphere",
+      "subsphere": "hydrosphere_groundwater",
+      "primary_collection": "VP3 - Afgrænsning. Grundvand, terrænnære forekomster",
+      "realisations": [
+        "VP3 - Afgrænsning. Grundvand, terrænnære forekomster",
+        "VP3 - Afgrænsning. Grundvand, regionale forekomster",
+        "VP3 - Afgrænsning. Grundvand, dybe forekomster"
+      ],
+      "question": "Which groundwater body or aquifer is present here, and what status applies?",
+      "entities": [
+        "groundwater_body",
+        "aquifer",
+        "drinking_water_body",
+        "monitoring_zone"
+      ],
+      "key_attributes": [
+        "groundwater_body_id",
+        "body_class",
+        "chemical_status",
+        "quantitative_status",
+        "plan_cycle"
+      ],
+      "services": {},
+      "tags": [
+        "hydrosphere_groundwater"
+      ],
+      "threads": []
+    },
+    {
+      "id": "marine-waters",
+      "title": "Marine and Coastal Waters",
+      "path": "/Leaves/marine-waters",
+      "sphere": "hydrosphere",
+      "subsphere": "hydrosphere_marine",
+      "primary_collection": "VP3 - Afgrænsning. Kystvande",
+      "realisations": [
+        "VP3 - Afgrænsning. Kystvande",
+        "Ålegræs Marin",
+        "Bundfauna Marin"
+      ],
+      "question": "Which coastal or marine water body is this location part of, and what condition applies?",
+      "entities": [
+        "coastal_water_body",
+        "marine_area",
+        "fjord",
+        "marine_monitoring_zone"
+      ],
+      "key_attributes": [
+        "water_body_id",
+        "marine_zone_type",
+        "ecological_status",
+        "chemical_status",
+        "plan_cycle"
+      ],
+      "services": {},
+      "tags": [
+        "hydrosphere_marine"
+      ],
+      "threads": []
+    },
+    {
+      "id": "aquaculture-sites",
+      "title": "Aquaculture Sites",
+      "path": "/Leaves/aquaculture-sites",
+      "sphere": "socio-technical",
+      "subsphere": "Socio_technical_resource_utilisation",
+      "primary_collection": "Akvakulturanlæg: Stamdata",
+      "realisations": [
+        "Akvakultur: Fiskeopdræt",
+        "Akvakultur: Skaldyrsopdræt",
+        "Akvakulturanlæg: Stamdata"
+      ],
+      "question": "Where are aquaculture activities located, and what production or discharge characteristics are reported there?",
+      "entities": [
+        "aquaculture_site",
+        "intake_point",
+        "outlet_point",
+        "measurement_station"
+      ],
+      "key_attributes": [
+        "site_id",
+        "production_type",
+        "species_group",
+        "discharge_indicator",
+        "measurement_datetime"
+      ],
+      "services": {},
+      "tags": [
+        "socio_technical_resource_utilisation"
+      ],
+      "threads": []
+    },
+    {
+      "id": "species-observations",
+      "title": "Species Observations",
+      "path": "/Leaves/species-observations",
+      "sphere": "biosphere",
+      "subsphere": "biosphere_ecosystems",
+      "primary_collection": "Alle fund fra Arter.dk",
+      "realisations": [
+        "Alle fund fra Arter.dk",
+        "Alle fund fra Arter.dk, historiske",
+        "Arter Resultat",
+        "Artsfund i Naturdatabasen (Darwin Core)",
+        "Fund af arter på Habitatdirektivets bilag IV fra Arter.dk"
+      ],
+      "question": "Which species have been observed at this location, and when were they recorded?",
+      "entities": [
+        "observation",
+        "taxon",
+        "observer",
+        "observation_location"
+      ],
+      "key_attributes": [
+        "observation_id",
+        "taxon_name",
+        "taxon_group",
+        "observation_datetime",
+        "observation_method"
+      ],
+      "services": {},
+      "tags": [
+        "biosphere_ecosystems"
+      ],
+      "threads": []
+    },
+    {
+      "id": "groundwater-chemistry",
+      "title": "Groundwater Chemistry",
+      "path": "/Leaves/groundwater-chemistry",
+      "sphere": "hydrosphere",
+      "subsphere": "hydrosphere_groundwater",
+      "primary_collection": "VP3 - Aluminium. Kemisk tilstand og trends. Terrænnære grundvandsforekomster",
+      "realisations": [
+        "VP3 - Aluminium. Kemisk tilstand og trends. Terrænnære grundvandsforekomster",
+        "VP3 - Arsen. Kemisk tilstand og trends. Regionale grundvandsforekomster",
+        "VP3 - Bly. Kemisk tilstand og trends. Dybe grundvandsforekomster"
+      ],
+      "question": "What is the chemical status of groundwater in this area, and which substances drive trends or exceedances?",
+      "entities": [
+        "groundwater_body",
+        "chemical_indicator",
+        "trend_assessment",
+        "monitoring_result"
+      ],
+      "key_attributes": [
+        "groundwater_body_id",
+        "substance_name",
+        "chemical_status",
+        "trend_direction",
+        "assessment_period"
+      ],
+      "services": {},
+      "tags": [
+        "hydrosphere_groundwater"
+      ],
+      "threads": []
+    },
+    {
+      "id": "land-use-agriculture",
+      "title": "Agricultural Land Management",
+      "path": "/Leaves/land-use-agriculture",
+      "sphere": "socio-technical",
+      "subsphere": "Socio_technical_resource_utilisation",
+      "primary_collection": "Arealanvendelse, landbrug, 2024",
+      "realisations": [
+        "Arealanvendelse, landbrug, 2024",
+        "Markudledningskort 2025",
+        "Økologiske marker 2023",
+        "GeoDanmark"
+      ],
+      "question": "Which agricultural management patterns and production-use classes apply in this area?",
+      "entities": [
+        "agricultural_management_unit",
+        "agricultural_parcel",
+        "nutrient_pressure_zone",
+        "cultivation_regime"
+      ],
+      "key_attributes": [
+        "crop_use_class",
+        "cultivation_regime",
+        "nutrient_pressure_class",
+        "management_period",
+        "reporting_year"
+      ],
+      "services": {},
+      "tags": [
+        "socio_technical_resource_utilisation"
+      ],
+      "threads": []
+    },
+    {
+      "id": "nature-protection-areas",
+      "title": "Nature Protection Areas",
+      "path": "/Leaves/nature-protection-areas",
+      "sphere": "biosphere",
+      "subsphere": "biosphere_conservation",
+      "primary_collection": "Beskyttede naturtyper",
+      "realisations": [
+        "Beskyttede naturtyper",
+        "Beskyttede vandløb",
+        "Åbeskyttelseslinjer",
+        "NP3 - Arealer med invasive arter (2016-2019)"
+      ],
+      "question": "Which nature protection designations or restrictions apply at this location?",
+      "entities": [
+        "protected_area",
+        "protection_line",
+        "protected_watercourse",
+        "restricted_zone"
+      ],
+      "key_attributes": [
+        "designation_id",
+        "designation_type",
+        "legal_basis",
+        "restriction_class",
+        "validity_period"
+      ],
+      "services": {},
+      "tags": [
+        "biosphere_conservation"
+      ],
+      "threads": []
+    },
+    {
+      "id": "fisheries-intensity",
+      "title": "Fisheries Intensity",
+      "path": "/Leaves/fisheries-intensity",
+      "sphere": "socio-technical",
+      "subsphere": "Socio_technical_resource_utilisation",
+      "primary_collection": "VP3 - Analyseret fiskeriintensitet 2013-2018",
+      "realisations": [
+        "VP3 - Analyseret fiskeriintensitet 2013-2018",
+        "NP3 - AIS Garn",
+        "NP3 - AIS Pelagiske redskaber"
+      ],
+      "question": "What fishing effort and gear activity occur in this marine area, and how does it relate to ecosystem pressure and regulation?",
+      "entities": [
+        "fishing_effort_zone",
+        "vessel_activity_track",
+        "gear_activity_class",
+        "marine_management_area"
+      ],
+      "key_attributes": [
+        "fishing_effort_index",
+        "gear_type",
+        "effort_period",
+        "marine_area_id",
+        "pressure_signal"
+      ],
+      "services": {},
+      "tags": [
+        "socio_technical_resource_utilisation",
+        "socio_technical_governance",
+        "biosphere_ecosystems"
+      ],
+      "flow_mode": "ant",
+      "temporal_mmu": "episodic",
+      "threads": [
+        "fisheries-intensity-to-governance",
+        "fisheries-intensity-to-biosphere-ecosystems"
+      ]
+    },
+    {
+      "id": "habitat-condition",
+      "title": "Habitat Condition",
+      "path": "/Leaves/habitat-condition",
+      "sphere": "biosphere",
+      "subsphere": "biosphere_ecosystems",
+      "primary_collection": "NP3 - Lysåbne naturtyper (2016-2019) - Naturtilstand",
+      "realisations": [
+        "NP3 - Lysåbne naturtyper (2016-2019) - Naturtilstand",
+        "Biodiversitetskortet - Habitatnatur",
+        "Biodiversitetskortet - Bioscore",
+        "HNV 2019, værdi 1-4",
+        "HNV 2019, værdi 5-13",
+        "HNV 2020 - hele landet",
+        "HNV 2020, værdi 1-4",
+        "HNV 2020, værdi 5-13",
+        "HNV 2021 - hele landet",
+        "HNV 2021 - udbredelse 1",
+        "HNV 2021 - udbredelse 2",
+        "HNV 2021 - udbredelse 3",
+        "HNV 2021 - udbredelse 4",
+        "HNV 2021, værdi 5-13",
+        "HNV 2022, værdi 1-4",
+        "HNV 2022, værdi 5-13",
+        "HNV 2023, værdi 1-4",
+        "HNV 2023, værdi 5-13",
+        "HNV 2024, værdi 1-4",
+        "HNV 2024, værdi 5-13",
+        "HNV 2025, værdi 1-4",
+        "HNV 2025, værdi 5-13",
+        "HNV - Skov Arter",
+        "HNV - Skov proxy",
+        "Kategori 1 - Habitatnatur",
+        "Kategori 1 – Heder og overdrev",
+        "Kategori 2 - Heder og overdrev",
+        "Kategori 2 - Lobeliesøer og højmoser",
+        "Kategori 3 - Heder - moser og overdrev",
+        "Gammel skovjordbund",
+        "Naturmæssig særlig værdifuld skov",
+        "Naturmæssigt særlig værdifuld skov på offentlige arealer (§25-skov)",
+        "Naturmæssigt særlig værdifuld skov på private arealer (§25-skov)",
+        "Kategori 3-natur potentiel ammoniakfølsom skov",
+        "Potentiel Ammoniakfølsom skov – Gammel skovjordbund",
+        "Potentiel Ammoniakfølsom skov – Naturmæssig særlig værdifuld skov",
+        "Potentiel Ammoniakfølsom skov – Naturlig lysåben tilgroet areal"
+      ],
+      "question": "What ecological condition or quality is reported for the habitat at this location?",
+      "entities": [
+        "habitat_condition_assessment",
+        "ecological_indicator",
+        "quality_class",
+        "assessment_unit"
+      ],
+      "key_attributes": [
+        "condition_class",
+        "indicator_name",
+        "assessment_period",
+        "habitat_reference",
+        "ecological_quality_signal"
+      ],
+      "services": {},
+      "tags": [
+        "biosphere_ecosystems"
+      ],
+      "threads": []
+    },
+    {
+      "id": "habitat-extent",
+      "title": "Habitat Extent",
+      "path": "/Leaves/habitat-extent",
+      "sphere": "biosphere",
+      "subsphere": "biosphere_ecosystems",
+      "primary_collection": "Kortlægning af naturtyper - flader​",
+      "realisations": [
+        "Kortlægning af naturtyper - flader​",
+        "Biodiversitetskortet - Kortlagt natur",
+        "EU Sea Map 2023: Bentiske habitater",
+        "GeoDanmark"
+      ],
+      "question": "Which habitat and nature-type areas are mapped at this location?",
+      "entities": [
+        "habitat_area",
+        "nature_type_polygon",
+        "mapped_levested",
+        "ecosystem_unit"
+      ],
+      "key_attributes": [
+        "habitat_type_code",
+        "nature_type_name",
+        "mapping_method",
+        "mapping_period",
+        "geometry_confidence"
+      ],
+      "services": {},
+      "tags": [
+        "biosphere_ecosystems"
+      ],
+      "threads": []
+    },
+    {
+      "id": "biodiversity-priority-indicators",
+      "title": "Biodiversity Priority Indicators",
+      "path": "/Leaves/biodiversity-priority-indicators",
+      "sphere": "biosphere",
+      "subsphere": "biosphere_ecosystems",
+      "primary_collection": "Biodiversitetskortet - National prioritering",
+      "realisations": [
+        "Biodiversitetskortet - Antal truede arter i 10km kvadrat",
+        "Biodiversitetskortet - National prioritering",
+        "Biodiversitetskortet - Kvælstofdeposition"
+      ],
+      "question": "How is this area prioritized for biodiversity action, and which indicators drive that priority?",
+      "entities": [
+        "biodiversity_indicator_cell",
+        "priority_area",
+        "pressure_indicator",
+        "scoring_unit"
+      ],
+      "key_attributes": [
+        "indicator_name",
+        "indicator_score",
+        "priority_class",
+        "reference_grid",
+        "assessment_year"
+      ],
+      "services": {},
+      "tags": [
+        "biosphere_ecosystems"
+      ],
+      "threads": []
+    },
+    {
+      "id": "coastal-erosion-risk",
+      "title": "Coastal Erosion Risk",
+      "path": "/Leaves/coastal-erosion-risk",
+      "sphere": "lithosphere",
+      "subsphere": "lithosphere_hazards",
+      "primary_collection": "Akut erosion, detaljeret",
+      "realisations": [
+        "Akut erosion, detaljeret",
+        "Akut erosion, forenklet",
+        "Kystbeskyttelsesanlæg",
+        "GeoDanmark"
+      ],
+      "question": "Where is coastal erosion risk highest, and how severe is the expected shoreline impact?",
+      "entities": [
+        "erosion_zone",
+        "shoreline_segment",
+        "risk_class_area",
+        "protection_structure"
+      ],
+      "key_attributes": [
+        "erosion_risk_class",
+        "shoreline_change_signal",
+        "assessment_scale",
+        "hazard_period",
+        "intervention_indicator"
+      ],
+      "services": {},
+      "tags": [
+        "lithosphere_hazards"
+      ],
+      "threads": []
+    },
+    {
+      "id": "hydrological-basin-delineations",
+      "title": "Hydrological Basin Delineations",
+      "path": "/Leaves/hydrological-basin-delineations",
+      "sphere": "hydrosphere",
+      "subsphere": "hydrosphere_freshwater_surface",
+      "primary_collection": "VP3 - Afgrænsning af hovedvandoplande",
+      "realisations": [
+        "VP3 - Afgrænsning af hovedvandoplande",
+        "VP3 - Afgrænsning af kystvandoplande",
+        "Kystvandoplande"
+      ],
+      "question": "Which basin or sub-basin does this location belong to in water-management planning?",
+      "entities": [
+        "basin_unit",
+        "sub_basin_unit",
+        "catchment_boundary",
+        "planning_district"
+      ],
+      "key_attributes": [
+        "basin_id",
+        "basin_type",
+        "plan_cycle",
+        "district_reference",
+        "outlet_context"
+      ],
+      "services": {},
+      "tags": [
+        "hydrosphere_freshwater_surface"
+      ],
+      "threads": []
+    },
+    {
+      "id": "marine-spatial-infrastructure",
+      "title": "Marine Spatial Infrastructure",
+      "path": "/Leaves/marine-spatial-infrastructure",
+      "sphere": "socio-technical",
+      "subsphere": "Socio_technical_infrastructure",
+      "primary_collection": "Anlæg på søterritoriet (flade)",
+      "realisations": [
+        "Anlæg på søterritoriet (flade)",
+        "Anlæg på søterritoriet (linje)",
+        "Dumpet ammunition (punkter)",
+        "GeoDanmark",
+        "BygningerOgBoliger"
+      ],
+      "question": "Which marine installations or constrained-use structures are present in this sea area?",
+      "entities": [
+        "marine_installation",
+        "sea_territory_structure",
+        "maritime_constraint_zone",
+        "hazard_site"
+      ],
+      "key_attributes": [
+        "installation_type",
+        "permit_context",
+        "geometry_type",
+        "marine_zone_reference",
+        "restriction_signal"
+      ],
+      "services": {},
+      "tags": [
+        "socio_technical_infrastructure"
+      ],
+      "threads": []
+    },
+    {
+      "id": "planning-zoning-decisions",
+      "title": "Planning and Zoning Decisions",
+      "path": "/Leaves/planning-zoning-decisions",
+      "sphere": "socio-technical",
+      "subsphere": "Socio_technical_governance",
+      "primary_collection": "Afgrænsning af CPH Roskilde (Fingerplan)",
+      "realisations": [
+        "Afgrænsning af CPH Roskilde (Fingerplan)",
+        "Beslutning om tilbageførsel til landzone",
+        "Byggefelt, vedtaget"
+      ],
+      "question": "Which planning or zoning decisions apply here, and what constraints do they impose?",
+      "entities": [
+        "planning_zone",
+        "zoning_decision",
+        "regulated_area",
+        "planning_constraint"
+      ],
+      "key_attributes": [
+        "planning_id",
+        "zoning_type",
+        "legal_basis",
+        "decision_status",
+        "validity_period"
+      ],
+      "services": {},
+      "tags": [
+        "socio_technical_governance"
+      ],
+      "threads": []
+    },
+    {
+      "id": "protected-water-use-zones",
+      "title": "Protected Water Use Zones",
+      "path": "/Leaves/protected-water-use-zones",
+      "sphere": "hydrosphere",
+      "subsphere": "hydrosphere_contaminants",
+      "primary_collection": "VP3 - Nitratfølsomme indvindingsområder brugt i Vandområdeplaner 2021-2027",
+      "realisations": [
+        "VP3 - Nitratfølsomme indvindingsområder brugt i Vandområdeplaner 2021-2027",
+        "VP3 - Skaldyrvande",
+        "Boringsnære beskyttelsesområder, vedtaget (MST)"
+      ],
+      "question": "Which protected-use water zones apply here, and what protection objective do they represent?",
+      "entities": [
+        "protection_zone",
+        "groundwater_protection_area",
+        "shellfish_water_area",
+        "designated_use_area"
+      ],
+      "key_attributes": [
+        "zone_type",
+        "protection_target",
+        "legal_designation",
+        "plan_cycle",
+        "status"
+      ],
+      "services": {},
+      "tags": [
+        "hydrosphere_contaminants"
+      ],
+      "threads": []
+    },
+    {
+      "id": "species-conservation-concern",
+      "title": "Species of Conservation Concern",
+      "path": "/Leaves/species-conservation-concern",
+      "sphere": "biosphere",
+      "subsphere": "Fauna",
+      "primary_collection": "Habitatdirektivets bilagsarter",
+      "realisations": [
+        "Habitatdirektivets bilagsarter",
+        "Danmarks internationalt vigtige fugleområder (IBA’er)",
+        "NP3 - Bechsteins flagermus"
+      ],
+      "question": "Which protected or conservation-priority species are documented here?",
+      "entities": [
+        "protected_species_record",
+        "species_occurrence",
+        "conservation_area_reference",
+        "species_group_indicator"
+      ],
+      "key_attributes": [
+        "species_name",
+        "protection_basis",
+        "observation_status",
+        "area_reference",
+        "evidence_source"
+      ],
+      "services": {},
+      "tags": [
+        "biosphere_ecosystems"
+      ],
+      "threads": []
+    },
+    {
+      "id": "surface-flow-systems",
+      "title": "Surface Flow Systems",
+      "path": "/Leaves/surface-flow-systems",
+      "sphere": "hydrosphere",
+      "subsphere": "hydrosphere_freshwater_surface",
+      "primary_collection": "VP3 - Afgrænsning af hovedvandoplande",
+      "realisations": [
+        "Bluespot (lavninger) 0 mm",
+        "VP3 - Afgrænsning af hovedvandoplande",
+        "VP3 - Afgrænsning af kystvandoplande",
+        "GeoDanmark"
+      ],
+      "question": "How does water move and accumulate on the surface here, including depressions, flooding, and catchment context?",
+      "entities": [
+        "surface_flow_path",
+        "flood_depression",
+        "runoff_catchment",
+        "flood_accumulation_zone"
+      ],
+      "key_attributes": [
+        "flow_direction",
+        "accumulation_signal",
+        "catchment_id",
+        "flood_threshold",
+        "event_context"
+      ],
+      "services": {},
+      "tags": [
+        "hydrosphere_freshwater_surface"
+      ],
+      "threads": []
+    },
+    {
+      "id": "geological-strata",
+      "title": "Geological Strata",
+      "path": "/Leaves/geological-strata",
+      "sphere": "lithosphere",
+      "subsphere": "lithosphere_geology",
+      "primary_collection": "Danmarks undergrund",
+      "realisations": [
+        "Danmarks undergrund",
+        "Havbundsgeologi, Kvartær, Litologi",
+        "Havbundsgeologi, Præ-kvartær, Forkastninger"
+      ],
+      "question": "Which geological strata and subsurface structures are present here, and how do they frame subsurface interpretation?",
+      "entities": [
+        "stratigraphic_unit",
+        "lithological_unit",
+        "fault_structure",
+        "geological_layer"
+      ],
+      "key_attributes": [
+        "stratigraphy_code",
+        "lithology_class",
+        "structural_feature",
+        "geological_age",
+        "depth_reference"
+      ],
+      "services": {},
+      "tags": [
+        "lithosphere_geology"
+      ],
+      "threads": []
+    },
+    {
+      "id": "subsurface-freshwater",
+      "title": "Subsurface Freshwater",
+      "path": "/Leaves/subsurface-freshwater",
+      "sphere": "hydrosphere",
+      "subsphere": "hydrosphere_groundwater",
+      "primary_collection": "Boringer (Jupiter)",
+      "realisations": [
+        "Boringer (Jupiter)",
+        "Drikkevandets hårdhed",
+        "Feltmåling Grundvand"
+      ],
+      "question": "What do boreholes reveal about subsurface freshwater chemistry and aquifer behavior here?",
+      "entities": [
+        "borehole_record",
+        "groundwater_chemistry_profile",
+        "aquifer_interval",
+        "monitoring_point"
+      ],
+      "key_attributes": [
+        "borehole_id",
+        "depth_interval",
+        "chemistry_parameter",
+        "groundwater_level_signal",
+        "aquifer_context"
+      ],
+      "services": {},
+      "tags": [
+        "hydrosphere_groundwater"
+      ],
+      "threads": []
+    },
+    {
+      "id": "atmospheric-deposition-emissions",
+      "title": "Atmospheric Deposition and Emissions",
+      "path": "/Leaves/atmospheric-deposition-emissions",
+      "sphere": "atmosphere",
+      "subsphere": "Atmospheric_chemistry",
+      "primary_collection": "Samlet deposition af kvælstof, 2023",
+      "realisations": [
+        "Samlet deposition af kvælstof, 2023",
+        "Deposition af svovl (S), 2023",
+        "Årlig emission af kvælstofoxider (NOx), 2022"
+      ],
+      "question": "What atmospheric emissions and deposition loads are modeled for this area?",
+      "entities": [
+        "deposition_grid_cell",
+        "emissions_grid_cell",
+        "pollutant_load_surface",
+        "atmospheric_pressure_indicator"
+      ],
+      "key_attributes": [
+        "pollutant_species",
+        "annual_load_or_emission",
+        "modeled_time_period",
+        "grid_resolution",
+        "model_reference"
+      ],
+      "services": {},
+      "tags": [
+        "atmospheric_chemistry"
+      ],
+      "threads": []
+    },
+    {
+      "id": "nautical-traffic",
+      "title": "Nautical Traffic",
+      "path": "/Leaves/nautical-traffic",
+      "sphere": "socio-technical",
+      "subsphere": "Socio_technical_infrastructure",
+      "primary_collection": "Skibstrafik, Årligt gennemsnit, Alle skibstyper",
+      "realisations": [
+        "Skibstrafik, Årligt gennemsnit, Alle skibstyper",
+        "Skibstrafik, Årligt gennemsnit, Fragtskibe",
+        "Hovedhavne (Skibstrafik efter type 1997-2023)"
+      ],
+      "question": "What vessel traffic patterns are present here, and how intense is maritime movement over time?",
+      "entities": [
+        "vessel_traffic_grid",
+        "shipping_route_intensity",
+        "harbor_traffic_node",
+        "vessel_class_distribution"
+      ],
+      "key_attributes": [
+        "vessel_class",
+        "traffic_intensity",
+        "temporal_aggregation",
+        "harbor_or_sea_zone",
+        "reporting_period"
+      ],
+      "services": {},
+      "tags": [
+        "socio_technical_infrastructure"
+      ],
+      "threads": []
+    },
+    {
+      "id": "soil-properties",
+      "title": "Soil Properties",
+      "path": "/Leaves/soil-properties",
+      "sphere": "lithosphere",
+      "subsphere": "Lithosphere_soils",
+      "primary_collection": "Jordbundskort 2019",
+      "realisations": [
+        "Jordbundskort 2019",
+        "Jordbundstyper",
+        "Jordartskort 1:25 000"
+      ],
+      "question": "What soil types and near-surface soil properties characterize this area?",
+      "entities": [
+        "soil_unit",
+        "soil_texture_class",
+        "pedological_zone",
+        "near_surface_soil_layer"
+      ],
+      "key_attributes": [
+        "soil_type_class",
+        "texture_or_jb_class",
+        "organic_content_proxy",
+        "mapped_depth_context",
+        "mapping_vintage"
+      ],
+      "services": {},
+      "tags": [
+        "lithosphere_soils"
+      ],
+      "threads": []
+    },
+    {
+      "id": "spill-pollution-incidents",
+      "title": "Spill and Pollution Incidents",
+      "path": "/Leaves/spill-pollution-incidents",
+      "sphere": "socio-technical",
+      "subsphere": "Socio_technical_governance",
+      "primary_collection": "VP3 - Jordforureninger brugt i Vandområdeplaner 2021-2027",
+      "realisations": [
+        "Dumpet ammunition (flader)",
+        "Dumpet ammunition (punkter)",
+        "VP3 - Jordforureninger brugt i Vandområdeplaner 2021-2027"
+      ],
+      "question": "Which spill, contamination, or hazardous discharge signals are reported for this area?",
+      "entities": [
+        "contamination_site",
+        "hazardous_material_zone",
+        "pollution_incident_indicator",
+        "discharge_risk_area"
+      ],
+      "key_attributes": [
+        "contamination_type",
+        "pollutant_or_hazard_class",
+        "monitoring_or_plan_context",
+        "risk_or_status_class",
+        "reporting_period"
+      ],
+      "services": {},
+      "tags": [
+        "socio_technical_governance"
+      ],
+      "threads": []
+    },
+    {
+      "id": "energy-infrastructure",
+      "title": "Energy Infrastructure",
+      "path": "/Leaves/energy-infrastructure",
+      "sphere": "socio-technical",
+      "subsphere": "Socio_technical_infrastructure",
+      "primary_collection": "Eksisterende vindmølle",
+      "realisations": [
+        "Eksisterende vindmølle",
+        "El Kabel-trace",
+        "Gastransmissionsledning 80 bar",
+        "Solcelleanlæg på kommuneniveau (2024)",
+        "Solcelleanlæg primo 2018",
+        "Solcelleanlæg primo 2019",
+        "Solcelleanlæg primo 2020",
+        "Solcelleanlæg primo 2021",
+        "Solcelleanlæg primo 2022",
+        "Solcelleanlæg primo 2023",
+        "Store solcelleanlæg",
+        "Solfangeranlæg - solceller, el",
+        "Solfangeranlæg - solfanger, varme",
+        "GeoDanmark",
+        "BygningerOgBoliger"
+      ],
+      "question": "Which energy infrastructures are present here, and what operational or planning constraints apply to them?",
+      "entities": [
+        "energy_installation",
+        "transmission_corridor",
+        "energy_siting_zone",
+        "generation_asset"
+      ],
+      "key_attributes": [
+        "infrastructure_type",
+        "energy_carrier",
+        "capacity_or_voltage_class",
+        "siting_constraint_type",
+        "operational_status",
+        "operator_reference"
+      ],
+      "services": {},
+      "tags": [
+        "socio_technical_infrastructure"
+      ],
+      "threads": []
+    },
+    {
+      "id": "flood-hazard-inundation",
+      "title": "Flood Hazard and Inundation",
+      "path": "/Leaves/flood-hazard-inundation",
+      "sphere": "hydrosphere",
+      "subsphere": "hydrosphere_flooding",
+      "primary_collection": "Hydrologisk Højdemodel - Havvand på Land",
+      "realisations": [
+        "Havvand på land. 0 m",
+        "Hydrologisk Højdemodel - Havvand på Land",
+        "INSPIRE_FloodAreas_2016_2021_100aar",
+        "GeoDanmark"
+      ],
+      "question": "Which areas are exposed to flooding or inundation here, and under what scenario or return period?",
+      "entities": [
+        "inundation_area",
+        "flood_scenario_surface",
+        "flood_risk_zone",
+        "flood_management_unit"
+      ],
+      "key_attributes": [
+        "flood_driver",
+        "scenario_threshold",
+        "return_period",
+        "flood_extent_class",
+        "management_context"
+      ],
+      "services": {},
+      "tags": [
+        "hydrosphere_flooding"
+      ],
+      "threads": []
+    },
+    {
+      "id": "geodetic-control-points",
+      "title": "Geodetic Control Points",
+      "path": "/Leaves/geodetic-control-points",
+      "sphere": "socio-technical",
+      "subsphere": "Socio_technical_governance",
+      "primary_collection": "Fikspunkter",
+      "primary_collection_path": "/Datasets-by-Collection/Grunddatamodellen/Fikspunkter/",
+      "realisations": [
+        "Fikspunkter"
+      ],
+      "question": "Where are the geodetic control points, and what coordinates and accuracy do they define?",
+      "entities": [
+        "PlanfikspunktDanmark",
+        "HøjdefikspunktDanmark",
+        "FikspunktSys34",
+        "HøjdefikspunktDNN"
+      ],
+      "key_attributes": [
+        "fikspunktsnummer",
+        "northing",
+        "easting",
+        "kote",
+        "klasse",
+        "koteklasse",
+        "maalemetode",
+        "middelfejl"
+      ],
+      "services": {},
+      "tags": [],
+      "threads": []
+    },
+    {
+      "id": "historical-map-sheets",
+      "title": "Historical Map Sheets",
+      "path": "/Leaves/historical-map-sheets",
+      "sphere": "socio-technical",
+      "subsphere": "Socio_technical_governance",
+      "primary_collection": "HistoriskeKortbladsinddelinger",
+      "primary_collection_path": "/Datasets-by-Collection/Grunddatamodellen/HistoriskeKortbladsinddelinger/",
+      "realisations": [
+        "HistoriskeKortbladsinddelinger"
+      ],
+      "question": "Which historical map sheet covers this location, and what cartographic source does it represent?",
+      "entities": [
+        "HISTKORT_Kortbladsinddeling"
+      ],
+      "key_attributes": [
+        "kortbladnummer",
+        "kortvaerk",
+        "maalestok",
+        "maalt_aar",
+        "udgivet_aar",
+        "HKPNlink",
+        "orginalkortprojektion"
+      ],
+      "services": {},
+      "tags": [],
+      "threads": []
+    },
+    {
+      "id": "property-valuation",
+      "title": "Property Valuation",
+      "path": "/Leaves/property-valuation",
+      "sphere": "socio-technical",
+      "subsphere": "Socio_technical_socioeconomic",
+      "primary_collection": "Ejendomsvurdering",
+      "primary_collection_path": "/Datasets-by-Collection/Grunddatamodellen/Ejendomsvurdering/",
+      "realisations": [
+        "Ejendomsvurdering",
+        "Matrikel"
+      ],
+      "question": "What is the official assessed value of a property?",
+      "entities": [
+        "VUR_Ejendomsvurdering",
+        "VUR_Vurderingsejendom",
+        "VUR_BFEKrydsreference",
+        "VUR_Fordeling",
+        "VUR_Grundvaerdispecifikation"
+      ],
+      "key_attributes": [
+        "ejendomvaerdiBeloeb",
+        "grundvaerdiBeloeb",
+        "aar",
+        "benyttelseKode",
+        "BFEnummer",
+        "ESRejendomsnummer"
+      ],
+      "services": {},
+      "tags": [],
+      "threads": [
+        "valuation-to-cadastral-parcels"
+      ]
+    }
+  ],
+  "threads": [
+    {
+      "id": "bathing-water-quality-hydrosphere-freshwater",
+      "leaf": "bathing-water-quality",
+      "twig": "hydrosphere_freshwater_surface",
+      "relation_type": "core_water_body_context",
+      "question": "Which freshwater surface context does this site belong to?",
+      "rationale": "Bathing suitability is interpreted against the local freshwater surface context and station placement."
+    },
+    {
+      "id": "bathing-water-quality-hydrosphere-contaminants",
+      "leaf": "bathing-water-quality",
+      "twig": "hydrosphere_contaminants",
+      "relation_type": "water_quality_measurement",
+      "question": "Which contamination measurements determine suitability?",
+      "rationale": "Measured parameters in water are direct inputs to bathing quality status."
+    },
+    {
+      "id": "bathing-water-quality-socio-contaminants",
+      "leaf": "bathing-water-quality",
+      "twig": "socio_technical_contaminants",
+      "relation_type": "human_exposure_signal",
+      "question": "What do measurements imply for human exposure?",
+      "rationale": "Water contamination measurements are interpreted as potential human exposure during bathing."
+    },
+    {
+      "id": "bathing-water-quality-hvr",
+      "leaf": "bathing-water-quality",
+      "twig": "socio_technical_hazard_vulnerability_risk",
+      "relation_type": "risk_classification_input",
+      "question": "Should this site be flagged for risk communication?",
+      "rationale": "Suitability classes and thresholds support public risk messaging and advisories."
+    },
+    {
+      "id": "bathing-water-quality-services",
+      "leaf": "bathing-water-quality",
+      "twig": "socio_technical_services",
+      "relation_type": "service_suitability",
+      "question": "Is the bathing service usable at this time?",
+      "rationale": "Bathing quality status directly affects recreational service availability."
+    },
+    {
+      "id": "economic-activities-to-biosphere-ecosystems",
+      "leaf": "economic-activities",
+      "twig": "biosphere_ecosystems",
+      "relation_type": "cross_twig_relevance",
+      "question": "How does economic activity connect to ecosystem conditions?",
+      "rationale": "Industry codes can signal pressures and impacts on ecosystems."
+    },
+    {
+      "id": "economic-activities-to-perception-thematics",
+      "leaf": "economic-activities",
+      "twig": "socio_technical_perception_thematics",
+      "relation_type": "cross_twig_relevance",
+      "question": "How does economic activity connect to land use and cover patterns?",
+      "rationale": "Industry composition often correlates with classified land use patterns."
+    },
+    {
+      "id": "business-locations-to-topography",
+      "leaf": "business-locations",
+      "twig": "toposphere_topography_bathymetry",
+      "relation_type": "cross_twig_relevance",
+      "question": "How do business locations connect to terrain context?",
+      "rationale": "Terrain and elevation influence accessibility and hazard exposure of business sites."
+    },
+    {
+      "id": "business-locations-to-perception-thematics",
+      "leaf": "business-locations",
+      "twig": "socio_technical_perception_thematics",
+      "relation_type": "cross_twig_relevance",
+      "question": "How do business locations connect to land use patterns?",
+      "rationale": "Business clusters align with urban and industrial land use categories."
+    },
+    {
+      "id": "elevation-to-hydrosphere-freshwater-surface",
+      "leaf": "elevation",
+      "twig": "hydrosphere_freshwater_surface",
+      "relation_type": "cross_twig_relevance",
+      "question": "How does elevation connect to surface water behavior?",
+      "rationale": "Elevation gradients govern runoff and flow paths in freshwater systems."
+    },
+    {
+      "id": "orthoimagery-to-perception-thematics",
+      "leaf": "orthoimagery",
+      "twig": "socio_technical_perception_thematics",
+      "relation_type": "cross_twig_relevance",
+      "question": "How does orthoimagery connect to classified land cover products?",
+      "rationale": "Classified land cover is commonly derived from orthoimagery inputs."
+    },
+    {
+      "id": "orthoimagery-to-remote-sensed-observations",
+      "leaf": "orthoimagery",
+      "twig": "toposphere_remote_sensed_observations",
+      "source": "orthoimagery",
+      "predicate": "is_primary_evidence_for",
+      "target": "toposphere_remote_sensed_observations",
+      "relation_type": "primary_twig_membership",
+      "question": "How does orthoimagery function as remote-sensed evidence?",
+      "rationale": "Orthoimagery is a direct observational record of the Earth's surface — the canonical data type for the Remote Sensed Observations twig."
+    },
+    {
+      "id": "fisheries-intensity-to-governance",
+      "leaf": "fisheries-intensity",
+      "twig": "socio_technical_governance",
+      "relation_type": "regulatory_management_context",
+      "question": "How does observed fisheries effort connect to zoning rules and legal management constraints?",
+      "rationale": "Fishing effort layers are interpreted against protected-area rules, access constraints, and planning designations."
+    },
+    {
+      "id": "fisheries-intensity-to-biosphere-ecosystems",
+      "leaf": "fisheries-intensity",
+      "twig": "biosphere_ecosystems",
+      "relation_type": "ecosystem_pressure_signal",
+      "question": "How does fisheries effort indicate ecosystem pressure in marine habitats?",
+      "rationale": "Gear-specific effort intensity is a pressure indicator for benthic habitats, species assemblages, and ecosystem condition."
+    },
+    {
+      "id": "valuation-to-cadastral-parcels",
+      "leaf": "property-valuation",
+      "twig": "socio_technical_governance",
+      "relation_type": "spatial_join_path",
+      "question": "How does a valuation connect to the legal cadastral parcel geometry?",
+      "rationale": "Property valuation records are non-spatial and require linkage through BFE and cadastral references to retrieve parcel-based geometry and legal boundaries."
+    }
+  ]
+}

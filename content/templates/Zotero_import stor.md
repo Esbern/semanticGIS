@@ -5,9 +5,10 @@ year: "{{date | format("YYYY")}}"
 publisher: "{{publicationTitle}}"
 citekey: "{{citekey}}"
 tags:
+
   -  {{hashTags | replace("#", "")| replace(",", "")}}
+
 ---
- 
 
 > [!meta]- Metadata
 > abstract:: {{abstractNote}}
@@ -17,22 +18,21 @@ tags:
 > doi:: {{doi}}
 > bibliography:: {{bibliography}}
 
-
-
 ### Self Notes
-{% persist "notes" %}
 
+{% persist "notes" %}
 
 {% endpersist %}
 
 ---
 
 ## Reading notes
+
 {% persist "annotations" %}
 
 {%-
     set zoteroColors = {
-	    "#2ea8e5": "blue",
+        "#2ea8e5": "blue",
         "#5fb236": "green",
         "#a28ae5": "purple",
         "#ff6666": "red",
@@ -45,14 +45,14 @@ tags:
 
 {%-
    set colorHeading = {
-		"blue": "ℹ Background information, Prerequisites",
-		"green": "❓ Assumptions, Questions, Goals, Problems",
-		"purple": "📊 Main findings, Results, Conclusions",
-		"red": "🧪Experimental details or Methods",
-		"yellow": "⭐ Interesting point, Facts, Examples",
-		"orange": "⚠️ Disagree with author",
-		"grey": "📅 Vocabulary, Names, Dates, Definitions",
-		"magenta": "📄 Important references"
+        "blue": "ℹ Background information, Prerequisites",
+        "green": "❓ Assumptions, Questions, Goals, Problems",
+        "purple": "📊 Main findings, Results, Conclusions",
+        "red": "🧪Experimental details or Methods",
+        "yellow": "⭐ Interesting point, Facts, Examples",
+        "orange": "⚠️ Disagree with author",
+        "grey": "📅 Vocabulary, Names, Dates, Definitions",
+        "magenta": "📄 Important references"
    }
 -%}
 
@@ -79,9 +79,9 @@ tags:
     {%- if annot.color in zoteroColors -%}
         {%- set customColor = zoteroColors[annot.color] -%}
     {%- elif annot.colorCategory|lower in colorHeading -%}
-    	{%- set customColor = annot.colorCategory|lower -%}
+        {%- set customColor = annot.colorCategory|lower -%}
     {%- else -%}
-	    {%- set customColor = "other" -%}
+        {%- set customColor = "other" -%}
     {%- endif -%}
 
     {%- set newAnnotations = (newAnnotations.push({"annotation": annot, "customColor": customColor}), newAnnotations) -%}
@@ -99,6 +99,7 @@ tags:
 {%- if entry and loop.first %}
 
 ### {{colorHeading[color]}}
+
 {%- endif %}
 
 > [!quote{{"|" + color if color != "other"}}] ([page. {{annot.pageLabel}}](zotero://open-pdf/library/items/{{annot.attachment.itemKey}}?page={{annot.pageLabel}}&annotation={{annot.id}}))
@@ -116,6 +117,7 @@ tags:
 {%- endif %}
 
 {%- if annot.comment %}
+>
 > - **{{annot.comment|nl2br}}**
 {%- endif -%}
 
@@ -125,7 +127,9 @@ tags:
 {% endpersist %}
 
 ---
+
 ### Webpage
+
 <iframe src="{{url}}" allow="fullscreen" allowfullscreen="" style="height:100%;width:100%; aspect-ratio: 16 / 10; "></iframe>
 
 ---

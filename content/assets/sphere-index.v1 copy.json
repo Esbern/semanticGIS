@@ -1,0 +1,702 @@
+{
+  "$schema": "https://semanticgis.dk/assets/sphere-index.schema.v1.json",
+  "protocol": "SPHERE",
+  "version": "0.2.1",
+  "description": "Machine-readable index of spheres, leaves, and cross-domain connections for agent discovery",
+  "generated": "2026-04-17",
+  "documentation": "/SPHERE",
+  "extensions": {
+    "multi_twig_membership": true,
+    "optional_primary_lens": true,
+    "threads": true
+  },
+  "spheres": [
+    {
+      "id": "socio-technical",
+      "title": "Socio-Technical",
+      "path": "/SPHERE/Socio_Technical/",
+      "description": "Human-created systems: infrastructure, services, socioeconomic patterns, governance, ICT and flows, thematic perception, informal systems, risk",
+      "subspheres": [
+        "socio_technical_infrastructure",
+        "socio_technical_services",
+        "socio_technical_socioeconomic",
+        "socio_technical_governance",
+        "socio_technical_ict_flows",
+        "socio_technical_contaminants",
+        "socio_technical_hazard_vulnerability_risk",
+        "socio_technical_resource_utilisation",
+        "socio_technical_perception_thematics",
+        "socio_technical_informal_ephemeral"
+      ]
+    },
+    {
+      "id": "atmosphere",
+      "title": "Atmosphere",
+      "path": "/SPHERE/Atmosphere/",
+      "description": "Air, climate, weather patterns",
+      "subspheres": [
+        "atmosphere_climate",
+        "atmosphere_weather",
+        "atmosphere_composition",
+        "atmosphere_contaminants"
+      ]
+    },
+    {
+      "id": "biosphere",
+      "title": "Biosphere",
+      "path": "/SPHERE/Biosphere/",
+      "description": "Living organisms, ecosystems, ecological communities",
+      "subspheres": [
+        "Vegetation",
+        "Fauna",
+        "biosphere_microbial",
+        "biosphere_ecosystems",
+        "biosphere_contaminants"
+      ]
+    },
+    {
+      "id": "hydrosphere",
+      "title": "Hydrosphere",
+      "path": "/SPHERE/Hydrosphere/",
+      "description": "Water bodies, precipitation, water quality, hydrology",
+      "subspheres": [
+        "hydrosphere_freshwater_surface",
+        "hydrosphere_groundwater",
+        "hydrosphere_marine",
+        "hydrosphere_cryosphere",
+        "hydrosphere_atmosphericwater",
+        "hydrosphere_contaminants"
+      ]
+    },
+    {
+      "id": "lithosphere",
+      "title": "Lithosphere",
+      "path": "/SPHERE/Lithosphere/",
+      "description": "Geology, soil composition, minerals, subsurface",
+      "subspheres": [
+        "lithosphere_geology",
+        "lithosphere_tectonics",
+        "lithosphere_resources",
+        "lithosphere_hazards",
+        "lithosphere_contaminants"
+      ]
+    },
+    {
+      "id": "pedosphere",
+      "title": "Pedosphere",
+      "path": "/SPHERE/Pedosphere/",
+      "description": "Soil processes, pedological classification",
+      "subspheres": [
+        "pedosphere_soil_properties",
+        "pedosphere_soil_types_mapping",
+        "pedosphere_soil_moisture_temperature",
+        "pedosphere_soil_erosion_sedimentation",
+        "pedosphere_contaminants"
+      ]
+    },
+    {
+      "id": "toposphere",
+      "title": "Toposphere",
+      "path": "/SPHERE/Toposphere/",
+      "description": "Terrain, bathymetry, surface properties, remote-sensed observations, and coordinate reference systems",
+      "subspheres": [
+        "toposphere_geospatial_reference_framework",
+        "toposphere_topography_bathymetry",
+        "toposphere_surface_radiative_thermal",
+        "toposphere_surface_physical",
+        "toposphere_remote_sensed_observations"
+      ]
+    }
+  ],
+  "leaves": [
+    {
+      "id": "firms",
+      "title": "Firms",
+      "path": "/Leaves/firms",
+      "sphere": "socio-technical",
+      "subsphere": "socio_technical_socioeconomic",
+      "primary_collection": "CentraleVirksomhedsregister",
+      "primary_collection_path": "/Datasets-by-Collection/Grunddatamodellen/CentraleVirksomhedsregister/",
+      "realisations": [
+        "CentraleVirksomhedsregister"
+      ],
+      "question": "What firm is this, as a legal registered entity?",
+      "entities": [
+        "CVREnhed",
+        "Virksomhed",
+        "Navn",
+        "Virksomhedsform",
+        "CVRAdresse"
+      ],
+      "key_attributes": [
+        "cvrnummer",
+        "navn",
+        "virksomhedsform",
+        "virksomhedstatus"
+      ],
+      "services": {
+        "graphql": "/assets/source-manifests/datafordeler/datafordeler.graphql.services.manifest.v1.json",
+        "source_manifest": "/assets/source-manifests/datafordeler/cvr.source.manifest.v1.json",
+        "semantic_map": "/assets/source-manifests/datafordeler/cvr.semantic.entity-attribute-map.v1.json"
+      },
+      "threads": []
+    },
+    {
+      "id": "economic-activities",
+      "title": "Economic Activities",
+      "path": "/Leaves/economic-activities",
+      "sphere": "socio-technical",
+      "subsphere": "socio_technical_socioeconomic",
+      "primary_collection": "CentraleVirksomhedsregister",
+      "primary_collection_path": "/Datasets-by-Collection/Grunddatamodellen/CentraleVirksomhedsregister/",
+      "realisations": [
+        "CentraleVirksomhedsregister",
+        "OpenStreetMap",
+        "DanmarksStatistik"
+      ],
+      "question": "What economic activity does a business perform?",
+      "entities": [
+        "Branche",
+        "Virksomhed",
+        "CVREnhed"
+      ],
+      "key_attributes": [
+        "branchekode",
+        "branchetekst",
+        "hovedbranche"
+      ],
+      "services": {
+        "graphql": "/assets/source-manifests/datafordeler/datafordeler.graphql.services.manifest.v1.json",
+        "source_manifest": "/assets/source-manifests/datafordeler/cvr.source.manifest.v1.json",
+        "semantic_map": "/assets/source-manifests/datafordeler/cvr.semantic.entity-attribute-map.v1.json"
+      },
+      "threads": [
+        "economic-activities-to-biosphere-ecosystems",
+        "economic-activities-to-perception-thematics"
+      ]
+    },
+    {
+      "id": "business-locations",
+      "title": "Business Locations",
+      "path": "/Leaves/business-locations",
+      "sphere": "socio-technical",
+      "subsphere": "socio_technical_infrastructure",
+      "primary_collection": "CentraleVirksomhedsregister",
+      "primary_collection_path": "/Datasets-by-Collection/Grunddatamodellen/CentraleVirksomhedsregister/",
+      "realisations": [
+        "CentraleVirksomhedsregister",
+        "OpenStreetMap",
+        "BygningerOgBoliger"
+      ],
+      "question": "Where does a business physically operate?",
+      "entities": [
+        "Produktionsenhed",
+        "Adressering",
+        "Virksomhed"
+      ],
+      "key_attributes": [
+        "kommunekode",
+        "vejnavn",
+        "husnummer",
+        "postnummer"
+      ],
+      "services": {
+        "graphql": "/assets/source-manifests/datafordeler/datafordeler.graphql.services.manifest.v1.json",
+        "source_manifest": "/assets/source-manifests/datafordeler/cvr.source.manifest.v1.json",
+        "semantic_map": "/assets/source-manifests/datafordeler/cvr.semantic.entity-attribute-map.v1.json"
+      },
+      "threads": [
+        "business-locations-to-topography",
+        "business-locations-to-perception-thematics"
+      ]
+    },
+    {
+      "id": "corporate-ownership",
+      "title": "Ownership and Governance",
+      "path": "/Leaves/corporate-ownership",
+      "sphere": "socio-technical",
+      "subsphere": "socio_technical_socioeconomic",
+      "primary_collection": "CentraleVirksomhedsregister",
+      "primary_collection_path": "/Datasets-by-Collection/Grunddatamodellen/CentraleVirksomhedsregister/",
+      "realisations": [
+        "CentraleVirksomhedsregister"
+      ],
+      "question": "Who owns, controls, or governs a firm?",
+      "entities": [
+        "ejerforhold",
+        "reelejerrelation",
+        "legalejerrelation",
+        "andendeltager",
+        "fuldtansvarligdeltagerrelation",
+        "ledelse",
+        "ledelserelation",
+        "kapitalforhold"
+      ],
+      "key_attributes": [
+        "ejerandel",
+        "stemmeandel",
+        "rollebeskrivelse",
+        "CVREnhedsId"
+      ],
+      "services": {
+        "graphql": "/assets/source-manifests/datafordeler/datafordeler.graphql.services.manifest.v1.json",
+        "source_manifest": "/assets/source-manifests/datafordeler/cvr.source.manifest.v1.json",
+        "semantic_map": "/assets/source-manifests/datafordeler/cvr.semantic.entity-attribute-map.v1.json"
+      },
+      "threads": []
+    },
+    {
+      "id": "business-financials",
+      "title": "Economics and Employment",
+      "path": "/Leaves/business-financials",
+      "sphere": "socio-technical",
+      "subsphere": "socio_technical_socioeconomic",
+      "primary_collection": "CentraleVirksomhedsregister",
+      "primary_collection_path": "/Datasets-by-Collection/Grunddatamodellen/CentraleVirksomhedsregister/",
+      "realisations": [
+        "CentraleVirksomhedsregister",
+        "DanmarksStatistik"
+      ],
+      "question": "What are the economic and employment characteristics of a firm or establishment?",
+      "entities": [
+        "regnskab",
+        "revision",
+        "revisorrelation",
+        "finansiel",
+        "stadfæstelse",
+        "Beskaeftigelse",
+        "Kreditoplysninger"
+      ],
+      "key_attributes": [
+        "omsaetning",
+        "bruttofortjeneste",
+        "resultatfoerskat",
+        "balancesum",
+        "ansatte",
+        "aarsvaerk"
+      ],
+      "services": {
+        "graphql": "/assets/source-manifests/datafordeler/datafordeler.graphql.services.manifest.v1.json",
+        "source_manifest": "/assets/source-manifests/datafordeler/cvr.source.manifest.v1.json",
+        "semantic_map": "/assets/source-manifests/datafordeler/cvr.semantic.entity-attribute-map.v1.json"
+      },
+      "threads": []
+    },
+    {
+      "id": "addresses",
+      "title": "Addresses",
+      "path": "/Leaves/addresses",
+      "sphere": "socio-technical",
+      "subsphere": "socio_technical_governance",
+      "question": "Where is a property located by its official address?",
+      "entities": [
+        "adresse",
+        "adressepunkt",
+        "husnummer",
+        "navngivenvej",
+        "postnummer"
+      ],
+      "key_attributes": [
+        "adressebetegnelse",
+        "husnummertekst",
+        "postnr",
+        "postnrnavn",
+        "etage",
+        "doer"
+      ],
+      "services": {},
+      "realisations": [
+        "DanmarksAdresser",
+        "OpenStreetMap"
+      ],
+      "primary_collection": "DanmarksAdresser",
+      "primary_collection_path": "/Datasets-by-Collection/Grunddatamodellen/DanmarksAdresser/",
+      "threads": []
+    },
+    {
+      "id": "buildings",
+      "title": "Buildings and Housing",
+      "path": "/Leaves/buildings",
+      "sphere": "socio-technical",
+      "subsphere": "socio_technical_infrastructure",
+      "collection": "BygningerOgBoliger",
+      "collection_path": "/Datasets-by-Collection/BygningerOgBoliger/",
+      "question": "What buildings exist at a location and what are their characteristics?",
+      "entities": [
+        "bygning",
+        "enhed",
+        "etage",
+        "opgang",
+        "grund",
+        "tekniskanlæg"
+      ],
+      "key_attributes": [
+        "byg_anvendelse",
+        "byg_opfoerelsesaar",
+        "byg_areal",
+        "byg_antal_etager",
+        "byg_varmeinstallation"
+      ],
+      "services": {},
+      "threads": []
+    },
+    {
+      "id": "administrative-units",
+      "title": "Administrative Units",
+      "path": "/Leaves/administrative-units",
+      "sphere": "socio-technical",
+      "subsphere": "socio_technical_governance",
+      "question": "Which administrative area does a location belong to?",
+      "entities": [
+        "kommune",
+        "region",
+        "sogn",
+        "retskreds",
+        "politikreds",
+        "opstillingskreds",
+        "afstemningsomraade"
+      ],
+      "key_attributes": [
+        "kommunekode",
+        "regionskode",
+        "navn",
+        "geometri"
+      ],
+      "services": {},
+      "realisations": [
+        "DAGI",
+        "OpenStreetMap"
+      ],
+      "primary_collection": "DAGI",
+      "primary_collection_path": "/Datasets-by-Collection/Grunddatamodellen/DAGI/",
+      "threads": []
+    },
+    {
+      "id": "cadastral-parcels",
+      "title": "Cadastral Parcels",
+      "path": "/Leaves/cadastral-parcels",
+      "sphere": "socio-technical",
+      "subsphere": "socio_technical_governance",
+      "question": "What are the legal boundaries and ownership of land?",
+      "entities": [
+        "jordstykke",
+        "matrikelnummer",
+        "ejerlav",
+        "skelforretning"
+      ],
+      "key_attributes": [
+        "matrikelnummer",
+        "ejerlavskode",
+        "registreretareal",
+        "arealberegningsmetode",
+        "geometri"
+      ],
+      "services": {},
+      "realisations": [
+        "Matrikel",
+        "Ejerfortegnelsen"
+      ],
+      "primary_collection": "Matrikel",
+      "primary_collection_path": "/Datasets-by-Collection/Grunddatamodellen/Matrikel/",
+      "threads": []
+    },
+    {
+      "id": "geographical-names",
+      "title": "Geographical Names",
+      "path": "/Leaves/geographical-names",
+      "sphere": "socio-technical",
+      "subsphere": "socio_technical_governance",
+      "question": "What is the official name of a place or feature?",
+      "entities": [
+        "stednavn",
+        "stednavntype"
+      ],
+      "key_attributes": [
+        "navn",
+        "stednavntype",
+        "geometri",
+        "sprog"
+      ],
+      "services": {},
+      "realisations": [
+        "Stednavne",
+        "OpenStreetMap"
+      ],
+      "primary_collection": "Stednavne",
+      "primary_collection_path": "/Datasets-by-Collection/Grunddatamodellen/Stednavne/",
+      "threads": []
+    },
+    {
+      "id": "elevation",
+      "title": "Elevation Models",
+      "path": "/Leaves/elevation",
+      "sphere": "toposphere",
+      "subsphere": "toposphere_topography_bathymetry",
+      "collection": "DHMOprindelse",
+      "collection_path": "/Datasets-by-Collection/Grunddatamodellen/DHMOprindelse/",
+      "question": "What is the elevation at a given location?",
+      "entities": [
+        "DHM/Punktsky",
+        "DHM/Terræn",
+        "DHM/Overflade"
+      ],
+      "key_attributes": [
+        "elevation_value",
+        "horizontal_accuracy",
+        "vertical_accuracy",
+        "acquisition_date"
+      ],
+      "services": {},
+      "threads": [
+        "elevation-to-hydrosphere-freshwater-surface"
+      ]
+    },
+    {
+      "id": "orthoimagery",
+      "title": "Orthoimagery",
+      "path": "/Leaves/orthoimagery",
+      "sphere": "toposphere",
+      "subsphere": "toposphere_remote_sensed_observations",
+      "collection": "GeoDanmark",
+      "collection_path": "/Datasets-by-Collection/Grunddatamodellen/GeoDanmark/",
+      "question": "What does the Earth's surface look like at a location?",
+      "entities": [
+        "orthophoto",
+        "image_tile"
+      ],
+      "key_attributes": [
+        "acquisition_date",
+        "ground_resolution",
+        "spectral_bands",
+        "cloud_cover"
+      ],
+      "services": {},
+      "threads": [
+        "orthoimagery-to-perception-thematics",
+        "orthoimagery-to-imagery-evidence"
+      ]
+    },
+    {
+      "id": "population",
+      "title": "Population Distribution",
+      "path": "/Leaves/population",
+      "sphere": "socio-technical",
+      "subsphere": "socio_technical_socioeconomic",
+      "collection": "Person",
+      "collection_path": "/Datasets-by-Collection/Grunddatamodellen/Person/",
+      "question": "How is the population distributed and what are its characteristics?",
+      "entities": [
+        "person",
+        "civilstand",
+        "statsborgerskab"
+      ],
+      "key_attributes": [
+        "foedselsdato",
+        "koen",
+        "civilstand",
+        "adresseringsnavn",
+        "kommunekode"
+      ],
+      "services": {},
+      "threads": []
+    },
+    {
+      "id": "transport-networks",
+      "title": "Transport Networks",
+      "path": "/Leaves/transport-networks",
+      "sphere": "socio-technical",
+      "subsphere": "socio_technical_infrastructure",
+      "question": "What transport routes and networks exist?",
+      "entities": [
+        "vejmidte",
+        "jernbane",
+        "sti",
+        "faergerute",
+        "lufthavn"
+      ],
+      "key_attributes": [
+        "vejklasse",
+        "vejnavn",
+        "hastighed",
+        "belægning",
+        "geometri"
+      ],
+      "services": {},
+      "realisations": [
+        "GeoDanmark",
+        "OpenStreetMap",
+        "Vejdirektoratet"
+      ],
+      "primary_collection": "GeoDanmark",
+      "primary_collection_path": "/Datasets-by-Collection/Grunddatamodellen/GeoDanmark/",
+      "threads": []
+    },
+    {
+      "id": "services",
+      "title": "Services and Amenities",
+      "path": "/Leaves/services",
+      "sphere": "socio-technical",
+      "subsphere": "socio_technical_services",
+      "primary_collection": "CentraleVirksomhedsregister",
+      "primary_collection_path": "/Datasets-by-Collection/Grunddatamodellen/CentraleVirksomhedsregister/",
+      "realisations": [
+        "CentraleVirksomhedsregister",
+        "OpenStreetMap",
+        "BygningerOgBoliger"
+      ],
+      "question": "What services or amenities are available at or near a location?",
+      "entities": [
+        "Virksomhed",
+        "Produktionsenhed",
+        "Branche"
+      ],
+      "key_attributes": [
+        "branchekode",
+        "branchetekst",
+        "hovedbranche"
+      ],
+      "services": {},
+      "threads": []
+    },
+    {
+      "id": "bathing-water-quality",
+      "title": "Bathing Water Quality",
+      "path": "/Leaves/bathing-water-quality",
+      "sphere": "hydrosphere",
+      "subsphere": "hydrosphere_freshwater_surface",
+      "twig_membership": [
+        "hydrosphere_freshwater_surface",
+        "hydrosphere_contaminants",
+        "socio_technical_contaminants",
+        "socio_technical_hazard_vulnerability_risk",
+        "socio_technical_services"
+      ],
+      "primary_lens": "hydrosphere_freshwater_surface",
+      "realisations": [
+        "Miljoeportalen PULS",
+        "National bathing monitoring programs"
+      ],
+      "question": "Is bathing water suitable and safe for human recreational use at this location and time?",
+      "entities": [
+        "bathing_site",
+        "monitoring_station",
+        "sample",
+        "measurement"
+      ],
+      "key_attributes": [
+        "sample_datetime",
+        "parameter_name",
+        "measured_value",
+        "unit",
+        "quality_class",
+        "risk_flag"
+      ],
+      "threads": [
+        "bathing-water-quality-hydrosphere-freshwater",
+        "bathing-water-quality-hydrosphere-contaminants",
+        "bathing-water-quality-socio-contaminants",
+        "bathing-water-quality-hvr",
+        "bathing-water-quality-services"
+      ],
+      "services": {}
+    }
+  ],
+  "threads": [
+    {
+      "id": "bathing-water-quality-hydrosphere-freshwater",
+      "leaf": "bathing-water-quality",
+      "twig": "hydrosphere_freshwater_surface",
+      "relation_type": "core_water_body_context",
+      "question": "Which freshwater surface context does this site belong to?",
+      "rationale": "Bathing suitability is interpreted against the local freshwater surface context and station placement."
+    },
+    {
+      "id": "bathing-water-quality-hydrosphere-contaminants",
+      "leaf": "bathing-water-quality",
+      "twig": "hydrosphere_contaminants",
+      "relation_type": "water_quality_measurement",
+      "question": "Which contamination measurements determine suitability?",
+      "rationale": "Measured parameters in water are direct inputs to bathing quality status."
+    },
+    {
+      "id": "bathing-water-quality-socio-contaminants",
+      "leaf": "bathing-water-quality",
+      "twig": "socio_technical_contaminants",
+      "relation_type": "human_exposure_signal",
+      "question": "What do measurements imply for human exposure?",
+      "rationale": "Water contamination measurements are interpreted as potential human exposure during bathing."
+    },
+    {
+      "id": "bathing-water-quality-hvr",
+      "leaf": "bathing-water-quality",
+      "twig": "socio_technical_hazard_vulnerability_risk",
+      "relation_type": "risk_classification_input",
+      "question": "Should this site be flagged for risk communication?",
+      "rationale": "Suitability classes and thresholds support public risk messaging and advisories."
+    },
+    {
+      "id": "bathing-water-quality-services",
+      "leaf": "bathing-water-quality",
+      "twig": "socio_technical_services",
+      "relation_type": "service_suitability",
+      "question": "Is the bathing service usable at this time?",
+      "rationale": "Bathing quality status directly affects recreational service availability."
+    },
+    {
+      "id": "economic-activities-to-biosphere-ecosystems",
+      "leaf": "economic-activities",
+      "twig": "biosphere_ecosystems",
+      "relation_type": "cross_twig_relevance",
+      "question": "How does economic activity connect to ecosystem conditions?",
+      "rationale": "Industry codes can signal pressures and impacts on ecosystems."
+    },
+    {
+      "id": "economic-activities-to-perception-thematics",
+      "leaf": "economic-activities",
+      "twig": "socio_technical_perception_thematics",
+      "relation_type": "cross_twig_relevance",
+      "question": "How does economic activity connect to land use and cover patterns?",
+      "rationale": "Industry composition often correlates with classified land use patterns."
+    },
+    {
+      "id": "business-locations-to-topography",
+      "leaf": "business-locations",
+      "twig": "toposphere_topography_bathymetry",
+      "relation_type": "cross_twig_relevance",
+      "question": "How do business locations connect to terrain context?",
+      "rationale": "Terrain and elevation influence accessibility and hazard exposure of business sites."
+    },
+    {
+      "id": "business-locations-to-perception-thematics",
+      "leaf": "business-locations",
+      "twig": "socio_technical_perception_thematics",
+      "relation_type": "cross_twig_relevance",
+      "question": "How do business locations connect to land use patterns?",
+      "rationale": "Business clusters align with urban and industrial land use categories."
+    },
+    {
+      "id": "elevation-to-hydrosphere-freshwater-surface",
+      "leaf": "elevation",
+      "twig": "hydrosphere_freshwater_surface",
+      "relation_type": "cross_twig_relevance",
+      "question": "How does elevation connect to surface water behavior?",
+      "rationale": "Elevation gradients govern runoff and flow paths in freshwater systems."
+    },
+    {
+      "id": "orthoimagery-to-perception-thematics",
+      "leaf": "orthoimagery",
+      "twig": "socio_technical_perception_thematics",
+      "relation_type": "cross_twig_relevance",
+      "question": "How does orthoimagery connect to classified land cover products?",
+      "rationale": "Classified land cover is commonly derived from orthoimagery inputs."
+    },
+    {
+      "id": "orthoimagery-to-imagery-evidence",
+      "leaf": "orthoimagery",
+      "twig": "toposphere_remote_sensed_observations",
+      "relation_type": "cross_twig_relevance",
+      "question": "How does orthoimagery function as evidence?",
+      "rationale": "Orthoimagery provides direct observational evidence of surface state prior to thematic interpretation."
+    }
+  ]
+}

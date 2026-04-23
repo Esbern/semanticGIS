@@ -38,8 +38,10 @@ Every leaf represents a cognised existence — an abstract concept realised by o
 | [[Leaves/cadastral-parcels\\\|Cadastral Parcels]] | What are the legal boundaries of land? | Matrikel, EJF |
 | [[Leaves/geographical-names\\\|Geographical Names]] | What is the official name of a place? | Stednavne, OSM |
 | [[Leaves/elevation\\\|Elevation]] | What is the elevation at a given location? | DHM |
+| [[Leaves/coastline\\\|Coastline]] | Where is the land-sea boundary and what is its large-scale geometry? | Natural Earth |
 | [[Leaves/orthoimagery\\\|Orthoimagery]] | What does the Earth's surface look like? | GeoDanmark, Copernicus |
-| [[Leaves/population\\\|Population]] | How is the population distributed? | Person/CPR, DST |
+| [[Leaves/populated-areas\\\|Populated Areas and Settlements]] | Where are villages, towns, and cities, and what is their hierarchy? | OSM, Natural Earth |
+| [[Leaves/population\\\|Population]] | What is the population count, density, and demographic profile in this area? | Census grids, GEOSTAT, GHSL, WorldPop |
 | [[Leaves/transport-networks\\\|Transport Networks]] | What transport routes and networks exist? | GeoDanmark, OSM |
 | [[Leaves/services\\\|Services and Amenities]] | What services or amenities are available at or near a location? | CVR, OSM, BBR |
 | [[Leaves/bathing-water-quality\\\|Bathing Water Quality]] | Is bathing water suitable and safe for human recreational use at this location and time? | Badevand analyse, kontrolstation, and stamdata datasets |
@@ -97,7 +99,8 @@ Every leaf represents a cognised existence — an abstract concept realised by o
 - [[Leaves/administrative-units|Administrative Units]]
 - [[Leaves/cadastral-parcels|Cadastral Parcels]]
 - [[Leaves/geographical-names|Geographical Names]]
-- [[Leaves/population|Population Distribution]]
+- [[Leaves/populated-areas|Populated Areas and Settlements]]
+- [[Leaves/population|Population (Demography)]]
 - [[Leaves/transport-networks|Transport Networks]]
 - [[Leaves/services|Services and Amenities]]
 - [[Leaves/planning-zoning-decisions|Planning and Zoning Decisions]]

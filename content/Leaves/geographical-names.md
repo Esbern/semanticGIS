@@ -8,10 +8,7 @@ concept: Named places and topographic features as spatial identifiers
 question: What is the name and location of a place or topographic feature?
 realisations:
   - OpenStreetMap
-threads: []
-tags:
-  - socio_technical_governance
-  - names
+  - Natural Earth
   - places
 primary_collection: OpenStreetMap
 services: {}
@@ -66,6 +63,34 @@ gdf = ox.geocode_to_gdf("Aarhus, Denmark")
 | `name:en=*` | English name |
 | `population=*` | Population estimate (sparse) |
 
+### Natural Earth — `ne_10m_populated_places`
+
+Natural Earth provides a curated point dataset of globally significant populated places, cross-referenced to multiple authoritative gazetteer sources. It includes ADM0 (country) and ADM1 (first-level) name associations and a `scalerank` field for symbol filtering.
+
+#### Python load
+
+```python
+import geopandas as gpd
+
+places = gpd.read_file("ne_10m_populated_places.shp")
+
+# Filter by rank for display
+major = places[places["scalerank"] <= 5]
+```
+
+#### Key attributes
+
+| Field | Meaning |
+| --- | --- |
+| `NAME` | Primary place name |
+| `NAME_EN` | English name |
+| `FEATURECLA` | Feature class (Populated place) |
+| `SCALERANK` | Display prominence (0 = most prominent) |
+| `POP_MAX` | Maximum population estimate |
+| `ADM0NAME` | Country name |
+| `ADM1NAME` | First-level administrative unit name |
+| `SOV0NAME` | Sovereignty name |
+
 ---
 
 ## Geometry Representations
@@ -73,6 +98,7 @@ gdf = ox.geocode_to_gdf("Aarhus, Denmark")
 | Rep ID | Source Dataset | Geometry Type | Native CRS | Suitable For | Not Suitable For |
 | --- | --- | --- | --- | --- | --- |
 | `names_osm_points` | OSM via Geofabrik | Point | EPSG:4326 | Geocoding, labelling, proximity search | Area-based aggregation (use admin boundary polygons instead) |
+| `names_ne_10m_points` | Natural Earth 10m populated places | Point | EPSG:4326 | Global reference labelling, settlement hierarchy maps, continental-scale geocoding | Sub-national name coverage, local gazetteers |
 
 ---
 
@@ -85,3 +111,4 @@ gdf = ox.geocode_to_gdf("Aarhus, Denmark")
 ## Realised By Links
 
 - [[Datasets by Collection/OpenStreetMap/index|OpenStreetMap]] (collection)
+- [[Datasets by Collection/Natural Earth/index|Natural Earth]] (collection)

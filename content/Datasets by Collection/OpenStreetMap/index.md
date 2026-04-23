@@ -31,7 +31,7 @@ OpenStreetMap (OSM) is a global collaborative map dataset covering roads, buildi
 | [[Leaves/business-locations\|Business Locations]] | POIs | `amenity=*`, `shop=*`, `office=*` | Point, Polygon | `gis_osm_pois_free_1` |
 | [[Leaves/energy-infrastructure\|Energy Infrastructure]] | Power | `power=*` | Point, LineString | — (use Overpass) |
 | [[Leaves/habitat-extent\|Habitat Extent]] | Natural areas | `natural=wetland`, `natural=heath` | Polygon | `gis_osm_natural_a_free_1` |
-| [[Leaves/population\|Population / Settlements]] | Places | `place=city\|town\|village\|hamlet` | Point | `gis_osm_places_free_1` |
+| [[Leaves/populated-areas\|Populated Areas and Settlements]] | Places | `place=city\|town\|village\|hamlet` | Point | `gis_osm_places_free_1` |
 
 ---
 

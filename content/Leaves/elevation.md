@@ -6,8 +6,9 @@ sphere: Toposphere
 subsphere: toposphere_topography_bathymetry
 concept: Cognised vertical position of the Earth's surface
 question: What is the elevation at a given location?
-realisations: []
-threads:
+realisations:
+  - Danmarks Højdemodel
+  - Natural Earth
   - elevation-to-hydrosphere-freshwater-surface
 tags:
   - hydrosphere_freshwater_surface

@@ -8,6 +8,7 @@ concept: Road, rail, and other transport corridors including routing geometry an
 question: What transport networks exist at a location and how are they classified?
 realisations:
   - OpenStreetMap
+  - Natural Earth
 threads: []
 tags:
   - socio_technical_infrastructure
@@ -80,12 +81,49 @@ nodes, edges = ox.graph_to_gdfs(G_drive)
 
 ---
 
+### Natural Earth — roads, railroads, airports, ports
+
+Natural Earth provides small-to-medium scale transport infrastructure layers covering the entire globe. These are suitable for continental overview mapping and context layers, not for routing or sub-national analysis.
+
+**Download:** [https://www.naturalearthdata.com/downloads/](https://www.naturalearthdata.com/downloads/) → Cultural
+
+| Layer | Scale | Geometry | Content |
+| --- | --- | --- | --- |
+| `ne_10m_roads` | 1:10m | LineString | Major roads globally, field `type` (Major Highway, Secondary Highway, etc.) |
+| `ne_50m_roads` | 1:50m | LineString | Generalised road network |
+| `ne_10m_railroads` | 1:10m | LineString | Main line rail, field `type` (Rail, Ferry) |
+| `ne_10m_airports` | 1:10m | Point | Major civilian airports, field `iata_code`, `name`, `scalerank` |
+| `ne_10m_ports` | 1:10m | Point | Major seaports, field `name`, `website`, `scalerank` |
+
+#### Python load
+
+```python
+import geopandas as gpd
+
+roads      = gpd.read_file("ne_10m_roads.zip")
+railroads  = gpd.read_file("ne_10m_railroads.zip")
+airports   = gpd.read_file("ne_10m_airports.zip")
+ports      = gpd.read_file("ne_10m_ports.zip")
+
+# Filter to major airports only (scalerank 0–2 are the largest)
+major_airports = airports[airports["scalerank"] <= 2]
+major_ports    = ports[ports["scalerank"] <= 2]
+```
+
+**Important:** Natural Earth transport layers are context reference data. Do not use them for routing — they carry no topology. For routing, use OSM via osmnx.
+
+---
+
 ## Geometry Representations
 
 | Rep ID | Source Dataset | Geometry Type | Native CRS | Suitable For | Not Suitable For |
 | --- | --- | --- | --- | --- | --- |
 | `transport_osm_graph` | OSM via osmnx | NetworkX graph (LineString edges) | EPSG:4326 | Routing, isochrones, accessibility, network analysis | Simple visual mapping without topology |
 | `transport_osm_lines` | OSM via Geofabrik | LineString | EPSG:4326 | Visual mapping, length statistics, buffer analysis | Turn-by-turn routing without topology processing |
+| `transport_ne_10m_roads` | Natural Earth 10m | LineString | EPSG:4326 | Continental overview mapping, context layer | Routing, sub-national road analysis |
+| `transport_ne_10m_railroads` | Natural Earth 10m | LineString | EPSG:4326 | Continental overview mapping, rail context | Routing, detailed rail network analysis |
+| `transport_ne_10m_airports` | Natural Earth 10m | Point | EPSG:4326 | Airport location mapping, index of major airports | Airport capacity, traffic, or operational data |
+| `transport_ne_10m_ports` | Natural Earth 10m | Point | EPSG:4326 | Port location mapping, index of major seaports | Port throughput or vessel traffic intensity |
 
 **Important:** Select `transport_osm_graph` (osmnx) for any routing or accessibility analysis. Raw line features do not carry topological connectivity.
 
@@ -93,10 +131,13 @@ nodes, edges = ox.graph_to_gdfs(G_drive)
 
 ## Limitations
 
-- Speed limits (`maxspeed`) are inconsistently tagged — validate before use in routing models.
+- Speed limits (`maxspeed`) are inconsistently tagged in OSM — validate before use in routing models.
 - Turn restrictions exist in OSM but require explicit processing.
+- Natural Earth transport layers cover only major infrastructure and are not suitable for local or sub-national analysis.
 - For legally authoritative road classification, prefer national datasets.
 
 ## Realised By Links
 
 - [[Datasets by Collection/OpenStreetMap/index|OpenStreetMap]] (collection)
+- [[Datasets by Collection/Natural Earth/index|Natural Earth]] (collection)
+- [[Datasets by Owner/Natural Earth/index|Natural Earth]] (owner)

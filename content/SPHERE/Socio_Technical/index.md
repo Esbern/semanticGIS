@@ -46,6 +46,7 @@ Leaves are purpose-specific semantic aspects of datasets. They answer one kind o
 | [[Leaves/administrative-units\\\|Administrative Units]] | Which administrative area does a location belong to? | Socio_technical_governance |
 | [[Leaves/cadastral-parcels\\\|Cadastral Parcels]] | What are the legal boundaries of land? | Socio_technical_governance |
 | [[Leaves/geographical-names\\\|Geographical Names]] | What is the official name of a place? | Socio_technical_governance |
-| [[Leaves/population\\\|Population Distribution]] | How is the population distributed? | Socio_technical_socioeconomic |
+| [[Leaves/populated-areas\\\|Populated Areas and Settlements]] | Where are villages, towns, and cities, and what is their hierarchy? | Socio_technical_socioeconomic |
+| [[Leaves/population\\\|Population (Demography)]] | What is the population count, density, and demographic profile in this area? | Socio_technical_socioeconomic |
 | [[Leaves/transport-networks\\\|Transport Networks]] | What transport routes and networks exist? | Socio_technical_infrastructure |
 | [[Leaves/services\\\|Services and Amenities]] | What services or amenities are available at or near a location? | Socio_technical_services |

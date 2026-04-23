@@ -6,6 +6,10 @@ tags: []
 
 This section organises datasets by the organisation responsible for them.
 
+## Available Owners
+
+- [[Datasets by Owner/Natural Earth/index|Natural Earth]] (free and public domain)
+
 ## Planned Owners
 
 - OpenStreetMap Foundation
@@ -13,7 +17,6 @@ This section organises datasets by the organisation responsible for them.
 - European Space Agency (ESA)
 - Copernicus Programme (EU/ECMWF)
 - NASA
-- Natural Earth (Free and Public Domain)
 - Overture Maps Foundation
 - GBIF Secretariat
 - FAO (Food and Agriculture Organisation)

@@ -36,6 +36,7 @@ Which coastal or marine water body is this location part of, and what condition 
 - VP3 - Afgrænsning. Kystvande
 - Ålegræs Marin
 - Bundfauna Marin
+- Natural Earth (ocean, marine polygons, and geography marine polys)
 
 ## Interpretation Note
 
@@ -46,6 +47,8 @@ This leaf is about the marine water body as a managed or observed unit. Fisherie
 - [[Datasets by Owner/miljoestyrelsen/vp3-afgraensning-kystvande.md|VP3 - Afgrænsning. Kystvande]] (owner)
 - [[Datasets by Owner/danske-regioner/aalegraes-marin.md|Ålegræs Marin]] (owner)
 - [[Datasets by Owner/danske-regioner/bundfauna-marin.md|Bundfauna Marin]] (owner)
+- [[Datasets by Collection/Natural Earth/index|Natural Earth]] (collection)
+
 ## Related Leaves
 
 - [[Leaves/freshwater-bodies|Surface Freshwater Bodies]]

@@ -4,59 +4,68 @@ type: leaf
 draft: false
 sphere: Socio_Technical
 subsphere: Socio_technical_socioeconomic
-concept: Cognised spatial distribution of human inhabitants and settlement hierarchy
-question: How is population distributed and what are settlement characteristics?
+concept: Cognised demographic magnitude over space, including counts, density, and composition by area
+question: What is the population count, density, and demographic profile in this area?
 realisations:
-  - OpenStreetMap
-threads: []
-tags:
-  - socio_technical_socioeconomic
-  - population
-  - settlements
-primary_collection: OpenStreetMap
+  - Official Census and Statistical Units
+  - Global Population Grids
+  - EU Population Grids
+primary_collection: Statistical Offices and Population Grid Products
 services: {}
 ---
 
-> **Cognised existence:** Population is the spatial distribution of people and settlement structure across territory.
+> **Cognised existence:** Population is the measured quantity and density of inhabitants across space and time.
 
-**Question:** How is population distributed and what are settlement characteristics?
+**Question:** What is the population count, density, and demographic profile in this area?
 
-**OSM wiki:** [https://wiki.openstreetmap.org/wiki/Key:place](https://wiki.openstreetmap.org/wiki/Key:place)
+Population is typically represented as raster grids or statistical polygons, not as settlement place points.
 
 ---
 
 ## Realisations
 
-### OpenStreetMap — settlement proxy via `place=*`
+### Global population grids
 
-OSM does not model full demographic registers, but it captures settlement hierarchy (city, town, village, hamlet) and some population-tagged places.
+Global gridded datasets estimate population counts and density on regular cells (for example 1 km or 100 m depending on product/version).
 
-#### osmnx access
+Representative products:
+
+| Product | Geometry | Typical Resolution | Scope |
+| --- | --- | --- | --- |
+| GHSL Population Grid (GHS-POP) | Raster grid | 250 m to 1 km | Global |
+| WorldPop | Raster grid | ~100 m (country dependent) | Global (modelled) |
+| GPWv4 (CIESIN) | Raster grid | ~1 km | Global |
+
+### EU population grids
+
+For Europe, population is commonly distributed in harmonized grid systems for comparable regional analysis.
+
+Representative products:
+
+| Product | Geometry | Typical Resolution | Scope |
+| --- | --- | --- | --- |
+| GEOSTAT population grid | Grid polygon / raster equivalent | 1 km | Europe |
+| National statistical population grids | Grid polygon / raster | 100 m to 1 km | Country-specific |
+
+### Census and administrative statistics
+
+Population can also be represented as areal totals linked to administrative units (municipality, region, census tract, etc.).
+
+#### Python load (example pattern)
 
 ```python
-import osmnx as ox
-ox.settings.cache_folder = ".cache/"
+import geopandas as gpd
+import rasterio
 
-settlements = ox.features_from_place(
-    "Denmark",
-    tags={"place": ["city", "town", "village", "hamlet", "suburb"]},
-)
+# Raster grid example (population count per cell)
+with rasterio.open("population_grid.tif") as src:
+    pop_grid = src.read(1)
+    transform = src.transform
+
+# Polygon example (population per statistical unit)
+admin_pop = gpd.read_file("population_by_admin_units.gpkg")
+admin_pop["pop_density"] = admin_pop["population"] / admin_pop.to_crs(3857).area * 1_000_000
 ```
-
-#### Geofabrik layer
-
-`gis_osm_places_free_1.shp` — place points with optional `population` field.
-
-#### Key OSM tags
-
-| Tag | Meaning |
-| --- | --- |
-| `place=city` | Major settlement |
-| `place=town` | Town |
-| `place=village` | Village |
-| `place=hamlet` | Hamlet |
-| `place=suburb` | Suburb/neighborhood |
-| `population=*` | Population estimate (optional, sparse) |
 
 ---
 
@@ -64,16 +73,26 @@ settlements = ox.features_from_place(
 
 | Rep ID | Source Dataset | Geometry Type | Native CRS | Suitable For | Not Suitable For |
 | --- | --- | --- | --- | --- | --- |
-| `population_osm_place_points` | OSM via Geofabrik | Point | EPSG:4326 | Settlement hierarchy mapping, nearest-settlement analysis | Official population totals, demographic structure, per-capita reporting |
+| `population_grid_global` | GHSL / WorldPop / GPW | Raster grid | Product-specific | Density surfaces, exposure modelling, regional comparisons | Household-level counts, legal reporting |
+| `population_grid_eu` | GEOSTAT / national EU grids | Grid polygon or raster | Product-specific | Harmonized European population comparisons, density analysis | Fine-grained individual-level inference |
+| `population_admin_units` | Census by admin area | Polygon | National statistical CRS | Official reporting, demographic indicators by area | Within-unit spatial heterogeneity |
 
 ---
 
 ## Limitations
 
-- OSM is not an official census dataset.
-- Population figures are sparse and inconsistent.
-- Use OSM for settlement structure, then enrich with official census products.
+- Gridded population products are modelled estimates, not exact headcounts per cell.
+- Census polygons introduce the modifiable areal unit problem (MAUP).
+- Temporal mismatch across products is common; always check reference year.
+- Settlement point datasets should be treated as populated-area proxies, not full population measures.
+
+## Related Leaves
+
+- [[Leaves/populated-areas\|Populated Areas and Settlements]]
+- [[Leaves/administrative-units\|Administrative Units]]
+- [[Leaves/geographical-names\|Geographical Names]]
 
 ## Realised By Links
 
-- [[Datasets by Collection/OpenStreetMap/index|OpenStreetMap]] (collection)
+- [[Classical Classifications/INSPIRE/population-distribution|INSPIRE Population Distribution]] (classification)
+- [[Classical Classifications/UN-GGIM/population-distribution|UN-GGIM Population Distribution]] (classification)

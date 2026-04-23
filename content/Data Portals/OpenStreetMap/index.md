@@ -162,4 +162,4 @@ All OSM data must be attributed: **© OpenStreetMap contributors**, licensed und
 | [[Leaves/business-locations\|Business Locations]] | `amenity=*`, `shop=*`, `office=*` |
 | [[Leaves/energy-infrastructure\|Energy Infrastructure]] | `power=*` |
 | [[Leaves/habitat-extent\|Habitat Extent]] | `natural=wetland`, `natural=heath`, `natural=scrub` |
-| [[Leaves/population\|Population / Settlements]] | `place=city\|town\|village\|hamlet` |
+| [[Leaves/populated-areas\|Populated Areas and Settlements]] | `place=city\|town\|village\|hamlet` |

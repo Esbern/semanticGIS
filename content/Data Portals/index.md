@@ -9,11 +9,11 @@ This section documents international and global geospatial data portals and thei
 ## Available Portals
 
 - [[Data Portals/OpenStreetMap/index|OpenStreetMap (OSM)]] — tile service, Geofabrik downloads, and Overpass/osmnx query workflow
+- [[Data Portals/Natural Earth/index|Natural Earth]] — global small-scale vector and raster basemap data (10m/50m/110m)
 
 ## Planned Portals
 
 - Copernicus — EU Earth Observation programme (Sentinel imagery, land service, marine service, atmosphere service)
-- Natural Earth — free vector and raster map data at multiple scales
 - Overture Maps — open map dataset (buildings, places, divisions, transportation)
 - GBIF — Global Biodiversity Information Facility
 - FAO GeoNetwork — Food and Agriculture Organisation spatial data

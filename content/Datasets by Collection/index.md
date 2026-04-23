@@ -9,13 +9,13 @@ This section organises datasets by the collection or programme they belong to.
 ## Available Collections
 
 - [[Datasets by Collection/OpenStreetMap/index|OpenStreetMap]]
+- [[Datasets by Collection/Natural Earth/index|Natural Earth]]
 
 ## Planned Collections
 
 - Copernicus Land Monitoring Service
 - Copernicus Marine Service
 - Copernicus Atmosphere Monitoring Service
-- Natural Earth
 - Overture Maps
 - GBIF Occurrence Data
 - SRTM / Copernicus DEM (elevation)

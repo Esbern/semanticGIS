@@ -8,9 +8,7 @@ concept: Lakes, rivers, streams, and other surface freshwater features
 question: What surface freshwater bodies exist at a location and how do they flow?
 realisations:
   - OpenStreetMap
-threads: []
-tags:
-  - hydrosphere
+  - Natural Earth
   - freshwater
   - water
 primary_collection: OpenStreetMap
@@ -71,6 +69,31 @@ water_bodies = ox.features_from_place(
 | `water=pond` | Pond |
 | `name=*` | Name of the water body |
 
+### Natural Earth — Lakes and Rivers
+
+Natural Earth includes `ne_10m_lakes`, `ne_10m_rivers_lake_centerlines`, and related ocean basin polygon variants at three scales. Best used for continental or global overview contexts.
+
+#### Python load
+
+```python
+import geopandas as gpd
+
+lakes = gpd.read_file("ne_10m_lakes.shp")
+rivers = gpd.read_file("ne_10m_rivers_lake_centerlines.shp")
+
+# Optional: filter to major rivers only
+major_rivers = rivers[rivers["scalerank"] <= 4]
+```
+
+#### Key attributes
+
+| Field | Meaning |
+| --- | --- |
+| `featurecla` | Feature class (`Lake`, `River`) |
+| `name` | Feature name |
+| `scalerank` | Prominence rank (lower = larger/more important) |
+| `min_zoom` | Suggested minimum display zoom |
+
 ---
 
 ## Geometry Representations
@@ -79,6 +102,8 @@ water_bodies = ox.features_from_place(
 | --- | --- | --- | --- | --- | --- |
 | `freshwater_osm_lines` | OSM via Geofabrik | LineString | EPSG:4326 | Network tracing, flow direction, river mapping | Catchment area calculation |
 | `freshwater_osm_polygons` | OSM via Geofabrik | Polygon | EPSG:4326 | Surface area, shoreline mapping | Flow routing, upstream/downstream analysis |
+| `freshwater_ne_10m_lakes` | Natural Earth 10m lakes | Polygon | EPSG:4326 | Global lake context, continental overview | Small or sub-regional lake detail |
+| `freshwater_ne_10m_rivers` | Natural Earth 10m rivers and lake centerlines | LineString | EPSG:4326 | Global/continental river context, atlas mapping | Tributary-level hydrological analysis |
 
 **Important:** For catchment / drainage basin analysis, a DEM-derived hydrological network (e.g. Copernicus DEM + SAGA/WhiteboxTools) is more reliable than OSM waterways.
 
@@ -93,3 +118,4 @@ water_bodies = ox.features_from_place(
 ## Realised By Links
 
 - [[Datasets by Collection/OpenStreetMap/index|OpenStreetMap]] (collection)
+- [[Datasets by Collection/Natural Earth/index|Natural Earth]] (collection)

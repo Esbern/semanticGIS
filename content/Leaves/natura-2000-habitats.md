@@ -10,16 +10,11 @@ concept: >
   Areas (SPAs) and Special Areas of Conservation (SACs).
 question: |
   What Natura 2000 designations or habitat network requirements apply here?
-realisations: []
 threads: []
 tags:
   - biosphere_conservation
   - protected_habitat
   - eu_directive
-primary_collection:
-entities: []
-key_attributes: []
-services: {}
 ---
 
 > Cognised existence: natura 2000 protected habitat areas and species protection zones designated under eu birds directive and habitats directive.

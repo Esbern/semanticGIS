@@ -6,14 +6,8 @@ sphere: Socio_Technical
 subsphere: Socio_technical_governance
 concept: Cognised spatial identifiers for locatable dwellings and premises
 question: Where is a property located by its official address?
-realisations: []
 threads: []
 tags: []
-primary_collection:
-primary_collection_path: /Datasets-by-Collection/Grunddatamodellen/DanmarksAdresser/
-entities: []
-key_attributes: []
-services: {}
 ---
 
 > **Cognised existence:** An address is a structured spatial identifier that connects a human activity — dwelling, business, service — to a point in geographic space. It is a universal join key in many geospatial data ecosystems.

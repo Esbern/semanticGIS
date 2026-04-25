@@ -10,14 +10,9 @@ concept: >-
 question: >-
   Which basin or sub-basin does this location belong to in water-management
   planning?
-realisations: []
 threads: []
 tags:
   - hydrosphere_freshwater_surface
-primary_collection:
-entities: []
-key_attributes: []
-services: {}
 ---
 
 > Cognised existence: a hydrological management unit defining upstream-downstream planning boundaries.

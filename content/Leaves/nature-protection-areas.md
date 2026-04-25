@@ -1,4 +1,5 @@
 ---
+
 title: Nature Protection Areas
 type: leaf
 draft: false
@@ -6,15 +7,11 @@ sphere: Biosphere
 subsphere: Conservation
 concept: Designated areas where nature conservation is the primary land management objective
 question: What areas are designated for nature protection at a location?
-realisations:
-  - OpenStreetMap
 threads: []
 tags:
   - biosphere
   - conservation
   - protected-areas
-primary_collection: OpenStreetMap
-services: {}
 ---
 
 > **Cognised existence:** Nature protection areas are politically designated zones where biodiversity and natural heritage take precedence over other land uses. Their boundaries carry legal weight and are the primary input for conservation planning.
@@ -27,52 +24,9 @@ services: {}
 
 ## Realisations
 
-### OpenStreetMap — `boundary=protected_area`, `leisure=nature_reserve`
+Instead of hardcoding implementation schemas here, SPHERE separates semantic meaning from dataset implementation. See the following realisations for how to access this data:
 
-OSM maps protected areas globally. Coverage is linked to WDPA (World Database of Protected Areas) imports in many countries.
-
-#### osmnx access
-
-```python
-import osmnx as ox
-ox.settings.cache_folder = ".cache/"
-
-# Protected areas
-protected = ox.features_from_place(
-    "Denmark",
-    tags={"boundary": "protected_area"}
-)
-
-# Nature reserves
-reserves = ox.features_from_place(
-    "Denmark",
-    tags={"leisure": "nature_reserve"}
-)
-```
-
-#### Overpass (fallback)
-
-```ql
-[out:json][timeout:120];
-area["name"="Denmark"]["admin_level"="2"]->.dk;
-(
-  relation["boundary"="protected_area"](area.dk);
-  way["boundary"="protected_area"](area.dk);
-  relation["leisure"="nature_reserve"](area.dk);
-);
-out body; >; out skel qt;
-```
-
-#### Key OSM tags
-
-| Tag | Meaning |
-| --- | --- |
-| `boundary=protected_area` | Designated protected area of any type |
-| `protect_class=*` | IUCN protection category (1a, 1b, 2, 3, 4, 5, 6) |
-| `protection_title=*` | Official designation name (e.g. "National Park", "Nature Reserve") |
-| `leisure=nature_reserve` | Nature reserve |
-| `name=*` | Official name |
-| `ref:WDPA=*` | WDPA (World Database of Protected Areas) identifier |
+- **[[Realisations/OpenStreetMap_nature_protection_areas|OpenStreetMap — `boundary=protected_area`, `leisure=nature_reserve`]]**
 
 ---
 
@@ -89,7 +43,3 @@ out body; >; out skel qt;
 - OSM protected area boundaries may lag official updates.
 - `protect_class` is not consistently tagged.
 - For authoritative data consider: EEA CDDA (Europe), WDPA (global), or national environment agency sources.
-
-## Realised By Links
-
-- [[Datasets by Collection/OpenStreetMap/index|OpenStreetMap]] (collection)

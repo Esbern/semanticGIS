@@ -6,14 +6,9 @@ sphere: Hydrosphere
 subsphere: hydrosphere_groundwater
 concept: Aquifers and managed groundwater bodies as cognised subsurface water systems
 question: 'Which groundwater body or aquifer is present here, and what status applies?'
-realisations: []
 threads: []
 tags:
   - hydrosphere_groundwater
-primary_collection:
-entities: []
-key_attributes: []
-services: {}
 ---
 
 > Cognised existence: a delimited groundwater body, aquifer, or groundwater management unit used to describe subsurface water occurrence and condition.

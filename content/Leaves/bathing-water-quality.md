@@ -8,7 +8,6 @@ concept: Bathing water suitability and public exposure risk from measured water 
 question: >-
   Is bathing water suitable and safe for human recreational use at this location
   and time?
-realisations: []
 twig_membership:
   - hydrosphere_freshwater_surface
   - hydrosphere_contaminants
@@ -30,10 +29,6 @@ tags:
   - socio_technical_services
 flow_mode: gauge
 temporal_mmu: stream
-primary_collection:
-entities: []
-key_attributes: []
-services: {}
 ---
 
 > Cognised existence: a monitored bathing location with measured water quality and interpreted suitability for recreational human use.

@@ -10,14 +10,9 @@ concept: >-
 question: >-
   What ecological condition or quality is reported for the habitat at this
   location?
-realisations: []
 threads: []
 tags:
   - biosphere_ecosystems
-primary_collection:
-entities: []
-key_attributes: []
-services: {}
 ---
 
 > Cognised existence: ecological condition state of a habitat area, represented through measured or derived quality indicators.

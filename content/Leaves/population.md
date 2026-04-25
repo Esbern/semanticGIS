@@ -1,4 +1,5 @@
 ---
+
 title: Population
 type: leaf
 draft: false
@@ -6,12 +7,6 @@ sphere: Socio_Technical
 subsphere: Socio_technical_socioeconomic
 concept: Cognised demographic magnitude over space, including counts, density, and composition by area
 question: What is the population count, density, and demographic profile in this area?
-realisations:
-  - Official Census and Statistical Units
-  - Global Population Grids
-  - EU Population Grids
-primary_collection: Statistical Offices and Population Grid Products
-services: {}
 ---
 
 > **Cognised existence:** Population is the measured quantity and density of inhabitants across space and time.
@@ -24,48 +19,11 @@ Population is typically represented as raster grids or statistical polygons, not
 
 ## Realisations
 
-### Global population grids
+Instead of hardcoding implementation schemas here, SPHERE separates semantic meaning from dataset implementation. See the following realisations for how to access this data:
 
-Global gridded datasets estimate population counts and density on regular cells (for example 1 km or 100 m depending on product/version).
-
-Representative products:
-
-| Product | Geometry | Typical Resolution | Scope |
-| --- | --- | --- | --- |
-| GHSL Population Grid (GHS-POP) | Raster grid | 250 m to 1 km | Global |
-| WorldPop | Raster grid | ~100 m (country dependent) | Global (modelled) |
-| GPWv4 (CIESIN) | Raster grid | ~1 km | Global |
-
-### EU population grids
-
-For Europe, population is commonly distributed in harmonized grid systems for comparable regional analysis.
-
-Representative products:
-
-| Product | Geometry | Typical Resolution | Scope |
-| --- | --- | --- | --- |
-| GEOSTAT population grid | Grid polygon / raster equivalent | 1 km | Europe |
-| National statistical population grids | Grid polygon / raster | 100 m to 1 km | Country-specific |
-
-### Census and administrative statistics
-
-Population can also be represented as areal totals linked to administrative units (municipality, region, census tract, etc.).
-
-#### Python load (example pattern)
-
-```python
-import geopandas as gpd
-import rasterio
-
-# Raster grid example (population count per cell)
-with rasterio.open("population_grid.tif") as src:
-    pop_grid = src.read(1)
-    transform = src.transform
-
-# Polygon example (population per statistical unit)
-admin_pop = gpd.read_file("population_by_admin_units.gpkg")
-admin_pop["pop_density"] = admin_pop["population"] / admin_pop.to_crs(3857).area * 1_000_000
-```
+- **[[Realisations/Global_population_grids_population|Global population grids]]**
+- **[[Realisations/EU_population_grids_population|EU population grids]]**
+- **[[Realisations/Census_and_administrative_statistics_population|Census and administrative statistics]]**
 
 ---
 
@@ -91,8 +49,3 @@ admin_pop["pop_density"] = admin_pop["population"] / admin_pop.to_crs(3857).area
 - [[Leaves/populated-areas\|Populated Areas and Settlements]]
 - [[Leaves/administrative-units\|Administrative Units]]
 - [[Leaves/geographical-names\|Geographical Names]]
-
-## Realised By Links
-
-- [[Classical Classifications/INSPIRE/population-distribution|INSPIRE Population Distribution]] (classification)
-- [[Classical Classifications/UN-GGIM/population-distribution|UN-GGIM Population Distribution]] (classification)

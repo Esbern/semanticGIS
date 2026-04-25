@@ -10,14 +10,9 @@ concept: >-
 question: >-
   Which areas are exposed to flooding or inundation here, and under what
   scenario or return period?
-realisations: []
 threads: []
 tags:
   - hydrosphere_flooding
-primary_collection:
-entities: []
-key_attributes: []
-services: {}
 ---
 
 > Cognised existence: a mapped flood or inundation extent representing where land is exposed to water under a defined scenario, event class, or regulatory assessment.

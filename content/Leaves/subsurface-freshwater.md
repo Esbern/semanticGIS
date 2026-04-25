@@ -10,14 +10,9 @@ concept: >-
 question: >-
   What do boreholes reveal about subsurface freshwater chemistry and aquifer
   behavior here?
-realisations: []
 threads: []
 tags:
   - hydrosphere_groundwater
-primary_collection:
-entities: []
-key_attributes: []
-services: {}
 ---
 
 > Cognised existence: a subsurface freshwater interpretation unit derived from borehole observations and groundwater-focused measurements.

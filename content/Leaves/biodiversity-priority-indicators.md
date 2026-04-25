@@ -10,14 +10,9 @@ concept: >-
 question: >-
   How is this area prioritized for biodiversity action, and which indicators
   drive that priority?
-realisations: []
 threads: []
 tags:
   - biosphere_ecosystems
-primary_collection:
-entities: []
-key_attributes: []
-services: {}
 ---
 
 > Cognised existence: an indicator-based biodiversity prioritization unit used to compare ecological value and pressure across space.

@@ -10,14 +10,9 @@ concept: >-
 question: >-
   Which planning or zoning decisions apply here, and what constraints do they
   impose?
-realisations: []
 threads: []
 tags:
   - socio_technical_governance
-primary_collection:
-entities: []
-key_attributes: []
-services: {}
 ---
 
 > Cognised existence: a legally defined planning or zoning unit that governs where and how activities or development are allowed.

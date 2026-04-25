@@ -8,14 +8,9 @@ concept: Cognised aquaculture production locations and related monitoring output
 question: >-
   Where are aquaculture activities located, and what production or discharge
   characteristics are reported there?
-realisations: []
 threads: []
 tags:
   - socio_technical_resource_utilisation
-primary_collection:
-entities: []
-key_attributes: []
-services: {}
 ---
 
 > Cognised existence: a managed aquaculture production site and its associated monitoring context, including fish and shellfish operations and related intake, outlet, and discharge information.

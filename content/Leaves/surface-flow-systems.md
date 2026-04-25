@@ -10,14 +10,9 @@ concept: >-
 question: >-
   How does water move and accumulate on the surface here, including depressions,
   flooding, and catchment context?
-realisations: []
 threads: []
 tags:
   - hydrosphere_freshwater_surface
-primary_collection:
-entities: []
-key_attributes: []
-services: {}
 ---
 
 > Cognised existence: a surface-water flow and accumulation system combining terrain-driven routing, local depressions, and catchment-scale structure.

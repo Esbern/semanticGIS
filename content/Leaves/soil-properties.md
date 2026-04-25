@@ -8,14 +8,9 @@ concept: >-
   Soil type, texture, and near-surface geochemical properties relevant for land
   capability, hydrology, and vulnerability assessment
 question: What soil types and near-surface soil properties characterize this area?
-realisations: []
 threads: []
 tags:
   - lithosphere_soils
-primary_collection:
-entities: []
-key_attributes: []
-services: {}
 ---
 
 > Cognised existence: a mapped soil unit describing the physical and classification properties of near-surface soils.

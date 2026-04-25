@@ -10,14 +10,9 @@ concept: >-
 question: >-
   Where is coastal erosion risk highest, and how severe is the expected
   shoreline impact?
-realisations: []
 threads: []
 tags:
   - lithosphere_hazards
-primary_collection:
-entities: []
-key_attributes: []
-services: {}
 ---
 
 > Cognised existence: a coastal hazard unit describing expected or observed erosion pressure at the land-sea interface.

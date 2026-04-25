@@ -1,4 +1,5 @@
 ---
+
 title: Energy Infrastructure
 type: leaf
 draft: false
@@ -6,15 +7,11 @@ sphere: Socio_Technical
 subsphere: Socio_technical_infrastructure
 concept: Energy generation, transmission, and distribution infrastructure corridors and assets
 question: Which energy infrastructures are present here, and what operational constraints apply?
-realisations:
-  - OpenStreetMap
 threads: []
 tags:
   - socio_technical_infrastructure
   - energy
   - utilities
-primary_collection: OpenStreetMap
-services: {}
 ---
 
 > **Cognised existence:** Energy infrastructure is the spatial network of generation assets, substations, and transmission/distribution lines.
@@ -27,32 +24,9 @@ services: {}
 
 ## Realisations
 
-### OpenStreetMap — `power=*`
+Instead of hardcoding implementation schemas here, SPHERE separates semantic meaning from dataset implementation. See the following realisations for how to access this data:
 
-OSM contains global energy-network features: plants, substations, transmission towers, and power lines.
-
-#### osmnx access
-
-```python
-import osmnx as ox
-ox.settings.cache_folder = ".cache/"
-
-power_features = ox.features_from_place(
-    "Denmark",
-    tags={"power": True},
-)
-```
-
-#### Key OSM tags
-
-| Tag | Meaning |
-| --- | --- |
-| `power=line` | Transmission/distribution overhead line |
-| `power=cable` | Underground/submarine cable |
-| `power=substation` | Substation polygon or point |
-| `power=plant` | Power plant area |
-| `power=generator` | Single generator (wind turbine, solar, etc.) |
-| `generator:source=*` | Source type (wind, solar, gas, hydro, etc.) |
+- **[[Realisations/OpenStreetMap_energy_infrastructure|OpenStreetMap — `power=*`]]**
 
 ---
 
@@ -70,7 +44,3 @@ power_features = ox.features_from_place(
 - Voltage and capacity attributes are incomplete.
 - Power network topology may be partially mapped.
 - For regulatory planning, validate against national grid operator datasets.
-
-## Realised By Links
-
-- [[Datasets by Collection/OpenStreetMap/index|OpenStreetMap]] (collection)

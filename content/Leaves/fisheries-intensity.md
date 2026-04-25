@@ -10,7 +10,6 @@ concept: >-
 question: >-
   What fishing effort and gear activity occur in this marine area, and how does
   it relate to ecosystem pressure and regulation?
-realisations: []
 threads:
   - fisheries-intensity-to-governance
   - fisheries-intensity-to-biosphere-ecosystems
@@ -18,10 +17,6 @@ tags:
   - socio_technical_resource_utilisation
   - socio_technical_governance
   - biosphere_ecosystems
-primary_collection:
-entities: []
-key_attributes: []
-services: {}
 flow_mode: ant
 temporal_mmu: episodic
 ---

@@ -8,14 +8,9 @@ concept: Georeferenced observations and occurrences of species in space and time
 question: >-
   Which species have been observed at this location, and when were they
   recorded?
-realisations: []
 threads: []
 tags:
   - biosphere_ecosystems
-primary_collection:
-entities: []
-key_attributes: []
-services: {}
 ---
 
 > Cognised existence: a species occurrence record tied to a location and observation time, documenting biodiversity evidence in the landscape or water environment.

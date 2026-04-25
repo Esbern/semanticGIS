@@ -8,14 +8,9 @@ concept: >-
   Species-specific records used for conservation prioritization, legal
   protection, and management action
 question: Which protected or conservation-priority species are documented here?
-realisations: []
 threads: []
 tags:
   - biosphere_ecosystems
-primary_collection:
-entities: []
-key_attributes: []
-services: {}
 ---
 
 > Cognised existence: an observation or delineation tied to species under formal conservation concern.

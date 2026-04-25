@@ -10,14 +10,9 @@ concept: >-
 question: >-
   Which marine installations or constrained-use structures are present in this
   sea area?
-realisations: []
 threads: []
 tags:
   - socio_technical_infrastructure
-primary_collection:
-entities: []
-key_attributes: []
-services: {}
 ---
 
 > Cognised existence: a marine infrastructure or constraint feature placed in sea territory by permission, engineering, or historical activity.

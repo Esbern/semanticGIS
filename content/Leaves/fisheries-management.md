@@ -11,16 +11,11 @@ concept: >
 question: >
   What fisheries activities, vessel density, or aquaculture operations occur
   here?
-realisations: []
 threads: []
 tags:
   - blue_economy
   - fisheries
   - maritime_monitoring
-primary_collection:
-entities: []
-key_attributes: []
-services: {}
 ---
 
 > Cognised existence: fisheries intensity.

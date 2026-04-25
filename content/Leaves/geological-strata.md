@@ -10,14 +10,9 @@ concept: >-
 question: >-
   Which geological strata and subsurface structures are present here, and how do
   they frame subsurface interpretation?
-realisations: []
 threads: []
 tags:
   - lithosphere_geology
-primary_collection:
-entities: []
-key_attributes: []
-services: {}
 ---
 
 > Cognised existence: a geological layer system describing stratigraphic sequence, lithology, and structural context in the subsurface.

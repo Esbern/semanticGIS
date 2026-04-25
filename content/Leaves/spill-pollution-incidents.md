@@ -10,14 +10,9 @@ concept: >-
 question: >-
   Which spill, contamination, or hazardous discharge signals are reported for
   this area?
-realisations: []
 threads: []
 tags:
   - socio_technical_governance
-primary_collection:
-entities: []
-key_attributes: []
-services: {}
 ---
 
 > Cognised existence: a mapped pollution or contamination signal indicating present, historical, or potential environmental hazard.

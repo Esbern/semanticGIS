@@ -10,16 +10,11 @@ concept: >
 question: >
   What drinking water source protection zones or supply infrastructure exist
   here?
-realisations: []
 threads: []
 tags:
   - water_resources
   - public_health
   - infrastructure
-primary_collection:
-entities: []
-key_attributes: []
-services: {}
 ---
 
 > Cognised existence: groundwater source protection zones.

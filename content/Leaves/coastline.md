@@ -1,4 +1,5 @@
 ---
+
 title: Coastline
 type: leaf
 draft: false
@@ -6,17 +7,12 @@ sphere: Toposphere
 subsphere: toposphere_coastline
 concept: The physical boundary between land and sea as a mappable linear or polygon feature
 question: Where is the land-sea boundary and what is its large-scale geometry?
-realisations:
-  - Natural Earth
-  - OpenStreetMap
 threads:
   - coastline-to-hydrosphere-marine
 tags:
   - toposphere_coastline
   - coastline
   - land-sea-boundary
-primary_collection: Natural Earth
-services: {}
 ---
 
 > **Cognised existence:** The coastline is the land-sea boundary — the line or polygon edge that separates terrestrial from marine space. It is foundational for any analysis that requires knowing what is land, what is water, or which areas are coastal.
@@ -29,54 +25,9 @@ services: {}
 
 ## Realisations
 
-### Natural Earth — Coastline and Land/Ocean masks
+Instead of hardcoding implementation schemas here, SPHERE separates semantic meaning from dataset implementation. See the following realisations for how to access this data:
 
-Natural Earth provides the most widely used public-domain global coastline at three generalisation levels. It is appropriate for global-to-regional mapping and spatial analysis at scales where high-precision coastal surveys are not required.
-
-#### Scale selection guide
-
-| Scale | Shapefile | Use case |
-| --- | --- | --- |
-| `1:10m` | `ne_10m_coastline.shp` | Regional analysis, national-level maps, coastal context overlays |
-| `1:50m` | `ne_50m_coastline.shp` | Continental overview, medium-scale thematic maps |
-| `1:110m` | `ne_110m_coastline.shp` | Global visualisation, small-scale reference maps |
-
-#### Python load
-
-```python
-import geopandas as gpd
-
-# Coastline as LineString (all scales follow same pattern)
-coastline = gpd.read_file("ne_10m_coastline.shp")
-
-# Land as Polygon (useful for land/sea masking)
-land = gpd.read_file("ne_10m_land.shp")
-
-# Ocean as Polygon
-ocean = gpd.read_file("ne_10m_ocean.shp")
-
-# Clip to a bounding box
-bbox = (5.0, 54.0, 16.0, 58.0)  # roughly Denmark + neighbours
-coastline_clip = coastline.cx[bbox[0]:bbox[2], bbox[1]:bbox[3]]
-```
-
-#### Key attributes (`ne_10m_coastline`)
-
-| Field | Meaning |
-| --- | --- |
-| `featurecla` | Feature class (`Coastline`) |
-| `scalerank` | Visibility rank (lower = more prominent) |
-| `min_zoom` | Suggested minimum display zoom level |
-
-#### Available companion layers
-
-| Layer | Geometry | Use |
-| --- | --- | --- |
-| `ne_10m_land` | Polygon | Land mask |
-| `ne_10m_ocean` | Polygon | Ocean mask |
-| `ne_10m_coastline` | LineString | Coastline line |
-| `ne_10m_minor_islands` | Polygon | Small islands not in main land polygon |
-| `ne_10m_reefs` | LineString | Reef features near coast |
+- **[[Realisations/Natural_Earth_coastline|Natural Earth — Coastline and Land/Ocean masks]]**
 
 ---
 
@@ -155,12 +106,6 @@ For sub-national detail (e.g. Danish fjords, harbour inlets) OSM-derived coastli
 - For authoritative national coastlines, use official surveying agency products (e.g. GeoDanmark for Denmark, Ordnance Survey for UK).
 - Raster relief products from Natural Earth include bathymetry shading but are not bathymetric data for depth analysis.
 - Raw OSM `natural=coastline` ways **cannot be used directly** — always use the pre-processed `land-polygons-split-4326` product from osmdata.openstreetmap.de.
-
-## Realised By Links
-
-- [[Datasets by Collection/Natural Earth/index|Natural Earth]] (collection)
-- [[Datasets by Owner/Natural Earth/index|Natural Earth]] (owner)
-- [[Datasets by Collection/OpenStreetMap/index|OpenStreetMap]] (collection via osmdata land-polygons)
 
 ## Related Leaves
 

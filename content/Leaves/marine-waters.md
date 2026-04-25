@@ -8,14 +8,9 @@ concept: Coastal and marine water bodies as cognised sea-space units
 question: >-
   Which coastal or marine water body is this location part of, and what
   condition applies?
-realisations: []
 threads: []
 tags:
   - hydrosphere_marine
-primary_collection:
-entities: []
-key_attributes: []
-services: {}
 ---
 
 > Cognised existence: a coastal or marine water body used for monitoring, planning, or ecological interpretation, including fjords, coastal waters, and marine management zones.

@@ -10,16 +10,11 @@ concept: >
   health assessment zones.
 question: |
   What noise levels and exposure zones exist at this location?
-realisations: []
 threads: []
 tags:
   - biosphere_monitoring
   - environmental_health
   - noise_regulation
-primary_collection:
-entities: []
-key_attributes: []
-services: {}
 ---
 
 > Cognised existence: sound level measurements and noise mapping from road.

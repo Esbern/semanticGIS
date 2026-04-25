@@ -42,16 +42,18 @@ The current protocol uses **7 branches**: Atmosphere, Biosphere, Hydrosphere, Li
 
 ```
 Leaf (semantic aspect, answers a question type)
-  → Dataset (registry info, license, temporal model)
-    → Service (GraphQL endpoint, WFS, file download, API key)
+  → Realisation (implementation mapping, join logic, dataset choice)
+    → Dataset (registry info, license, temporal model)
+      → Service (GraphQL endpoint, WFS, file download, API key)
 ```
 
 An agent navigating SPHERE:
 
 1. Identifies the **sphere** matching its question domain
-2. Browses **leaves** within that sphere
-3. Follows the leaf's pointers to **dataset** documentation for join logic and entity details
-4. Uses **service** references to access the actual data
+2. Browses **leaves** within that sphere to understand the concept conceptually
+3. Identifies the **realisation** that best fits its technical or authoritative requirements
+4. Follows the realisation's mapping and join logic to the **dataset** documentation
+5. Uses **service** references to access the actual data
 
 ## Leaf Schema
 
@@ -64,26 +66,12 @@ type: leaf
 draft: false
 sphere: <primary sphere>
 subsphere: <subsphere within the primary sphere>
-collection: <source data collection/registry>
 concept: <semantic concept from the collection's semantic organisation>
 question: <what kind of question does this leaf help answer?>
-entities:
-
-  - <source entity 1>
-  - <source entity 2>
-
-key-attributes:
-
-  - <most important attributes for this aspect>
-
 threads:
-
   - <cross-domain thread ids this leaf connects through>
-
 tags:
-
   - collection/<collection-slug>
-
 ---
 ```
 

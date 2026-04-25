@@ -8,14 +8,9 @@ concept: >-
   Gridded atmospheric pollutant emissions and deposition loads linking source
   pressure to environmental receptor loading
 question: What atmospheric emissions and deposition loads are modeled for this area?
-realisations: []
 threads: []
 tags:
   - atmospheric_chemistry
-primary_collection:
-entities: []
-key_attributes: []
-services: {}
 ---
 
 > Cognised existence: modeled atmospheric pollutant burden represented as spatially distributed emissions and deposition loads.

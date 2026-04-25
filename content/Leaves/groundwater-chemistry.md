@@ -10,14 +10,9 @@ concept: >-
 question: >-
   What is the chemical status of groundwater in this area, and which substances
   drive trends or exceedances?
-realisations: []
 threads: []
 tags:
   - hydrosphere_groundwater
-primary_collection:
-entities: []
-key_attributes: []
-services: {}
 ---
 
 > Cognised existence: the chemical state and trend profile of groundwater bodies, represented through substance-specific assessments in the planning cycle.

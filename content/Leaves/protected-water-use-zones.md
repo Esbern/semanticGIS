@@ -10,14 +10,9 @@ concept: >-
 question: >-
   Which protected-use water zones apply here, and what protection objective do
   they represent?
-realisations: []
 threads: []
 tags:
   - hydrosphere_contaminants
-primary_collection:
-entities: []
-key_attributes: []
-services: {}
 ---
 
 > Cognised existence: a designated zone where water use or quality is specifically protected through regulatory planning.

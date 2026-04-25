@@ -11,16 +11,11 @@ concept: >
 question: >
   What planning designations, zoning constraints, or development restrictions
   apply here?
-realisations: []
 threads: []
 tags:
   - planning_regulation
   - land_use
   - zoning
-primary_collection:
-entities: []
-key_attributes: []
-services: {}
 ---
 
 > Cognised existence: municipal and regional planning datasets from plandk registry.

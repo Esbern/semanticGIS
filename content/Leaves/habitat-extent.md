@@ -1,4 +1,5 @@
 ---
+
 title: Habitat Extent
 type: leaf
 draft: false
@@ -6,15 +7,11 @@ sphere: Biosphere
 subsphere: biosphere_ecosystems
 concept: Delineated spatial extent of habitats and nature-type units
 question: Which habitat and nature-type areas are mapped at this location?
-realisations:
-  - OpenStreetMap
 threads: []
 tags:
   - biosphere_ecosystems
   - habitat
   - nature
-primary_collection: OpenStreetMap
-services: {}
 ---
 
 > **Cognised existence:** Habitat extent describes where ecological units are physically present as mapped spatial entities.
@@ -27,31 +24,9 @@ services: {}
 
 ## Realisations
 
-### OpenStreetMap — natural and habitat proxy tags
+Instead of hardcoding implementation schemas here, SPHERE separates semantic meaning from dataset implementation. See the following realisations for how to access this data:
 
-OSM does not have a single canonical habitat schema, but many habitat-like extents can be derived from tags such as wetland, heath, scrub, grassland, and woodland.
-
-#### osmnx access
-
-```python
-import osmnx as ox
-ox.settings.cache_folder = ".cache/"
-
-habitats = ox.features_from_place(
-    "Denmark",
-    tags={
-        "natural": ["wetland", "heath", "scrub", "grassland", "wood"],
-        "landuse": ["forest", "meadow"],
-    },
-)
-```
-
-#### Geofabrik layers
-
-| Layer | Content |
-| --- | --- |
-| `gis_osm_natural_a_free_1.shp` | Natural polygons |
-| `gis_osm_landuse_a_free_1.shp` | Land-use polygons including meadow/forest |
+- **[[Realisations/OpenStreetMap_habitat_extent|OpenStreetMap — natural and habitat proxy tags]]**
 
 ---
 
@@ -68,7 +43,3 @@ habitats = ox.features_from_place(
 - Habitat semantics are proxy-based and non-standardized across countries.
 - OSM cannot replace official ecological habitat surveys.
 - Use as exploratory/open baseline, then validate with authoritative habitat products.
-
-## Realised By Links
-
-- [[Datasets by Collection/OpenStreetMap/index|OpenStreetMap]] (collection)

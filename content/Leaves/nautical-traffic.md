@@ -10,14 +10,9 @@ concept: >-
 question: >-
   What vessel traffic patterns are present here, and how intense is maritime
   movement over time?
-realisations: []
 threads: []
 tags:
   - socio_technical_infrastructure
-primary_collection:
-entities: []
-key_attributes: []
-services: {}
 ---
 
 > Cognised existence: measurable vessel movement activity represented as spatial intensity and class-specific traffic patterns.
